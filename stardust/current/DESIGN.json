@@ -1,0 +1,352 @@
+{
+  "_provenance": {
+    "writtenBy": "stardust:extract",
+    "writtenAt": "2026-05-28T13:30:00Z",
+    "readArtifacts": [
+      "stardust/current/_brand-extraction.json",
+      "stardust/current/pages/*.json (25 pages)"
+    ],
+    "synthesizedInputs": [],
+    "stardustVersion": "0.10.0",
+    "notes": "Re-aggregated across 25 pages (24 new + home already approved). Cross-page primary radius is 5px (103 occurrences, confirmed); pill 9999px detected (5 occurrences) — previous home-only run reported pill: null. Cross-promo footer detected on 26/26 pages."
+  },
+  "frontmatter": {
+    "colors": {
+      "background": "#FFFFFF",
+      "text": "#454545",
+      "textHeading": "#272727",
+      "primary": "#FFCC00",
+      "surfaceDark": "#272727",
+      "surface": "#E5E3DF",
+      "overlay": "rgba(18,18,18,0.5)"
+    },
+    "typography": {
+      "display": "\"Roboto Condensed\", sans-serif",
+      "body": "Roboto, sans-serif",
+      "scaleAudit": {
+        "kind": "ad-hoc",
+        "ratios": [
+          1.05,
+          2
+        ],
+        "matchedScale": null
+      }
+    },
+    "rounded": {
+      "small": "5px",
+      "medium": "6px",
+      "pill": "9999px"
+    },
+    "spacing": {
+      "baseUnit": 8,
+      "section": 64
+    },
+    "components": [
+      "btn-primary",
+      "btn-secondary",
+      "service-tile",
+      "finance-card",
+      "stat-row",
+      "partner-logo-strip",
+      "branch-map",
+      "utility-bar"
+    ]
+  },
+  "extensions": {
+    "componentStyle": {
+      "buttons": {
+        "primary": {
+          "background": "#FFCC00",
+          "color": "#000000",
+          "borderRadius": "5px",
+          "padding": "12px 24px",
+          "fontWeight": 700,
+          "shadow": null,
+          "hoverDelta": "unknown"
+        },
+        "secondary": {
+          "background": "#FFFFFF",
+          "color": "#272727",
+          "borderRadius": "5px",
+          "padding": "8px 16px",
+          "fontWeight": 700,
+          "shadow": null,
+          "hoverDelta": "unknown"
+        },
+        "ghost": null
+      },
+      "dualCTAPattern": "primary-yellow-with-underline-secondary",
+      "cards": {
+        "background": "#FFFFFF",
+        "borderRadius": "5px",
+        "padding": "24px",
+        "shadow": "rgba(0,0,0,0.1) 0px 3px 6px 0px",
+        "border": "1px solid #EBEBEB"
+      },
+      "inputs": {
+        "borderRadius": "5px",
+        "padding": "10px 12px",
+        "border": "1px solid #B5B5B5",
+        "focusRing": null
+      }
+    },
+    "motifs": {
+      "borderRadius": {
+        "primary": "5px",
+        "secondary": "3px",
+        "pill": "9999px",
+        "primarySources": [
+          "home",
+          "about",
+          "rental",
+          "service",
+          "parts"
+        ],
+        "occurrences": {
+          "5px": 103,
+          "50%": 8,
+          "3px": 6,
+          "9999px": 5,
+          "4px": 2,
+          "2px": 1
+        }
+      },
+      "shadows": [
+        {
+          "value": "rgba(0, 0, 0, 0.8) 0px 6px 16px 0px",
+          "uses": "cards"
+        },
+        {
+          "value": "rgba(0, 0, 0, 0.1) 0px 0px 50px 0px",
+          "uses": "overlay/lightbox"
+        },
+        {
+          "value": "rgba(0, 0, 0, 0.1) 0px 3px 6px 0px",
+          "uses": "overlay/lightbox"
+        }
+      ],
+      "gradients": [],
+      "patterns": [
+        {
+          "name": "hero-with-cta-strip",
+          "evidence": "full-bleed hero image with overlaid yellow CTA above the fold"
+        },
+        {
+          "name": "icon-tile-row",
+          "evidence": "service tiles use icomoon icons in a 6-up row under \"YOUR HEAVY MACHINERY EXPERTS\""
+        },
+        {
+          "name": "image-with-overlay-headline",
+          "evidence": "multiple sections combine a photo + black overlay + capital-Roboto-Condensed headline + yellow button"
+        },
+        {
+          "name": "stat-row",
+          "evidence": "\"18 / 75 / 24\" stats row under DEPENDABLE AND RELIABLE"
+        },
+        {
+          "name": "partner-logo-strip",
+          "evidence": "monochrome partner logos in a horizontal strip near the footer"
+        },
+        {
+          "name": "dark-utility-header",
+          "evidence": "thin dark utility bar with top-of-site nav links above the main header"
+        }
+      ]
+    },
+    "voice": {
+      "heroHeadline": "FINANCING DEALS & SPECIAL OFFERS",
+      "heroSubcopy": null,
+      "heroImage": {
+        "url": "https://wheelercat.com/wp-content/uploads/2025/05/SC_Hero.jpg",
+        "alt": "",
+        "source": "img",
+        "domPath": "body > article > div:nth-of-type(2) > section:nth-of-type(1) > a > img",
+        "localPath": "stardust/current/assets/media/SC_Hero-292cc4.jpg",
+        "rect": {
+          "x": 0,
+          "y": 158,
+          "width": 1440,
+          "height": 496.4375
+        }
+      },
+      "primaryCTALabel": "BROWSE MORE SERVICES",
+      "ctaSamples": [
+        "BROWSE MORE SERVICES",
+        "MORE ABOUT US",
+        "NEW QUOTE",
+        "SHOP USED",
+        "RENT NOW",
+        "REQUEST SERVICE",
+        "CREDIT APP"
+      ],
+      "navItems": [
+        "Sponsorships",
+        "NEW EQUIPMENT",
+        "USED EQUIPMENT",
+        "RENT NOW",
+        "REQUEST SERVICE",
+        "CREDIT APP",
+        "801-436-3672"
+      ],
+      "footerHeadings": [
+        "QUICK LINKS",
+        "CONTACT US",
+        "CONNECT WITH US"
+      ],
+      "firstParagraph": null,
+      "tone": {
+        "guess": "bold-direct",
+        "evidence": "ALL-CAPS Roboto Condensed display headlines, short imperative CTAs, blue-collar tone (\"YOUR HEAVY MACHINERY EXPERTS\", \"DEPENDABLE AND RELIABLE\", \"WE PROUDLY SUPPORT THE ONES WHO BUILD OUR WORLD\")"
+      }
+    },
+    "systemComponents": [
+      {
+        "name": "site-header",
+        "kind": "header",
+        "occurrences": 26,
+        "headingSequence": [
+          "Sponsorships",
+          "NEW EQUIPMENT",
+          "USED EQUIPMENT",
+          "RENT NOW",
+          "REQUEST SERVICE",
+          "CREDIT APP",
+          "801-436-3672"
+        ],
+        "ctaLabels": [
+          "NEW QUOTE",
+          "SHOP USED"
+        ],
+        "domFingerprintHash": "sha256:header-cross-page",
+        "exampleSlug": "home",
+        "exampleSelector": "header#page-header",
+        "examplePages": ["home", "about", "rental", "service", "parts", "new", "used-equipment", "industries"]
+      },
+      {
+        "name": "site-footer",
+        "kind": "footer",
+        "occurrences": 26,
+        "headingSequence": [
+          "QUICK LINKS",
+          "CONTACT US",
+          "CONNECT WITH US"
+        ],
+        "ctaLabels": [
+          "Sitemap",
+          "Legal"
+        ],
+        "domFingerprintHash": "sha256:footer-cross-page",
+        "exampleSlug": "home",
+        "exampleSelector": "footer",
+        "examplePages": ["home", "about", "rental", "service", "parts", "new", "used-equipment", "industries"]
+      },
+      {
+        "name": "dark-utility-bar",
+        "kind": "header",
+        "occurrences": 26,
+        "headingSequence": [
+          "Sponsorships",
+          "phone"
+        ],
+        "ctaLabels": [],
+        "domFingerprintHash": "sha256:utility-cross-page",
+        "exampleSlug": "home",
+        "exampleSelector": "header.c-header-top",
+        "examplePages": ["home", "about", "rental", "service", "parts", "new"]
+      },
+      {
+        "name": "footer-cross-promo (QUICK LINKS / CONTACT US / CONNECT WITH US)",
+        "kind": "cross-promo",
+        "occurrences": 26,
+        "headingSequence": [
+          "QUICK LINKS",
+          "CONTACT US",
+          "CONNECT WITH US"
+        ],
+        "ctaLabels": [],
+        "domFingerprintHash": "sha256:footer-cross-promo",
+        "exampleSlug": "home",
+        "exampleSelector": "footer .c-footer-cols",
+        "examplePages": ["home", "about", "rental", "service", "parts", "new", "used-equipment", "industries", "careers", "contact-us", "credit-application", "specials", "offers", "sponsorships"]
+      }
+    ],
+    "iconFont": {
+      "family": "icomoon",
+      "localPath": "stardust/current/assets/fonts/icomoon.ttf",
+      "sourceCss": "@font-face { font-family: \"icomoon\"; src: url(\"/wp-content/themes/wheelermachinery/assets/fonts/icomoon.ttf\") format(\"truetype\"); }",
+      "glyphCount": 14,
+      "glyphs": [
+        {
+          "class": "icon-menu",
+          "codepoint": "",
+          "name": "menu"
+        },
+        {
+          "class": "icon-map-pin",
+          "codepoint": "",
+          "name": "map-pin"
+        },
+        {
+          "class": "icon-new",
+          "codepoint": "",
+          "name": "new"
+        },
+        {
+          "class": "icon-used",
+          "codepoint": "",
+          "name": "used"
+        },
+        {
+          "class": "icon-rent",
+          "codepoint": "",
+          "name": "rent"
+        },
+        {
+          "class": "icon-order",
+          "codepoint": "",
+          "name": "order"
+        },
+        {
+          "class": "icon-service",
+          "codepoint": "",
+          "name": "service"
+        },
+        {
+          "class": "icon-phone",
+          "codepoint": "",
+          "name": "phone"
+        },
+        {
+          "class": "icon-facebook",
+          "codepoint": "",
+          "name": "facebook"
+        },
+        {
+          "class": "icon-instagram",
+          "codepoint": "",
+          "name": "instagram"
+        },
+        {
+          "class": "icon-twitter",
+          "codepoint": "url(data:image/svg+xml,%3Csvg id=Capa_1 height=20 width=20 enable-background=new 0 0 1226.37 1226.37 viewBox=0 0 1226.37 1226.37 xmlns=http://www.w3.org/2000/svg%3E%3Cpath fill=%23fc0 d=m727.348 519.284 446.727-519.284h-105.86l-387.893 450.887-309.809-450.887h-357.328l468.492 681.821-468.492 544.549h105.866l409.625-476.152 327.181 476.152h357.328l-485.863-707.086zm-144.998 168.544-47.468-67.894-377.686-540.24h162.604l304.797 435.991 47.468 67.894 396.2 566.721h-162.604l-323.311-462.446z/%3E%3Cg/%3E%3Cg/%3E%3Cg/%3E%3Cg/%3E%3Cg/%3E%3Cg/%3E%3Cg/%3E%3Cg/%3E%3Cg/%3E%3Cg/%3E%3Cg/%3E%3Cg/%3E%3Cg/%3E%3Cg/%3E%3Cg/%3E%3C/svg%3E)",
+          "name": "twitter"
+        },
+        {
+          "class": "icon-linkedin",
+          "codepoint": "",
+          "name": "linkedin"
+        },
+        {
+          "class": "icon-youtube",
+          "codepoint": "",
+          "name": "youtube"
+        },
+        {
+          "class": "icon-left-arrow",
+          "codepoint": "",
+          "name": "left-arrow"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- stardust:provenance
+  writtenBy:         stardust:prototype (Pattern A · 3-strategy exploration)
+  writtenAt:         2026-05-28T05:30:00Z
+  page:              nav-pattern-a-strategies
+  purpose:           Stacked side-by-side mock of 3 strategies for handling the non-verb "other links" on top of Pattern A's 4-verb primary nav.
+  strategies:
+    - 1 · tight utility row + footer brand directory (recommended)
+    - 2 · 5th WHEELER ▾ identity menu in the verb row
+    - 3 · search-led + minimal chrome (no utility row)
+  readArtifacts:
+    - stardust/prototypes/nav-explorations.html (Pattern A primitives)
+    - stardust/prototypes/home-A-rich-proposed.html
+  stardustVersion:   0.10.0
+-->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wheeler Cat — Pattern A · Strategies for the other links</title>
+<style>
+:root {
+  --color-page: #FFFFFF;
+  --color-body: #454545;
+  --color-heading: #272727;
+  --color-cat-yellow: #FFCC00;
+  --color-cat-yellow-hover: #E6B800;
+  --color-surface-dark: #272727;
+  --color-surface-dark-hover: #1A1A1A;
+  --color-warm-stone: #E5E3DF;
+  --color-text-on-dark: #FFFFFF;
+  --color-text-on-yellow: #272727;
+
+  --fs-100: 1rem;
+  --fs-125: 1.25rem;
+  --fs-156: 1.563rem;
+  --fs-195: 1.953rem;
+  --fs-244: 2.441rem;
+  --fs-label: 0.8rem;
+
+  --sp-xs: 4px;
+  --sp-sm: 8px;
+  --sp-md: 16px;
+  --sp-lg: 24px;
+  --sp-xl: 32px;
+  --sp-xxl: 48px;
+  --sp-section: 64px;
+
+  --r-primary: 5px;
+  --r-pill: 999px;
+
+  --container-max: 1400px;
+
+  --font-display: "Roboto Condensed", "Roboto", system-ui, sans-serif;
+  --font-body: "Roboto", system-ui, sans-serif;
+  --font-icon: "icomoon";
+
+  --ease-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+@font-face { font-family: "Roboto Condensed"; font-weight: 400 700; font-style: normal; font-display: swap; src: url("../current/assets/fonts/ieVl2ZhZI2eCN5jzbjEETS9weq8-19K7DQ.woff2") format("woff2"); }
+@font-face { font-family: "Roboto"; font-weight: 300 700; font-style: normal; font-display: swap; src: url("../current/assets/fonts/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2") format("woff2"); }
+@font-face { font-family: "Roboto"; font-weight: 700; font-style: normal; font-display: swap; src: url("../current/assets/fonts/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBHMdazQ.woff2") format("woff2"); }
+@font-face { font-family: "icomoon"; src: url("../current/assets/fonts/icomoon.ttf") format("truetype"); font-weight: normal; font-style: normal; font-display: block; }
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--fs-100);
+  line-height: 1.5;
+  color: var(--color-body);
+  background: var(--color-warm-stone);
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; cursor: pointer; }
+.container { width: 100%; max-width: var(--container-max); margin: 0 auto; padding-left: var(--sp-lg); padding-right: var(--sp-lg); }
+
+/* Icons */
+.icon { font-family: var(--font-icon) !important; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; -webkit-font-smoothing: antialiased; speak: never; display: inline-block; }
+.icon-menu::before { content: "\e904"; }
+.icon-map-pin::before { content: "\e906"; }
+.icon-phone::before { content: "\e90b"; }
+.icon-new::before { content: "\e907"; }
+.icon-used::before { content: "\e90c"; }
+.icon-rent::before { content: "\e909"; }
+.icon-order::before { content: "\e908"; }
+.icon-service::before { content: "\e90a"; }
+
+/* ─────────────────────────────────────────────────────────────
+   INTRO
+   ───────────────────────────────────────────────────────────── */
+.intro { background: var(--color-surface-dark); color: var(--color-text-on-dark); padding: var(--sp-section) 0; }
+.intro h1 {
+  font-family: var(--font-display); font-weight: 700; text-transform: uppercase;
+  font-size: clamp(2rem, 4vw, var(--fs-244));
+  letter-spacing: 0.02em; line-height: 1.05;
+  margin: 0 0 var(--sp-md); color: var(--color-text-on-dark);
+}
+.intro__lead { font-size: var(--fs-125); line-height: 1.5; color: rgba(255,255,255,0.85); max-width: 70ch; margin: 0; }
+.intro__legend { display: flex; gap: var(--sp-lg); flex-wrap: wrap; margin-top: var(--sp-xl); }
+.intro__legend a {
+  font-family: var(--font-display); font-weight: 700; font-size: 0.85rem;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--color-cat-yellow);
+  padding: 6px 12px;
+  border: 1px solid var(--color-cat-yellow);
+  border-radius: var(--r-primary);
+  transition: background 200ms var(--ease-out), color 200ms var(--ease-out);
+}
+.intro__legend a:hover { background: var(--color-cat-yellow); color: var(--color-text-on-yellow); }
+
+/* ─────────────────────────────────────────────────────────────
+   PATTERN CARD WRAPPER
+   ───────────────────────────────────────────────────────────── */
+.pattern { padding: var(--sp-section) 0; border-bottom: 1px solid rgba(39,39,39,0.08); }
+.pattern__head { max-width: var(--container-max); margin: 0 auto var(--sp-xl); padding: 0 var(--sp-lg); }
+.pattern__label {
+  display: inline-block;
+  font-family: var(--font-display); font-weight: 700; font-size: 0.78rem;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--color-heading);
+  padding: 4px 10px;
+  background: var(--color-cat-yellow);
+  border-radius: var(--r-primary);
+  margin-bottom: var(--sp-md);
+}
+.pattern__head h2 {
+  font-family: var(--font-display); font-weight: 700; text-transform: uppercase;
+  font-size: clamp(1.5rem, 3vw, var(--fs-195));
+  letter-spacing: 0.02em; line-height: 1.1;
+  margin: 0 0 var(--sp-sm); color: var(--color-heading);
+  text-wrap: balance;
+}
+.pattern__head .tagline { font-size: var(--fs-125); color: var(--color-body); max-width: 70ch; margin: 0; }
+.pattern__head .ribbon {
+  display: inline-block;
+  font-family: var(--font-display); font-weight: 700; font-size: 0.7rem;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: #2a8;
+  padding: 4px 10px;
+  border: 1px solid #2a8;
+  border-radius: var(--r-primary);
+  margin-left: var(--sp-md);
+}
+
+.pattern__demo {
+  background: var(--color-page);
+  border-radius: var(--r-primary);
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.04);
+  margin: 0 auto;
+  max-width: var(--container-max);
+  border: 1px solid rgba(39,39,39,0.06);
+}
+.demo-page-stub {
+  background: linear-gradient(180deg, var(--color-page) 0%, #f6f5f1 100%);
+  padding: var(--sp-xxl) var(--sp-lg);
+  text-align: center;
+  min-height: 120px;
+  color: rgba(39,39,39,0.4);
+  font-family: var(--font-display); font-weight: 700; font-size: 0.75rem;
+  letter-spacing: 0.12em; text-transform: uppercase;
+}
+
+.pattern__notes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: var(--sp-lg);
+  max-width: var(--container-max);
+  margin: var(--sp-xl) auto 0;
+  padding: 0 var(--sp-lg);
+}
+.note-card { background: var(--color-page); border-radius: var(--r-primary); padding: var(--sp-lg); border: 1px solid rgba(39,39,39,0.08); }
+.note-card h3 {
+  font-family: var(--font-display); font-weight: 700; font-size: 0.75rem;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--color-heading);
+  margin: 0 0 var(--sp-md);
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--color-cat-yellow);
+  display: inline-block;
+}
+.note-card--pros h3 { border-bottom-color: #2a8; }
+.note-card--cons h3 { border-bottom-color: #d44; }
+.note-card--fit h3 { border-bottom-color: var(--color-cat-yellow); }
+.note-card ul { margin: 0; padding-left: var(--sp-lg); color: var(--color-body); font-size: 0.92rem; line-height: 1.5; }
+.note-card li { margin-bottom: 6px; }
+.note-card li strong { color: var(--color-heading); font-weight: 700; }
+
+/* ─────────────────────────────────────────────────────────────
+   SHARED — buttons + verb-row primitives (from Pattern A)
+   ───────────────────────────────────────────────────────────── */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: var(--sp-sm);
+  font-family: var(--font-display); font-weight: 700; font-size: 0.875rem;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: var(--r-primary);
+  border: 1px solid transparent;
+  transition: background 180ms var(--ease-out), color 180ms var(--ease-out), border-color 180ms var(--ease-out);
+  cursor: pointer; text-decoration: none;
+}
+.btn-primary { background: var(--color-cat-yellow); color: var(--color-text-on-yellow); border-color: var(--color-cat-yellow); }
+.btn-primary:hover { background: var(--color-surface-dark); color: var(--color-cat-yellow); border-color: var(--color-surface-dark); }
+
+/* Verb row (shared across all 3 strategies — Pattern A primitive) */
+.hA__main { background: var(--color-page); border-bottom: 4px solid var(--color-surface-dark); }
+.hA__main-inner { display: flex; justify-content: space-between; align-items: stretch; padding: 0; gap: var(--sp-md); min-height: 96px; }
+.hA__logo { display: inline-flex; align-items: center; padding: 0 var(--sp-lg); }
+.hA__logo img { height: 56px; width: auto; }
+.hA__verbs { display: flex; align-items: stretch; flex: 1; justify-content: center; }
+.hA__verb {
+  position: relative;
+  display: inline-flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;
+  padding: 0 var(--sp-xl);
+  font-family: var(--font-display); font-weight: 700; font-size: 1.05rem;
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-heading);
+  border-left: 1px solid rgba(39,39,39,0.08);
+  transition: background 200ms var(--ease-out), color 200ms var(--ease-out);
+}
+.hA__verb:last-child { border-right: 1px solid rgba(39,39,39,0.08); }
+.hA__verb:hover, .hA__verb:focus-visible { background: var(--color-surface-dark); color: var(--color-cat-yellow); outline: none; }
+.hA__verb .icon { font-size: 22px; color: var(--color-cat-yellow); }
+.hA__verb .verb-sub { font-size: 0.65rem; letter-spacing: 0.12em; opacity: 0.7; font-weight: 400; }
+.hA__verb--wheeler::after {
+  content: "▾"; font-size: 0.7rem; opacity: 0.5; position: absolute; bottom: 8px; right: 12px;
+}
+
+/* Verb hover dropdown */
+.hA__dropdown {
+  position: absolute; top: 100%; left: 0;
+  background: var(--color-surface-dark); color: var(--color-text-on-dark);
+  min-width: 260px; padding: var(--sp-md) 0;
+  opacity: 0; pointer-events: none; transform: translateY(-8px);
+  transition: opacity 200ms var(--ease-out), transform 200ms var(--ease-out);
+  z-index: 10;
+  border-top: 4px solid var(--color-cat-yellow);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.25);
+}
+.hA__verb:hover .hA__dropdown, .hA__verb:focus-within .hA__dropdown {
+  opacity: 1; pointer-events: auto; transform: translateY(0);
+}
+.hA__dropdown a {
+  display: block; padding: 10px var(--sp-lg);
+  font-family: var(--font-body); font-weight: 400; font-size: 0.9rem;
+  letter-spacing: 0.02em; text-transform: none;
+  color: rgba(255,255,255,0.85);
+  transition: color 150ms, background 150ms;
+}
+.hA__dropdown a:hover { color: var(--color-cat-yellow); background: rgba(255,204,0,0.05); }
+.hA__cta { display: inline-flex; align-items: center; padding: 0 var(--sp-lg); }
+
+/* ─────────────────────────────────────────────────────────────
+   STRATEGY 1 · tight utility row + footer brand directory
+   ───────────────────────────────────────────────────────────── */
+.s1__util { background: var(--color-surface-dark); padding: 8px 0; }
+.s1__util-inner { display: flex; justify-content: flex-end; align-items: center; gap: var(--sp-lg); position: relative; }
+.s1__util a, .s1__util .s1__emp-trigger {
+  font-family: var(--font-display); font-weight: 700; font-size: 0.72rem;
+  letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.78);
+  transition: color 150ms;
+  display: inline-flex; align-items: center; gap: 6px;
+  background: transparent; border: 0; padding: 0; cursor: pointer;
+}
+.s1__util a:hover, .s1__util .s1__emp-trigger:hover { color: var(--color-cat-yellow); }
+.s1__util .icon { color: var(--color-cat-yellow); font-size: 12px; }
+.s1__emp { position: relative; }
+.s1__emp-trigger::after { content: "▾"; font-size: 0.6rem; margin-left: 4px; opacity: 0.6; }
+.s1__emp-dropdown {
+  position: absolute; top: calc(100% + 6px); right: 0;
+  background: var(--color-surface-dark); color: var(--color-text-on-dark);
+  min-width: 220px; padding: var(--sp-md) 0;
+  opacity: 0; pointer-events: none; transform: translateY(-6px);
+  transition: opacity 200ms var(--ease-out), transform 200ms var(--ease-out);
+  z-index: 12;
+  border-top: 3px solid var(--color-cat-yellow);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.3);
+}
+.s1__emp:hover .s1__emp-dropdown, .s1__emp:focus-within .s1__emp-dropdown {
+  opacity: 1; pointer-events: auto; transform: translateY(0);
+}
+.s1__emp-dropdown a {
+  display: block; padding: 8px var(--sp-lg);
+  font-family: var(--font-body); font-weight: 400; font-size: 0.85rem;
+  letter-spacing: 0.02em; text-transform: none;
+  color: rgba(255,255,255,0.85);
+}
+.s1__emp-dropdown a:hover { color: var(--color-cat-yellow); background: rgba(255,204,0,0.06); }
+.s1__emp-dropdown__label {
+  display: block;
+  padding: 6px var(--sp-lg) 4px;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--color-cat-yellow); opacity: 0.65;
+}
+
+/* Footer brand directory (Strategy 1 visualization) */
+.s1__footer { background: var(--color-surface-dark-hover); color: var(--color-text-on-dark); padding: var(--sp-xl) 0; }
+.s1__footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: var(--sp-xl); }
+.s1__footer-brand img { max-width: 200px; }
+.s1__footer-brand p { color: rgba(255,255,255,0.65); font-size: 0.85rem; margin: var(--sp-md) 0 0; max-width: 36ch; }
+.s1__footer-col h4 {
+  font-family: var(--font-display); font-weight: 700; font-size: 0.7rem;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--color-cat-yellow);
+  margin: 0 0 var(--sp-md);
+  padding-bottom: 6px; border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+.s1__footer-col ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.s1__footer-col a { font-size: 0.88rem; color: rgba(255,255,255,0.72); }
+.s1__footer-col a:hover { color: var(--color-cat-yellow); }
+
+/* ─────────────────────────────────────────────────────────────
+   STRATEGY 2 · 5th WHEELER ▾ menu in verb row
+   ───────────────────────────────────────────────────────────── */
+.s2__util { background: var(--color-surface-dark); padding: 8px 0; }
+.s2__util-inner { display: flex; justify-content: flex-end; gap: var(--sp-lg); }
+.s2__util a {
+  font-family: var(--font-display); font-weight: 700; font-size: 0.72rem;
+  letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.78);
+  display: inline-flex; align-items: center; gap: 6px;
+}
+.s2__util a:hover { color: var(--color-cat-yellow); }
+.s2__util .icon { color: var(--color-cat-yellow); font-size: 12px; }
+
+/* ─────────────────────────────────────────────────────────────
+   STRATEGY 3 · search-led
+   ───────────────────────────────────────────────────────────── */
+.s3__search {
+  display: flex; align-items: stretch;
+  background: var(--color-warm-stone);
+  border-radius: var(--r-primary);
+  padding: 0 var(--sp-md);
+  height: 44px;
+  min-width: 280px;
+  margin-right: var(--sp-md);
+}
+.s3__search input {
+  flex: 1; background: transparent; border: 0; outline: 0;
+  font-family: var(--font-body); font-size: 0.92rem; color: var(--color-heading);
+}
+.s3__search input::placeholder { color: rgba(39,39,39,0.5); }
+.s3__search button {
+  background: transparent; border: 0; padding: 0; cursor: pointer;
+  font-family: var(--font-display); font-weight: 700; font-size: 0.78rem;
+  letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-cat-yellow-hover);
+}
+.s3__right-cluster { display: inline-flex; align-items: center; padding: 0 var(--sp-lg); gap: var(--sp-md); }
+
+/* Strategy-3 footer (carries everything brand) */
+.s3__footer { background: var(--color-surface-dark-hover); color: var(--color-text-on-dark); padding: var(--sp-xl) 0; }
+.s3__footer-grid { display: grid; grid-template-columns: 2fr repeat(4, 1fr); gap: var(--sp-xl); }
+.s3__footer-brand img { max-width: 200px; }
+.s3__footer-brand p { color: rgba(255,255,255,0.65); font-size: 0.85rem; margin: var(--sp-md) 0 0; max-width: 36ch; }
+.s3__footer-col h4 {
+  font-family: var(--font-display); font-weight: 700; font-size: 0.7rem;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--color-cat-yellow);
+  margin: 0 0 var(--sp-md); padding-bottom: 6px; border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+.s3__footer-col ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.s3__footer-col a { font-size: 0.85rem; color: rgba(255,255,255,0.72); }
+.s3__footer-col a:hover { color: var(--color-cat-yellow); }
+
+/* ─────────────────────────────────────────────────────────────
+   RESPONSIVE
+   ───────────────────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .pattern__notes { grid-template-columns: 1fr; }
+  .hA__verb { padding: 0 var(--sp-md); font-size: 0.9rem; }
+  .s1__footer-grid, .s3__footer-grid { grid-template-columns: 1fr 1fr; gap: var(--sp-lg); }
+}
+@media (max-width: 768px) {
+  .hA__verb .verb-sub { display: none; }
+  .hA__cta { display: none; }
+  .s3__search { display: none; }
+  .s1__footer-grid, .s3__footer-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .hA__verbs { overflow-x: auto; -webkit-overflow-scrolling: touch; justify-content: flex-start; }
+  .hA__verb { padding: 0 var(--sp-md); font-size: 0.75rem; }
+  .s1__util-inner, .s2__util-inner { gap: var(--sp-sm); flex-wrap: wrap; justify-content: center; }
+}
+
+:focus-visible { outline: 2px solid var(--color-cat-yellow); outline-offset: 2px; }
+</style>
+</head>
+<body>
+
+<section class="intro">
+  <div class="container">
+    <h1>Pattern A · Three strategies for the "other links"</h1>
+    <p class="intro__lead">Pattern A's 4 verbs (BUY · RENT · SERVICE · PARTS) absorb the catalog actions. These three strategies show how to place the leftover items — <strong style="color:var(--color-cat-yellow);">Locations / Customer Login / Employee tools / About / Sponsorships / Jobs / Resources / Contact</strong> — without sliding back into 25-item chaos.</p>
+    <div class="intro__legend">
+      <a href="#s1">1 · Tight utility + footer directory</a>
+      <a href="#s2">2 · 5th WHEELER ▾ menu</a>
+      <a href="#s3">3 · Search-led, minimal chrome</a>
+    </div>
+  </div>
+</section>
+
+<!-- ──────────────────────────────────────────────────────────
+     STRATEGY 1 · TIGHT UTILITY + FOOTER BRAND DIRECTORY (RECOMMENDED)
+     ────────────────────────────────────────────────────────── -->
+<article class="pattern" id="s1" data-strategy="1">
+  <div class="pattern__head">
+    <span class="pattern__label">Strategy 1 · Tight utility + footer directory</span>
+    <span class="ribbon">RECOMMENDED</span>
+    <h2>Three persistent utility items. Brand directory in the footer.</h2>
+    <p class="tagline">Top utility row stays at 3 items: Locations · Customer Login · For Employees ▾. Brand items (About / Sponsorships / Jobs / Resources / Contact) move to the footer, where every other industrial-dealer site keeps them. The "For Employees ▾" dropdown audience-codes the internal/admin tools so customers don't get confused.</p>
+  </div>
+
+  <div class="pattern__demo">
+    <!-- TOP UTILITY ROW (3 items) -->
+    <div class="s1__util">
+      <div class="container s1__util-inner">
+        <a href="#"><span class="icon icon-map-pin" aria-hidden="true"></span> Locations</a>
+        <a href="#">Customer Login</a>
+        <div class="s1__emp">
+          <button type="button" class="s1__emp-trigger" tabindex="0">For Employees</button>
+          <div class="s1__emp-dropdown" role="menu">
+            <span class="s1__emp-dropdown__label">Internal tools</span>
+            <a href="#">Employee Login</a>
+            <a href="#">SIS 2.0</a>
+            <a href="#">Vision Link</a>
+            <a href="#">Rental Portal Admin</a>
+            <a href="#">Online Payments</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PATTERN A · 4 VERBS -->
+    <div class="hA__main">
+      <div class="container hA__main-inner">
+        <a class="hA__logo" href="#"><img src="../current/assets/logo.png" alt="Wheeler"></a>
+        <nav class="hA__verbs" aria-label="primary intents">
+          <a class="hA__verb" href="#" tabindex="0">
+            <span class="icon icon-new" aria-hidden="true"></span>
+            Buy
+            <span class="verb-sub">New &amp; Used</span>
+            <div class="hA__dropdown">
+              <a href="#">New Equipment</a>
+              <a href="#">Used Equipment</a>
+              <a href="#">Request a Quote</a>
+              <a href="#">Credit Application</a>
+              <a href="#">Power Systems</a>
+            </div>
+          </a>
+          <a class="hA__verb" href="#" tabindex="0">
+            <span class="icon icon-rent" aria-hidden="true"></span>
+            Rent
+            <span class="verb-sub">Equipment, Tools, Trailers</span>
+            <div class="hA__dropdown">
+              <a href="#">Compact Equipment Rentals</a>
+              <a href="#">Tool Rentals</a>
+              <a href="#">Trailer Rentals</a>
+              <a href="#">Attachments</a>
+              <a href="#">Rental Portal</a>
+            </div>
+          </a>
+          <a class="hA__verb" href="#" tabindex="0">
+            <span class="icon icon-service" aria-hidden="true"></span>
+            Service
+            <span class="verb-sub">Field, Shop, Maintenance</span>
+            <div class="hA__dropdown">
+              <a href="#">Request Service Online</a>
+              <a href="#">Field Service</a>
+              <a href="#">Shop Service</a>
+              <a href="#">Maintenance (CVAs)</a>
+              <a href="#">Equipment Rebuilds</a>
+              <a href="#">Get Training</a>
+            </div>
+          </a>
+          <a class="hA__verb" href="#" tabindex="0">
+            <span class="icon icon-order" aria-hidden="true"></span>
+            Parts
+            <span class="verb-sub">Order &amp; Track</span>
+            <div class="hA__dropdown">
+              <a href="#">Order Parts (Parts.Cat.com)</a>
+              <a href="#">Parts Lookup</a>
+              <a href="#">Track Your Order</a>
+              <a href="#">Online Payments</a>
+            </div>
+          </a>
+        </nav>
+        <div class="hA__cta">
+          <a class="btn btn-primary" href="tel:801-436-3672"><span class="icon icon-phone" aria-hidden="true"></span> 801-436-3672</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="demo-page-stub">↓ Page content lives between header and footer ↓</div>
+
+    <!-- BRAND-DIRECTORY FOOTER (where brand items live in Strategy 1) -->
+    <div class="s1__footer">
+      <div class="container">
+        <div class="s1__footer-grid">
+          <div class="s1__footer-brand">
+            <img src="../current/assets/logo.png" alt="Wheeler Machinery Co.">
+            <p>Construction Equipment, Tool &amp; Trailer Rental &amp; Sales across 18 locations in Utah, Arizona, Nevada &amp; Wyoming.</p>
+          </div>
+          <div class="s1__footer-col">
+            <h4>Wheeler</h4>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Locations</a></li>
+              <li><a href="#">Jobs &amp; Careers</a></li>
+              <li><a href="#">Sponsorships</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="s1__footer-col">
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="#">Field Notes (Blog)</a></li>
+              <li><a href="#">News &amp; Updates</a></li>
+              <li><a href="#">Customer Stories</a></li>
+              <li><a href="#">Training Library</a></li>
+            </ul>
+          </div>
+          <div class="s1__footer-col">
+            <h4>Connect</h4>
+            <ul>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">LinkedIn</a></li>
+              <li><a href="#">YouTube</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pattern__notes">
+    <div class="note-card note-card--pros">
+      <h3>Pros</h3>
+      <ul>
+        <li><strong>Header chrome: 4 verbs + 3 utility + CTA = 8 items</strong> (vs current 25). Honest hierarchy.</li>
+        <li>Audience-coded utility solves the customer-vs-staff Login confusion.</li>
+        <li>Footer brand directory matches dealer-industry convention (Cat OEM, peers).</li>
+        <li>Locations gets first-class billing — high-priority intent for field users.</li>
+        <li>Yellow CTA is unambiguously the primary action.</li>
+      </ul>
+    </div>
+    <div class="note-card note-card--cons">
+      <h3>Cons</h3>
+      <ul>
+        <li>About / Sponsorships / Jobs require a footer scroll for first-time visitors.</li>
+        <li>"For Employees ▾" dropdown is a hover/focus interaction (touch needs a tap-to-open).</li>
+        <li>The utility row's 3 items still need labels short enough to fit on tablet portrait.</li>
+      </ul>
+    </div>
+    <div class="note-card note-card--fit">
+      <h3>Best fit</h3>
+      <ul>
+        <li>The default for Wheeler. <strong>Industry-conformant + opinionated</strong> hierarchy.</li>
+        <li>When the footer is well-designed (currently is — captured Quick Links / Contact / Connect are solid).</li>
+        <li>When the brand wants customer-facing chrome to feel confident, not loaded with staff tools.</li>
+      </ul>
+    </div>
+  </div>
+</article>
+
+<!-- ──────────────────────────────────────────────────────────
+     STRATEGY 2 · 5TH WHEELER ▾ MENU
+     ────────────────────────────────────────────────────────── -->
+<article class="pattern" id="s2" data-strategy="2">
+  <div class="pattern__head">
+    <span class="pattern__label">Strategy 2 · 5th WHEELER ▾ menu</span>
+    <h2>Brand items stay in the header. Verb row gains a 5th identity menu.</h2>
+    <p class="tagline">A WHEELER ▾ dropdown sits at the end of the verb row, opening a column of brand items (About / Locations / Sponsorships / Jobs / Resources / Contact). Utility row shrinks to two items: Customer Login and Employee Login.</p>
+  </div>
+
+  <div class="pattern__demo">
+    <div class="s2__util">
+      <div class="container s2__util-inner">
+        <a href="#">Customer Login</a>
+        <a href="#">Employee Login</a>
+      </div>
+    </div>
+    <div class="hA__main">
+      <div class="container hA__main-inner">
+        <a class="hA__logo" href="#"><img src="../current/assets/logo.png" alt="Wheeler"></a>
+        <nav class="hA__verbs" aria-label="primary intents">
+          <a class="hA__verb" href="#" tabindex="0">
+            <span class="icon icon-new" aria-hidden="true"></span>
+            Buy
+            <span class="verb-sub">New &amp; Used</span>
+            <div class="hA__dropdown">
+              <a href="#">New Equipment</a>
+              <a href="#">Used Equipment</a>
+              <a href="#">Request a Quote</a>
+              <a href="#">Credit Application</a>
+              <a href="#">Power Systems</a>
+            </div>
+          </a>
+          <a class="hA__verb" href="#" tabindex="0">
+            <span class="icon icon-rent" aria-hidden="true"></span>
+            Rent
+            <span class="verb-sub">Equipment, Tools, Trailers</span>
+            <div class="hA__dropdown">
+              <a href="#">Compact Equipment Rentals</a>
+              <a href="#">Tool Rentals</a>
+              <a href="#">Trailer Rentals</a>
+              <a href="#">Attachments</a>
+              <a href="#">Rental Portal</a>
+            </div>
+          </a>
+          <a class="hA__verb" href="#" tabindex="0">
+            <span class="icon icon-service" aria-hidden="true"></span>
+            Service
+            <span class="verb-sub">Field, Shop, Maintenance</span>
+            <div class="hA__dropdown">
+              <a href="#">Request Service Online</a>
+              <a href="#">Field Service</a>
+              <a href="#">Shop Service</a>
+              <a href="#">Maintenance (CVAs)</a>
+              <a href="#">Equipment Rebuilds</a>
+              <a href="#">Get Training</a>
+            </div>
+          </a>
+          <a class="hA__verb" href="#" tabindex="0">
+            <span class="icon icon-order" aria-hidden="true"></span>
+            Parts
+            <span class="verb-sub">Order &amp; Track</span>
+            <div class="hA__dropdown">
+              <a href="#">Order Parts (Parts.Cat.com)</a>
+              <a href="#">SIS 2.0</a>
+              <a href="#">Vision Link</a>
+              <a href="#">Online Payments</a>
+            </div>
+          </a>
+          <!-- 5th: WHEELER ▾ identity menu -->
+          <a class="hA__verb hA__verb--wheeler" href="#" tabindex="0">
+            <span class="icon icon-map-pin" aria-hidden="true"></span>
+            Wheeler
+            <span class="verb-sub">About &amp; More</span>
+            <div class="hA__dropdown">
+              <a href="#">About Wheeler</a>
+              <a href="#">Locations (18 branches)</a>
+              <a href="#">Sponsorships</a>
+              <a href="#">Jobs &amp; Careers</a>
+              <a href="#">Resources / Blog</a>
+              <a href="#">News &amp; Updates</a>
+              <a href="#">Contact Us</a>
+            </div>
+          </a>
+        </nav>
+        <div class="hA__cta">
+          <a class="btn btn-primary" href="tel:801-436-3672"><span class="icon icon-phone" aria-hidden="true"></span> 801-436-3672</a>
+        </div>
+      </div>
+    </div>
+    <div class="demo-page-stub">↓ Page content starts here ↓ &nbsp;&nbsp; The 5th verb is the brand-identity entry point</div>
+  </div>
+
+  <div class="pattern__notes">
+    <div class="note-card note-card--pros">
+      <h3>Pros</h3>
+      <ul>
+        <li>Every navigation target is <strong>in the header</strong>. No footer scroll required.</li>
+        <li>Brand identity (Wheeler) gets a visible top-level slot — useful if About / Sponsorships are conversion-critical.</li>
+        <li>Utility row is the cleanest of the three (2 login links only).</li>
+      </ul>
+    </div>
+    <div class="note-card note-card--cons">
+      <h3>Cons</h3>
+      <ul>
+        <li><strong>WHEELER ▾ is a noun in a row of verbs</strong> — breaks the cognitive pattern that makes the 4-verb model work. Users learn "this row is what I CAN DO" then hit a brand name.</li>
+        <li>Adds visual weight to the verb row (now 5 items instead of 4) — tighter on tablet.</li>
+        <li>Locations buried one click deeper than Strategy 1.</li>
+      </ul>
+    </div>
+    <div class="note-card note-card--fit">
+      <h3>Best fit</h3>
+      <ul>
+        <li>When the footer is weak and can't carry brand items convincingly.</li>
+        <li>When Sponsorships / About / News are <strong>genuinely top-traffic</strong> pages (not the usual footer-dwellers).</li>
+        <li>Less recommended than Strategy 1 for Wheeler specifically.</li>
+      </ul>
+    </div>
+  </div>
+</article>
+
+<!-- ──────────────────────────────────────────────────────────
+     STRATEGY 3 · SEARCH-LED
+     ────────────────────────────────────────────────────────── -->
+<article class="pattern" id="s3" data-strategy="3">
+  <div class="pattern__head">
+    <span class="pattern__label">Strategy 3 · Search-led, minimal chrome</span>
+    <h2>No utility row. Search bar carries the long tail.</h2>
+    <p class="tagline">Drop the utility row entirely. Put a search bar in the header where utility links normally sit. Search handles long-tail discovery (find a 259D3, find a branch in Cedar City, find the Cat Card page) so the visible chrome stays the 4 verbs plus a search field and a phone CTA. Everything else lives in the footer.</p>
+  </div>
+
+  <div class="pattern__demo">
+    <div class="hA__main">
+      <div class="container hA__main-inner">
+        <a class="hA__logo" href="#"><img src="../current/assets/logo.png" alt="Wheeler"></a>
+        <nav class="hA__verbs" aria-label="primary intents" style="flex: 0 0 auto;">
+          <a class="hA__verb" href="#" tabindex="0">
+            <span class="icon icon-new" aria-hidden="true"></span>
+            Buy
+            <span class="verb-sub">New &amp; Used</span>
+            <div class="hA__dropdown">
+              <a href="#">New Equipment</a>
+              <a href="#">Used Equipment</a>
+              <a href="#">Request a Quote</a>
+              <a href="#">Credit Application</a>
+              <a href="#">Power Systems</a>
+            </div>
+          </a>
+          <a class="hA__verb" href="#" tabindex="0">
+            <span class="icon icon-rent" aria-hidden="true"></span>
+            Rent
+            <span class="verb-sub">Equipment, Tools, Trailers</span>
+            <div class="hA__dropdown">
+              <a href="#">Compact Equipment Rentals</a>
+              <a href="#">Tool Rentals</a>
+              <a href="#">Trailer Rentals</a>
+              <a href="#">Attachments</a>
+              <a href="#">Rental Portal</a>
+            </div>
+          </a>
+          <a class="hA__verb" href="#" tabindex="0">
+            <span class="icon icon-service" aria-hidden="true"></span>
+            Service
+            <span class="verb-sub">Field, Shop, Maintenance</span>
+            <div class="hA__dropdown">
+              <a href="#">Request Service Online</a>
+              <a href="#">Field Service</a>
+              <a href="#">Shop Service</a>
+              <a href="#">Maintenance (CVAs)</a>
+              <a href="#">Equipment Rebuilds</a>
+              <a href="#">Get Training</a>
+            </div>
+          </a>
+          <a class="hA__verb" href="#" tabindex="0">
+            <span class="icon icon-order" aria-hidden="true"></span>
+            Parts
+            <span class="verb-sub">Order &amp; Track</span>
+            <div class="hA__dropdown">
+              <a href="#">Order Parts (Parts.Cat.com)</a>
+              <a href="#">SIS 2.0</a>
+              <a href="#">Vision Link</a>
+              <a href="#">Online Payments</a>
+            </div>
+          </a>
+        </nav>
+        <div class="s3__right-cluster">
+          <div class="s3__search">
+            <input type="search" placeholder="Find equipment, branches, parts..." aria-label="Search">
+            <button type="button">Search</button>
+          </div>
+          <a class="btn btn-primary" href="tel:801-436-3672"><span class="icon icon-phone" aria-hidden="true"></span> 801-436-3672</a>
+        </div>
+      </div>
+    </div>
+    <div class="demo-page-stub">↓ Page content starts here ↓ &nbsp;&nbsp; Search bar replaces the utility row entirely</div>
+
+    <!-- Strategy 3's bigger footer (everything brand + utility) -->
+    <div class="s3__footer">
+      <div class="container">
+        <div class="s3__footer-grid">
+          <div class="s3__footer-brand">
+            <img src="../current/assets/logo.png" alt="Wheeler Machinery Co.">
+            <p>Construction Equipment, Tool &amp; Trailer Rental &amp; Sales across 18 locations in Utah, Arizona, Nevada &amp; Wyoming.</p>
+          </div>
+          <div class="s3__footer-col">
+            <h4>Wheeler</h4>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Locations</a></li>
+              <li><a href="#">Sponsorships</a></li>
+              <li><a href="#">Jobs</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="s3__footer-col">
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="#">Field Notes</a></li>
+              <li><a href="#">News</a></li>
+              <li><a href="#">Training</a></li>
+            </ul>
+          </div>
+          <div class="s3__footer-col">
+            <h4>Account</h4>
+            <ul>
+              <li><a href="#">Customer Login</a></li>
+              <li><a href="#">Online Payments</a></li>
+              <li><a href="#">Rental Portal</a></li>
+            </ul>
+          </div>
+          <div class="s3__footer-col">
+            <h4>Internal</h4>
+            <ul>
+              <li><a href="#">Employee Login</a></li>
+              <li><a href="#">SIS 2.0</a></li>
+              <li><a href="#">Vision Link</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pattern__notes">
+    <div class="note-card note-card--pros">
+      <h3>Pros</h3>
+      <ul>
+        <li>Most premium-feeling of the three. Header reads <strong>clean and modern</strong>.</li>
+        <li>Search bar serves the "I know what I'm looking for" intent (model code, branch name, blog post) in one keystroke.</li>
+        <li>One row total — header height drops to ~96px. Hero gets maximum canvas.</li>
+        <li>Footer accommodates every leftover link honestly without crowding the top.</li>
+      </ul>
+    </div>
+    <div class="note-card note-card--cons">
+      <h3>Cons</h3>
+      <ul>
+        <li><strong>Requires real search infrastructure</strong> — search bar is the load-bearing piece; if it's poor (no autocomplete, no fuzzy match), the whole strategy fails.</li>
+        <li>Locations / Login lose first-class billing — both buried in the footer.</li>
+        <li>Tablet portrait gets cramped quickly: 4 verbs + search + CTA + logo on one row.</li>
+        <li>Less industry-conformant than Strategies 1 and 2.</li>
+      </ul>
+    </div>
+    <div class="note-card note-card--fit">
+      <h3>Best fit</h3>
+      <ul>
+        <li>When users arrive with a <strong>specific model or location in mind</strong> (the "I know what I want" intent).</li>
+        <li>When the brand wants a <strong>premium / Apple-corporate</strong> register rather than a "browse the catalog" register.</li>
+        <li>When the build budget includes a real search backend (Algolia / typesense / SearchWP+).</li>
+      </ul>
+    </div>
+  </div>
+</article>
+
+<!-- Closing -->
+<section class="intro" style="padding: var(--sp-xxl) 0;">
+  <div class="container">
+    <h2 style="font-family: var(--font-display); font-weight: 700; text-transform: uppercase; font-size: clamp(1.5rem, 2.5vw, 1.95rem); letter-spacing: 0.02em; margin: 0 0 var(--sp-md); color: var(--color-text-on-dark);">Recommendation</h2>
+    <p class="intro__lead"><strong style="color:var(--color-cat-yellow);">Strategy 1</strong> is the strongest default for Wheeler: keeps the header at 8 chrome items, audience-codes the staff vs customer tools, and leans on an already-strong captured footer for brand items. <strong>Strategy 2</strong> is a fallback when the footer can't be trusted to carry brand items. <strong>Strategy 3</strong> is the bold play that requires real search to deliver.</p>
+  </div>
+</section>
+
+</body>
+</html>

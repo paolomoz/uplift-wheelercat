@@ -1,0 +1,109 @@
+{
+  "_provenance": {
+    "writtenBy": "stardust:direct (--add-variant E)",
+    "writtenAt": "2026-05-28T00:30:00Z",
+    "variant": "E",
+    "parent": "DESIGN.json",
+    "inheritanceChain": "E → active-direction (Mode A)",
+    "readArtifacts": [
+      "DESIGN.json",
+      "stardust/uplift-improvements.md",
+      "stardust/uplift-questions.md",
+      "stardust/current/pages/home.json",
+      "stardust/current/_brand-extraction.json"
+    ],
+    "stardustVersion": "0.10.0"
+  },
+  "schemaVersion": 2,
+  "title": "Design System: Wheeler Cat — Variant E (photography re-foregrounding)",
+  "variant": {
+    "id": "E",
+    "role": "one captured trait amplified (composition + scale bet)",
+    "bet": "equipment portraits restored to editorial 3:2 hero scale; hero photo becomes the layout, not a tile; cards gain photo-first composition",
+    "capturedTraitAmplified": "equipment photography (Compact_Track_Loader, Excavators, Wheeler_Campus, aerial_resource)",
+    "evidence": "current/assets/media/ holds 52 captured images including equipment portraits at full resolution; the captured page crops Compact_Track_Loader to a 280×180 thumbnail when the source supports 1440×810 full-bleed",
+    "static": true,
+    "cinematic": false,
+    "siblings": ["A", "B", "C", "D", "F", "G", "H", "I"],
+    "differentiationFrom": {
+      "A": "A's hero uses SC_Hero finance creative + dark overlay; E's hero uses an equipment portrait at editorial 3:2 with NO overlay (photo carries the headline via a low-band caption plate). 3 diffs: hero asset choice (finance creative vs equipment portrait); overlay vs caption-plate composition; finance band layout (E pulls finance below service tiles to give photography the second-viewport oxygen).",
+      "B": "B is palette inversion (yellow primary); E retains captured palette proportions. 3 diffs: hero ground (yellow type vs equipment photo), service tile treatment (yellow tiles vs photo-card tiles in E), no finance-band ground inversion in E.",
+      "knownWeakness": "Captured photography is product-documentation tier, not editorial. E will visibly expose this gap — that exposure IS the presales artifact (tells the brand owner what a photography investment would unlock). Variant carries an explicit '_photographyMaturityNote' surfaced in the rendered file's provenance."
+    }
+  },
+  "inherits": {
+    "from": "DESIGN.json",
+    "items": [
+      "colorMeta",
+      "typographyMeta",
+      "modularScale (1.250)",
+      "shadows",
+      "breakpoints",
+      "sectionPadding",
+      "iaPriorities",
+      "componentStyle (base)",
+      "motifs",
+      "voice (base)",
+      "systemComponentRoles",
+      "iconFont",
+      "divergence (base)"
+    ]
+  },
+  "extensions": {
+    "photographyContract": {
+      "rationale": "E's bet — restore equipment photography to share-of-canvas equivalent to its source resolution",
+      "heroComposition": {
+        "asset": "Compact_Track_Loader (captured at full resolution; reuse via current/assets/media/)",
+        "aspect": "3:2 (1440×960 desktop; cropped to 2:1 at >1600px for ultrawide)",
+        "treatment": "no dark overlay; caption-plate as bottom-left card on white ground (carries headline + supporting line + primary CTA)",
+        "headline": "FINANCING DEALS & SPECIAL OFFERS (verbatim captured) — set in caption-plate, not over photo",
+        "rationale": "Overlay-on-photo (captured pattern) reduces both photo and type legibility; caption-plate honors both."
+      },
+      "cardComposition": {
+        "pattern": "photo-first cards (image 60% of card height, text 40%)",
+        "aspectRatio": "4:5 for tile cards; 3:2 for hero adjacency",
+        "minimumWidth": "480px desktop tile, 320px mobile"
+      },
+      "serviceTiles": {
+        "treatment": "replace icomoon glyph + dark ground with equipment-photo tile + bottom caption (FIELD SERVICE / SHOP SERVICE / etc.)",
+        "rationale": "Improvement #5 expanded — photography (where it exists) earns the surface; icomoon glyph retreats to a footer-utility role"
+      }
+    },
+    "compositionDeltas": {
+      "hero": {
+        "ground": "white (page surface) with full-bleed photo to viewport edge",
+        "asset": "../current/assets/media/Compact_Track_Loader-<hash>.jpg (resolve actual filename from media inventory)",
+        "noOverlay": true,
+        "captionPlate": {
+          "position": "bottom-left, 480px wide, white ground, 24px padding",
+          "content": "eyebrow FINANCE · h1 FINANCING DEALS & SPECIAL OFFERS · supporting line · primary CTA BROWSE MORE SERVICES"
+        }
+      },
+      "financeBand": {
+        "position": "moved BELOW service tiles (was second viewport; now third)",
+        "layout": "3-up CSS grid (inherited from A's improvement #1)",
+        "ground": "warm stone #E5E3DF",
+        "rationale": "Photography gets the second-viewport oxygen; finance is still above the fold of typical scroll depth but no longer competes with the hero for primary canvas."
+      },
+      "serviceTiles": {
+        "treatment": "photo-card pattern (see photographyContract.serviceTiles)",
+        "ground": "white",
+        "fallback": "where no equipment photo exists for a service category, render the icomoon glyph on a warm-stone tile with a dashed PLACEHOLDER · photo-needed signature so the missing-photo gap is visible"
+      },
+      "supportPartnersBand": {
+        "treatment": "Wheeler_Campus photo as section background at low contrast (rgba(255,255,255,0.85) overlay) with sentiment + partner-logo strip floating in card",
+        "rationale": "Improvement #2 inherited; campus photo adds a place-of-business signal that text-only couldn't carry"
+      }
+    },
+    "antiToolboxAudit": {
+      "hits": [
+        {
+          "rule": "Hero text on photographic background without contrast scrim",
+          "justification": "E avoids the rule by using caption-plate instead of text-over-photo. The plate IS the scrim equivalent — opaque white ground with sharp edges. Type lives on the plate, not the photo."
+        }
+      ],
+      "rationale": "Single bet (photography re-foregrounding). The one anti-toolbox hit is brand-faithfully resolved via caption-plate composition."
+    },
+    "photographyMaturityNote": "Captured photography is product-documentation tier (WordPress media library, not editorial commissions). E renders at editorial scale honestly — the exposure is the presales artifact. Recommend a photo commission roadmap as a parallel deliverable; the rendered file would dramatically improve with editorial-grade equipment portraits at the same composition."
+  }
+}

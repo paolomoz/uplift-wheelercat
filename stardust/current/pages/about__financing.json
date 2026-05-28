@@ -1,0 +1,2079 @@
+{
+  "_provenance": {
+    "writtenBy": "stardust:extract",
+    "writtenAt": "2026-05-28T11:41:14.565Z",
+    "readArtifacts": [
+      "https://wheelercat.com/about/financing/"
+    ],
+    "synthesizedInputs": [],
+    "stardustVersion": "0.10.0",
+    "renderedBy": "playwright",
+    "fetchedAt": "2026-05-28T11:41:04.580Z",
+    "waitMode": "medium",
+    "waitMs": 6922,
+    "httpStatus": 200,
+    "contentType": "text/html"
+  },
+  "slug": "about__financing",
+  "url": "https://wheelercat.com/about/financing/",
+  "finalUrl": "https://wheelercat.com/about/financing/",
+  "title": "Equipment Financing & Business Loans | Wheeler Machinery Co.",
+  "metaDescription": "Wheeler offers financing and loan opportunities for both buying and renting new or used Cat® equipment in Utah. Learn more and apply for financing today.",
+  "og": {
+    "title": "Equipment Financing & Business Loans | Wheeler Machinery Co.",
+    "description": "Wheeler offers financing and loan opportunities for both buying and renting new or used Cat® equipment in Utah. Learn more and apply for financing today.",
+    "image": "https://wheelercat.com/wp-content/uploads/2022/08/half-img.jpg",
+    "type": "article",
+    "siteName": "Wheeler Machinery Co."
+  },
+  "themeColor": {
+    "light": null,
+    "dark": null
+  },
+  "language": "en-US",
+  "headings": [
+    {
+      "level": 1,
+      "text": "FINANCING OPTIONS",
+      "id": null,
+      "domPath": "body.wp-singular.page-template-default > section.masthead.masthead--innerpage > div.masthead__content.masthead--innerpage-details > div.container > h1",
+      "style": {
+        "fontFamily": "\"Roboto Condensed\", sans-serif",
+        "fontWeight": "700",
+        "fontSize": "60px",
+        "lineHeight": "78px",
+        "letterSpacing": "normal",
+        "color": "rgb(255, 204, 0)"
+      }
+    },
+    {
+      "level": 2,
+      "text": "EQUIPMENT FINANCING SOLUTIONS FOR YOUR BUSINESS",
+      "id": null,
+      "domPath": "section.wysiwyg.section-padding > div.container > div.row > div.col-xxs-12 > div.wysiwyg-wrapper > h2",
+      "style": {
+        "fontFamily": "\"Roboto Condensed\", sans-serif",
+        "fontWeight": "700",
+        "fontSize": "50px",
+        "lineHeight": "65px",
+        "letterSpacing": "normal",
+        "color": "rgb(39, 39, 39)"
+      }
+    },
+    {
+      "level": 3,
+      "text": "WHEELER CREDIT DEPARTMENT: BUY NOW, PAY LATER",
+      "id": null,
+      "domPath": "section.wysiwyg.section-padding > div.container > div.row > div.col-xxs-12 > div.wysiwyg-wrapper > h3",
+      "style": {
+        "fontFamily": "\"Roboto Condensed\", sans-serif",
+        "fontWeight": "700",
+        "fontSize": "40px",
+        "lineHeight": "52px",
+        "letterSpacing": "normal",
+        "color": "rgb(39, 39, 39)"
+      }
+    },
+    {
+      "level": 3,
+      "text": "USE THE CAT® COMMERCIAL ACCOUNT FOR FLEXIBLE PAYMENT OPTIONS FOR PARTS, SERVICE, RENTALS, AND MORE.",
+      "id": null,
+      "domPath": "section.full-width-image-text.section-padding > div.container > div.row > div.col-md-12 > div.full-width-image-text__content.left > h3",
+      "style": {
+        "fontFamily": "\"Roboto Condensed\", sans-serif",
+        "fontWeight": "700",
+        "fontSize": "40px",
+        "lineHeight": "52px",
+        "letterSpacing": "normal",
+        "color": "rgb(39, 39, 39)"
+      }
+    },
+    {
+      "level": 3,
+      "text": "SPECIAL FINANCING OFFERS",
+      "id": null,
+      "domPath": "article.page-content > div.bialty-container > section.half-and-half.half-and-half--inner > div.half-and-half-text.half-and-half-text--inner > div.half-and-half-text__wrapper > h3",
+      "style": {
+        "fontFamily": "\"Roboto Condensed\", sans-serif",
+        "fontWeight": "700",
+        "fontSize": "40px",
+        "lineHeight": "52px",
+        "letterSpacing": "normal",
+        "color": "rgb(39, 39, 39)"
+      }
+    },
+    {
+      "level": 3,
+      "text": "CAT FINANCIAL",
+      "id": null,
+      "domPath": "section.full-width-image-text.section-padding > div.container > div.row > div.col-md-12 > div.full-width-image-text__content.right > h3",
+      "style": {
+        "fontFamily": "\"Roboto Condensed\", sans-serif",
+        "fontWeight": "700",
+        "fontSize": "40px",
+        "lineHeight": "52px",
+        "letterSpacing": "normal",
+        "color": "rgb(39, 39, 39)"
+      }
+    },
+    {
+      "level": 3,
+      "text": "SOLUTIONS FINANCIAL SERVICES",
+      "id": null,
+      "domPath": "section.wysiwyg.section-padding > div.container > div.row > div.col-xxs-12 > div.wysiwyg-wrapper > h3",
+      "style": {
+        "fontFamily": "\"Roboto Condensed\", sans-serif",
+        "fontWeight": "700",
+        "fontSize": "40px",
+        "lineHeight": "52px",
+        "letterSpacing": "normal",
+        "color": "rgb(39, 39, 39)"
+      }
+    },
+    {
+      "level": 3,
+      "text": "",
+      "id": null,
+      "domPath": "section.wysiwyg.section-padding > div.container > div.row > div.col-xxs-12 > div.wysiwyg-wrapper > h3",
+      "style": {
+        "fontFamily": "\"Roboto Condensed\", sans-serif",
+        "fontWeight": "700",
+        "fontSize": "40px",
+        "lineHeight": "52px",
+        "letterSpacing": "normal",
+        "color": "rgb(39, 39, 39)"
+      }
+    },
+    {
+      "level": 4,
+      "text": "QUICK LINKS",
+      "id": null,
+      "domPath": "footer.page-footer > div.container > div.row > div.col-lg-3.col-sm-6 > div.footer-link > h4",
+      "style": {
+        "fontFamily": "\"Roboto Condensed\", sans-serif",
+        "fontWeight": "700",
+        "fontSize": "24px",
+        "lineHeight": "31.2px",
+        "letterSpacing": "normal",
+        "color": "rgb(255, 255, 255)"
+      }
+    },
+    {
+      "level": 4,
+      "text": "CONTACT US",
+      "id": null,
+      "domPath": "footer.page-footer > div.container > div.row > div.col-lg-5.col-sm-6 > div.footer-address > h4",
+      "style": {
+        "fontFamily": "\"Roboto Condensed\", sans-serif",
+        "fontWeight": "700",
+        "fontSize": "24px",
+        "lineHeight": "31.2px",
+        "letterSpacing": "normal",
+        "color": "rgb(255, 255, 255)"
+      }
+    },
+    {
+      "level": 4,
+      "text": "CONNECT WITH US",
+      "id": null,
+      "domPath": "footer.page-footer > div.container > div.row > div.col-lg-4.col-sm-6 > div.footer-social > h4",
+      "style": {
+        "fontFamily": "\"Roboto Condensed\", sans-serif",
+        "fontWeight": "700",
+        "fontSize": "24px",
+        "lineHeight": "31.2px",
+        "letterSpacing": "normal",
+        "color": "rgb(255, 255, 255)"
+      }
+    }
+  ],
+  "landmarks": [
+    {
+      "tag": "header",
+      "role": null,
+      "id": "page-header",
+      "classes": [
+        "page-c-header",
+        "page-c-header--header",
+        "header-sticky"
+      ],
+      "innerText": "Login\nNEW EQUIPMENT\nUSED EQUIPMENT\nRENT NOW\nORDER PARTS\nREQUEST SERVICE\nGET TRAINING\nCREDIT APP\n801-436-3672\nQuotes\nOffers\nAttachments\nTrailers\nPower Systems\nParts\nService\nTechnology\nSupport\nJobs",
+      "children": [
+        {
+          "tag": "div",
+          "role": null,
+          "id": null,
+          "classes": [
+            "c-header-top",
+            "container"
+          ],
+          "purpose": "unknown",
+          "headlineRef": -1,
+          "innerTextSummary": "Login\nNEW EQUIPMENT\nUSED EQUIPMENT\nRENT NOW\nORDER PARTS\nREQUEST SERVICE\nGET TRAINING\nCREDIT APP\n801-436-3672",
+          "wordCount": 16,
+          "body": [],
+          "lists": [],
+          "qa": [],
+          "quotes": []
+        },
+        {
+          "tag": "div",
+          "role": null,
+          "id": null,
+          "classes": [
+            "c-header-main-nav"
+          ],
+          "purpose": "unknown",
+          "headlineRef": -1,
+          "innerTextSummary": "Quotes\nOffers\nAttachments\nTrailers\nPower Systems\nParts\nService\nTechnology\nSupport\nJobs",
+          "wordCount": 11,
+          "body": [],
+          "lists": [],
+          "qa": [],
+          "quotes": []
+        }
+      ]
+    },
+    {
+      "tag": "nav",
+      "role": null,
+      "id": "ubermenu-main-383-main_menu-2",
+      "classes": [
+        "ubermenu",
+        "ubermenu-main",
+        "ubermenu-menu-383",
+        "ubermenu-loc-main_menu",
+        "ubermenu-responsive",
+        "ubermenu-responsive-single-column"
+      ],
+      "innerText": "Quotes\nOffers\nAttachments\nTrailers\nPower Systems\nParts\nService\nTechnology\nSupport\nJobs",
+      "children": []
+    },
+    {
+      "tag": "header",
+      "role": null,
+      "id": "page-header",
+      "classes": [
+        "page-c-header-m",
+        "header-sticky"
+      ],
+      "innerText": "Menu\n                \n                \n                    <img width=\"268\" height=\"67\" src=\"https://wheelercat.com/wp-content/uploads/2023/06/Wheeler-Logo-border-e1685733632890.png\" class=\"logo\" alt=\"Wheeler Machinery\" decoding=\"async\" />                \n                \n                \n            \n\n            \n                \n                    \n                        \n                            \n                                        \n                                                \n                                            \n                                        \n                                                \n                                            \n                                        \n                                                \n                                            \n                                        \n                                                \n                                            \n                                        \n                        \n                    \n                    \n                        \n                    \n                \n                \n                    \n\n LoginOnline PaymentsRental PortalParts.Cat.comSIS 2.0Vision LinkEmployee LoginSponsorships\n\n                \n                \n                    \n\n NEW EQUIPMENTUSED EQUIPMENTRENT NOWORDER PARTSREQUEST SERVICEGET TRAININGCREDIT APP 801-436-3672\n\n                \n                \n                    \n\n QuotesOffersAttachmentsTrailersPower SystemsPartsServiceTechnologySupportJobs\n\n                \n            \n        \n        \n            \n            \t\t\n\t\t\t\n\t\t\t\t\t\t\t#searchwp-form-5 .swp-input,\n                #searchwp-form-5 .swp-select {\n                    border: 1px solid #000000;\n                    border-radius: 5px;\n                }\n\t\t\t\t#searchwp-form-5 .searchwp-form-input-container .swp-select {\n                    border-top-right-radius: 0;\n                    border-bottom-right-radius: 0;\n                    border-right: 0;\n                }\n\t\t\t\t#searchwp-form-5 .searchwp-form-input-container .swp-select + .swp-input {\n                    border-top-left-radius: 0;\n                    border-bottom-left-radius: 0;\n                }\n\t\t\t\t#searchwp-form-5 input[type=submit] {\n                    border-radius: 5px;\n                }\n\t\t\t\n\t\t\t\n\t\t\t                #searchwp-form-5 .swp-toggle-checkbox:checked + .swp-toggle-switch,\n                #searchwp-form-5 .swp-toggle-switch--checked  {\n                    background: #000000;\n                }\n\t\t\t\n\t\t\t\n\t\t\t\t\t\t\t#searchwp-form-5 input[type=submit] {\n                    background-color: #ffcc01;\n                }",
+      "children": [
+        {
+          "tag": "div",
+          "role": null,
+          "id": null,
+          "classes": [
+            "page-c-header-m__wrap"
+          ],
+          "purpose": "unknown",
+          "headlineRef": -1,
+          "innerTextSummary": "Menu\n                \n                \n                    <img width=\"268\" height=\"67\" src=\"https://wheelercat.com/wp-content/uploads/2023/06/Wheeler-Logo-border-e1685733632890.png\" class=\"logo\" alt=\"Wheeler Machinery\" decoding=\"async\" /> ",
+          "wordCount": 27,
+          "body": [],
+          "lists": [],
+          "qa": [],
+          "quotes": []
+        },
+        {
+          "tag": "div",
+          "role": null,
+          "id": null,
+          "classes": [
+            "c-header-top__search",
+            "c-header-top__search--mobile"
+          ],
+          "purpose": "unknown",
+          "headlineRef": -1,
+          "innerTextSummary": "#searchwp-form-5 .swp-input,\n                #searchwp-form-5 .swp-select {\n                    border: 1px solid #000000;\n                    border-radius: 5px;\n                }\n\t\t\t\t#searchwp-form-5 .searchwp-form-input-container .swp-se",
+          "wordCount": 56,
+          "body": [],
+          "lists": [],
+          "qa": [],
+          "quotes": []
+        }
+      ]
+    },
+    {
+      "tag": "nav",
+      "role": null,
+      "id": "ubermenu-main-525",
+      "classes": [
+        "ubermenu",
+        "ubermenu-main",
+        "ubermenu-menu-525",
+        "ubermenu-responsive",
+        "ubermenu-responsive-single-column",
+        "ubermenu-responsive-single-column-subs"
+      ],
+      "innerText": "LoginOnline PaymentsRental PortalParts.Cat.comSIS 2.0Vision LinkEmployee LoginSponsorships",
+      "children": []
+    },
+    {
+      "tag": "nav",
+      "role": null,
+      "id": "ubermenu-main-510",
+      "classes": [
+        "ubermenu",
+        "ubermenu-main",
+        "ubermenu-menu-510",
+        "ubermenu-responsive",
+        "ubermenu-responsive-single-column",
+        "ubermenu-responsive-single-column-subs"
+      ],
+      "innerText": "NEW EQUIPMENTUSED EQUIPMENTRENT NOWORDER PARTSREQUEST SERVICEGET TRAININGCREDIT APP 801-436-3672",
+      "children": []
+    },
+    {
+      "tag": "nav",
+      "role": null,
+      "id": "ubermenu-main-383-main_menu-4",
+      "classes": [
+        "ubermenu",
+        "ubermenu-main",
+        "ubermenu-menu-383",
+        "ubermenu-loc-main_menu",
+        "ubermenu-responsive",
+        "ubermenu-responsive-single-column"
+      ],
+      "innerText": "QuotesOffersAttachmentsTrailersPower SystemsPartsServiceTechnologySupportJobs",
+      "children": []
+    },
+    {
+      "tag": "footer",
+      "role": null,
+      "id": null,
+      "classes": [
+        "page-footer"
+      ],
+      "innerText": "QUICK LINKS\nSALES\nRENTALS\nCAT PARTS\nSERVICE\nLOCATIONS\nCONTACT\nABOUT\nSPONSORSHIP\nCONTACT US\n\n4901 West 2100 South,\nSalt Lake City,\nUT 84120\n\n801-436-3672\nCONNECT WITH US\nSitemap\nLegal\nCopyright © 2026. All Rights Reserved.\nA Campbell Company",
+      "children": [
+        {
+          "tag": "div",
+          "role": null,
+          "id": null,
+          "classes": [
+            "container"
+          ],
+          "purpose": "unknown",
+          "headlineRef": 8,
+          "innerTextSummary": "QUICK LINKS\nSALES\nRENTALS\nCAT PARTS\nSERVICE\nLOCATIONS\nCONTACT\nABOUT\nSPONSORSHIP\nCONTACT US\n\n4901 West 2100 South,\nSalt Lake City,\nUT 84120\n\n801-436-3672\nCONNECT WITH US\nSitemap\nLegal\nCopyright © 2026. All Rights Reserved.\nA Campbell Company",
+          "wordCount": 37,
+          "body": [],
+          "lists": [],
+          "qa": [],
+          "quotes": []
+        },
+        {
+          "tag": "div",
+          "role": null,
+          "id": null,
+          "classes": [
+            "back-top-btn",
+            "ease--out"
+          ],
+          "purpose": "unknown",
+          "headlineRef": -1,
+          "innerTextSummary": "",
+          "wordCount": 0,
+          "body": [],
+          "lists": [],
+          "qa": [],
+          "quotes": []
+        }
+      ]
+    },
+    {
+      "tag": "nav",
+      "role": null,
+      "id": null,
+      "classes": [
+        "footer-navigation"
+      ],
+      "innerText": "SALES\nRENTALS\nCAT PARTS\nSERVICE\nLOCATIONS\nCONTACT\nABOUT\nSPONSORSHIP",
+      "children": []
+    }
+  ],
+  "ctas": [
+    {
+      "label": "FINANCIAL CALCULATOR",
+      "href": "https://www.cat.com/en_US/support/financing-protection/resources/tools-calculators/payment-calculator.html?utm_source=wheelercat&utm_medium=calc-button&utm_campaign=cat-financial",
+      "tag": "a",
+      "domPath": "div.container > div.row > div.col-xxs-12 > div.wysiwyg-wrapper > p > a.btn.btn-primary",
+      "style": {
+        "backgroundColor": "rgb(255, 204, 0)",
+        "color": "rgb(0, 0, 0)",
+        "fontFamily": "\"Roboto Condensed\", sans-serif",
+        "fontWeight": "700",
+        "borderRadius": "5px",
+        "padding": "18px 30px",
+        "boxShadow": "none"
+      },
+      "appearsAbove": "below-fold"
+    },
+    {
+      "label": "APPLY NOW",
+      "href": "https://www.campbellcompanies.com/credit/",
+      "tag": "a",
+      "domPath": "div.container > div.row > div.col-xxs-12 > div.wysiwyg-wrapper > p > a.btn.btn-secondary",
+      "style": {
+        "backgroundColor": "rgb(255, 255, 255)",
+        "color": "rgb(0, 0, 0)",
+        "fontFamily": "\"Roboto Condensed\", sans-serif",
+        "fontWeight": "700",
+        "borderRadius": "5px",
+        "padding": "18px 30px",
+        "boxShadow": "none"
+      },
+      "appearsAbove": "below-fold"
+    },
+    {
+      "label": "OPEN CREDIT ACCOUNT",
+      "href": "https://www.campbellcompanies.com/credit/",
+      "tag": "a",
+      "domPath": "div.container > div.row > div.col-xxs-12 > div.wysiwyg-wrapper > p > a.btn.btn-primary",
+      "style": {
+        "backgroundColor": "rgb(255, 204, 0)",
+        "color": "rgb(0, 0, 0)",
+        "fontFamily": "\"Roboto Condensed\", sans-serif",
+        "fontWeight": "700",
+        "borderRadius": "5px",
+        "padding": "18px 30px",
+        "boxShadow": "none"
+      },
+      "appearsAbove": "below-fold"
+    },
+    {
+      "label": "DOWNLOAD W-9",
+      "href": "https://wheelercat.com/wp-content/uploads/2023/05/W9-Wheeler-2023.pdf",
+      "tag": "a",
+      "domPath": "div.container > div.row > div.col-xxs-12 > div.wysiwyg-wrapper > p > a.btn.btn-secondary",
+      "style": {
+        "backgroundColor": "rgb(255, 255, 255)",
+        "color": "rgb(0, 0, 0)",
+        "fontFamily": "\"Roboto Condensed\", sans-serif",
+        "fontWeight": "700",
+        "borderRadius": "5px",
+        "padding": "18px 30px",
+        "boxShadow": "none"
+      },
+      "appearsAbove": "below-fold"
+    },
+    {
+      "label": "APPLY NOW",
+      "href": "https://mycatfinancial.com/s/apply?language=en_US&utm_source=wheelercat&utm_medium=cc-button-support&utm_campaign=cat-credit",
+      "tag": "a",
+      "domPath": "div.full-width-image-text__content.left > table > tbody > tr > td > a.btn.btn-primary",
+      "style": {
+        "backgroundColor": "rgb(255, 204, 0)",
+        "color": "rgb(0, 0, 0)",
+        "fontFamily": "\"Roboto Condensed\", sans-serif",
+        "fontWeight": "700",
+        "borderRadius": "5px",
+        "padding": "18px 30px",
+        "boxShadow": "none"
+      },
+      "appearsAbove": "below-fold"
+    },
+    {
+      "label": "LEARN MORE",
+      "href": "https://wheelercat.com/cat-rewards/",
+      "tag": "a",
+      "domPath": "div.full-width-image-text__content.left > table > tbody > tr > td > a.btn.btn-primary",
+      "style": {
+        "backgroundColor": "rgb(255, 204, 0)",
+        "color": "rgb(0, 0, 0)",
+        "fontFamily": "\"Roboto Condensed\", sans-serif",
+        "fontWeight": "700",
+        "borderRadius": "5px",
+        "padding": "18px 30px",
+        "boxShadow": "none"
+      },
+      "appearsAbove": "below-fold"
+    },
+    {
+      "label": "CURRENT SPECIALS",
+      "href": "https://wheelercat.com/specials/",
+      "tag": "a",
+      "domPath": "div.bialty-container > section.half-and-half.half-and-half--inner > div.half-and-half-text.half-and-half-text--inner > div.half-and-half-text__wrapper > p > a.btn.btn-secondary",
+      "style": {
+        "backgroundColor": "rgb(255, 255, 255)",
+        "color": "rgb(0, 0, 0)",
+        "fontFamily": "\"Roboto Condensed\", sans-serif",
+        "fontWeight": "700",
+        "borderRadius": "5px",
+        "padding": "18px 30px",
+        "boxShadow": "none"
+      },
+      "appearsAbove": "below-fold"
+    },
+    {
+      "label": "LOGIN",
+      "href": "https://mycatfinancial.com/GC_Login?ec=302&startURL=%2Fs%2F&utm_source=wheelercat&utm_medium=cf-button-login&utm_campaign=cat-finance",
+      "tag": "a",
+      "domPath": "div.container > div.row > div.col-md-12 > div.full-width-image-text__content.right > p > a.btn.btn-primary",
+      "style": {
+        "backgroundColor": "rgb(255, 204, 0)",
+        "color": "rgb(0, 0, 0)",
+        "fontFamily": "\"Roboto Condensed\", sans-serif",
+        "fontWeight": "700",
+        "borderRadius": "5px",
+        "padding": "18px 30px",
+        "boxShadow": "none"
+      },
+      "appearsAbove": "below-fold"
+    },
+    {
+      "label": "VISIT CAT FINANCIAL",
+      "href": "https://www.cat.com/en_ID/support/financing-protection.html?utm_source=wheelercat&utm_medium=cf-button-support&utm_campaign=cat-finance",
+      "tag": "a",
+      "domPath": "div.container > div.row > div.col-md-12 > div.full-width-image-text__content.right > p > a.btn.btn-secondary",
+      "style": {
+        "backgroundColor": "rgb(255, 255, 255)",
+        "color": "rgb(0, 0, 0)",
+        "fontFamily": "\"Roboto Condensed\", sans-serif",
+        "fontWeight": "700",
+        "borderRadius": "5px",
+        "padding": "18px 30px",
+        "boxShadow": "none"
+      },
+      "appearsAbove": "below-fold"
+    },
+    {
+      "label": "LEARN MORE",
+      "href": "https://sfsutah.com/?utm_source=wheelercat&utm_medium=sfs-button-learn-more&utm_campaign=sfsutah",
+      "tag": "a",
+      "domPath": "div.container > div.row > div.col-xxs-12 > div.wysiwyg-wrapper > p > a.btn.btn-primary",
+      "style": {
+        "backgroundColor": "rgb(255, 204, 0)",
+        "color": "rgb(0, 0, 0)",
+        "fontFamily": "\"Roboto Condensed\", sans-serif",
+        "fontWeight": "700",
+        "borderRadius": "5px",
+        "padding": "18px 30px",
+        "boxShadow": "none"
+      },
+      "appearsAbove": "below-fold"
+    }
+  ],
+  "links": {
+    "internal": [
+      {
+        "href": "/",
+        "text": "<img width=\"268\" height=\"67\" src=\"https://wheelercat.com/wp-content/uploads/2023/06/Wheeler-Logo-border-e1685733632890.p",
+        "domPath": "header#page-header > div.c-header-top.container > div.container.c-header-top__cont > div.c-header-top__site-logo-container > a.c-header-top__site-logo"
+      },
+      {
+        "href": "/about/locations/",
+        "text": "",
+        "domPath": "header#page-header > div.c-header-top.container > div.container.c-header-top__cont > div.c-header-top__header-call > a.c-header-top__header-loc-pin"
+      },
+      {
+        "href": "/contact-us/",
+        "text": "<img width=\"65\" height=\"45\" src=\"/wp-content/uploads/2023/04/mail.png\"/>",
+        "domPath": "header#page-header > div.c-header-top.container > div.container.c-header-top__cont > div.c-header-top__header-call > a.c-header-top__header-email-mail"
+      },
+      {
+        "href": "/sponsorships/",
+        "text": "Sponsorships",
+        "domPath": "li#menu-item-74232 > a"
+      },
+      {
+        "href": "/new/",
+        "text": "NEW EQUIPMENT",
+        "domPath": "li#menu-item-51828 > a"
+      },
+      {
+        "href": "/used-equipment/machinery/",
+        "text": "USED EQUIPMENT",
+        "domPath": "li#menu-item-48727 > a"
+      },
+      {
+        "href": "/rental/",
+        "text": "RENT NOW",
+        "domPath": "li#menu-item-48502 > a"
+      },
+      {
+        "href": "/request-service/",
+        "text": "REQUEST SERVICE",
+        "domPath": "li#menu-item-48977 > a"
+      },
+      {
+        "href": "/credit-application/",
+        "text": "CREDIT APP",
+        "domPath": "li#menu-item-48609 > a"
+      },
+      {
+        "href": "/contact-us/",
+        "text": "801-436-3672",
+        "domPath": "li#menu-item-75054 > a"
+      },
+      {
+        "href": "/machine-quote-request/",
+        "text": "Quotes",
+        "domPath": "li#menu-item-76791 > a.ubermenu-target.ubermenu-item-layout-default"
+      },
+      {
+        "href": "/specials/",
+        "text": "Offers",
+        "domPath": "li#menu-item-42024 > a.ubermenu-target.ubermenu-item-layout-default"
+      },
+      {
+        "href": "/new/attachments/",
+        "text": "Attachments",
+        "domPath": "li#menu-item-76795 > a.ubermenu-target.ubermenu-item-layout-default"
+      },
+      {
+        "href": "/trailers/",
+        "text": "Trailers",
+        "domPath": "li#menu-item-56995 > a.ubermenu-target.ubermenu-item-layout-default"
+      },
+      {
+        "href": "/power/",
+        "text": "Power Systems",
+        "domPath": "li#menu-item-53659 > a.ubermenu-target.ubermenu-item-layout-default"
+      },
+      {
+        "href": "/parts/",
+        "text": "Parts",
+        "domPath": "li#menu-item-2994 > a.ubermenu-target.ubermenu-item-layout-default"
+      },
+      {
+        "href": "/service",
+        "text": "Service",
+        "domPath": "li#menu-item-2995 > a.ubermenu-target.ubermenu-item-layout-default"
+      },
+      {
+        "href": "/technology/",
+        "text": "Technology",
+        "domPath": "li#menu-item-50499 > a.ubermenu-target.ubermenu-item-layout-default"
+      },
+      {
+        "href": "/support",
+        "text": "Support",
+        "domPath": "li#menu-item-46687 > a.ubermenu-target.ubermenu-item-layout-default"
+      },
+      {
+        "href": "/careers/",
+        "text": "Jobs",
+        "domPath": "li#menu-item-52481 > a.ubermenu-target.ubermenu-item-layout-default"
+      },
+      {
+        "href": "/contact-us/",
+        "text": "",
+        "domPath": "header#page-header > div.page-c-header-m__wrap > div.page-c-header-m__menu > ul.mobile-custom-menu > li > a.c-header-top__header-email-mail--mobile"
+      },
+      {
+        "href": "/about/",
+        "text": "Back to About Us",
+        "domPath": "body.wp-singular.page-template-default > section.masthead.masthead--innerpage > div.masthead__content.masthead--innerpage-details > div.container > div.breadcrumbs.hidden-lg > a"
+      },
+      {
+        "href": "/",
+        "text": "Home",
+        "domPath": "div.masthead__content.masthead--innerpage-details > div.container > div.breadcrumbs.hidden-md-down > ul.clearfix > li > a"
+      },
+      {
+        "href": "/about/",
+        "text": "About Us",
+        "domPath": "div.masthead__content.masthead--innerpage-details > div.container > div.breadcrumbs.hidden-md-down > ul.clearfix > li > a"
+      },
+      {
+        "href": "/wp-content/uploads/2023/05/W9-Wheeler-2023.pdf",
+        "text": "DOWNLOAD W-9",
+        "domPath": "div.container > div.row > div.col-xxs-12 > div.wysiwyg-wrapper > p > a.btn.btn-secondary"
+      },
+      {
+        "href": "/cat-rewards/",
+        "text": "LEARN MORE",
+        "domPath": "div.full-width-image-text__content.left > table > tbody > tr > td > a.btn.btn-primary"
+      },
+      {
+        "href": "/specials/",
+        "text": "CURRENT SPECIALS",
+        "domPath": "div.bialty-container > section.half-and-half.half-and-half--inner > div.half-and-half-text.half-and-half-text--inner > div.half-and-half-text__wrapper > p > a.btn.btn-secondary"
+      },
+      {
+        "href": "/equipment/",
+        "text": "SALES",
+        "domPath": "li#menu-item-3148 > a"
+      },
+      {
+        "href": "/rental/",
+        "text": "RENTALS",
+        "domPath": "li#menu-item-79193 > a"
+      },
+      {
+        "href": "/parts/",
+        "text": "CAT PARTS",
+        "domPath": "li#menu-item-3150 > a"
+      },
+      {
+        "href": "/service-old/",
+        "text": "SERVICE",
+        "domPath": "li#menu-item-3151 > a"
+      },
+      {
+        "href": "/about/locations/",
+        "text": "LOCATIONS",
+        "domPath": "li#menu-item-49060 > a"
+      },
+      {
+        "href": "/contact-us/",
+        "text": "CONTACT",
+        "domPath": "li#menu-item-44833 > a"
+      },
+      {
+        "href": "/about/",
+        "text": "ABOUT",
+        "domPath": "li#menu-item-50160 > a"
+      },
+      {
+        "href": "/sponsorships/",
+        "text": "SPONSORSHIP",
+        "domPath": "li#menu-item-74233 > a"
+      },
+      {
+        "href": "/sitemap/",
+        "text": "Sitemap",
+        "domPath": "footer.page-footer > div.container > div.footer-nav > ul.clearfix > li.footer-nav__item > a.footer-nav__link"
+      },
+      {
+        "href": "/legal/",
+        "text": "Legal",
+        "domPath": "footer.page-footer > div.container > div.footer-nav > ul.clearfix > li.footer-nav__item > a.footer-nav__link"
+      }
+    ],
+    "external": [
+      {
+        "href": "https://accessibe.com/blog/knowledgebase/screen-reader-guide",
+        "text": "Accessibility Screen-Reader Guide, Feedback, and Issue Reporting | New window",
+        "domPath": "body.wp-singular.page-template-default > a.acsb-sr-only"
+      },
+      {
+        "href": "https://www.mywheeler.net/",
+        "text": "Login",
+        "domPath": "li#menu-item-48757 > a.external"
+      },
+      {
+        "href": "https://my.wheelercat.com/",
+        "text": "Online Payments",
+        "domPath": "li#menu-item-48805 > a"
+      },
+      {
+        "href": "https://www.catrentalstore.com/wheeler/en_US/home.html?utm_content=cat_rental_portal&utm_source=wheelermachinery_login&utm_medium=referral&utm_campaign=rental&utm_term=rental_portal",
+        "text": "Rental Portal",
+        "domPath": "li#menu-item-48806 > a.external"
+      },
+      {
+        "href": "https://parts.cat.com/en/wheelermachinery?utm_content=loginmenu&utm_source=wheelermachinery&utm_medium=referral&utm_campaign=pcc&utm_term=login_menu",
+        "text": "Parts.Cat.com",
+        "domPath": "li#menu-item-48807 > a.external"
+      },
+      {
+        "href": "https://sis2.cat.com/",
+        "text": "SIS 2.0",
+        "domPath": "li#menu-item-48809 > a.external"
+      },
+      {
+        "href": "https://www.myvisionlink.com/cat",
+        "text": "Vision Link",
+        "domPath": "li#menu-item-48810 > a.external"
+      },
+      {
+        "href": "https://my.campbellcompanies.com/",
+        "text": "Employee Login",
+        "domPath": "li#menu-item-48811 > a.external"
+      },
+      {
+        "href": "https://parts.cat.com/en/wheelermachinery?utm_content=wheelermachinery_na_pcc&utm_source=wheelercat.com&utm_medium=referral&utm_campaign=wheelercat_na_2025&utm_term=cat_parts",
+        "text": "ORDER PARTS",
+        "domPath": "li#menu-item-48728 > a"
+      },
+      {
+        "href": "https://specials.wheelercat.com/wti",
+        "text": "GET TRAINING",
+        "domPath": "li#menu-item-49912 > a"
+      },
+      {
+        "href": "https://www.cat.com/en_US/support/financing-protection/resources/tools-calculators/payment-calculator.html?utm_source=wheelercat&utm_medium=calc-button&utm_campaign=cat-financial",
+        "text": "FINANCIAL CALCULATOR",
+        "domPath": "div.container > div.row > div.col-xxs-12 > div.wysiwyg-wrapper > p > a.btn.btn-primary"
+      },
+      {
+        "href": "https://www.campbellcompanies.com/credit/",
+        "text": "APPLY NOW",
+        "domPath": "div.container > div.row > div.col-xxs-12 > div.wysiwyg-wrapper > p > a.btn.btn-secondary"
+      },
+      {
+        "href": "https://www.campbellcompanies.com/credit/",
+        "text": "OPEN CREDIT ACCOUNT",
+        "domPath": "div.container > div.row > div.col-xxs-12 > div.wysiwyg-wrapper > p > a.btn.btn-primary"
+      },
+      {
+        "href": "https://mycatfinancial.com/s/apply?language=en_US&utm_source=wheelercat&utm_medium=cc-button-support&utm_campaign=cat-credit",
+        "text": "APPLY NOW",
+        "domPath": "div.full-width-image-text__content.left > table > tbody > tr > td > a.btn.btn-primary"
+      },
+      {
+        "href": "https://mycatfinancial.com/GC_Login?ec=302&startURL=%2Fs%2F&utm_source=wheelercat&utm_medium=cf-button-login&utm_campaign=cat-finance",
+        "text": "LOGIN",
+        "domPath": "div.container > div.row > div.col-md-12 > div.full-width-image-text__content.right > p > a.btn.btn-primary"
+      },
+      {
+        "href": "https://www.cat.com/en_ID/support/financing-protection.html?utm_source=wheelercat&utm_medium=cf-button-support&utm_campaign=cat-finance",
+        "text": "VISIT CAT FINANCIAL",
+        "domPath": "div.container > div.row > div.col-md-12 > div.full-width-image-text__content.right > p > a.btn.btn-secondary"
+      },
+      {
+        "href": "https://sfsutah.com/?utm_source=wheelercat&utm_medium=sfs-button-learn-more&utm_campaign=sfsutah",
+        "text": "LEARN MORE",
+        "domPath": "div.container > div.row > div.col-xxs-12 > div.wysiwyg-wrapper > p > a.btn.btn-primary"
+      },
+      {
+        "href": "https://www.facebook.com/wheelermachinery/",
+        "text": "",
+        "domPath": "div.row > div.col-lg-4.col-sm-6 > div.footer-social > ul.clearfix > li.footer-social__item > a.footer-social__link.external"
+      },
+      {
+        "href": "https://www.instagram.com/wheelermachinery/",
+        "text": "",
+        "domPath": "div.row > div.col-lg-4.col-sm-6 > div.footer-social > ul.clearfix > li.footer-social__item > a.footer-social__link.external"
+      },
+      {
+        "href": "https://twitter.com/wheelercat",
+        "text": "",
+        "domPath": "div.row > div.col-lg-4.col-sm-6 > div.footer-social > ul.clearfix > li.footer-social__item > a.footer-social__link.external"
+      },
+      {
+        "href": "https://www.linkedin.com/company/wheelercat/",
+        "text": "",
+        "domPath": "div.row > div.col-lg-4.col-sm-6 > div.footer-social > ul.clearfix > li.footer-social__item > a.footer-social__link.external"
+      },
+      {
+        "href": "https://www.youtube.com/c/WheelerMachineryCo",
+        "text": "",
+        "domPath": "div.row > div.col-lg-4.col-sm-6 > div.footer-social > ul.clearfix > li.footer-social__item > a.footer-social__link.external"
+      },
+      {
+        "href": "https://campbellcompanies.com/",
+        "text": "A Campbell Company",
+        "domPath": "footer.page-footer > div.container > div.footer-nav > ul.clearfix > li.footer-nav__item > a.footer-nav__link.external"
+      }
+    ]
+  },
+  "media": {
+    "images": [
+      {
+        "src": "https://wheelercat.com/wp-content/uploads/2023/06/Wheeler-Logo-border-e1685733632890.png",
+        "srcset": null,
+        "alt": "Wheeler Machinery",
+        "naturalWidth": 268,
+        "naturalHeight": 67,
+        "localPath": "current/assets/media/Wheeler-Logo-border-e1685733632890-1facfc.png"
+      },
+      {
+        "src": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2065%2045'%3E%3C/svg%3E",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 217,
+        "naturalHeight": 150,
+        "localPath": null
+      },
+      {
+        "src": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20268%2067'%3E%3C/svg%3E",
+        "srcset": null,
+        "alt": "Wheeler Machinery",
+        "naturalWidth": 300,
+        "naturalHeight": 75,
+        "localPath": null
+      },
+      {
+        "src": "https://wheelercat.com/wp-content/uploads/2023/04/CM20200724.webp",
+        "srcset": "https://wheelercat.com/wp-content/uploads/2023/04/CM20200724.webp 1920w, https://wheelercat.com/wp-content/uploads/2023/04/CM20200724-300x103.webp 300w, https://wheelercat.com/wp-content/uploads/2023/04/CM20200724-1024x353.webp 1024w, https://wheelercat.com/wp-content/uploads/2023/04/CM20200724-768x265.webp 768w, https://wheelercat.com/wp-content/uploads/2023/04/CM20200724-1536x530.webp 1536w, https://wheelercat.com/wp-content/uploads/2023/04/CM20200724-1740x600.webp 1740w",
+        "alt": "Cat machines working at a jobsite",
+        "naturalWidth": 1440,
+        "naturalHeight": 496,
+        "localPath": "current/assets/media/CM20200724-a14096.webp"
+      },
+      {
+        "src": "https://wheelercat.com/wp-content/uploads/2023/04/CM20220314.webp",
+        "srcset": "https://wheelercat.com/wp-content/uploads/2023/04/CM20220314.webp 1919w, https://wheelercat.com/wp-content/uploads/2023/04/CM20220314-300x124.webp 300w, https://wheelercat.com/wp-content/uploads/2023/04/CM20220314-1024x423.webp 1024w, https://wheelercat.com/wp-content/uploads/2023/04/CM20220314-768x317.webp 768w, https://wheelercat.com/wp-content/uploads/2023/04/CM20220314-1536x634.webp 1536w, https://wheelercat.com/wp-content/uploads/2023/04/CM20220314-1454x600.webp 1454w",
+        "alt": "Cat Credit card",
+        "naturalWidth": 1440,
+        "naturalHeight": 594,
+        "localPath": "current/assets/media/CM20220314-97e2c4.webp"
+      },
+      {
+        "src": "https://wheelercat.com/wp-content/uploads/2022/08/C686484.jpg",
+        "srcset": "https://wheelercat.com/wp-content/uploads/2022/08/C686484.jpg 2126w, https://wheelercat.com/wp-content/uploads/2022/08/C686484-300x200.jpg 300w, https://wheelercat.com/wp-content/uploads/2022/08/C686484-1024x683.jpg 1024w, https://wheelercat.com/wp-content/uploads/2022/08/C686484-768x512.jpg 768w, https://wheelercat.com/wp-content/uploads/2022/08/C686484-1536x1024.jpg 1536w, https://wheelercat.com/wp-content/uploads/2022/08/C686484-2048x1365.jpg 2048w, https://wheelercat.com/wp-content/uploads/2022/08/C686484-900x600.jpg 900w",
+        "alt": "Financing your construction equipment with Wheeler Machinery Co. is a simple process to help your business grow.",
+        "naturalWidth": 1440,
+        "naturalHeight": 959,
+        "localPath": "current/assets/media/C686484-6b95d2.jpg"
+      },
+      {
+        "src": "https://wheelercat.com/wp-content/uploads/2022/08/full-img.jpg",
+        "srcset": "https://wheelercat.com/wp-content/uploads/2022/08/full-img.jpg 1919w, https://wheelercat.com/wp-content/uploads/2022/08/full-img-300x124.jpg 300w, https://wheelercat.com/wp-content/uploads/2022/08/full-img-1024x423.jpg 1024w, https://wheelercat.com/wp-content/uploads/2022/08/full-img-768x317.jpg 768w, https://wheelercat.com/wp-content/uploads/2022/08/full-img-1536x634.jpg 1536w, https://wheelercat.com/wp-content/uploads/2022/08/full-img-1454x600.jpg 1454w",
+        "alt": "Financing Options",
+        "naturalWidth": 1440,
+        "naturalHeight": 594,
+        "localPath": "current/assets/media/full-img-5e7394.jpg"
+      },
+      {
+        "src": "https://wheelercat.com/wp-content/uploads/2022/08/SFS-Logo.png",
+        "srcset": "https://wheelercat.com/wp-content/uploads/2022/08/SFS-Logo-300x104.png 300w, https://wheelercat.com/wp-content/uploads/2022/08/SFS-Logo.png 538w",
+        "alt": "Financing Options",
+        "naturalWidth": 300,
+        "naturalHeight": 104,
+        "localPath": "current/assets/media/SFS-Logo-2879bf.png"
+      },
+      {
+        "src": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20268%2067'%3E%3C/svg%3E",
+        "srcset": null,
+        "alt": "Wheeler Machinery",
+        "naturalWidth": 300,
+        "naturalHeight": 75,
+        "localPath": null
+      }
+    ],
+    "inlineSvgs": [
+      {
+        "viewBox": "0 0 512 512",
+        "domPath": "div.page-c-header-m__wrap > div.page-c-header-m__menu > ul.mobile-custom-menu > li > a.c-header-top__header-email-mail--mobile > svg",
+        "markupHash": null
+      }
+    ],
+    "cssBackgrounds": [],
+    "videos": [],
+    "iframes": [
+      {
+        "src": null,
+        "title": "archetype"
+      },
+      {
+        "src": null,
+        "title": null
+      },
+      {
+        "src": "https://insight.adsrvr.org/track/cei?advertiser_id=3mfjrz3&cookie_sync=1&upv=3.0.0&upid=zfuxbqz&ref=https://wheelercat.com/about/financing/",
+        "title": "TTD Universal Pixel"
+      }
+    ]
+  },
+  "forms": [
+    {
+      "action": "https://wheelercat.com/",
+      "method": "get",
+      "fields": [
+        {
+          "type": "hidden",
+          "name": "swp_form[form_id]",
+          "label": "swp_form[form_id]",
+          "required": false
+        },
+        {
+          "type": "search",
+          "name": "swps",
+          "label": "What can we help you find?",
+          "required": false
+        },
+        {
+          "type": "hidden",
+          "name": "_mcfx_submission_id",
+          "label": "_mcfx_submission_id",
+          "required": false
+        }
+      ],
+      "thirdParty": null
+    },
+    {
+      "action": "https://wheelercat.com/",
+      "method": "get",
+      "fields": [
+        {
+          "type": "hidden",
+          "name": "swp_form[form_id]",
+          "label": "swp_form[form_id]",
+          "required": false
+        },
+        {
+          "type": "search",
+          "name": "swps",
+          "label": "What can we help you find?",
+          "required": false
+        },
+        {
+          "type": "hidden",
+          "name": "_mcfx_submission_id",
+          "label": "_mcfx_submission_id",
+          "required": false
+        }
+      ],
+      "thirdParty": null
+    }
+  ],
+  "widgets": {
+    "modals": [],
+    "accordions": [],
+    "tabs": []
+  },
+  "components": {
+    "cards": {
+      "count": 0,
+      "examples": []
+    },
+    "grids": {
+      "count": 0,
+      "examples": []
+    },
+    "accordions": {
+      "count": 0,
+      "examples": []
+    },
+    "tabs": {
+      "count": 0,
+      "examples": []
+    },
+    "tables": {
+      "count": 1,
+      "examples": []
+    },
+    "modals": {
+      "count": 0,
+      "examples": []
+    },
+    "carousels": {
+      "count": 0,
+      "examples": []
+    },
+    "videos": {
+      "count": 0,
+      "examples": []
+    },
+    "iframes": {
+      "count": 3,
+      "examples": []
+    },
+    "dataVizEmbeds": {
+      "count": 0,
+      "examples": []
+    },
+    "teamTiles": {
+      "count": 0,
+      "examples": []
+    },
+    "pricingTiles": {
+      "count": 0,
+      "examples": []
+    },
+    "testimonialCards": {
+      "count": 0,
+      "examples": []
+    },
+    "logoStrip": {
+      "count": 0,
+      "examples": []
+    },
+    "timeline": {
+      "count": 0,
+      "examples": []
+    },
+    "breadcrumbs": {
+      "count": 3,
+      "examples": []
+    },
+    "statRow": {
+      "count": 0,
+      "examples": []
+    },
+    "ctaBand": {
+      "count": 0,
+      "examples": []
+    },
+    "formFields": {
+      "count": 6,
+      "examples": []
+    },
+    "other": []
+  },
+  "perSectionStyle": [
+    {
+      "sectionRef": "body > span:nth-child(1)",
+      "purpose": "unknown",
+      "background": {
+        "color": "rgba(0, 0, 0, 0)",
+        "hasImage": false,
+        "hasGradient": false
+      },
+      "text": {
+        "dominantColor": "rgb(69, 69, 69)"
+      },
+      "spacing": {
+        "paddingBlock": "0px",
+        "paddingInline": "0px",
+        "gap": "normal"
+      },
+      "borderRadius": "0px",
+      "fontFamilies": [
+        "Roboto, sans-serif"
+      ],
+      "shadowsUsed": []
+    },
+    {
+      "sectionRef": "body > access-widget-ui:nth-child(2)",
+      "purpose": "unknown",
+      "background": {
+        "color": "rgba(0, 0, 0, 0)",
+        "hasImage": false,
+        "hasGradient": false
+      },
+      "text": {
+        "dominantColor": "rgb(0, 0, 0)"
+      },
+      "spacing": {
+        "paddingBlock": "0px",
+        "paddingInline": "0px",
+        "gap": "normal"
+      },
+      "borderRadius": "0px",
+      "fontFamilies": [
+        "Times"
+      ],
+      "shadowsUsed": []
+    },
+    {
+      "sectionRef": "body > a:nth-child(3)",
+      "purpose": "unknown",
+      "background": {
+        "color": "rgba(0, 0, 0, 0)",
+        "hasImage": false,
+        "hasGradient": false
+      },
+      "text": {
+        "dominantColor": "rgb(69, 69, 69)"
+      },
+      "spacing": {
+        "paddingBlock": "0px",
+        "paddingInline": "0px",
+        "gap": "normal"
+      },
+      "borderRadius": "0px",
+      "fontFamilies": [
+        "Roboto, sans-serif"
+      ],
+      "shadowsUsed": []
+    },
+    {
+      "sectionRef": "body > access-widget-ui:nth-child(4)",
+      "purpose": "unknown",
+      "background": {
+        "color": "rgba(0, 0, 0, 0)",
+        "hasImage": false,
+        "hasGradient": false
+      },
+      "text": {
+        "dominantColor": "rgb(0, 0, 0)"
+      },
+      "spacing": {
+        "paddingBlock": "0px",
+        "paddingInline": "0px",
+        "gap": "normal"
+      },
+      "borderRadius": "0px",
+      "fontFamilies": [
+        "Times"
+      ],
+      "shadowsUsed": []
+    },
+    {
+      "sectionRef": "body > access-widget-ui:nth-child(5)",
+      "purpose": "unknown",
+      "background": {
+        "color": "rgba(0, 0, 0, 0)",
+        "hasImage": false,
+        "hasGradient": false
+      },
+      "text": {
+        "dominantColor": "rgb(0, 0, 0)"
+      },
+      "spacing": {
+        "paddingBlock": "0px",
+        "paddingInline": "0px",
+        "gap": "normal"
+      },
+      "borderRadius": "0px",
+      "fontFamilies": [
+        "Times"
+      ],
+      "shadowsUsed": []
+    },
+    {
+      "sectionRef": "body > access-widget-ui:nth-child(6)",
+      "purpose": "unknown",
+      "background": {
+        "color": "rgba(0, 0, 0, 0)",
+        "hasImage": false,
+        "hasGradient": false
+      },
+      "text": {
+        "dominantColor": "rgb(0, 0, 0)"
+      },
+      "spacing": {
+        "paddingBlock": "0px",
+        "paddingInline": "0px",
+        "gap": "normal"
+      },
+      "borderRadius": "0px",
+      "fontFamilies": [
+        "Times"
+      ],
+      "shadowsUsed": []
+    },
+    {
+      "sectionRef": "body > noscript:nth-child(7)",
+      "purpose": "unknown",
+      "background": {
+        "color": "rgba(0, 0, 0, 0)",
+        "hasImage": false,
+        "hasGradient": false
+      },
+      "text": {
+        "dominantColor": "rgb(69, 69, 69)"
+      },
+      "spacing": {
+        "paddingBlock": "0px",
+        "paddingInline": "0px",
+        "gap": "normal"
+      },
+      "borderRadius": "0px",
+      "fontFamilies": [
+        "Roboto, sans-serif"
+      ],
+      "shadowsUsed": []
+    },
+    {
+      "sectionRef": "body > noscript:nth-child(8)",
+      "purpose": "unknown",
+      "background": {
+        "color": "rgba(0, 0, 0, 0)",
+        "hasImage": false,
+        "hasGradient": false
+      },
+      "text": {
+        "dominantColor": "rgb(69, 69, 69)"
+      },
+      "spacing": {
+        "paddingBlock": "0px",
+        "paddingInline": "0px",
+        "gap": "normal"
+      },
+      "borderRadius": "0px",
+      "fontFamilies": [
+        "Roboto, sans-serif"
+      ],
+      "shadowsUsed": []
+    },
+    {
+      "sectionRef": "body > noscript:nth-child(9)",
+      "purpose": "unknown",
+      "background": {
+        "color": "rgba(0, 0, 0, 0)",
+        "hasImage": false,
+        "hasGradient": false
+      },
+      "text": {
+        "dominantColor": "rgb(69, 69, 69)"
+      },
+      "spacing": {
+        "paddingBlock": "0px",
+        "paddingInline": "0px",
+        "gap": "normal"
+      },
+      "borderRadius": "0px",
+      "fontFamilies": [
+        "Roboto, sans-serif"
+      ],
+      "shadowsUsed": []
+    },
+    {
+      "sectionRef": "body > header:nth-child(10)",
+      "purpose": "unknown",
+      "background": {
+        "color": "rgb(255, 255, 255)",
+        "hasImage": false,
+        "hasGradient": false
+      },
+      "text": {
+        "dominantColor": "rgb(69, 69, 69)"
+      },
+      "spacing": {
+        "paddingBlock": "0px",
+        "paddingInline": "0px",
+        "gap": "normal"
+      },
+      "borderRadius": "0px",
+      "fontFamilies": [
+        "Roboto, sans-serif"
+      ],
+      "shadowsUsed": []
+    },
+    {
+      "sectionRef": "body > header:nth-child(11)",
+      "purpose": "unknown",
+      "background": {
+        "color": "rgba(0, 0, 0, 0)",
+        "hasImage": false,
+        "hasGradient": false
+      },
+      "text": {
+        "dominantColor": "rgb(69, 69, 69)"
+      },
+      "spacing": {
+        "paddingBlock": "0px",
+        "paddingInline": "0px",
+        "gap": "normal"
+      },
+      "borderRadius": "0px",
+      "fontFamilies": [
+        "Roboto, sans-serif"
+      ],
+      "shadowsUsed": []
+    },
+    {
+      "sectionRef": "body > section:nth-child(12)",
+      "purpose": "unknown",
+      "background": {
+        "color": "rgba(20, 20, 20, 0.9)",
+        "hasImage": false,
+        "hasGradient": false
+      },
+      "text": {
+        "dominantColor": "rgb(69, 69, 69)"
+      },
+      "spacing": {
+        "paddingBlock": "0px",
+        "paddingInline": "0px",
+        "gap": "normal"
+      },
+      "borderRadius": "0px",
+      "fontFamilies": [
+        "Roboto, sans-serif"
+      ],
+      "shadowsUsed": []
+    },
+    {
+      "sectionRef": "body > article:nth-child(13)",
+      "purpose": "unknown",
+      "background": {
+        "color": "rgba(0, 0, 0, 0)",
+        "hasImage": false,
+        "hasGradient": false
+      },
+      "text": {
+        "dominantColor": "rgb(69, 69, 69)"
+      },
+      "spacing": {
+        "paddingBlock": "0px",
+        "paddingInline": "0px",
+        "gap": "normal"
+      },
+      "borderRadius": "0px",
+      "fontFamilies": [
+        "Roboto, sans-serif"
+      ],
+      "shadowsUsed": []
+    },
+    {
+      "sectionRef": "body > footer:nth-child(14)",
+      "purpose": "unknown",
+      "background": {
+        "color": "rgb(39, 39, 39)",
+        "hasImage": false,
+        "hasGradient": false
+      },
+      "text": {
+        "dominantColor": "rgb(255, 255, 255)"
+      },
+      "spacing": {
+        "paddingBlock": "60px",
+        "paddingInline": "0px",
+        "gap": "normal"
+      },
+      "borderRadius": "0px",
+      "fontFamilies": [
+        "Roboto, sans-serif"
+      ],
+      "shadowsUsed": []
+    },
+    {
+      "sectionRef": "body > script:nth-child(15)",
+      "purpose": "unknown",
+      "background": {
+        "color": "rgba(0, 0, 0, 0)",
+        "hasImage": false,
+        "hasGradient": false
+      },
+      "text": {
+        "dominantColor": "rgb(69, 69, 69)"
+      },
+      "spacing": {
+        "paddingBlock": "0px",
+        "paddingInline": "0px",
+        "gap": "normal"
+      },
+      "borderRadius": "0px",
+      "fontFamilies": [
+        "Roboto, sans-serif"
+      ],
+      "shadowsUsed": []
+    },
+    {
+      "sectionRef": "body > script:nth-child(16)",
+      "purpose": "unknown",
+      "background": {
+        "color": "rgba(0, 0, 0, 0)",
+        "hasImage": false,
+        "hasGradient": false
+      },
+      "text": {
+        "dominantColor": "rgb(69, 69, 69)"
+      },
+      "spacing": {
+        "paddingBlock": "0px",
+        "paddingInline": "0px",
+        "gap": "normal"
+      },
+      "borderRadius": "0px",
+      "fontFamilies": [
+        "Roboto, sans-serif"
+      ],
+      "shadowsUsed": []
+    },
+    {
+      "sectionRef": "body > script:nth-child(17)",
+      "purpose": "unknown",
+      "background": {
+        "color": "rgba(0, 0, 0, 0)",
+        "hasImage": false,
+        "hasGradient": false
+      },
+      "text": {
+        "dominantColor": "rgb(69, 69, 69)"
+      },
+      "spacing": {
+        "paddingBlock": "0px",
+        "paddingInline": "0px",
+        "gap": "normal"
+      },
+      "borderRadius": "0px",
+      "fontFamilies": [
+        "Roboto, sans-serif"
+      ],
+      "shadowsUsed": []
+    },
+    {
+      "sectionRef": "body > noscript:nth-child(18)",
+      "purpose": "unknown",
+      "background": {
+        "color": "rgba(0, 0, 0, 0)",
+        "hasImage": false,
+        "hasGradient": false
+      },
+      "text": {
+        "dominantColor": "rgb(69, 69, 69)"
+      },
+      "spacing": {
+        "paddingBlock": "0px",
+        "paddingInline": "0px",
+        "gap": "normal"
+      },
+      "borderRadius": "0px",
+      "fontFamilies": [
+        "Roboto, sans-serif"
+      ],
+      "shadowsUsed": []
+    },
+    {
+      "sectionRef": "body > script:nth-child(19)",
+      "purpose": "unknown",
+      "background": {
+        "color": "rgba(0, 0, 0, 0)",
+        "hasImage": false,
+        "hasGradient": false
+      },
+      "text": {
+        "dominantColor": "rgb(69, 69, 69)"
+      },
+      "spacing": {
+        "paddingBlock": "0px",
+        "paddingInline": "0px",
+        "gap": "normal"
+      },
+      "borderRadius": "0px",
+      "fontFamilies": [
+        "Roboto, sans-serif"
+      ],
+      "shadowsUsed": []
+    },
+    {
+      "sectionRef": "body > script:nth-child(20)",
+      "purpose": "unknown",
+      "background": {
+        "color": "rgba(0, 0, 0, 0)",
+        "hasImage": false,
+        "hasGradient": false
+      },
+      "text": {
+        "dominantColor": "rgb(69, 69, 69)"
+      },
+      "spacing": {
+        "paddingBlock": "0px",
+        "paddingInline": "0px",
+        "gap": "normal"
+      },
+      "borderRadius": "0px",
+      "fontFamilies": [
+        "Roboto, sans-serif"
+      ],
+      "shadowsUsed": []
+    },
+    {
+      "sectionRef": "body > script:nth-child(21)",
+      "purpose": "unknown",
+      "background": {
+        "color": "rgba(0, 0, 0, 0)",
+        "hasImage": false,
+        "hasGradient": false
+      },
+      "text": {
+        "dominantColor": "rgb(69, 69, 69)"
+      },
+      "spacing": {
+        "paddingBlock": "0px",
+        "paddingInline": "0px",
+        "gap": "normal"
+      },
+      "borderRadius": "0px",
+      "fontFamilies": [
+        "Roboto, sans-serif"
+      ],
+      "shadowsUsed": []
+    },
+    {
+      "sectionRef": "body > script:nth-child(22)",
+      "purpose": "unknown",
+      "background": {
+        "color": "rgba(0, 0, 0, 0)",
+        "hasImage": false,
+        "hasGradient": false
+      },
+      "text": {
+        "dominantColor": "rgb(69, 69, 69)"
+      },
+      "spacing": {
+        "paddingBlock": "0px",
+        "paddingInline": "0px",
+        "gap": "normal"
+      },
+      "borderRadius": "0px",
+      "fontFamilies": [
+        "Roboto, sans-serif"
+      ],
+      "shadowsUsed": []
+    },
+    {
+      "sectionRef": "body > script:nth-child(23)",
+      "purpose": "unknown",
+      "background": {
+        "color": "rgba(0, 0, 0, 0)",
+        "hasImage": false,
+        "hasGradient": false
+      },
+      "text": {
+        "dominantColor": "rgb(69, 69, 69)"
+      },
+      "spacing": {
+        "paddingBlock": "0px",
+        "paddingInline": "0px",
+        "gap": "normal"
+      },
+      "borderRadius": "0px",
+      "fontFamilies": [
+        "Roboto, sans-serif"
+      ],
+      "shadowsUsed": []
+    },
+    {
+      "sectionRef": "body > script:nth-child(24)",
+      "purpose": "unknown",
+      "background": {
+        "color": "rgba(0, 0, 0, 0)",
+        "hasImage": false,
+        "hasGradient": false
+      },
+      "text": {
+        "dominantColor": "rgb(69, 69, 69)"
+      },
+      "spacing": {
+        "paddingBlock": "0px",
+        "paddingInline": "0px",
+        "gap": "normal"
+      },
+      "borderRadius": "0px",
+      "fontFamilies": [
+        "Roboto, sans-serif"
+      ],
+      "shadowsUsed": []
+    },
+    {
+      "sectionRef": "body > script:nth-child(25)",
+      "purpose": "unknown",
+      "background": {
+        "color": "rgba(0, 0, 0, 0)",
+        "hasImage": false,
+        "hasGradient": false
+      },
+      "text": {
+        "dominantColor": "rgb(69, 69, 69)"
+      },
+      "spacing": {
+        "paddingBlock": "0px",
+        "paddingInline": "0px",
+        "gap": "normal"
+      },
+      "borderRadius": "0px",
+      "fontFamilies": [
+        "Roboto, sans-serif"
+      ],
+      "shadowsUsed": []
+    },
+    {
+      "sectionRef": "body > script:nth-child(26)",
+      "purpose": "unknown",
+      "background": {
+        "color": "rgba(0, 0, 0, 0)",
+        "hasImage": false,
+        "hasGradient": false
+      },
+      "text": {
+        "dominantColor": "rgb(69, 69, 69)"
+      },
+      "spacing": {
+        "paddingBlock": "0px",
+        "paddingInline": "0px",
+        "gap": "normal"
+      },
+      "borderRadius": "0px",
+      "fontFamilies": [
+        "Roboto, sans-serif"
+      ],
+      "shadowsUsed": []
+    },
+    {
+      "sectionRef": "body > script:nth-child(27)",
+      "purpose": "unknown",
+      "background": {
+        "color": "rgba(0, 0, 0, 0)",
+        "hasImage": false,
+        "hasGradient": false
+      },
+      "text": {
+        "dominantColor": "rgb(69, 69, 69)"
+      },
+      "spacing": {
+        "paddingBlock": "0px",
+        "paddingInline": "0px",
+        "gap": "normal"
+      },
+      "borderRadius": "0px",
+      "fontFamilies": [
+        "Roboto, sans-serif"
+      ],
+      "shadowsUsed": []
+    },
+    {
+      "sectionRef": "body > script:nth-child(28)",
+      "purpose": "unknown",
+      "background": {
+        "color": "rgba(0, 0, 0, 0)",
+        "hasImage": false,
+        "hasGradient": false
+      },
+      "text": {
+        "dominantColor": "rgb(69, 69, 69)"
+      },
+      "spacing": {
+        "paddingBlock": "0px",
+        "paddingInline": "0px",
+        "gap": "normal"
+      },
+      "borderRadius": "0px",
+      "fontFamilies": [
+        "Roboto, sans-serif"
+      ],
+      "shadowsUsed": []
+    },
+    {
+      "sectionRef": "body > script:nth-child(29)",
+      "purpose": "unknown",
+      "background": {
+        "color": "rgba(0, 0, 0, 0)",
+        "hasImage": false,
+        "hasGradient": false
+      },
+      "text": {
+        "dominantColor": "rgb(69, 69, 69)"
+      },
+      "spacing": {
+        "paddingBlock": "0px",
+        "paddingInline": "0px",
+        "gap": "normal"
+      },
+      "borderRadius": "0px",
+      "fontFamilies": [
+        "Roboto, sans-serif"
+      ],
+      "shadowsUsed": []
+    },
+    {
+      "sectionRef": "body > style:nth-child(30)",
+      "purpose": "unknown",
+      "background": {
+        "color": "rgba(0, 0, 0, 0)",
+        "hasImage": false,
+        "hasGradient": false
+      },
+      "text": {
+        "dominantColor": "rgb(69, 69, 69)"
+      },
+      "spacing": {
+        "paddingBlock": "0px",
+        "paddingInline": "0px",
+        "gap": "normal"
+      },
+      "borderRadius": "0px",
+      "fontFamilies": [
+        "Roboto, sans-serif"
+      ],
+      "shadowsUsed": []
+    }
+  ],
+  "embedDominance": {
+    "dominated": false,
+    "iframeSrc": null,
+    "viewportCoveragePct": null,
+    "mainHeightCoveragePct": null,
+    "screenshot": null
+  },
+  "cssCustomProperties": [
+    {
+      "name": "--wp--preset--gradient--midnight",
+      "value": "linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%)"
+    },
+    {
+      "name": "--yellow",
+      "value": "#fc0"
+    },
+    {
+      "name": "--wp-admin-theme-color-darker-20",
+      "value": "#005a87"
+    },
+    {
+      "name": "--wp--preset--font-size--large",
+      "value": "36px"
+    },
+    {
+      "name": "--wp--preset--shadow--outlined",
+      "value": "6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0)"
+    },
+    {
+      "name": "--section-margins",
+      "value": "80px"
+    },
+    {
+      "name": "--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan",
+      "value": "linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%)"
+    },
+    {
+      "name": "--wp--preset--color--vivid-purple",
+      "value": "#9b51e0"
+    },
+    {
+      "name": "--wp--preset--gradient--blush-light-purple",
+      "value": "linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%)"
+    },
+    {
+      "name": "--wp--preset--aspect-ratio--16-9",
+      "value": "16/9"
+    },
+    {
+      "name": "--section-margins--half",
+      "value": "30px"
+    },
+    {
+      "name": "--wp--preset--color--pale-pink",
+      "value": "#f78da7"
+    },
+    {
+      "name": "--wp-block-synced-color--rgb",
+      "value": "122,0,223"
+    },
+    {
+      "name": "--wp-bound-block-color",
+      "value": "#7a00df"
+    },
+    {
+      "name": "--wp--preset--color--cyan-bluish-gray",
+      "value": "#abb8c3"
+    },
+    {
+      "name": "--red",
+      "value": "#a91321"
+    },
+    {
+      "name": "--wp--preset--gradient--electric-grass",
+      "value": "linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%)"
+    },
+    {
+      "name": "--wp--preset--gradient--blush-bordeaux",
+      "value": "linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%)"
+    },
+    {
+      "name": "--wp--preset--spacing--60",
+      "value": "2.25rem"
+    },
+    {
+      "name": "--lighter-gray",
+      "value": "#f0f0f0"
+    },
+    {
+      "name": "--wp--preset--color--vivid-green-cyan",
+      "value": "#00d084"
+    },
+    {
+      "name": "--wp--preset--shadow--deep",
+      "value": "12px 12px 50px rgba(0, 0, 0, 0.4)"
+    },
+    {
+      "name": "--easing-leave",
+      "value": "cubic-bezier(.4,0,1,1)"
+    },
+    {
+      "name": "--wp-editor-canvas-background",
+      "value": "#ddd"
+    },
+    {
+      "name": "--wp-admin-theme-color-darker-20--rgb",
+      "value": "0,90,135"
+    },
+    {
+      "name": "--border-gray",
+      "value": "#b5b5b5"
+    },
+    {
+      "name": "--wp--preset--spacing--40",
+      "value": "1rem"
+    },
+    {
+      "name": "--wp-admin-theme-color--rgb",
+      "value": "0,124,186"
+    },
+    {
+      "name": "--wp-admin-theme-color",
+      "value": "#007cba"
+    },
+    {
+      "name": "--wp--preset--aspect-ratio--3-2",
+      "value": "3/2"
+    },
+    {
+      "name": "--wp--preset--color--luminous-vivid-orange",
+      "value": "#ff6900"
+    },
+    {
+      "name": "--wp--preset--aspect-ratio--2-3",
+      "value": "2/3"
+    },
+    {
+      "name": "--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple",
+      "value": "linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%)"
+    },
+    {
+      "name": "--wp--preset--font-size--huge",
+      "value": "42px"
+    },
+    {
+      "name": "--menu-gray",
+      "value": "#7B7770"
+    },
+    {
+      "name": "--wp--preset--font-size--x-large",
+      "value": "42px"
+    },
+    {
+      "name": "--wp--preset--font-size--normal",
+      "value": "16px"
+    },
+    {
+      "name": "--wp-admin-theme-color-darker-10--rgb",
+      "value": "0,107,160.5"
+    },
+    {
+      "name": "--wp--preset--color--vivid-cyan-blue",
+      "value": "#0693e3"
+    },
+    {
+      "name": "--wp--preset--shadow--natural",
+      "value": "6px 6px 9px rgba(0, 0, 0, 0.2)"
+    },
+    {
+      "name": "--wp--preset--spacing--30",
+      "value": "0.67rem"
+    },
+    {
+      "name": "--wp--preset--aspect-ratio--4-3",
+      "value": "4/3"
+    },
+    {
+      "name": "--easing-standard",
+      "value": "cubic-bezier(.4,0,.2,1)"
+    },
+    {
+      "name": "--wp--preset--spacing--50",
+      "value": "1.5rem"
+    },
+    {
+      "name": "--wp--preset--color--pale-cyan-blue",
+      "value": "#8ed1fc"
+    },
+    {
+      "name": "--wp--preset--font-size--small",
+      "value": "13px"
+    },
+    {
+      "name": "--black",
+      "value": "#000"
+    },
+    {
+      "name": "--wp--preset--spacing--70",
+      "value": "3.38rem"
+    },
+    {
+      "name": "--wp--preset--gradient--luminous-dusk",
+      "value": "linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%)"
+    },
+    {
+      "name": "--wp-block-synced-color",
+      "value": "#7a00df"
+    },
+    {
+      "name": "--wp--preset--color--luminous-vivid-amber",
+      "value": "#fcb900"
+    },
+    {
+      "name": "--light-gray",
+      "value": "#ebebeb"
+    },
+    {
+      "name": "--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange",
+      "value": "linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%)"
+    },
+    {
+      "name": "--wp--preset--aspect-ratio--9-16",
+      "value": "9/16"
+    },
+    {
+      "name": "--wp--preset--color--vivid-red",
+      "value": "#cf2e2e"
+    },
+    {
+      "name": "--wp--preset--shadow--crisp",
+      "value": "6px 6px 0px rgb(0, 0, 0)"
+    },
+    {
+      "name": "--wp--preset--color--light-green-cyan",
+      "value": "#7bdcb5"
+    },
+    {
+      "name": "--text-gray",
+      "value": "#454545"
+    },
+    {
+      "name": "--easing-enter",
+      "value": "cubic-bezier(0,0,.2,1)"
+    },
+    {
+      "name": "--dark-gray",
+      "value": "#272727"
+    },
+    {
+      "name": "--wp--preset--aspect-ratio--square",
+      "value": "1"
+    },
+    {
+      "name": "--wp-admin-border-width-focus",
+      "value": "1.5px"
+    },
+    {
+      "name": "--wp--preset--shadow--sharp",
+      "value": "6px 6px 0px rgba(0, 0, 0, 0.2)"
+    },
+    {
+      "name": "--wp--preset--gradient--pale-ocean",
+      "value": "linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%)"
+    },
+    {
+      "name": "--wp--preset--color--white",
+      "value": "#ffffff"
+    },
+    {
+      "name": "--wp--preset--spacing--80",
+      "value": "5.06rem"
+    },
+    {
+      "name": "--yellow-hover",
+      "value": "#ffba00"
+    },
+    {
+      "name": "--wp--preset--font-size--medium",
+      "value": "20px"
+    },
+    {
+      "name": "--wp--preset--color--black",
+      "value": "#000000"
+    },
+    {
+      "name": "--wp-admin-theme-color-darker-10",
+      "value": "#006ba1"
+    },
+    {
+      "name": "--wp--preset--aspect-ratio--3-4",
+      "value": "3/4"
+    },
+    {
+      "name": "--wp--preset--gradient--luminous-vivid-orange-to-vivid-red",
+      "value": "linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%)"
+    },
+    {
+      "name": "--wp--preset--spacing--20",
+      "value": "0.44rem"
+    },
+    {
+      "name": "--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray",
+      "value": "linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%)"
+    },
+    {
+      "name": "--wp--preset--gradient--cool-to-warm-spectrum",
+      "value": "linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%)"
+    }
+  ],
+  "stats": {
+    "wordCount": 580,
+    "ctaCount": 10,
+    "internalLinkCount": 37,
+    "externalLinkCount": 23,
+    "imageCount": 9
+  },
+  "screenshot": "current/assets/screenshots/about__financing.png"
+}

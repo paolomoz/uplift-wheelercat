@@ -1,0 +1,319 @@
+{
+  "_provenance": {
+    "writtenBy": "stardust:extract",
+    "writtenAt": "2026-05-28T11:46:25.002781Z",
+    "readArtifacts": [],
+    "synthesizedInputs": [],
+    "stardustVersion": "0.10.0"
+  },
+  "runs": [
+    {
+      "runAt": "2026-05-27T21:48:31.188Z",
+      "mode": "--single",
+      "origin": "https://wheelercat.com/",
+      "consent": {
+        "method": "none-detected"
+      },
+      "discovery": {
+        "source": "single-url",
+        "totalDiscovered": 1,
+        "kept": 1,
+        "cutAsJunk": 0,
+        "cap": 1,
+        "fetchTechnique": "headless-chromium-default",
+        "waitMode": "medium"
+      },
+      "pagesCrawled": [
+        {
+          "slug": "home",
+          "url": "https://wheelercat.com/",
+          "finalUrl": "https://wheelercat.com/",
+          "httpStatus": 200,
+          "contentType": "text/html",
+          "waitMode": "medium",
+          "waitMs": 4310,
+          "fetchedAt": "2026-05-27T21:42:17.856Z"
+        }
+      ],
+      "crawl": {
+        "failures": []
+      }
+    },
+    {
+      "runAt": "2026-05-28T11:46:25.002781Z",
+      "mode": "--cap 25 (sitemap discovery)",
+      "origin": "https://wheelercat.com/",
+      "consent": {
+        "method": "none-detected"
+      },
+      "discovery": {
+        "source": "sitemap_index \u2192 page-sitemap.xml",
+        "sourceUrl": "https://wheelercat.com/sitemap.xml",
+        "totalDiscovered": 253,
+        "kept": 25,
+        "cutAsJunk": 0,
+        "cap": 25,
+        "capSource": "--cap",
+        "fetchTechnique": "headless-chromium-default",
+        "waitMode": "medium",
+        "note": "home already extracted+approved in --single run; 25 new pages selected via page-type checklist + IA-keyword scoring from /page-sitemap.xml (253 URLs). Sub-sitemaps for cat_new_machine/cat_new_attachment/cat_used_machine bypassed \u2014 would dominate the cap with near-identical product detail pages."
+      },
+      "pagesCrawled": [
+        {
+          "slug": "about__locations",
+          "url": "https://wheelercat.com/about/locations/",
+          "finalUrl": "https://wheelercat.com/about/locations/",
+          "httpStatus": 200,
+          "contentType": "text/html",
+          "waitMode": "medium",
+          "waitMs": 4131,
+          "fetchedAt": "2026-05-28T11:46:25.002781Z"
+        },
+        {
+          "slug": "about",
+          "url": "https://wheelercat.com/about/",
+          "finalUrl": "https://wheelercat.com/about/",
+          "httpStatus": 200,
+          "contentType": "text/html",
+          "waitMode": "medium",
+          "waitMs": 4065,
+          "fetchedAt": "2026-05-28T11:46:25.002781Z"
+        },
+        {
+          "slug": "about__history",
+          "url": "https://wheelercat.com/about/history/",
+          "finalUrl": "https://wheelercat.com/about/history/",
+          "httpStatus": 200,
+          "contentType": "text/html",
+          "waitMode": "medium",
+          "waitMs": 6619,
+          "fetchedAt": "2026-05-28T11:46:25.002781Z"
+        },
+        {
+          "slug": "about__financing",
+          "url": "https://wheelercat.com/about/financing/",
+          "finalUrl": "https://wheelercat.com/about/financing/",
+          "httpStatus": 200,
+          "contentType": "text/html",
+          "waitMode": "medium",
+          "waitMs": 6922,
+          "fetchedAt": "2026-05-28T11:46:25.002781Z"
+        },
+        {
+          "slug": "contact-us",
+          "url": "https://wheelercat.com/contact-us/",
+          "finalUrl": "https://wheelercat.com/contact-us/",
+          "httpStatus": 200,
+          "contentType": "text/html",
+          "waitMode": "medium",
+          "waitMs": 4963,
+          "fetchedAt": "2026-05-28T11:46:25.002781Z"
+        },
+        {
+          "slug": "careers",
+          "url": "https://wheelercat.com/careers/",
+          "finalUrl": "https://wheelercat.com/careers/",
+          "httpStatus": 200,
+          "contentType": "text/html",
+          "waitMode": "medium",
+          "waitMs": 5249,
+          "fetchedAt": "2026-05-28T11:46:25.002781Z"
+        },
+        {
+          "slug": "credit-application",
+          "url": "https://wheelercat.com/credit-application/",
+          "finalUrl": "https://wheelercat.com/credit-application/",
+          "httpStatus": 200,
+          "contentType": "text/html",
+          "waitMode": "medium",
+          "waitMs": 4980,
+          "fetchedAt": "2026-05-28T11:46:25.002781Z"
+        },
+        {
+          "slug": "request-service",
+          "url": "https://wheelercat.com/request-service/",
+          "finalUrl": "https://wheelercat.com/request-service/",
+          "httpStatus": 200,
+          "contentType": "text/html",
+          "waitMode": "medium",
+          "waitMs": 4539,
+          "fetchedAt": "2026-05-28T11:46:25.002781Z"
+        },
+        {
+          "slug": "machine-quote-request",
+          "url": "https://wheelercat.com/machine-quote-request/",
+          "finalUrl": "https://wheelercat.com/machine-quote-request/",
+          "httpStatus": 200,
+          "contentType": "text/html",
+          "waitMode": "medium",
+          "waitMs": 4511,
+          "fetchedAt": "2026-05-28T11:46:25.002781Z"
+        },
+        {
+          "slug": "new",
+          "url": "https://wheelercat.com/new/",
+          "finalUrl": "https://wheelercat.com/new/",
+          "httpStatus": 200,
+          "contentType": "text/html",
+          "waitMode": "medium",
+          "waitMs": 4611,
+          "fetchedAt": "2026-05-28T11:46:25.002781Z"
+        },
+        {
+          "slug": "used-equipment",
+          "url": "https://wheelercat.com/used-equipment/",
+          "finalUrl": "https://wheelercat.com/used-equipment/",
+          "httpStatus": 200,
+          "contentType": "text/html",
+          "waitMode": "medium",
+          "waitMs": 4747,
+          "fetchedAt": "2026-05-28T11:46:25.002781Z"
+        },
+        {
+          "slug": "new__machines",
+          "url": "https://wheelercat.com/new/machines/",
+          "finalUrl": "https://wheelercat.com/new/machines/",
+          "httpStatus": 200,
+          "contentType": "text/html",
+          "waitMode": "medium",
+          "waitMs": 4461,
+          "fetchedAt": "2026-05-28T11:46:25.002781Z"
+        },
+        {
+          "slug": "rental",
+          "url": "https://wheelercat.com/rental/",
+          "finalUrl": "https://wheelercat.com/rental/",
+          "httpStatus": 200,
+          "contentType": "text/html",
+          "waitMode": "medium",
+          "waitMs": 4768,
+          "fetchedAt": "2026-05-28T11:46:25.002781Z"
+        },
+        {
+          "slug": "rental__excavators",
+          "url": "https://wheelercat.com/rental/excavators/",
+          "finalUrl": "https://wheelercat.com/rental/excavators/",
+          "httpStatus": 200,
+          "contentType": "text/html",
+          "waitMode": "medium",
+          "waitMs": 5156,
+          "fetchedAt": "2026-05-28T11:46:25.002781Z"
+        },
+        {
+          "slug": "service",
+          "url": "https://wheelercat.com/service/",
+          "finalUrl": "https://wheelercat.com/service/",
+          "httpStatus": 200,
+          "contentType": "text/html",
+          "waitMode": "medium",
+          "waitMs": 4377,
+          "fetchedAt": "2026-05-28T11:46:25.002781Z"
+        },
+        {
+          "slug": "service__field-service",
+          "url": "https://wheelercat.com/service/field-service/",
+          "finalUrl": "https://wheelercat.com/service/field-service/",
+          "httpStatus": 200,
+          "contentType": "text/html",
+          "waitMode": "medium",
+          "waitMs": 4827,
+          "fetchedAt": "2026-05-28T11:46:25.002781Z"
+        },
+        {
+          "slug": "customer-value-agreements",
+          "url": "https://wheelercat.com/customer-value-agreements/",
+          "finalUrl": "https://wheelercat.com/customer-value-agreements/",
+          "httpStatus": 200,
+          "contentType": "text/html",
+          "waitMode": "medium",
+          "waitMs": 6273,
+          "fetchedAt": "2026-05-28T11:46:25.002781Z"
+        },
+        {
+          "slug": "parts",
+          "url": "https://wheelercat.com/parts/",
+          "finalUrl": "https://wheelercat.com/parts/",
+          "httpStatus": 200,
+          "contentType": "text/html",
+          "waitMode": "medium",
+          "waitMs": 5883,
+          "fetchedAt": "2026-05-28T11:46:25.002781Z"
+        },
+        {
+          "slug": "industries",
+          "url": "https://wheelercat.com/industries/",
+          "finalUrl": "https://wheelercat.com/industries/",
+          "httpStatus": 200,
+          "contentType": "text/html",
+          "waitMode": "medium",
+          "waitMs": 4549,
+          "fetchedAt": "2026-05-28T11:46:25.002781Z"
+        },
+        {
+          "slug": "parts__shop-by-category",
+          "url": "https://wheelercat.com/parts/shop-by-category/",
+          "finalUrl": "https://wheelercat.com/parts/shop-by-category/",
+          "httpStatus": 200,
+          "contentType": "text/html",
+          "waitMode": "medium",
+          "waitMs": 6513,
+          "fetchedAt": "2026-05-28T11:46:25.002781Z"
+        },
+        {
+          "slug": "specials",
+          "url": "https://wheelercat.com/specials/",
+          "finalUrl": "https://wheelercat.com/specials/",
+          "httpStatus": 200,
+          "contentType": "text/html",
+          "waitMode": "medium",
+          "waitMs": 4763,
+          "fetchedAt": "2026-05-28T11:46:25.002781Z"
+        },
+        {
+          "slug": "offers",
+          "url": "https://wheelercat.com/offers/",
+          "finalUrl": "https://wheelercat.com/offers/",
+          "httpStatus": 200,
+          "contentType": "text/html",
+          "waitMode": "medium",
+          "waitMs": 4541,
+          "fetchedAt": "2026-05-28T11:46:25.002781Z"
+        },
+        {
+          "slug": "industries__heavy-construction",
+          "url": "https://wheelercat.com/industries/heavy-construction/",
+          "finalUrl": "https://wheelercat.com/industries/heavy-construction/",
+          "httpStatus": 200,
+          "contentType": "text/html",
+          "waitMode": "medium",
+          "waitMs": 5075,
+          "fetchedAt": "2026-05-28T11:46:25.002781Z"
+        },
+        {
+          "slug": "cat-certified-used",
+          "url": "https://wheelercat.com/cat-certified-used/",
+          "finalUrl": "https://wheelercat.com/cat-certified-used/",
+          "httpStatus": 200,
+          "contentType": "text/html",
+          "waitMode": "medium",
+          "waitMs": 5793,
+          "fetchedAt": "2026-05-28T11:46:25.002781Z"
+        },
+        {
+          "slug": "sponsorships",
+          "url": "https://wheelercat.com/sponsorships/",
+          "finalUrl": "https://wheelercat.com/sponsorships/",
+          "httpStatus": 200,
+          "contentType": "text/html",
+          "waitMode": "medium",
+          "waitMs": 5234,
+          "fetchedAt": "2026-05-28T11:46:25.002781Z"
+        }
+      ],
+      "crawl": {
+        "failures": [],
+        "successes": 25
+      }
+    }
+  ]
+}

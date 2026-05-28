@@ -1,0 +1,101 @@
+{
+  "_provenance": {
+    "writtenBy": "stardust:direct (--add-variant G)",
+    "writtenAt": "2026-05-28T00:30:00Z",
+    "variant": "G",
+    "parent": "DESIGN.json",
+    "inheritanceChain": "G → active-direction (Mode A)",
+    "readArtifacts": [
+      "DESIGN.json",
+      "DESIGN-B.json",
+      "stardust/uplift-improvements.md",
+      "stardust/uplift-questions.md",
+      "stardust/current/_brand-extraction.json"
+    ],
+    "stardustVersion": "0.10.0"
+  },
+  "schemaVersion": 2,
+  "title": "Design System: Wheeler Cat — Variant G (color-ladder re-weighting: dark primary)",
+  "variant": {
+    "id": "G",
+    "role": "one captured trait amplified (palette proportion)",
+    "bet": "promote captured #272727 surface-dark to primary page surface — Wheeler at night, industrial nocturne; yellow stays as accent and CTA pigment (current scope); warm stone retreats to one quiet warm break",
+    "capturedTraitAmplified": "surface-dark #272727 (705,892 occurrences but only used as background under captured palette analysis; never as primary page ground)",
+    "evidence": "_brand-extraction.json#palette[surface-dark]: 705k occurrences with usedAs: ['background']; brand-review surfaced T-color-imbalance for surface-dark; dark surface dominates captured headers + footers + photo overlays but never the whole page",
+    "static": true,
+    "cinematic": false,
+    "siblings": ["A", "B", "C", "D", "E", "F", "H", "I"],
+    "differentiationFrom": {
+      "B": "B promotes YELLOW to primary surface (hero ground yellow, service tiles yellow); G promotes DARK to primary surface (page ground #272727 throughout, yellow shrinks back to CTA scope). DIFFERENT CAPTURED SHADE PICKED. 4 diffs: hero ground (yellow B vs dark G), service tiles (yellow B vs dark G with yellow icomoon), page ground (white in B vs dark in G), text color inversion (dark on yellow B vs white on dark G).",
+      "A": "A uses captured proportions (white page, yellow CTA only); G inverts entire page ground to dark. 3 diffs: page ground (white vs dark), text color hierarchy (dark-on-light vs white-on-dark), section ground rhythm (alternating white/stone in A vs dark with single warm break in G).",
+      "captureBasis": "Color-ladder re-weighting catalog says 'Natural register: any (color re-weighting is composition, not motion).' G picks the dark shade; B picked yellow. Both are valid re-weightings of the same captured palette."
+    }
+  },
+  "inherits": {
+    "from": "DESIGN.json",
+    "items": [
+      "colorMeta",
+      "typographyMeta",
+      "modularScale (1.250)",
+      "shadows (adjusted opacity for dark surfaces — see compositionDeltas.shadows)",
+      "breakpoints",
+      "sectionPadding",
+      "iaPriorities",
+      "componentStyle (base, inverted)",
+      "voice (base)",
+      "systemComponentRoles",
+      "iconFont",
+      "divergence (base)"
+    ]
+  },
+  "extensions": {
+    "paletteProportionInversion": {
+      "primarySurface": "#272727 (was background-only; now page ground)",
+      "rationale": "Promote captured surface-dark to the primary page surface. Wheeler at night: equipment-yard mood, industrial nocturne, yellow accents read brighter on dark.",
+      "surfaceMap": {
+        "page": "#272727",
+        "hero": "#272727 (with photo at 60% opacity multiply blend OR no photo)",
+        "financeBand": "#1A1A1A (one tonal step deeper for band separation — from typographyMeta.heading-text tonalRamp[1], no invention)",
+        "serviceTiles": "#272727 with yellow #FFCC00 icomoon glyphs",
+        "supportPartnersBand": "#E5E3DF (the ONE warm break — partner strip benefits from a stone ground)",
+        "locationsBand": "#272727 with yellow #FFCC00 eyebrow band",
+        "footer": "#1A1A1A (deepest tonal step)"
+      },
+      "yellowScope": "RETAINED as captured: only CTAs, accent borders, icomoon glyphs, eyebrow rules. Yellow scope is NOT expanded — only the dark scope expands.",
+      "textOnDarkContrast": {
+        "white-on-#272727": "14.7:1 (AAA)",
+        "white-on-#1A1A1A": "18.0:1 (AAA)",
+        "yellow-on-#272727": "8.6:1 (AAA for normal text)",
+        "yellow-on-#1A1A1A": "10.5:1 (AAA)"
+      }
+    },
+    "compositionDeltas": {
+      "hero": {
+        "ground": "#272727",
+        "treatment": "captured SC_Hero finance creative on dark ground with overlay-color hue (no invention); OR equipment portrait at 50% opacity multiply blend revealing dark beneath; pick one and document",
+        "headline": "white Roboto Condensed 700 caps (text-on-dark canonical from colorMeta)"
+      },
+      "financeBand": {
+        "ground": "#1A1A1A (one tonal step deeper)",
+        "cards": "dark #272727 cards with yellow #FFCC00 eyebrow + white body + yellow CTA",
+        "rationale": "Improvement #1 inherited (3-up grid); dark cards on darker band creates separation without invented colors"
+      },
+      "shadows": {
+        "rationale": "Captured shadows ('rgba(0,0,0,0.8) 0px 6px 16px 0px') are designed for white surfaces; on dark they disappear. G replaces with 1px inset light rule for tonal separation.",
+        "cardShadow": "inset 0 0 0 1px rgba(255,255,255,0.08), 0 4px 12px rgba(0,0,0,0.6) — preserves captured shadow weight but adds visible edge on dark"
+      },
+      "supportPartnersBand": {
+        "ground": "#E5E3DF (THE warm break — single warm-tone band among dark)",
+        "rationale": "Without one warm break the page reads monolithic and humorless. Stone band gives the partner strip a stage and creates rhythmic relief."
+      },
+      "footer": {
+        "ground": "#1A1A1A",
+        "linkColor": "white at 0.7 opacity (E5E3DF on dark equivalent); hover white at 1.0 opacity"
+      }
+    },
+    "antiToolboxAudit": {
+      "hits": [],
+      "rationale": "Single bet (palette proportion: promote dark shade). No invented colors (#1A1A1A is tonalRamp[1] of captured #272727). No fonts changed. Shadow contract adapted from captured set (1px inset light rule is industry-standard dark-mode practice, not divergence)."
+    }
+  }
+}

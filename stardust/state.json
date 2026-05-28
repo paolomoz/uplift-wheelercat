@@ -1,0 +1,743 @@
+{
+  "_provenance": {
+    "writtenBy": "stardust:extract (--cap 25, multi-page run)",
+    "writtenAt": "2026-05-28T11:46:38.254063Z",
+    "stardustVersion": "0.10.0"
+  },
+  "site": {
+    "originUrl": "https://wheelercat.com/",
+    "deployUrl": null,
+    "extractedAt": "2026-05-28T11:46:38.254063Z",
+    "pageCap": 25,
+    "totalDiscovered": 253,
+    "crawled": 26
+  },
+  "direction": {
+    "resolvedAt": "2026-05-28T00:00:00Z",
+    "phrase": "uplift wheelercat.com (presales redesign, three variants) + six-candidate exploration fork",
+    "directionFile": "stardust/direction.md",
+    "directionPath": "stardust/direction.md",
+    "iaFidelity": "reimagined",
+    "mode": "A (brand-faithful)",
+    "variantMode": "nine-variant fork (A/B/C uplift + D/E/F/G/H/I exploration)",
+    "variants": [
+      {
+        "id": "A",
+        "designFile": "DESIGN-A.md",
+        "designJson": "DESIGN-A.json",
+        "static": true,
+        "cinematic": false,
+        "addedAt": "2026-05-28T00:00:00Z",
+        "parentVariant": null,
+        "role": "faithful + improvements"
+      },
+      {
+        "id": "B",
+        "designFile": "DESIGN-B.md",
+        "designJson": "DESIGN-B.json",
+        "static": true,
+        "cinematic": false,
+        "addedAt": "2026-05-28T00:00:00Z",
+        "parentVariant": null,
+        "role": "palette re-weighting (yellow primary)"
+      },
+      {
+        "id": "C",
+        "designFile": "DESIGN-C.md",
+        "designJson": "DESIGN-C.json",
+        "static": false,
+        "cinematic": true,
+        "addedAt": "2026-05-28T00:00:00Z",
+        "parentVariant": null,
+        "role": "kinetic-display motion"
+      },
+      {
+        "id": "D",
+        "designFile": "DESIGN-D.md",
+        "designJson": "DESIGN-D.json",
+        "static": true,
+        "cinematic": false,
+        "addedAt": "2026-05-28T00:30:00Z",
+        "parentVariant": null,
+        "role": "display-typography amplification (static)"
+      },
+      {
+        "id": "E",
+        "designFile": "DESIGN-E.md",
+        "designJson": "DESIGN-E.json",
+        "static": true,
+        "cinematic": false,
+        "addedAt": "2026-05-28T00:30:00Z",
+        "parentVariant": null,
+        "role": "photography re-foregrounding"
+      },
+      {
+        "id": "F",
+        "designFile": "DESIGN-F.md",
+        "designJson": "DESIGN-F.json",
+        "static": true,
+        "cinematic": false,
+        "addedAt": "2026-05-28T00:30:00Z",
+        "parentVariant": null,
+        "role": "signature-gesture extension"
+      },
+      {
+        "id": "G",
+        "designFile": "DESIGN-G.md",
+        "designJson": "DESIGN-G.json",
+        "static": true,
+        "cinematic": false,
+        "addedAt": "2026-05-28T00:30:00Z",
+        "parentVariant": null,
+        "role": "color-ladder re-weighting (dark primary)"
+      },
+      {
+        "id": "H",
+        "designFile": "DESIGN-H.md",
+        "designJson": "DESIGN-H.json",
+        "static": true,
+        "cinematic": false,
+        "addedAt": "2026-05-28T00:30:00Z",
+        "parentVariant": null,
+        "role": "audience-routing reframe (renters-first)",
+        "iaFidelity": "reimagined"
+      },
+      {
+        "id": "I",
+        "designFile": "DESIGN-I.md",
+        "designJson": "DESIGN-I.json",
+        "static": true,
+        "cinematic": false,
+        "addedAt": "2026-05-28T00:30:00Z",
+        "parentVariant": null,
+        "role": "motif vocabulary swap (spec-sheet primitive)"
+      },
+      {
+        "id": "A-rich",
+        "designFile": "DESIGN-A-rich.md",
+        "designJson": "DESIGN-A-rich.json",
+        "static": false,
+        "cinematic": "partial",
+        "addedAt": "2026-05-28T11:03:15Z",
+        "parentVariant": "A",
+        "role": "user-directed composition of A + B/C/G + new content (approved)",
+        "approved": true
+      }
+    ]
+  },
+  "pages": [
+    {
+      "slug": "home",
+      "url": "https://wheelercat.com/",
+      "title": "Wheeler Cat - Construction Equipment, Tool & Trailer Rental & Sales",
+      "type": "landing",
+      "status": "approved",
+      "approvedVariant": "A-rich",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-05-27T21:48:31.188Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-05-28T00:00:00Z"
+        },
+        {
+          "status": "prototyped",
+          "at": "2026-05-28T00:00:00Z"
+        },
+        {
+          "status": "prototyped (exploration variants D-I)",
+          "at": "2026-05-28T01:30:00Z"
+        },
+        {
+          "status": "approved (variant A-rich)",
+          "at": "2026-05-28T11:03:15Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/home.json",
+      "prototypePath": "stardust/prototypes/home-A-rich-proposed.html",
+      "variants": {
+        "A": "stardust/prototypes/home-A-proposed.html",
+        "B": "stardust/prototypes/home-B-proposed.html",
+        "C": "stardust/prototypes/home-C-proposed.html",
+        "C-cinematic": "stardust/prototypes/home-C-cinematic.html",
+        "D": "stardust/prototypes/home-D-proposed.html",
+        "E": "stardust/prototypes/home-E-proposed.html",
+        "F": "stardust/prototypes/home-F-proposed.html",
+        "G": "stardust/prototypes/home-G-proposed.html",
+        "H": "stardust/prototypes/home-H-proposed.html",
+        "I": "stardust/prototypes/home-I-proposed.html",
+        "A-rich": "stardust/prototypes/home-A-rich-proposed.html"
+      },
+      "shapeBriefs": {
+        "A": "stardust/prototypes/home-A-shape.md",
+        "B": "stardust/prototypes/home-B-shape.md",
+        "C": "stardust/prototypes/home-C-shape.md",
+        "D": "stardust/prototypes/home-D-shape.md",
+        "E": "stardust/prototypes/home-E-shape.md",
+        "F": "stardust/prototypes/home-F-shape.md",
+        "G": "stardust/prototypes/home-G-shape.md",
+        "H": "stardust/prototypes/home-H-shape.md",
+        "I": "stardust/prototypes/home-I-shape.md",
+        "A-rich": "stardust/prototypes/home-A-rich-shape.md"
+      },
+      "migratedPath": null,
+      "directedAt": "2026-05-28T00:00:00Z",
+      "prototypedAt": "2026-05-28T01:30:00Z",
+      "approvedAt": "2026-05-28T11:03:15Z"
+    },
+    {
+      "slug": "about__locations",
+      "url": "https://wheelercat.com/about/locations/",
+      "title": "Wheeler Machinery Locations | Cat\u00ae Dealer Locations in UT & NV",
+      "type": null,
+      "status": "extracted",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-05-28T11:46:38.254063Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/about__locations.json",
+      "prototypePath": null,
+      "variants": {},
+      "shapeBriefs": {},
+      "migratedPath": null,
+      "directedAt": null,
+      "prototypedAt": null
+    },
+    {
+      "slug": "about",
+      "url": "https://wheelercat.com/about/",
+      "title": "About Us | Wheeler Machinery Co.",
+      "type": null,
+      "status": "extracted",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-05-28T11:46:38.254063Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/about.json",
+      "prototypePath": null,
+      "variants": {},
+      "shapeBriefs": {},
+      "migratedPath": null,
+      "directedAt": null,
+      "prototypedAt": null
+    },
+    {
+      "slug": "about__history",
+      "url": "https://wheelercat.com/about/history/",
+      "title": "History | Wheeler Machinery Co.",
+      "type": null,
+      "status": "extracted",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-05-28T11:46:38.254063Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/about__history.json",
+      "prototypePath": null,
+      "variants": {},
+      "shapeBriefs": {},
+      "migratedPath": null,
+      "directedAt": null,
+      "prototypedAt": null
+    },
+    {
+      "slug": "about__financing",
+      "url": "https://wheelercat.com/about/financing/",
+      "title": "Equipment Financing & Business Loans | Wheeler Machinery Co.",
+      "type": null,
+      "status": "extracted",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-05-28T11:46:38.254063Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/about__financing.json",
+      "prototypePath": null,
+      "variants": {},
+      "shapeBriefs": {},
+      "migratedPath": null,
+      "directedAt": null,
+      "prototypedAt": null
+    },
+    {
+      "slug": "contact-us",
+      "url": "https://wheelercat.com/contact-us/",
+      "title": "Contact Us | Wheeler Machinery Co.",
+      "type": null,
+      "status": "extracted",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-05-28T11:46:38.254063Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/contact-us.json",
+      "prototypePath": null,
+      "variants": {},
+      "shapeBriefs": {},
+      "migratedPath": null,
+      "directedAt": null,
+      "prototypedAt": null
+    },
+    {
+      "slug": "careers",
+      "url": "https://wheelercat.com/careers/",
+      "title": "Careers & Job Openings | Wheeler Machinery Co.",
+      "type": null,
+      "status": "extracted",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-05-28T11:46:38.254063Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/careers.json",
+      "prototypePath": null,
+      "variants": {},
+      "shapeBriefs": {},
+      "migratedPath": null,
+      "directedAt": null,
+      "prototypedAt": null
+    },
+    {
+      "slug": "credit-application",
+      "url": "https://wheelercat.com/credit-application/",
+      "title": "Credit Application - Wheeler Machinery Co.",
+      "type": null,
+      "status": "extracted",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-05-28T11:46:38.254063Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/credit-application.json",
+      "prototypePath": null,
+      "variants": {},
+      "shapeBriefs": {},
+      "migratedPath": null,
+      "directedAt": null,
+      "prototypedAt": null
+    },
+    {
+      "slug": "request-service",
+      "url": "https://wheelercat.com/request-service/",
+      "title": "Request Service | Wheeler Machinery Co.",
+      "type": null,
+      "status": "extracted",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-05-28T11:46:38.254063Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/request-service.json",
+      "prototypePath": null,
+      "variants": {},
+      "shapeBriefs": {},
+      "migratedPath": null,
+      "directedAt": null,
+      "prototypedAt": null
+    },
+    {
+      "slug": "machine-quote-request",
+      "url": "https://wheelercat.com/machine-quote-request/",
+      "title": "Machine Quote Request | Wheeler Machinery Co.",
+      "type": null,
+      "status": "extracted",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-05-28T11:46:38.254063Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/machine-quote-request.json",
+      "prototypePath": null,
+      "variants": {},
+      "shapeBriefs": {},
+      "migratedPath": null,
+      "directedAt": null,
+      "prototypedAt": null
+    },
+    {
+      "slug": "new",
+      "url": "https://wheelercat.com/new/",
+      "title": "New Heavy Equipment for Sale in Utah | Wheeler Machinery Co.",
+      "type": null,
+      "status": "extracted",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-05-28T11:46:38.254063Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/new.json",
+      "prototypePath": null,
+      "variants": {},
+      "shapeBriefs": {},
+      "migratedPath": null,
+      "directedAt": null,
+      "prototypedAt": null
+    },
+    {
+      "slug": "used-equipment",
+      "url": "https://wheelercat.com/used-equipment/",
+      "title": "Used Heavy Equipment for Sale in Utah | Wheeler Machinery Co.",
+      "type": null,
+      "status": "extracted",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-05-28T11:46:38.254063Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/used-equipment.json",
+      "prototypePath": null,
+      "variants": {},
+      "shapeBriefs": {},
+      "migratedPath": null,
+      "directedAt": null,
+      "prototypedAt": null
+    },
+    {
+      "slug": "new__machines",
+      "url": "https://wheelercat.com/new/machines/",
+      "title": "New Cat\u00ae Equipment for Sale in Utah | Wheeler Machinery Co.",
+      "type": null,
+      "status": "extracted",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-05-28T11:46:38.254063Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/new__machines.json",
+      "prototypePath": null,
+      "variants": {},
+      "shapeBriefs": {},
+      "migratedPath": null,
+      "directedAt": null,
+      "prototypedAt": null
+    },
+    {
+      "slug": "rental",
+      "url": "https://wheelercat.com/rental/",
+      "title": "Heavy Equipment & Tool Rentals in Utah | Wheeler Machinery Co.",
+      "type": null,
+      "status": "extracted",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-05-28T11:46:38.254063Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/rental.json",
+      "prototypePath": null,
+      "variants": {},
+      "shapeBriefs": {},
+      "migratedPath": null,
+      "directedAt": null,
+      "prototypedAt": null
+    },
+    {
+      "slug": "rental__excavators",
+      "url": "https://wheelercat.com/rental/excavators/",
+      "title": "Excavator Rentals in Utah - Excavator Rental | Wheeler Machinery",
+      "type": null,
+      "status": "extracted",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-05-28T11:46:38.254063Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/rental__excavators.json",
+      "prototypePath": null,
+      "variants": {},
+      "shapeBriefs": {},
+      "migratedPath": null,
+      "directedAt": null,
+      "prototypedAt": null
+    },
+    {
+      "slug": "service",
+      "url": "https://wheelercat.com/service/",
+      "title": "Heavy Equipment Service & Repair in Utah | Wheeler Machinery",
+      "type": null,
+      "status": "extracted",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-05-28T11:46:38.254063Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/service.json",
+      "prototypePath": null,
+      "variants": {},
+      "shapeBriefs": {},
+      "migratedPath": null,
+      "directedAt": null,
+      "prototypedAt": null
+    },
+    {
+      "slug": "service__field-service",
+      "url": "https://wheelercat.com/service/field-service/",
+      "title": "Heavy Equipment Field Service in Utah | Wheeler Machinery Co.",
+      "type": null,
+      "status": "extracted",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-05-28T11:46:38.254063Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/service__field-service.json",
+      "prototypePath": null,
+      "variants": {},
+      "shapeBriefs": {},
+      "migratedPath": null,
+      "directedAt": null,
+      "prototypedAt": null
+    },
+    {
+      "slug": "customer-value-agreements",
+      "url": "https://wheelercat.com/customer-value-agreements/",
+      "title": "Cat\u00ae Customer Value Agreements (CVAs) | Wheeler Machinery Co.",
+      "type": null,
+      "status": "extracted",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-05-28T11:46:38.254063Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/customer-value-agreements.json",
+      "prototypePath": null,
+      "variants": {},
+      "shapeBriefs": {},
+      "migratedPath": null,
+      "directedAt": null,
+      "prototypedAt": null
+    },
+    {
+      "slug": "parts",
+      "url": "https://wheelercat.com/parts/",
+      "title": "Cat\u00ae Heavy Equipment Parts for Sale in Utah | Wheeler Machinery",
+      "type": null,
+      "status": "extracted",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-05-28T11:46:38.254063Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/parts.json",
+      "prototypePath": null,
+      "variants": {},
+      "shapeBriefs": {},
+      "migratedPath": null,
+      "directedAt": null,
+      "prototypedAt": null
+    },
+    {
+      "slug": "industries",
+      "url": "https://wheelercat.com/industries/",
+      "title": "Equipment by Industry | Wheeler Machinery Co.",
+      "type": null,
+      "status": "extracted",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-05-28T11:46:38.254063Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/industries.json",
+      "prototypePath": null,
+      "variants": {},
+      "shapeBriefs": {},
+      "migratedPath": null,
+      "directedAt": null,
+      "prototypedAt": null
+    },
+    {
+      "slug": "parts__shop-by-category",
+      "url": "https://wheelercat.com/parts/shop-by-category/",
+      "title": "Shop Cat\u00ae Parts by Category | Wheeler Machinery Co.",
+      "type": null,
+      "status": "extracted",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-05-28T11:46:38.254063Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/parts__shop-by-category.json",
+      "prototypePath": null,
+      "variants": {},
+      "shapeBriefs": {},
+      "migratedPath": null,
+      "directedAt": null,
+      "prototypedAt": null
+    },
+    {
+      "slug": "specials",
+      "url": "https://wheelercat.com/specials/",
+      "title": "Equipment Deals, Specials & Promotions | Wheeler Machinery Co.",
+      "type": null,
+      "status": "extracted",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-05-28T11:46:38.254063Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/specials.json",
+      "prototypePath": null,
+      "variants": {},
+      "shapeBriefs": {},
+      "migratedPath": null,
+      "directedAt": null,
+      "prototypedAt": null
+    },
+    {
+      "slug": "offers",
+      "url": "https://wheelercat.com/offers/",
+      "title": "Construction Equipment Deals & Offers - Wheeler Machinery Co.",
+      "type": null,
+      "status": "extracted",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-05-28T11:46:38.254063Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/offers.json",
+      "prototypePath": null,
+      "variants": {},
+      "shapeBriefs": {},
+      "migratedPath": null,
+      "directedAt": null,
+      "prototypedAt": null
+    },
+    {
+      "slug": "industries__heavy-construction",
+      "url": "https://wheelercat.com/industries/heavy-construction/",
+      "title": "Heavy Construction Equipment for Sale in UT | Wheeler Machinery",
+      "type": null,
+      "status": "extracted",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-05-28T11:46:38.254063Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/industries__heavy-construction.json",
+      "prototypePath": null,
+      "variants": {},
+      "shapeBriefs": {},
+      "migratedPath": null,
+      "directedAt": null,
+      "prototypedAt": null
+    },
+    {
+      "slug": "cat-certified-used",
+      "url": "https://wheelercat.com/cat-certified-used/",
+      "title": "Cat\u00ae Certified Used Equipment for Sale in UT | Wheeler Machinery",
+      "type": null,
+      "status": "extracted",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-05-28T11:46:38.254063Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/cat-certified-used.json",
+      "prototypePath": null,
+      "variants": {},
+      "shapeBriefs": {},
+      "migratedPath": null,
+      "directedAt": null,
+      "prototypedAt": null
+    },
+    {
+      "slug": "sponsorships",
+      "url": "https://wheelercat.com/sponsorships/",
+      "title": "Sponsorships - Wheeler Machinery Co.",
+      "type": null,
+      "status": "extracted",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-05-28T11:46:38.254063Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/sponsorships.json",
+      "prototypePath": null,
+      "variants": {},
+      "shapeBriefs": {},
+      "migratedPath": null,
+      "directedAt": null,
+      "prototypedAt": null
+    }
+  ]
+}

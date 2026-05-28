@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- stardust:provenance
+  writtenBy:         stardust:prototype (impeccable craft, strict cascade)
+  writtenAt:         2026-05-28T02:00:00Z
+  page:              home
+  variant:           D (display-typography amplification, static)
+  pageUrl:           https://wheelercat.com/
+  againstDirection:  stardust/direction.md (Active — six-candidate fork)
+  craftedVia:        impeccable:craft (reference/craft.md Steps 1, 2, 5)
+  consultedReferences:
+    - impeccable/reference/typography.md (modular scale, ALL-CAPS tracking, tabular-nums, text-wrap balance)
+    - impeccable/reference/brand.md (register=brand)
+  readArtifacts:
+    - stardust/prototypes/home-D-shape.md
+    - DESIGN-D.md / DESIGN-D.json
+    - DESIGN.md / DESIGN.json / PRODUCT.md
+    - stardust/current/pages/home.json
+    - stardust/current/_brand-extraction.json
+    - stardust/uplift-improvements.md
+    - stardust/prototypes/home-A-proposed.html (craft-level reference)
+  divergenceVersion: v1.0
+  fontDeck:          brand-inherited (Roboto Condensed + Roboto + icomoon)
+  paletteSource:     captured (Mode A brand-faithful)
+  colorStrategy:     Restrained (Cat Yellow accent ≤ 10% of surface)
+  brandFaithfulInversions:
+    - pure-white-as-page-ground (captured #FFFFFF)
+    - pure-#272727-as-headings (captured pure-near-black text)
+    - hex-format-not-OKLCH (captured hex sRGB)
+    - all-caps-headings-extended (captured 53% caps; D amplifies to nav + CTAs + eyebrows + footer-heads)
+    - ad-hoc-then-modular-scale (captured ad-hoc; D pins 1.333 perfect-fourth)
+    - saturated-yellow (captured Cat Yellow at full saturation)
+  derivedColors:
+    - "#E6B800 — yellow hover (10% darker)"
+    - "#1A1A1A — dark utility bar (8% darker than #272727)"
+  voiceClassification:
+    - { section: header, classification: captured-verbatim }
+    - { section: hero, classification: captured-verbatim (headline + CTA); direction-authorized rewrite (supporting line) }
+    - { section: finance, classification: captured-verbatim (all 3 card titles) }
+    - { section: services, classification: captured-verbatim (all 6 tile titles + eyebrow + title) }
+    - { section: support-partners, classification: captured-verbatim (sentiment) + placeholder (logos) }
+    - { section: locations-proof, classification: direction-authorized (narrative-proof rephrase of captured 18/75/24 stat row, improvement #4) }
+    - { section: footer, classification: captured-verbatim }
+  unsourcedContent:
+    - selector: "section[data-section='support-partners'] .partner-logo"
+      type: brand-logo
+      count: 5
+      reason: "Partner names captured (Campbell, JLG, Monson, Gardner, SFS); image assets not in stardust/current/assets/media/."
+  wcagContrast:
+    - "#272727 on #FFFFFF: 14.0:1 (AAA)"
+    - "#454545 on #FFFFFF: 9.7:1 (AAA)"
+    - "#FFFFFF on #272727: 14.7:1 (AAA)"
+    - "#272727 on #FFCC00: 12.6:1 (AAA)"
+    - "#FFCC00 on #272727: 8.6:1 (AAA)"
+    - "#454545 on #E5E3DF: 7.4:1 (AAA)"
+    - "REFUSED: #FFFFFF on #FFCC00 (1.95:1) — never paired"
+  antiToolboxAudit:
+    hits: 0
+    rationale: "Single bet (type-scope expansion). 1.333 ratio ≥ 1.25 ✓. Yellow ≤ 10% surface (Restrained color strategy holds). No side stripes > 1px; no gradient text; no glassmorphism; no hero-metric template (narrative proofs per improvement #4). Service tile grid uses captured icomoon vocabulary."
+  improvementsApplied:
+    - "#1 carousel → 3-up CSS grid"
+    - "#2 sentiment + partner-logo merged in warm-stone band"
+    - "#3 modular type scale (1.333 perfect-fourth)"
+    - "#4 stat-row retired; replaced with typographic-plate narrative proofs"
+    - "#5 yellow scope unchanged (B's territory)"
+  betSurfacesTouched:
+    - "nav links: Roboto Condensed 700 ALL-CAPS 0.04em"
+    - "primary CTA labels: Roboto Condensed 700 (UP from captured Roboto)"
+    - "section eyebrows: Roboto Condensed 700 12px 0.12em + 1px yellow hairline border-bottom"
+    - "stat numerals: Roboto Condensed 700 tabular-nums 65px"
+    - "footer column heads: Roboto Condensed 700 21px 0.08em"
+  critique:
+    - { source: "impeccable critique", priority: "P0", finding: "Partner-logo PLACEHOLDER chrome ships visible (dashed yellow); reads as unfinished in presales mockup", status: "logged; acknowledged for presales (placeholders required by migrate-guard contract)" }
+    - { source: "impeccable critique", priority: "P1", finding: "Display-cap monotony — every typographic surface in Roboto Condensed 700 CAPS kills its own contrast", status: "logged; would need /impeccable layout or /impeccable typeset pass to demote branch-grid rows + finance-card body lead-ins" }
+    - { source: "impeccable critique", priority: "P1", finding: "Finance card titles wrap to 4-5 lines at 37px CAPS in 340px-min cards", status: "logged; fix via card-title scale drop or numeric lockup split" }
+    - { source: "impeccable critique CLI", priority: "P1", finding: "hero-eyebrow-chip pattern (Caterpillar · Current Offers above h1)", status: "logged; fix via /impeccable distill" }
+    - { source: "impeccable critique", priority: "P2", count: 4, summary: "flat section rhythm + stat-plate vs sub-head competition + identical finance cards + rental affordance missing from hero" }
+  audit:
+    - { source: "impeccable audit", priority: "P1", finding: "skip-link missing", recommendation: "/impeccable harden" }
+    - { source: "impeccable audit", priority: "P1", finding: "LCP hero loaded via CSS background-image (no fetchpriority path)", recommendation: "/impeccable optimize — convert to <img loading=eager fetchpriority=high>" }
+    - { source: "impeccable audit", priority: "P2", count: 4, summary: "inline-style eyebrow modifiers + hard-coded #1a1a1a literals + hero-metric template echo in locations plate + identical finance cards" }
+    - { source: "impeccable audit", priority: "P3", count: 1, summary: "logo alt text could carry Cat authorized dealer context" }
+    - auditHealthScore: "15/20 (Good — address weak dimensions before release)"
+    - dimensionScores: { a11y: 3, perf: 3, responsive: 4, theming: 3, antiPatterns: 2 }
+  adapt:
+    - { at: "2026-05-28T02:30:00Z", breakpointsValidated: [1920, 1440, 1280, 800, 414, 375], mediaRuleCount: 4, additions: ["@media (max-width: 1100px) and (min-width: 769px) tightening nav for 800-1100 range"], surfaced: ["full nav at 1280px is right at the edge — logo + 5 links + phone strip ~ container width; intermediate breakpoint added to prevent overflow between 800-1100"] }
+  stardustVersion:   0.10.0
+-->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wheeler Cat - Construction Equipment, Tool & Trailer Rental & Sales</title>
+<meta name="description" content="Wheeler Cat offers Construction Equipment, Tool & Trailer Rental & Sales across 18 locations in Utah and parts of Arizona, Nevada & Wyoming.">
+<style>
+:root {
+  /* Colors (captured palette, Mode A) */
+  --color-page: #FFFFFF;
+  --color-body: #454545;
+  --color-heading: #272727;
+  --color-cat-yellow: #FFCC00;
+  --color-cat-yellow-hover: #E6B800;
+  --color-surface-dark: #272727;
+  --color-surface-dark-hover: #1A1A1A;
+  --color-warm-stone: #E5E3DF;
+  --color-text-on-dark: #FFFFFF;
+  --color-text-on-yellow: #272727;
+  --color-overlay: rgba(18,18,18,0.5);
+
+  /* Modular type scale — 1.333 PERFECT FOURTH (D's bet vs A's 1.250) */
+  --scale-12: 0.75rem;     /* 12px micro / eyebrow */
+  --scale-16: 1rem;        /* 16px body */
+  --scale-21: 1.3125rem;   /* 21px body-lift / footer-head */
+  --scale-28: 1.75rem;     /* 28px h4 / tile / card body */
+  --scale-37: 2.3125rem;   /* 37px h3 / card title */
+  --scale-49: 3.0625rem;   /* 49px h2 / section head */
+  --scale-65: 4.0625rem;   /* 65px h1 / hero / stat numeral */
+
+  /* Spacing (24px vertical rhythm — body line-height multiple) */
+  --sp-xs: 4px;
+  --sp-sm: 8px;
+  --sp-md: 16px;
+  --sp-lg: 24px;
+  --sp-xl: 32px;
+  --sp-xxl: 48px;
+  --sp-section: 64px;
+
+  /* Radii */
+  --r-primary: 5px;
+  --r-pill: 999px;
+
+  /* Layout */
+  --container-max: 1400px;
+
+  /* Shadows */
+  --shadow-card-strong: rgba(0,0,0,0.8) 0px 6px 16px 0px;
+
+  /* Fonts */
+  --font-display: "Roboto Condensed", "Roboto", system-ui, sans-serif;
+  --font-body: "Roboto", system-ui, sans-serif;
+  --font-icon: "icomoon";
+
+  /* Motion easing (impeccable: ease-out exponential) */
+  --ease-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Fonts (self-contained) */
+@font-face {
+  font-family: "Roboto Condensed";
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("../current/assets/fonts/ieVl2ZhZI2eCN5jzbjEETS9weq8-19K7DQ.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Roboto";
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("../current/assets/fonts/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("../current/assets/fonts/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBHMdazQ.woff2") format("woff2");
+}
+@font-face {
+  font-family: "icomoon";
+  src: url("../current/assets/fonts/icomoon.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+/* Reset / base */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--scale-16);
+  line-height: 1.5;
+  color: var(--color-body);
+  background: var(--color-page);
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; cursor: pointer; }
+
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding-left: var(--sp-lg);
+  padding-right: var(--sp-lg);
+}
+
+/* Mobile-nav-collapse: base hide rule at top of stylesheet (source-order check) */
+.burger { display: none; }
+
+/* ─────────────────────────────────────────────────────────────────
+   D's BET — Display-typography amplification
+   Roboto Condensed 700 ALL-CAPS as STRUCTURAL VOICE across the page
+   ───────────────────────────────────────────────────────────────── */
+
+.display, .headline, .title, .tile-title, .stat-numeral, .label-eyebrow, .footer-head {
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-heading);
+  margin: 0;
+  text-wrap: balance;
+}
+
+/* Hero h1 — 65px (D's largest display) */
+.display {
+  font-size: clamp(2.3125rem, 6vw, var(--scale-65));
+  line-height: 1.05;
+  letter-spacing: -0.005em;
+}
+/* Section h2 — 49px */
+.headline {
+  font-size: clamp(1.75rem, 4vw, var(--scale-49));
+  line-height: 1.1;
+}
+/* Card title h3 — 37px */
+.title {
+  font-size: clamp(1.5rem, 3vw, var(--scale-37));
+  line-height: 1.15;
+}
+/* Service tile title — 28px */
+.tile-title {
+  font-size: var(--scale-28);
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+}
+/* Stat numeral — 65px Roboto Condensed 700 TABULAR-NUMS (D's bet headline) */
+.stat-numeral {
+  font-size: clamp(2.3125rem, 5vw, var(--scale-65));
+  line-height: 0.95;
+  letter-spacing: -0.01em;
+  font-variant-numeric: tabular-nums;
+  display: block;
+}
+/* Section eyebrow — 12px 0.12em + 1px yellow hairline (D's bet move) */
+.label-eyebrow {
+  font-size: var(--scale-12);
+  line-height: 1.4;
+  letter-spacing: 0.12em;
+  display: inline-block;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--color-cat-yellow);
+  color: var(--color-heading);
+}
+.label-eyebrow--on-dark { color: var(--color-cat-yellow); }
+/* Footer column head — 21px 0.08em (D's bet move, UP from captured) */
+.footer-head {
+  font-size: var(--scale-21);
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  color: var(--color-text-on-dark);
+  margin: 0 0 var(--sp-md);
+}
+
+/* Body type */
+.body-copy { font-size: var(--scale-16); line-height: 1.55; color: var(--color-body); margin: 0; max-width: 65ch; text-wrap: pretty; }
+.lead-copy { font-size: var(--scale-21); line-height: 1.4; color: var(--color-body); margin: 0; max-width: 60ch; text-wrap: pretty; }
+
+/* Icomoon glyphs */
+.icon {
+  font-family: var(--font-icon) !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  speak: never;
+  display: inline-block;
+}
+.icon-menu::before     { content: "\e904"; }
+.icon-map-pin::before  { content: "\e906"; }
+.icon-new::before      { content: "\e907"; }
+.icon-used::before     { content: "\e90c"; }
+.icon-rent::before     { content: "\e909"; }
+.icon-order::before    { content: "\e908"; }
+.icon-service::before  { content: "\e90a"; }
+.icon-phone::before    { content: "\e90b"; }
+.icon-facebook::before { content: "\e900"; }
+.icon-instagram::before{ content: "\e902"; }
+.icon-linkedin::before { content: "\e903"; }
+.icon-youtube::before  { content: "\e90d"; }
+.icon-twitter::before  { content: "\e905"; }
+
+/* Buttons — Roboto Condensed 700 (D's bet: CTA labels in display family) */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-sm);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.9375rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  border-radius: var(--r-primary);
+  border: 1px solid transparent;
+  transition: background 200ms var(--ease-out), color 200ms var(--ease-out), border-color 200ms var(--ease-out);
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn-primary {
+  background: var(--color-cat-yellow);
+  color: var(--color-text-on-yellow);
+  border-color: var(--color-cat-yellow);
+}
+.btn-primary:hover, .btn-primary:focus-visible {
+  background: var(--color-surface-dark);
+  color: var(--color-cat-yellow);
+  border-color: var(--color-surface-dark);
+  outline: none;
+}
+.btn-secondary {
+  background: transparent;
+  color: var(--color-heading);
+  border-color: var(--color-heading);
+  padding: 12px 24px;
+}
+.btn-secondary:hover, .btn-secondary:focus-visible {
+  background: var(--color-surface-dark);
+  color: var(--color-text-on-dark);
+  outline: none;
+}
+.btn-ghost-light {
+  background: transparent;
+  color: var(--color-text-on-dark);
+  border-color: var(--color-text-on-dark);
+  padding: 12px 24px;
+}
+.btn-ghost-light:hover { background: var(--color-cat-yellow); color: var(--color-text-on-yellow); border-color: var(--color-cat-yellow); }
+
+/* ───────── HEADER ───────── */
+.site-header { position: sticky; top: 0; z-index: 50; background: var(--color-surface-dark); color: var(--color-text-on-dark); }
+.utility-bar {
+  background: #1a1a1a;
+  color: var(--color-text-on-dark);
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.utility-bar__inner { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; gap: var(--sp-md); }
+.utility-bar a { color: var(--color-text-on-dark); }
+.utility-bar a:hover { color: var(--color-cat-yellow); }
+.utility-bar__right { display: inline-flex; gap: var(--sp-lg); align-items: center; }
+.utility-bar__phone { color: var(--color-cat-yellow); display: inline-flex; gap: var(--sp-sm); align-items: center; }
+
+.main-header { background: var(--color-surface-dark); }
+.main-header__inner { display: flex; justify-content: space-between; align-items: stretch; padding: 16px 0; gap: var(--sp-md); }
+.main-header__logo img { height: 56px; width: auto; }
+
+.main-nav { display: flex; gap: 0; align-items: stretch; }
+.main-nav__list { display: flex; list-style: none; margin: 0; padding: 0; gap: 0; align-items: stretch; }
+.main-nav__list a {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 var(--sp-md);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.9375rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-text-on-dark);
+  position: relative;
+  transition: color 150ms var(--ease-out);
+}
+.main-nav__list a:hover { color: var(--color-cat-yellow); }
+.main-nav__list a.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: -16px;
+  left: var(--sp-md);
+  right: var(--sp-md);
+  height: 2px;
+  background: var(--color-cat-yellow);
+}
+.main-nav__phone {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-sm);
+  background: var(--color-cat-yellow);
+  color: var(--color-text-on-yellow);
+  padding: 0 var(--sp-lg);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.9375rem;
+  letter-spacing: 0.05em;
+}
+.main-nav__phone:hover { background: var(--color-cat-yellow-hover); }
+
+.burger {
+  background: transparent;
+  border: 1px solid var(--color-text-on-dark);
+  color: var(--color-text-on-dark);
+  width: 44px;
+  height: 44px;
+  border-radius: var(--r-primary);
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+.burger:focus-visible { outline: 2px solid var(--color-cat-yellow); outline-offset: 2px; }
+
+/* ───────── HERO ───────── */
+.hero {
+  position: relative;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  background-image: linear-gradient(var(--color-overlay), var(--color-overlay)), url("../current/assets/media/SC_Hero-292cc4.jpg");
+  background-size: cover;
+  background-position: center;
+  color: var(--color-text-on-dark);
+  padding: var(--sp-section) 0;
+}
+.hero__inner { max-width: 900px; }
+.hero__eyebrow { margin-bottom: var(--sp-lg); }
+.hero__headline { color: var(--color-text-on-dark); margin-bottom: var(--sp-lg); }
+.hero__supporting {
+  font-size: var(--scale-21);
+  line-height: 1.4;
+  margin-bottom: var(--sp-xl);
+  color: rgba(255,255,255,0.92);
+  max-width: 56ch;
+  text-wrap: pretty;
+}
+.hero__actions { display: inline-flex; gap: var(--sp-md); flex-wrap: wrap; }
+
+/* ───────── FINANCE BAND (3-up, improvement #1) ───────── */
+.finance { background: var(--color-page); padding: var(--sp-section) 0; }
+.finance__head { text-align: center; margin-bottom: var(--sp-xxl); }
+.finance__head .label-eyebrow { margin-bottom: var(--sp-md); }
+.finance__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--sp-lg); }
+.finance-card {
+  background: var(--color-surface-dark);
+  color: var(--color-text-on-dark);
+  border-radius: var(--r-primary);
+  padding: var(--sp-xl);
+  box-shadow: var(--shadow-card-strong);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-md);
+  min-height: 340px;
+  position: relative;
+  overflow: hidden;
+}
+.finance-card::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 4px; background: var(--color-cat-yellow); }
+.finance-card__title { color: var(--color-text-on-dark); }
+.finance-card__body { color: rgba(255,255,255,0.85); }
+.finance-card__cta { margin-top: auto; align-self: flex-start; }
+
+/* ───────── SERVICES ───────── */
+.services { background: var(--color-page); padding: var(--sp-section) 0; }
+.services__head { text-align: center; margin-bottom: var(--sp-xxl); }
+.services__eyebrow { margin-bottom: var(--sp-md); }
+.services__grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: var(--sp-md); }
+.service-tile {
+  background: var(--color-surface-dark);
+  color: var(--color-text-on-dark);
+  border-radius: var(--r-primary);
+  padding: var(--sp-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-md);
+  min-height: 240px;
+  text-decoration: none;
+  transition: background 200ms var(--ease-out), transform 200ms var(--ease-out);
+}
+.service-tile:hover { background: #1a1a1a; transform: translateY(-2px); }
+.service-tile__icon { font-size: 44px; color: var(--color-cat-yellow); line-height: 1; }
+.service-tile__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--scale-21);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--color-text-on-dark);
+  margin-top: auto;
+  text-wrap: balance;
+}
+.services__footer { margin-top: var(--sp-xxl); text-align: center; }
+
+/* ───────── SUPPORT + PARTNERS (improvement #2 — merged band) ───────── */
+.support-partners { background: var(--color-warm-stone); padding: var(--sp-section) 0; }
+.support-partners__head { text-align: center; margin-bottom: var(--sp-xxl); }
+.support-partners__eyebrow { margin-bottom: var(--sp-md); }
+.support-partners__sentiment { color: var(--color-heading); max-width: 24ch; margin: 0 auto; text-wrap: balance; }
+.partner-strip { display: grid; grid-template-columns: repeat(5, 1fr); gap: var(--sp-lg); align-items: center; }
+.partner-logo {
+  background: rgba(255,255,255,0.6);
+  border: 2px dashed var(--color-cat-yellow);
+  border-radius: var(--r-primary);
+  padding: var(--sp-md);
+  min-height: 96px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 4px;
+}
+.partner-logo__eyebrow {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-heading);
+  opacity: 0.7;
+}
+.partner-logo__name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--scale-16);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-heading);
+}
+
+/* ───────── LOCATIONS PROOF — D's typographic-plate (improvement #4) ───────── */
+.locations { background: var(--color-page); padding: var(--sp-section) 0; }
+.locations__plate {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-xxl);
+  margin-bottom: var(--sp-xxl);
+  padding: var(--sp-xl) 0;
+  border-top: 1px solid rgba(39,39,39,0.18);
+  border-bottom: 1px solid rgba(39,39,39,0.18);
+}
+.locations__proof-item { display: flex; flex-direction: column; gap: var(--sp-sm); }
+.locations__proof-item .proof-label {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--scale-21);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-heading);
+  line-height: 1.15;
+  text-wrap: balance;
+}
+.locations__proof-item .proof-sub {
+  font-family: var(--font-body);
+  font-size: var(--scale-16);
+  line-height: 1.4;
+  color: var(--color-body);
+  text-wrap: pretty;
+  max-width: 32ch;
+}
+.locations__sub-head { text-align: center; color: var(--color-heading); margin: var(--sp-xxl) 0 var(--sp-xl); }
+.branch-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-md) var(--sp-xl);
+  max-width: 960px;
+  margin: 0 auto;
+  list-style: none;
+  padding: 0;
+}
+.branch-grid li {
+  padding: var(--sp-sm) 0;
+  border-bottom: 1px solid rgba(39,39,39,0.12);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--scale-16);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--color-heading);
+  display: flex;
+  align-items: center;
+  gap: var(--sp-sm);
+}
+.branch-grid li .icon { font-size: 0.9rem; color: var(--color-cat-yellow); }
+.locations__more { text-align: center; margin-top: var(--sp-xl); font-size: 0.9rem; color: var(--color-body); }
+
+/* ───────── FOOTER ───────── */
+.site-footer { background: var(--color-surface-dark); color: var(--color-text-on-dark); padding: var(--sp-section) 0 var(--sp-xl); }
+.footer__grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: var(--sp-xxl); margin-bottom: var(--sp-xxl); }
+.footer__brand img { max-width: 220px; }
+.footer__brand p { margin-top: var(--sp-md); color: rgba(255,255,255,0.7); font-size: 0.9rem; max-width: 38ch; }
+.footer__col ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: var(--sp-sm); }
+.footer__col a { color: rgba(255,255,255,0.78); font-size: 0.92rem; transition: color 150ms var(--ease-out); }
+.footer__col a:hover { color: var(--color-cat-yellow); }
+.footer__address { font-size: 0.92rem; line-height: 1.55; color: rgba(255,255,255,0.78); font-style: normal; }
+.footer__address a:hover { color: var(--color-cat-yellow); }
+.footer__phone {
+  display: inline-flex; align-items: center; gap: var(--sp-sm);
+  margin-top: var(--sp-md);
+  color: var(--color-cat-yellow);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--scale-21);
+  letter-spacing: 0.04em;
+}
+.footer__social { display: flex; gap: var(--sp-md); margin-top: var(--sp-sm); }
+.footer__social a {
+  width: 40px; height: 40px;
+  display: inline-flex; align-items: center; justify-content: center;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: var(--r-pill);
+  color: var(--color-text-on-dark);
+  font-size: 1rem;
+}
+.footer__social a:hover { background: var(--color-cat-yellow); color: var(--color-text-on-yellow); border-color: var(--color-cat-yellow); }
+.footer__legal {
+  padding-top: var(--sp-lg);
+  border-top: 1px solid rgba(255,255,255,0.12);
+  display: flex; justify-content: space-between; gap: var(--sp-md);
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.55);
+  flex-wrap: wrap;
+}
+.footer__legal ul { display: flex; gap: var(--sp-lg); list-style: none; margin: 0; padding: 0; }
+
+/* ───────── RESPONSIVE ─────────
+   Validated viewports: 1920 / 1440 / 1280 / 800 / 414 / 375
+   - 1920 / 1440: container caps at 1400px max-width; type clamp caps at perfect-fourth scale
+   - 1280: full grid renders within 1232px content width
+   - 1100→769: intermediate nav tightening to prevent full-nav overflow before hamburger
+   - 800: hamburger fires (≤1100 nav tighten engaged); grids at 3-col / 2-col fold
+   - 414 / 375: hamburger + 1-col grids + 40px section padding
+*/
+@media (max-width: 1024px) {
+  :root { --sp-section: 56px; }
+  .services__grid { grid-template-columns: repeat(3, 1fr); }
+  .footer__grid { grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: var(--sp-xl); }
+  .locations__plate { grid-template-columns: 1fr; gap: var(--sp-xl); }
+}
+
+/* Intermediate range: tighten nav so it fits 800-1100 viewport widths
+   before the hamburger collapse fires at ≤ 768. Without this, the full
+   nav (5 links + phone strip + 56px-tall logo) overflows ~1272px content. */
+@media (max-width: 1100px) and (min-width: 769px) {
+  .main-header__logo img { height: 44px; }
+  .main-nav__list a { padding: 0 var(--sp-sm); font-size: 0.8125rem; letter-spacing: 0.03em; }
+  .main-nav__phone { padding: 0 var(--sp-md); font-size: 0.8125rem; letter-spacing: 0.04em; }
+  .utility-bar__inner { font-size: 0.7rem; }
+}
+
+@media (max-width: 768px) {
+  .main-nav__list, .main-nav__phone { display: none; }
+  .burger { display: inline-flex; }
+  .main-nav.is-open .main-nav__list {
+    display: flex;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--color-surface-dark);
+    flex-direction: column;
+    gap: 0;
+    padding: var(--sp-md) 0;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+  .main-nav.is-open .main-nav__list a {
+    padding: var(--sp-md) var(--sp-lg);
+    width: 100%;
+    font-size: var(--scale-16);
+  }
+  .main-nav.is-open .main-nav__phone {
+    display: inline-flex;
+    margin: var(--sp-md) var(--sp-lg);
+    padding: var(--sp-md) var(--sp-lg);
+    font-size: var(--scale-16);
+  }
+  .main-header { position: relative; }
+  .finance__grid { grid-template-columns: repeat(2, 1fr); }
+  .partner-strip { grid-template-columns: repeat(3, 1fr); }
+  .footer__grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 640px) {
+  :root { --sp-section: 40px; }
+  .utility-bar__inner { font-size: 0.65rem; gap: var(--sp-sm); }
+  .utility-bar__right { gap: var(--sp-md); }
+  .hero { min-height: 520px; padding: var(--sp-xl) 0; }
+  .hero__supporting { font-size: var(--scale-16); }
+  .finance__grid { grid-template-columns: 1fr; }
+  .services__grid { grid-template-columns: repeat(2, 1fr); }
+  .partner-strip { grid-template-columns: repeat(2, 1fr); }
+  .branch-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer__grid { grid-template-columns: 1fr; gap: var(--sp-xl); }
+  .footer__legal { flex-direction: column; }
+}
+
+:focus-visible { outline: 2px solid var(--color-cat-yellow); outline-offset: 2px; }
+</style>
+</head>
+<body>
+
+<header class="site-header" data-section="header" data-intent="navigate" data-layout="full-width-dark" data-nav-collapse="hamburger">
+
+  <div class="utility-bar">
+    <div class="container utility-bar__inner">
+      <nav aria-label="utility">
+        <a href="/sponsorships/">Sponsorships</a>
+      </nav>
+      <div class="utility-bar__right">
+        <a href="/about/locations/" class="utility-bar__locations"><span class="icon icon-map-pin" aria-hidden="true"></span> 18 Branches</a>
+        <a class="utility-bar__phone" href="tel:801-436-3672"><span class="icon icon-phone" aria-hidden="true"></span> 801-436-3672</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-header">
+    <div class="container main-header__inner">
+      <a class="main-header__logo" href="/" aria-label="Wheeler Machinery Co. — home">
+        <img src="../current/assets/logo.png" alt="Wheeler Machinery Co.">
+      </a>
+      <button class="burger" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="icon icon-menu" aria-hidden="true"></span>
+      </button>
+      <nav class="main-nav" id="primary-nav" aria-label="primary">
+        <ul class="main-nav__list">
+          <li><a href="/new/">New Equipment</a></li>
+          <li><a href="/used-equipment/machinery/">Used Equipment</a></li>
+          <li><a href="/rental/">Rent Now</a></li>
+          <li><a href="/request-service/" class="is-active">Request Service</a></li>
+          <li><a href="/credit-application/">Credit App</a></li>
+        </ul>
+        <a class="main-nav__phone" href="tel:801-436-3672"><span class="icon icon-phone" aria-hidden="true"></span> 801-436-3672</a>
+      </nav>
+    </div>
+  </div>
+
+</header>
+
+<main>
+
+  <!-- HERO — h1 at 65px Roboto Condensed 700 (D's largest display) -->
+  <section class="hero" data-section="hero" data-intent="promo-finance" data-layout="full-bleed" data-media="image">
+    <div class="container hero__inner">
+      <span class="label-eyebrow label-eyebrow--on-dark hero__eyebrow">Caterpillar · Current Offers</span>
+      <h1 class="display hero__headline">FINANCING DEALS &amp; SPECIAL OFFERS</h1>
+      <p class="hero__supporting">Cat finance offers, fuel-payback programs, and the CVA bonus across the Wheeler fleet.</p>
+      <div class="hero__actions">
+        <a class="btn btn-primary" href="#services">Browse More Services</a>
+        <a class="btn btn-ghost-light" href="/about/">More About Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINANCE BAND — 3-up grid (improvement #1) -->
+  <section class="finance" data-section="finance" data-intent="promo-offers" data-layout="grid" data-items="3">
+    <div class="container">
+      <div class="finance__head">
+        <span class="label-eyebrow">Finance</span>
+        <h2 class="headline" style="margin-top: var(--sp-md);">Current Finance Offers</h2>
+      </div>
+      <div class="finance__grid">
+        <article class="finance-card">
+          <span class="label-eyebrow" style="color: var(--color-cat-yellow); border-bottom-color: var(--color-cat-yellow);">Finance</span>
+          <h3 class="title finance-card__title">0% FOR UP TO 60 MONTHS + $500 TOWARD CVA</h3>
+          <p class="body-copy finance-card__body">On select Cat compact machines. Cat Vehicle Agreement bonus included.</p>
+          <a class="btn btn-primary finance-card__cta" href="/specials/">Learn More</a>
+        </article>
+        <article class="finance-card">
+          <span class="label-eyebrow" style="color: var(--color-cat-yellow); border-bottom-color: var(--color-cat-yellow);">Finance</span>
+          <h3 class="title finance-card__title">FINANCING &amp; FUEL PAYBACK OFFERS</h3>
+          <p class="body-copy finance-card__body">Combined fuel-payback programs across active Cat machinery.</p>
+          <a class="btn btn-primary finance-card__cta" href="/specials/">Learn More</a>
+        </article>
+        <article class="finance-card">
+          <span class="label-eyebrow" style="color: var(--color-cat-yellow); border-bottom-color: var(--color-cat-yellow);">Finance</span>
+          <h3 class="title finance-card__title">CAT® CARD IS NOW CAT® COMMERCIAL ACCOUNT</h3>
+          <p class="body-copy finance-card__body">Streamlined parts &amp; service purchasing on a single Cat account.</p>
+          <a class="btn btn-primary finance-card__cta" href="/specials/">Learn More</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services" data-section="services" data-intent="service-tiles" data-layout="grid" data-items="6">
+    <div class="container">
+      <div class="services__head">
+        <span class="label-eyebrow services__eyebrow">Service &amp; Support</span>
+        <h2 class="headline" style="margin-top: var(--sp-md);">YOUR HEAVY MACHINERY EXPERTS</h2>
+      </div>
+      <div class="services__grid">
+        <a class="service-tile" href="/service/"><span class="service-tile__icon icon icon-service" aria-hidden="true"></span><span class="service-tile__title">Field Service</span></a>
+        <a class="service-tile" href="/service/"><span class="service-tile__icon icon icon-service" aria-hidden="true"></span><span class="service-tile__title">Shop Service</span></a>
+        <a class="service-tile" href="https://parts.cat.com/"><span class="service-tile__icon icon icon-order" aria-hidden="true"></span><span class="service-tile__title">Parts.Cat.com</span></a>
+        <a class="service-tile" href="/customer-value-agreements/"><span class="service-tile__icon icon icon-new" aria-hidden="true"></span><span class="service-tile__title">Maintenance Service</span></a>
+        <a class="service-tile" href="/service/"><span class="service-tile__icon icon icon-used" aria-hidden="true"></span><span class="service-tile__title">Equipment Rebuilds</span></a>
+        <a class="service-tile" href="/request-service/"><span class="service-tile__icon icon icon-phone" aria-hidden="true"></span><span class="service-tile__title">Request Service Online</span></a>
+      </div>
+      <div class="services__footer">
+        <a class="btn btn-secondary" href="/service/">Browse More Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUPPORT + PARTNERS (improvement #2) -->
+  <section class="support-partners" data-section="support-partners" data-intent="brand-proof" data-layout="stack" data-items="5">
+    <div class="container">
+      <div class="support-partners__head">
+        <span class="label-eyebrow support-partners__eyebrow">Our Partners</span>
+        <h2 class="headline support-partners__sentiment" style="margin-top: var(--sp-md);">WE PROUDLY SUPPORT THE ONES WHO BUILD OUR WORLD</h2>
+      </div>
+      <div class="partner-strip">
+        <span class="partner-logo" data-placeholder="true" data-placeholder-type="brand-logo" data-placeholder-source="captured page lists Campbell Companies as parent in footer; image asset not in assets/media/">
+          <span class="partner-logo__eyebrow">PLACEHOLDER · brand-logo</span>
+          <span class="partner-logo__name">Campbell Companies</span>
+        </span>
+        <span class="partner-logo" data-placeholder="true" data-placeholder-type="brand-logo" data-placeholder-source="partner name captured; image asset not matched">
+          <span class="partner-logo__eyebrow">PLACEHOLDER · brand-logo</span>
+          <span class="partner-logo__name">JLG</span>
+        </span>
+        <span class="partner-logo" data-placeholder="true" data-placeholder-type="brand-logo" data-placeholder-source="partner name captured; image asset not matched">
+          <span class="partner-logo__eyebrow">PLACEHOLDER · brand-logo</span>
+          <span class="partner-logo__name">Monson</span>
+        </span>
+        <span class="partner-logo" data-placeholder="true" data-placeholder-type="brand-logo" data-placeholder-source="partner name captured; image asset not matched">
+          <span class="partner-logo__eyebrow">PLACEHOLDER · brand-logo</span>
+          <span class="partner-logo__name">Gardner</span>
+        </span>
+        <span class="partner-logo" data-placeholder="true" data-placeholder-type="brand-logo" data-placeholder-source="partner name captured; image asset not matched">
+          <span class="partner-logo__eyebrow">PLACEHOLDER · brand-logo</span>
+          <span class="partner-logo__name">SFS</span>
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATIONS PROOF — D's typographic-plate (improvement #4) -->
+  <section class="locations" data-section="locations-proof" data-intent="locations-stats" data-layout="stack" data-items="15">
+    <div class="container">
+      <div class="locations__plate" aria-label="Wheeler Cat reach and reliability">
+        <div class="locations__proof-item">
+          <span class="stat-numeral">18</span>
+          <span class="proof-label">Branches</span>
+          <span class="proof-sub">Across Utah, Arizona, Nevada &amp; Wyoming.</span>
+        </div>
+        <div class="locations__proof-item">
+          <span class="stat-numeral">75</span>
+          <span class="proof-label">Years of Same-Day Service</span>
+          <span class="proof-sub">Dispatching field crews from local yards since 1951.</span>
+        </div>
+        <div class="locations__proof-item">
+          <span class="stat-numeral">24/7</span>
+          <span class="proof-label">Phone Support</span>
+          <span class="proof-sub">Reach a Wheeler dispatcher at 801-436-3672 anytime.</span>
+        </div>
+      </div>
+      <h2 class="headline locations__sub-head">Find Your Nearest Branch</h2>
+      <ul class="branch-grid" aria-label="Wheeler Cat branch locations">
+        <li><span class="icon icon-map-pin" aria-hidden="true"></span>Salt Lake City (HQ)</li>
+        <li><span class="icon icon-map-pin" aria-hidden="true"></span>Lindon</li>
+        <li><span class="icon icon-map-pin" aria-hidden="true"></span>Sandy</li>
+        <li><span class="icon icon-map-pin" aria-hidden="true"></span>Cedar City, UT</li>
+        <li><span class="icon icon-map-pin" aria-hidden="true"></span>Ely</li>
+        <li><span class="icon icon-map-pin" aria-hidden="true"></span>Hurricane</li>
+        <li><span class="icon icon-map-pin" aria-hidden="true"></span>Kaysville</li>
+        <li><span class="icon icon-map-pin" aria-hidden="true"></span>Logan</li>
+        <li><span class="icon icon-map-pin" aria-hidden="true"></span>Moab</li>
+        <li><span class="icon icon-map-pin" aria-hidden="true"></span>Ogden</li>
+        <li><span class="icon icon-map-pin" aria-hidden="true"></span>Park City</li>
+        <li><span class="icon icon-map-pin" aria-hidden="true"></span>Salina</li>
+        <li><span class="icon icon-map-pin" aria-hidden="true"></span>Tooele</li>
+        <li><span class="icon icon-map-pin" aria-hidden="true"></span>Vernal</li>
+        <li><span class="icon icon-map-pin" aria-hidden="true"></span>West Valley</li>
+      </ul>
+      <p class="locations__more">Plus 3 additional locations · <a href="/about/locations/" style="color: var(--color-heading); text-decoration: underline;">View all 18 branches</a></p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer" data-section="footer" data-intent="navigate" data-layout="mega">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <img src="../current/assets/logo.png" alt="Wheeler Machinery Co.">
+        <p>Construction Equipment, Tool &amp; Trailer Rental &amp; Sales across 18 locations in Utah and parts of Arizona, Nevada &amp; Wyoming.</p>
+      </div>
+      <div class="footer__col">
+        <h2 class="footer-head">Quick Links</h2>
+        <ul>
+          <li><a href="/new/">Sales</a></li>
+          <li><a href="/rental/">Rentals</a></li>
+          <li><a href="/parts/">Cat Parts</a></li>
+          <li><a href="/service/">Service</a></li>
+          <li><a href="/about/locations/">Locations</a></li>
+          <li><a href="/contact-us/">Contact</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/sponsorships/">Sponsorship</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h2 class="footer-head">Contact Us</h2>
+        <address class="footer__address">
+          4901 West 2100 South,<br>
+          Salt Lake City,<br>
+          UT 84120
+        </address>
+        <a class="footer__phone" href="tel:801-436-3672"><span class="icon icon-phone" aria-hidden="true"></span> 801-436-3672</a>
+      </div>
+      <div class="footer__col">
+        <h2 class="footer-head">Connect With Us</h2>
+        <div class="footer__social">
+          <a href="#" aria-label="Facebook"><span class="icon icon-facebook" aria-hidden="true"></span></a>
+          <a href="#" aria-label="Instagram"><span class="icon icon-instagram" aria-hidden="true"></span></a>
+          <a href="#" aria-label="LinkedIn"><span class="icon icon-linkedin" aria-hidden="true"></span></a>
+          <a href="#" aria-label="YouTube"><span class="icon icon-youtube" aria-hidden="true"></span></a>
+          <a href="#" aria-label="Twitter"><span class="icon icon-twitter" aria-hidden="true"></span></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__legal">
+      <span>Copyright © 2026. All Rights Reserved. A Campbell Company</span>
+      <ul>
+        <li><a href="/sitemap/">Sitemap</a></li>
+        <li><a href="/legal/">Legal</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var burger = document.querySelector('.burger');
+    var nav = document.getElementById('primary-nav');
+    if (!burger || !nav) return;
+    burger.addEventListener('click', function () {
+      var open = nav.classList.toggle('is-open');
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && nav.classList.contains('is-open')) {
+        nav.classList.remove('is-open');
+        burger.setAttribute('aria-expanded', 'false');
+        burger.focus();
+      }
+    });
+  })();
+</script>
+
+</body>
+</html>

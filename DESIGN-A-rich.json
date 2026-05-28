@@ -1,0 +1,211 @@
+{
+  "_provenance": {
+    "writtenBy": "stardust:direct (approval fold-back for home-A-rich-proposed.html)",
+    "writtenAt": "2026-05-28T11:03:15Z",
+    "variant": "A-rich",
+    "parent": "DESIGN-A.json",
+    "inheritanceChain": "A-rich → A → active-direction (Mode A)",
+    "approvedAs": "stardust/prototypes/home-A-rich-proposed.html",
+    "readArtifacts": [
+      "DESIGN.json",
+      "DESIGN-A.json",
+      "DESIGN-B.json (palette inversion reference for hero pill CTA)",
+      "DESIGN-C.json (motion register reference for Lenis runtime)",
+      "DESIGN-G.json (locations dark-band reference)",
+      "stardust/prototypes/home-A-rich-proposed.html",
+      "stardust/direction.md"
+    ],
+    "stardustVersion": "0.10.0"
+  },
+  "schemaVersion": 2,
+  "title": "Design System: Wheeler Cat — Variant A-rich (approved home)",
+  "variant": {
+    "id": "A-rich",
+    "role": "user-directed composition of A + B/C/G surfaces with services-commitment content shift",
+    "bet": "Wheeler-as-services-partner home: Oswald display headline, 4-verb Pattern A nav, blog cards + brand logos + dark-locations sections, scroll-driven Lenis motion. Picked variant from interactive review with brand owner.",
+    "static": false,
+    "cinematic": "partial (Lenis runtime, scroll-reveal, hero load-fade; no register-driven kinetic-display)",
+    "parentVariant": "A",
+    "borrowedFrom": ["B (palette-inverse hero CTA)", "C-cinematic (Lenis + data-anim runtime)", "G (yellow-eyebrow + dark-page locations)", "H (Compact_Track_Loader hero image)"],
+    "userDirectedMoves": [
+      "REDEFINING / COMMITMENT two-tone headline (yellow/white)",
+      "white pill CTA (replaces yellow primary + ghost-light dual-CTA pattern)",
+      "left-to-right darkening hero gradient",
+      "Pattern A 4-verb nav (BUY / RENT / SERVICE / PARTS) replacing 7-link captured nav",
+      "Yellow utility strip with 2 visible + More ▾ dropdown",
+      "Dark grey 10-link department row restored as 3rd header layer",
+      "Service tile image-fade-on-hover with sticky reveal",
+      "Blog card image-scale-on-hover",
+      "4-up portrait blog cards (Field Notes section)"
+    ]
+  },
+  "inherits": {
+    "from": "DESIGN-A.json",
+    "items": [
+      "colorMeta (captured Mode A palette)",
+      "typographyMeta (Roboto + Roboto Condensed for body/most surfaces)",
+      "spacing.sectionPadding (64px desktop density floor)",
+      "componentStyle.cards",
+      "componentStyle.inputs",
+      "systemComponentRoles (header / footer / cta-band)",
+      "iconFont (icomoon glyph table)",
+      "divergence (base brand-faithful inversions)"
+    ]
+  },
+  "extensions": {
+    "typography": {
+      "displayHeadlineFamily": {
+        "name": "Oswald",
+        "weight": 700,
+        "source": "captured (assets/fonts/TK3IWkUHHAIjg75cFRf3bXL8LICs1_Fv40pKlN4NNSeSASz7FmlWHYg.woff2)",
+        "scope": "hero h1 only — letterforms match captured wheelercat.com hero display proportions (more compressed than Roboto Condensed)",
+        "stack": "\"Oswald\", \"Roboto Condensed\", \"Roboto\", system-ui, sans-serif",
+        "rationale": "Brand-faithful Mode A — Oswald was in the captured font inventory but unused by the original DESIGN-A spec. Restoring it for hero display matches the captured site's hero typographic register without inventing a new face."
+      },
+      "displayHeadlineRules": {
+        "fontSize": "clamp(2.4rem, 7.2vw, 8rem)",
+        "lineHeight": 0.9,
+        "letterSpacing": 0,
+        "textTransform": "uppercase",
+        "twoToneTreatment": "first line accent (Cat Yellow), second line on-dark (white)"
+      },
+      "supportingCopy": {
+        "family": "Roboto Condensed 700 caps (UP from original A's Roboto body)",
+        "fontSize": "clamp(0.95rem, 1.4vw, 1.25rem)",
+        "letterSpacing": "0.04em",
+        "twoToneInline": "yellow accent spans inline with white body (e.g. 'PARTNER WITH WHEELER' yellow / 'FOR YOUR EQUIPMENT...' white)",
+        "italicVariant": "second line uses font-style: italic (Roboto Condensed Italic synthesized)"
+      }
+    },
+    "componentStyle": {
+      "ctaPillLight": {
+        "background": "#FFFFFF",
+        "color": "#272727",
+        "borderRadius": "var(--r-pill)",
+        "padding": "14px 28px",
+        "letterSpacing": "0.08em",
+        "hover": "background → Cat Yellow #FFCC00",
+        "scope": "hero primary CTA (replaces dual btn-primary + btn-ghost-light pattern)"
+      },
+      "navVerbRow": {
+        "structure": "4-verb Pattern A inline in main-header (BUY / RENT / SERVICE / PARTS)",
+        "verbAffordances": ["icon (icomoon yellow)", "label (Roboto Condensed 700 caps)", "verb-sub (0.62rem 0.12em white 0.55 opacity)"],
+        "hoverState": "dark-grey background #1a1a1a + yellow label + yellow sub-opacity 0.7",
+        "dropdown": "dark panel below header, yellow 3px top border, Roboto 400 mixed-case items",
+        "rationale": "Replaces original A's 7 captured nav links + 10 captured dept links with 4 verbs that absorb both rows under semantic categories. See nav-explorations.html for derivation."
+      },
+      "utilityStrip": {
+        "ground": "Cat Yellow",
+        "items": ["Customer Login", "Sponsorships", "More ▾ (dropdown with Online Payments, Rental Portal, Parts.Cat.com, SIS 2.0, Vision Link, Employee Login)"],
+        "rationale": "Audience-coded simplification of captured 8-link utility row — visible items are customer-facing; staff/admin tools moved to More ▾"
+      },
+      "deptRow": {
+        "ground": "#1a1a1a (dark grey)",
+        "items": ["Quotes", "Offers", "Attachments", "Trailers", "Power Systems", "Parts", "Service", "Technology", "Support", "Jobs"],
+        "rationale": "Captured 10-link department row restored as 3rd header layer (kept per user direction)"
+      }
+    },
+    "compositionDeltas": {
+      "hero": {
+        "ground": "Compact_Track_Loader photo (per H) with left-to-right gradient overlay",
+        "gradient": "linear-gradient(to right, rgba(18,18,18,0.85) 0%, rgba(18,18,18,0.65) 40%, rgba(18,18,18,0.30) 75%, rgba(18,18,18,0.10) 100%)",
+        "padding": "calc(--sp-section * 1.5)",
+        "innerMaxWidth": "1100px (headline allowed to span wide)",
+        "supportingMaxWidth": "56ch (kept narrow)",
+        "headline": "two-line: REDEFINING (yellow) / COMMITMENT (white)",
+        "eyebrow": "Wheeler · Services Commitment",
+        "supportingCopy": "Services-commitment lockup with inline yellow/white + italic second line",
+        "cta": "single white pill: 'Learn More About Our Services Commitment'",
+        "loadMotion": "CSS keyframe fade-in: eyebrow 100ms → headline 250ms → supporting 450ms → cta 650ms (not scroll-driven)",
+        "rationale": "Replaces A's finance-promo hero with services-commitment narrative anchored on the captured Compact_Track_Loader photo + operator imagery"
+      },
+      "financeBand": {
+        "layout": "3-up CSS grid (inherited from A's improvement #1)",
+        "ground": "#FFFFFF page",
+        "motion": "data-anim slide-up + Card 1 numerals (60, 500) split-flap via data-flip",
+        "rationale": "Inherits from A; motion borrowed from C-cinematic finance card treatment"
+      },
+      "services": {
+        "layout": "6-up tile grid",
+        "tileBaseTreatment": "dark #272727 with yellow icomoon glyphs",
+        "hoverTreatment": "per-tile equipment image fades in as background with darkening gradient overlay (lighter at top, heavier at bottom for text contrast)",
+        "stickyReveal": "once revealed via hover/focus, image stays visible (JS adds .is-revealed class with { once: true })",
+        "tileImageMap": {
+          "FIELD SERVICE": "I7A0069-f55d9f.webp",
+          "SHOP SERVICE": "Wheeler_Campus-0d3589.webp",
+          "PARTS.CAT.COM": "CM2022040-2b9745.webp",
+          "MAINTENANCE SERVICE": "Excavators-24bfa6.webp",
+          "EQUIPMENT REBUILDS": "reliable-v3-scaled-c2c1e1.jpg",
+          "REQUEST SERVICE ONLINE": "aerial_resource-e5e159.webp"
+        },
+        "motion": "data-anim entrance (same as finance cards per user direction)"
+      },
+      "blogCards": {
+        "presence": "NEW — not in original A",
+        "layout": "4-up portrait grid (aspect 2:3) on warm-stone ground",
+        "cards": [
+          { "title": "The Value of Preventative Equipment Maintenance", "image": "Excavators-24bfa6.webp", "href": "/blog/preventative-equipment-maintenance/" },
+          { "title": "Aerial Lift Maintenance Tips and Checklist", "image": "aerial_resource-e5e159.webp", "href": "/blog/aerial-lift-maintenance/" },
+          { "title": "Landscaping Equipment Guide", "image": "landscape_blog-7260b0.webp", "href": "/blog/landscaping-equipment-guide/" },
+          { "title": "Customer Value Agreements: What's Included", "image": "CM2022040-2b9745.webp", "href": "/customer-value-agreements/" }
+        ],
+        "hoverTreatment": "smooth image scale (1 → 1.08 over 900ms cubic-bezier(0.16, 1, 0.3, 1)) via child .blog-card__bg element with overflow:hidden parent",
+        "gradient": "bottom-anchored dark gradient for title legibility (linear-gradient to top, rgba(18,18,18,0.92) 0% → transparent 70%)",
+        "moreLink": "Cat Yellow 'Read More ›' with arrow nudge on hover",
+        "rationale": "Per-user-screenshot reference of captured wheelercat.com blog index. Titles are real Wheeler blog topics."
+      },
+      "brandLogos": {
+        "presence": "NEW — not in original A",
+        "layout": "5-up logo strip on white between blog cards and locations",
+        "logos": "captured assets: Campbell, JLG, Monson, Gardner, SFS (no PLACEHOLDER)",
+        "treatment": "grayscale 100%, opacity 0.7 default; full color + opacity 1 on hover"
+      },
+      "locations": {
+        "borrowedFrom": "G",
+        "topRibbon": "thin yellow band (12px padding) holding 'FIND YOUR NEAREST BRANCH' in 0.85rem 0.12em condensed caps",
+        "ground": "dark #272727 below the ribbon",
+        "proofLine": "white narrative proof (no entrance motion — user-directed removal)",
+        "branchGrid": "3-col, white text, light borders rgba(255,255,255,0.12)",
+        "moreLink": "yellow underlined 'View all 18 branches'",
+        "rationale": "Replaces A's narrative-proof-on-white with G's yellow-ribbon-over-dark composition per user direction"
+      }
+    },
+    "motion": {
+      "runtime": "Lenis-based (lenis.min.js + lenis.min.css local-relative)",
+      "canonicalScript": "embedded verbatim from skills/prototype/reference/motion-runtime.md, kinetic-display tuning (parallax 30, cards.slide 48, cards.stagger 0.16)",
+      "register": "partial-kinetic-display (no top-of-page marquee, no monogram unmask, no section-head word-clip-path reveals — user-directed removal)",
+      "moves": [
+        "hero load-only CSS keyframe fade-in (NOT scroll-driven)",
+        "finance cards data-anim slide-up with stagger",
+        "finance card 1 numerals (60, 500) data-flip split-flap reveal",
+        "service tiles data-anim slide-up entrance (same as finance per user direction)",
+        "blog cards data-anim slide-up entrance",
+        "brand logos data-anim sequential entrance",
+        "service tile image fade-in on hover (CSS only, sticky via JS .is-revealed)",
+        "blog card image scale on hover (CSS only)"
+      ],
+      "reducedMotionFallback": "@media (prefers-reduced-motion: reduce) neutralizes all entrances + canonical runtime's prefersReducedMotion branch handles state pinning"
+    },
+    "brandFaithfulInversions": [
+      "pure-white-as-page-ground (captured)",
+      "pure-#272727-headings (captured)",
+      "hex-format-not-OKLCH (captured)",
+      "saturated-yellow (Cat brand-protected)",
+      "Oswald-display-restored (captured-but-unused-in-original-A)"
+    ],
+    "antiToolboxAudit": {
+      "hits": [
+        {
+          "rule": "Hero text on photographic background without contrast scrim",
+          "justification": "Left-to-right gradient overlay (0.85 → 0.10) provides 85% darkening on the left where text sits; AAA contrast preserved on white-on-darkened-photo"
+        },
+        {
+          "rule": "Identical card grids",
+          "applicableTo": "blog-cards section (4 same-shape cards)",
+          "justification": "Captured wheelercat.com blog index uses this exact 3-up portrait pattern (user-referenced screenshot). The 4-up variant honors the captured composition with one extra card."
+        }
+      ],
+      "rationale": "Composed variant with multi-source borrowing. All hits brand-faithfully resolved or captured-source justified."
+    }
+  }
+}

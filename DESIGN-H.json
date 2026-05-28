@@ -1,0 +1,105 @@
+{
+  "_provenance": {
+    "writtenBy": "stardust:direct (--add-variant H)",
+    "writtenAt": "2026-05-28T00:30:00Z",
+    "variant": "H",
+    "parent": "DESIGN.json",
+    "inheritanceChain": "H → active-direction (Mode A)",
+    "readArtifacts": [
+      "DESIGN.json",
+      "stardust/uplift-improvements.md",
+      "stardust/uplift-questions.md",
+      "stardust/current/pages/home.json",
+      "stardust/current/_brand-extraction.json"
+    ],
+    "stardustVersion": "0.10.0"
+  },
+  "schemaVersion": 2,
+  "title": "Design System: Wheeler Cat — Variant H (audience-routing reframe: renters-first)",
+  "variant": {
+    "id": "H",
+    "role": "one captured audience amplified (IA reframe)",
+    "bet": "pick the rental audience over the multi-audience compression; RENT NOW becomes the hero verb; rental fleet foregrounded; finance demoted to a secondary band; sales-quote retained smaller; service-call stays accessible",
+    "capturedTraitAmplified": "rental audience (currently one of 6+ buyer paths above the fold, demoted under the finance promo carousel)",
+    "evidence": "voice.navItems contains 'RENT NOW' as a primary nav verb; voice.ctaSamples includes 'RENT NOW'; captured tagline mentions 'Construction Equipment, Tool & Trailer Rental & Sales' (rental named first); pages/home.json shows >4 distinct CTA verbs above the fold (audience-routing reframe trigger)",
+    "iaFidelity": "reimagined (H is the ONLY variant that reimagines IA — all other variants are verbatim)",
+    "static": true,
+    "cinematic": false,
+    "siblings": ["A", "B", "C", "D", "E", "F", "G", "I"],
+    "differentiationFrom": {
+      "A": "A preserves IA verbatim (finance → service → support → locations); H reframes IA (rental-hero → rental-fleet-grid → finance band demoted → service → locations). 4 diffs: hero verb (BROWSE MORE SERVICES vs RENT NOW), second-band content (finance cards vs rental-fleet category grid), finance position (above-fold in A vs below-fold in H), CTA hierarchy (multi-verb in A vs renters-led in H).",
+      "iaPriorityShift": "H demotes finance and sales-quote but DOES NOT remove them. Service-call path stays first-viewport accessible (24/7 phone strip retained in header). Audience compression is untangled, not destroyed. Other audiences (contractors, fleet operators) can still reach finance / sales / service in ≤ 2 clicks."
+    }
+  },
+  "inherits": {
+    "from": "DESIGN.json",
+    "items": [
+      "colorMeta",
+      "typographyMeta",
+      "modularScale (1.250)",
+      "shadows",
+      "breakpoints",
+      "sectionPadding",
+      "componentStyle (base)",
+      "voice (base)",
+      "systemComponentRoles",
+      "iconFont",
+      "divergence (base)"
+    ]
+  },
+  "extensions": {
+    "iaReframe": {
+      "rationale": "H's bet — pick renter audience over multi-audience compression. The rental fleet (tools, trailers, compact track loaders, light-tower kits) is named first in Wheeler's own tagline but never leads the page.",
+      "audienceLed": "renters (operators needing equipment for 1-day to 6-month rental terms, plus contractors with short-term peak-demand gaps)",
+      "demotedAudiences": [
+        {"name": "finance-led buyers", "demotedTo": "third band (was first-viewport)", "preservedBy": "header CTA NEW QUOTE still visible; finance offers band still above scroll-2 fold"},
+        {"name": "sales-quote buyers", "demotedTo": "secondary header CTA SHOP USED", "preservedBy": "NEW QUOTE link retained in main nav"},
+        {"name": "service-callers", "demotedTo": "header phone strip + footer service link", "preservedBy": "24/7 phone number stays in dark utility bar"}
+      ],
+      "iaPrioritiesOverride": {
+        "rationale": "H's IA reframe legitimately moves the multi-audience-compression priority. Mode A's IA-priority preservation audit fires on the renter-foreground / finance-demote shift; H records the override per intent-dimensions.md § 8 'movable mutability' under reimagined.",
+        "preservationFloor": "all 6 captured audience verbs (BROWSE, NEW QUOTE, SHOP USED, RENT NOW, REQUEST SERVICE, CREDIT APP) remain reachable from the home page in ≤ 1 click from first viewport. Demoted audiences are reframed, not removed."
+      }
+    },
+    "compositionDeltas": {
+      "header": {
+        "treatment": "captured chrome retained; RENT NOW link upweighted (Roboto Condensed 700 yellow ground); other nav links neutral",
+        "phoneStrip": "service-call CTA retained for service-caller accessibility"
+      },
+      "hero": {
+        "headline": "RENT THE GEAR YOU NEED, TODAY (direction-authorized rewrite — captured surface has 'RENT NOW' CTA but no captured headline for a rental-led hero; classify as direction-authorized in provenance)",
+        "supportingLine": "Construction equipment, tools, and trailers across 18 branches — book online or call your nearest yard. (synthesized from captured tagline; classify as direction-authorized)",
+        "primaryCTA": "BROWSE RENTAL FLEET (direction-authorized — captured has 'BROWSE MORE SERVICES' as model)",
+        "secondaryCTA": "FIND YOUR BRANCH (direction-authorized)",
+        "ground": "captured Wheeler_Campus photo OR equipment portrait — pick one"
+      },
+      "rentalFleetBand": {
+        "position": "second viewport (was finance carousel)",
+        "layout": "4-up category grid: COMPACT TRACK LOADERS · EXCAVATORS · LIGHT TOWERS · ATTACHMENTS (categories sourced from captured icomoon classes + captured 'Compact Track Loader' photo + captured industry vocabulary)",
+        "treatment": "icomoon glyph + category label + 'X UNITS · Y BRANCHES' availability framing (UNITS / BRANCHES counts are NOT captured — render as PLACEHOLDER · availability-count)",
+        "rationale": "Renters' first question is 'what's available and where' — this band answers both without inventing inventory numbers"
+      },
+      "financeBand": {
+        "position": "demoted to third band (was first)",
+        "layout": "3-up grid retained from improvement #1",
+        "ground": "warm stone #E5E3DF (signals 'still here, but secondary')",
+        "headline": "Finance options when you're ready to own (direction-authorized — softer framing than captured 'FINANCING DEALS & SPECIAL OFFERS')"
+      },
+      "serviceTiles": {
+        "position": "fourth band (unchanged from captured order, just preceded by rental)",
+        "treatment": "captured 6-up icomoon row preserved"
+      },
+      "supportPartnersBand": {
+        "treatment": "Improvement #2 inherited (sentiment + partner merge)"
+      },
+      "locationsProof": {
+        "treatment": "Improvement #4 inherited (narrative proofs replace floating numerals); BRANCH FINDER widget upweighted because renters need 'closest yard' as primary"
+      }
+    },
+    "antiToolboxAudit": {
+      "hits": [],
+      "rationale": "Single bet (IA reframe to rental audience). No invented colors, no invented fonts. Rental-fleet category grid uses captured icomoon glyphs + captured equipment photography. The few direction-authorized copy rewrites (hero headline, supporting line) are documented in voice classification per Discipline 5. PLACEHOLDER signature used for unavailable inventory counts."
+    },
+    "unsourcedContentInheritance": "5 partner logos (inherited from variants A/B/C); PLUS rental-fleet availability counts (X UNITS · Y BRANCHES per category) — direction-authorized addition. The fleet category grid is renderable without these counts (just category label + glyph + CTA), but the availability framing is what makes H's bet land. Renders with PLACEHOLDER · availability-count signatures and shape hints (e.g. 'e.g. 42 UNITS · 11 BRANCHES'); migrate guard catches before any production deploy."
+  }
+}

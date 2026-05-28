@@ -1,0 +1,141 @@
+{
+  "_provenance": {
+    "writtenBy": "stardust:direct (Phase 4 of stardust:uplift)",
+    "writtenAt": "2026-05-28T00:00:00Z",
+    "variant": "B",
+    "parent": "DESIGN.json",
+    "readArtifacts": [
+      "DESIGN.json",
+      "stardust/uplift-improvements.md",
+      "stardust/uplift-questions.md",
+      "stardust/direction.md"
+    ],
+    "stardustVersion": "0.10.0"
+  },
+  "schemaVersion": 2,
+  "title": "Design System: Wheeler Cat — Variant B (Cat Yellow as primary surface)",
+  "variant": {
+    "id": "B",
+    "role": "one captured trait amplified — color-ladder re-weighting",
+    "bet": "Cat Yellow promoted to primary surface; finance band inverted to dark; no motion; no IA change",
+    "static": true,
+    "cinematic": false,
+    "siblings": ["A", "C"]
+  },
+  "inherits": {
+    "from": "DESIGN.json",
+    "items": [
+      "colorMeta",
+      "typographyMeta",
+      "modularScale",
+      "shadows",
+      "breakpoints",
+      "sectionPadding",
+      "iaPriorities",
+      "componentStyle",
+      "motifs",
+      "voice",
+      "systemComponentRoles",
+      "iconFont",
+      "divergence"
+    ]
+  },
+  "extensions": {
+    "palette": {
+      "set": "captured (unchanged): #FFCC00, #272727, #E5E3DF, #FFFFFF, #454545, rgba(18,18,18,0.5)",
+      "proportions": "INVERTED — Cat Yellow as primary surface (hero ground + service tile ground + locations eyebrow); dark as inverted finance band; warm stone as quiet band; page itself stays white",
+      "surfaceMap": {
+        "hero": "#FFCC00",
+        "financeBand": "#272727",
+        "serviceTiles": "#FFCC00",
+        "sentimentPartnerBand": "#E5E3DF",
+        "locationsEyebrow": "#FFCC00",
+        "page": "#FFFFFF",
+        "utilityBar": "#272727",
+        "mainHeader": "#272727",
+        "footer": "#272727"
+      },
+      "catYellowDeployment": "primary surface (hero, service tiles, locations eyebrow) + CTA + eyebrow + 1px border",
+      "rationale": "uplift-questions.md § Variant B — Cat Yellow is Caterpillar's protected dealer identity (71,464 occurrences in captured; usedAs: ['background','border'] only); 10× under-deployed relative to neutrals. B's bet promotes it to primary surface without changing the captured palette set."
+    },
+    "contrastVerification": [
+      { "surface": "#FFCC00 ground + #272727 text", "ratio": "12.6:1", "wcag": "AAA" },
+      { "surface": "#FFCC00 ground + #FFFFFF text", "ratio": "1.95:1", "wcag": "FAIL — never use white text on yellow" },
+      { "surface": "#272727 ground + #FFCC00 text (inverted CTA)", "ratio": "12.6:1", "wcag": "AAA" },
+      { "surface": "#E5E3DF ground + #454545 text", "ratio": "7.7:1", "wcag": "AAA" },
+      { "surface": "#272727 ground + #FFFFFF text", "ratio": "14.6:1", "wcag": "AAA" }
+    ],
+    "contrastRules": [
+      "Never use white text on yellow ground (1.95:1 fail).",
+      "Always use dark #272727 on yellow surfaces.",
+      "CTAs on yellow surfaces invert to dark ground + yellow text (12.6:1)."
+    ],
+    "compositionDeltas": {
+      "heroBand": {
+        "ground": "#FFCC00 (full-bleed)",
+        "headlineColor": "#272727",
+        "headlineFont": "Roboto Condensed 700 ALL-CAPS at display size (61px desktop)",
+        "headlineText": "FINANCING DEALS & SPECIAL OFFERS (per captured)",
+        "cta": { "background": "#272727", "color": "#FFCC00", "rationale": "Inverted CTA for contrast within yellow surface" },
+        "imageDeployment": "captured hero photograph becomes secondary right-aligned 5/3 inset panel within the yellow band; yellow ground IS the primary surface"
+      },
+      "financeBand": {
+        "ground": "#272727",
+        "cardGround": "#272727",
+        "cardEyebrowStripe": "#FFCC00",
+        "cardNumeralsColor": "#FFCC00",
+        "cardBodyColor": "#FFFFFF",
+        "layout": "3-up CSS grid (improvement #1 — no carousel)",
+        "rationale": "yellow → dark → yellow rhythm; prevents yellow-fatigue between hero and service tiles"
+      },
+      "serviceTileRow": {
+        "tileGround": "#FFCC00",
+        "tileGlyph": "#272727",
+        "tileHeading": "#272727",
+        "tileBody": "#272727",
+        "bandGround": "#272727",
+        "rationale": "The most striking inversion; service tiles become yellow plates with dark glyphs — Caterpillar's equipment-plate vocabulary on the page surface"
+      },
+      "partnerSentimentBand": {
+        "ground": "#E5E3DF",
+        "headlineMerged": true,
+        "rationale": "Quiet band between two yellow surfaces; improvement #2 retained"
+      },
+      "locationsBand": {
+        "eyebrowGround": "#FFCC00",
+        "eyebrowText": "#272727",
+        "mapGround": "#272727",
+        "narrativeProofPosition": "yellow eyebrow strip above the dark map",
+        "rationale": "Yellow eyebrow anchors locations as wayfinding surface; improvement #4 narrative-proof retained"
+      }
+    },
+    "iaPriorityCheck": {
+      "header": { "preserved": true, "viewport": "first" },
+      "heroOffer": { "preserved": true, "viewport": "first", "note": "Yellow hero IS the finance headline surface; finance cards land in immediate next band; finance visible above the fold across 2 viewports at 1440×900" },
+      "financeCards": { "preserved": true, "viewport": "first-or-second" },
+      "serviceTiles": { "preserved": true, "viewport": "mid-page" },
+      "partnerSentiment": { "preserved": true, "viewport": "mid-page (single band)" },
+      "locations": { "preserved": true, "viewport": "below-service-above-footer" },
+      "footer": { "preserved": true, "viewport": "bottom" },
+      "verdict": "PASS — IA priority preserved; yellow hero does not push finance below the fold"
+    },
+    "antiToolboxCheck": {
+      "betAxis": "palette proportion / surface assignment",
+      "rejectedMoves": [
+        "Custom font (Mode A pinning)",
+        "Invented color (palette set unchanged; only proportions shift)",
+        "Motion register (B is composition / palette, not motion)",
+        "Section sequence change (composition matches A)",
+        "Section removal (every captured section retained)",
+        "Editorial-register vocabulary",
+        "Generic-2026-SaaS silhouette",
+        "Glassmorphism / gradient text / side-stripes"
+      ]
+    },
+    "whatBIsNot": [
+      "Not 'make it more yellow everywhere'. Yellow lives on load-bearing surfaces only (hero, service tiles, locations eyebrow); quiet bands stay neutral; finance band intentionally inverts to dark to prevent yellow-fatigue.",
+      "Not a rebrand. Palette set unchanged; typography unchanged; component shapes unchanged.",
+      "Not a motion variant. Static — no marquee, no count-up, no split-flap, no reveal."
+    ]
+  }
+}

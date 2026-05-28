@@ -1,0 +1,503 @@
+{
+  "_provenance": {
+    "writtenBy": "stardust:direct (Phase 4 of stardust:uplift)",
+    "writtenAt": "2026-05-27T22:18:00Z",
+    "readArtifacts": [
+      "stardust/current/_brand-extraction.json",
+      "stardust/current/DESIGN.json",
+      "stardust/uplift-improvements.md",
+      "stardust/uplift-questions.md",
+      "stardust/direction.md"
+    ],
+    "stardustVersion": "0.10.0"
+  },
+  "schemaVersion": 2,
+  "generatedAt": "2026-05-27T22:18:00Z",
+  "title": "Design System: Wheeler Cat",
+  "extensions": {
+    "colorMeta": {
+      "page": {
+        "role": "neutral",
+        "displayName": "Wheeler Page White",
+        "canonical": "#FFFFFF",
+        "tonalRamp": ["#272727", "#454545", "#7A7A7A", "#B5B5B5", "#D5D3CF", "#E5E3DF", "#F2F0EC", "#FFFFFF"]
+      },
+      "body-text": {
+        "role": "neutral",
+        "displayName": "Wheeler Body Text",
+        "canonical": "#454545",
+        "tonalRamp": ["#1A1A1A", "#272727", "#3A3A3A", "#454545", "#6F6F6F", "#9A9A9A", "#C8C8C8", "#F0F0F0"]
+      },
+      "heading-text": {
+        "role": "neutral",
+        "displayName": "Wheeler Heading Black",
+        "canonical": "#272727",
+        "tonalRamp": ["#0A0A0A", "#1A1A1A", "#272727", "#3A3A3A", "#5A5A5A", "#888888", "#C0C0C0", "#F0F0F0"]
+      },
+      "cat-yellow": {
+        "role": "primary",
+        "displayName": "Cat Yellow",
+        "canonical": "#FFCC00",
+        "tonalRamp": ["#3D3100", "#6B5500", "#997A00", "#C7A000", "#FFCC00", "#FFD633", "#FFE166", "#FFF1B3"]
+      },
+      "surface-dark": {
+        "role": "neutral",
+        "displayName": "Wheeler Surface Dark",
+        "canonical": "#272727",
+        "tonalRamp": ["#0A0A0A", "#1A1A1A", "#272727", "#3A3A3A", "#5A5A5A", "#888888", "#C0C0C0", "#F0F0F0"]
+      },
+      "warm-stone": {
+        "role": "neutral",
+        "displayName": "Warm Stone",
+        "canonical": "#E5E3DF",
+        "tonalRamp": ["#3A3833", "#5C5A55", "#7E7C77", "#A09E99", "#C2C0BB", "#E5E3DF", "#F0EEEA", "#FAF8F4"]
+      },
+      "overlay-dark": {
+        "role": "neutral",
+        "displayName": "Hero Photo Overlay",
+        "canonical": "rgba(18,18,18,0.5)",
+        "tonalRamp": ["rgba(18,18,18,0.9)", "rgba(18,18,18,0.7)", "rgba(18,18,18,0.5)", "rgba(18,18,18,0.3)"]
+      },
+      "text-on-dark": {
+        "role": "neutral",
+        "displayName": "Text On Dark",
+        "canonical": "#FFFFFF",
+        "tonalRamp": ["#FFFFFF", "#F2F0EC", "#E5E3DF"]
+      },
+      "text-on-yellow": {
+        "role": "neutral",
+        "displayName": "Text On Yellow",
+        "canonical": "#272727",
+        "tonalRamp": ["#0A0A0A", "#1A1A1A", "#272727", "#3A3A3A"]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display (Roboto Condensed 700 caps)",
+        "purpose": "Hero headlines and largest section heads. ALL-CAPS. 61px at desktop ceiling."
+      },
+      "headline": {
+        "displayName": "Headline (Roboto Condensed 700 caps)",
+        "purpose": "Section heads: YOUR HEAVY MACHINERY EXPERTS, FINANCING DEALS & SPECIAL OFFERS. ALL-CAPS."
+      },
+      "title": {
+        "displayName": "Title (Roboto Condensed 700)",
+        "purpose": "Finance card headlines, sub-section heads."
+      },
+      "body": {
+        "displayName": "Body (Roboto 400)",
+        "purpose": "Paragraph copy; max 65–75ch line length."
+      },
+      "label": {
+        "displayName": "Label (Roboto Condensed 700 caps, tracked 0.08em)",
+        "purpose": "Eyebrows, CTA labels, utility-bar items."
+      }
+    },
+    "modularScale": {
+      "ratio": 1.25,
+      "name": "major third (1.250)",
+      "steps": {
+        "size-100": "16px",
+        "size-125": "20px",
+        "size-156": "25px",
+        "size-195": "31px",
+        "size-244": "39px",
+        "size-305": "49px",
+        "size-381": "61px"
+      },
+      "appliedTo": "all heading levels (h1–h6); body / lead derived from same scale."
+    },
+    "shadows": [
+      {
+        "name": "card-lift",
+        "value": "rgba(0,0,0,0.8) 0px 6px 16px 0px",
+        "purpose": "Signature card shadow — finance cards, service tiles raised, branch-list cards."
+      },
+      {
+        "name": "light-overlay",
+        "value": "rgba(0,0,0,0.1) 0px 3px 6px 0px",
+        "purpose": "Lightbox / modal / dropdown chrome only."
+      },
+      {
+        "name": "diffuse-glow",
+        "value": "rgba(0,0,0,0.1) 0px 0px 50px 0px",
+        "purpose": "Modal / sheet container ambient — rare."
+      }
+    ],
+    "breakpoints": [
+      { "name": "mobile", "value": "0–639px" },
+      { "name": "tablet", "value": "640–1023px" },
+      { "name": "desktop", "value": "1024px+" },
+      { "name": "container-max", "value": "1400px" }
+    ],
+    "sectionPadding": {
+      "desktop": "64px",
+      "tablet": "48px",
+      "mobile": "32px",
+      "rationale": "Brand-register multi-audience density floor: home has 6 sections (>5 trigger), capped at 64px desktop per intent-dimensions.md § 4."
+    },
+    "iaPriorities": [
+      {
+        "signal": "header-with-phone",
+        "evidence": "pages/home.json#landmarks[header] contains 6-link main nav (SPONSORSHIPS, NEW EQUIPMENT, USED EQUIPMENT, RENT NOW, REQUEST SERVICE, CREDIT APP) plus utility-bar phone 801-436-3672; phone is the field-operator's primary affordance.",
+        "preserveAs": "first-viewport",
+        "scope": "site-wide",
+        "mutability": "locked"
+      },
+      {
+        "signal": "promotional-finance",
+        "evidence": "pages/home.json#sections[1] is FINANCING DEALS & SPECIAL OFFERS with 3 finance cards (0% APR / 60 MONTHS / $500 CVA / FUEL PAYBACK / CAT COMMERCIAL ACCOUNT); finance is the primary conversion funnel above the fold.",
+        "preserveAs": "first-viewport-or-second",
+        "scope": "site-wide",
+        "mutability": "locked"
+      },
+      {
+        "signal": "service-routing",
+        "evidence": "pages/home.json#sections[2] is YOUR HEAVY MACHINERY EXPERTS with 6 service tiles (FIELD SERVICE, SHOP SERVICE, PARTS.CAT.COM, MAINTENANCE SERVICE, REBUILDS, REQUEST SERVICE ONLINE); service-callers route here.",
+        "preserveAs": "mid-page",
+        "scope": "site-wide",
+        "mutability": "locked"
+      },
+      {
+        "signal": "partner-sentiment-merge",
+        "evidence": "uplift-improvements.md#2 retires the orphan h5 'WE PROUDLY SUPPORT THE ONES WHO BUILD OUR WORLD' by merging it as the headline of the partner-logo band.",
+        "preserveAs": "single-band-mid-page",
+        "scope": "home",
+        "mutability": "locked"
+      },
+      {
+        "signal": "locations-wayfinding",
+        "evidence": "pages/home.json#sections[5] is the branch map + 18-row branch list; wayfinding-first is a captured brand-personality trait.",
+        "preserveAs": "below-service-above-footer",
+        "scope": "site-wide",
+        "mutability": "locked"
+      },
+      {
+        "signal": "footer-with-quick-links",
+        "evidence": "pages/home.json#landmarks[footer] contains QUICK LINKS, CONTACT US, CONNECT WITH US sections; footer is universal chrome.",
+        "preserveAs": "bottom-of-page",
+        "scope": "site-wide",
+        "mutability": "locked"
+      }
+    ],
+    "componentStyle": {
+      "buttons": {
+        "primary": {
+          "background": "#FFCC00",
+          "color": "#272727",
+          "borderRadius": "5px",
+          "padding": "12px 24px",
+          "fontWeight": 700,
+          "letterSpacing": "0.05em",
+          "textTransform": "uppercase",
+          "shadow": null,
+          "hover": { "background": "#272727", "color": "#FFCC00" }
+        },
+        "secondary": {
+          "background": "#FFFFFF",
+          "color": "#272727",
+          "border": "1px solid #272727",
+          "borderRadius": "5px",
+          "padding": "10px 20px",
+          "fontWeight": 700,
+          "textTransform": "uppercase"
+        },
+        "on-yellow-primary": {
+          "background": "#272727",
+          "color": "#FFCC00",
+          "borderRadius": "5px",
+          "padding": "12px 24px",
+          "fontWeight": 700,
+          "textTransform": "uppercase",
+          "appliesIn": "variant B yellow surfaces"
+        }
+      },
+      "dualCTAPattern": "primary-yellow-with-secondary-outline",
+      "cards": {
+        "background": "#FFFFFF",
+        "borderRadius": "5px",
+        "padding": "24px",
+        "shadow": "rgba(0,0,0,0.8) 0px 6px 16px 0px",
+        "border": "1px solid #EBEBEB"
+      },
+      "inputs": {
+        "background": "#FFFFFF",
+        "borderRadius": "5px",
+        "padding": "10px 12px",
+        "border": "1px solid #B5B5B5",
+        "focusRing": "2px solid #FFCC00"
+      }
+    },
+    "motifs": {
+      "borderRadius": {
+        "primary": "5px",
+        "secondary": "0px",
+        "pill": "999px",
+        "sources": "captured site — 36 occurrences of 5px dominate; secondary 0px reserved for full-bleed signage bars"
+      },
+      "patterns": [
+        { "name": "hero-with-cta-strip", "deployment": "variants A and C retain captured composition; variant B inverts ground to yellow." },
+        { "name": "icon-tile-row", "deployment": "all variants; glyph/ground color inverts in variant B." },
+        { "name": "image-with-overlay-headline", "deployment": "all variants on photo bands." },
+        { "name": "partner-logo-strip", "deployment": "all variants; sentiment merged into the same band per improvement #2." },
+        { "name": "dark-utility-header", "deployment": "all variants — universal chrome." },
+        { "name": "stat-row", "deployment": "RETIRED — replaced by narrative proof per improvement #4." }
+      ]
+    },
+    "voice": {
+      "tone": "bold-direct, signage-led, blue-collar",
+      "headingCase": "ALL-CAPS for display / headline / title / label; mixed case for body / lead / link.",
+      "headingTracking": "0.02em on display caps; 0.08em on label-size caps.",
+      "ctaVoice": "Short imperative caps: BROWSE MORE SERVICES, REQUEST SERVICE, CREDIT APP, NEW QUOTE, SHOP USED, RENT NOW.",
+      "dos": [
+        "Use short imperative verb-led CTA labels (CREDIT APP, REQUEST SERVICE).",
+        "Use ALL-CAPS for display / headline / title / label only.",
+        "Include the HQ phone in the utility bar on every page.",
+        "Group sentiment + proof into one band; do not orphan section heads.",
+        "Use narrative proofs ('18 branches across...') over floating numerals."
+      ],
+      "donts": [
+        "Don't use editorial register vocabulary (atelier, studio, journal).",
+        "Don't write sentence-case section heads — the brand voice is signage caps.",
+        "Don't carousel the finance offers — show them all above the fold.",
+        "Don't float numerals as a stat row — narrative only.",
+        "Don't drop the utility-bar phone on any variant."
+      ]
+    },
+    "systemComponentRoles": {
+      "site-header": {
+        "purpose": "Persistent top-of-page chrome carrying the dark utility bar (Sponsorships, Jobs, phone) + main nav (6 verbs) + logo.",
+        "positionClass": "sticky-top",
+        "constraint": "Phone reachable in ≤ 2 tab stops from page top."
+      },
+      "site-footer": {
+        "purpose": "Persistent bottom-of-page chrome carrying QUICK LINKS / CONTACT US / CONNECT WITH US, plus Sitemap and Legal.",
+        "positionClass": "bottom-of-page"
+      },
+      "dark-utility-bar": {
+        "purpose": "Persistent above-header band carrying Sponsorships, Jobs, and the HQ phone number.",
+        "positionClass": "top-of-page",
+        "constraint": "Retained on dark `#272727` ground regardless of variant; phone always visible."
+      },
+      "service-tile-row": {
+        "purpose": "Mid-page 6-tile service-routing element under YOUR HEAVY MACHINERY EXPERTS.",
+        "positionClass": "mid-page-band"
+      },
+      "finance-band": {
+        "purpose": "Above-the-fold 3-up finance card grid carrying current Caterpillar promotional cycle. RETIRES the captured slick.js carousel.",
+        "positionClass": "first-viewport"
+      },
+      "partner-sentiment-band": {
+        "purpose": "Single band merging the 'WE PROUDLY SUPPORT...' sentiment headline with the partner-logo strip (improvement #2).",
+        "positionClass": "mid-page-band"
+      },
+      "locations-band": {
+        "purpose": "Single band carrying the branch map + 18-row branch list + narrative proof line replacing the stat row (improvement #4).",
+        "positionClass": "below-service-above-footer"
+      }
+    },
+    "iconFont": {
+      "family": "icomoon",
+      "localPath": "stardust/current/assets/fonts/icomoon.ttf",
+      "glyphCount": 14,
+      "retainedFor": "service tiles, social icons, utility bar phone icon"
+    },
+    "divergence": {
+      "mode": "A — brand-faithful (Mode A per direct/SKILL.md § Phase 2)",
+      "seed": {
+        "decade": "inherited (2020s commercial-industrial)",
+        "craft": "inherited (signage / equipment-plate)",
+        "register": "brand (inherited from current/PRODUCT.md)",
+        "ground_family": {
+          "value": "stark-white",
+          "override": "brand-faithful",
+          "rationale": "Captured background is `#FFFFFF`; brand-faithful ground wins."
+        }
+      },
+      "font_deck": {
+        "name": "brand-inherited",
+        "picked_by": "user-constraint (Mode A pinning)"
+      },
+      "palette_source": {
+        "source": "inherited from _brand-extraction.json",
+        "picked_by": "user-constraint (Mode A pinning)",
+        "library_version": "n/a (inherited, not picked)"
+      },
+      "brand_faithful_inversions": [
+        {
+          "rule": "pure-white-retention",
+          "captured": "#FFFFFF",
+          "justification": "`#FFFFFF` retained as page ground (existing brand decision; canonical for Wheeler Cat). The 'no pure black/white' impeccable rule is inverted per brand-faithful direction."
+        },
+        {
+          "rule": "pure-black-adjacent-retention",
+          "captured": "#272727",
+          "justification": "`#272727` retained as primary text-heading and surface-dark (existing brand decision; reads as Caterpillar-aligned industrial dark, not pure black). The 'no pure black/white' rule is inverted per brand-faithful direction."
+        },
+        {
+          "rule": "hex-format-retention",
+          "captured": "hex tokens",
+          "justification": "Color tokens retained in hex format (matches captured brand surface and DESIGN.md Stitch frontmatter convention). OKLCH applies to new authoring; this is inheritance."
+        },
+        {
+          "rule": "all-uppercase-headings-retention",
+          "captured": "53% of headings ALL-CAPS in Roboto Condensed 700",
+          "justification": "ALL-CAPS headings retained on H1/H2/H3 — the brand uses uppercase headings as the visual signature (53% of captured headings). The 'use sentence case' reflex is inverted per brand-faithful direction."
+        },
+        {
+          "rule": "saturated-color-retention",
+          "captured": "#FFCC00 (Cat Yellow)",
+          "justification": "Saturated `#FFCC00` retained as the primary brand color — Caterpillar's protected dealer identity. The agent-default reflex toward tinted-neutral primaries is inverted per brand-faithful direction."
+        },
+        {
+          "rule": "sharp-radius-retention",
+          "captured": "5px primary radius (36 occurrences)",
+          "justification": "5px radius retained on cards / inputs / buttons / tiles (existing brand uses sharp-but-not-square corners as a deliberate choice). The agent-default reflex toward 8–12px rounded is inverted per brand-faithful direction."
+        }
+      ],
+      "anti_toolbox_audit": {
+        "hits": [
+          {
+            "move": "Sticky top navigation",
+            "justification": "Inherited site convention; field operators expect persistent access to the utility bar phone and main nav. Retained."
+          },
+          {
+            "move": "ALL-CAPS heading-rich page",
+            "justification": "Brand-faithful inversion — ALL-CAPS is the captured brand voice. Not a toolbox default; retained per Mode A."
+          }
+        ],
+        "rejected_moves": [
+          "Centered hero with dual CTA (Generic-2026-SaaS silhouette)",
+          "Glassmorphism (impeccable absolute ban; not present in captured surface)",
+          "Gradient text (impeccable absolute ban; not present in captured surface)",
+          "Editorial-register vocabulary (Wheeler is commerce / service / equipment)"
+        ]
+      }
+    },
+    "variants": {
+      "A": {
+        "designFile": "DESIGN-A.md",
+        "designJson": "DESIGN-A.json",
+        "role": "faithful + improvements",
+        "bet": "improvements-list applied; no motion; palette proportions unchanged",
+        "static": true
+      },
+      "B": {
+        "designFile": "DESIGN-B.md",
+        "designJson": "DESIGN-B.json",
+        "role": "one captured trait amplified — color-ladder re-weighting",
+        "bet": "Cat Yellow promoted to primary surface; finance band inverted to dark; no motion",
+        "static": true
+      },
+      "C": {
+        "designFile": "DESIGN-C.md",
+        "designJson": "DESIGN-C.json",
+        "role": "different captured trait amplified — display-typography amplification",
+        "bet": "kinetic-display motion register engaged; palette proportions match A; both static and cinematic renders ship",
+        "static": false,
+        "cinematic": true
+      }
+    }
+  },
+  "components": [
+    {
+      "name": "Primary CTA Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Cat Yellow button with dark text; the captured brand's signature CTA.",
+      "html": "<button class=\"ds-btn-primary\">CREDIT APP</button>",
+      "css": ".ds-btn-primary { background: #FFCC00; color: #272727; font-family: 'Roboto Condensed', sans-serif; font-weight: 700; font-size: 0.875rem; letter-spacing: 0.05em; text-transform: uppercase; padding: 12px 24px; border: none; border-radius: 5px; cursor: pointer; transition: background 200ms ease-out, color 200ms ease-out; } .ds-btn-primary:hover { background: #272727; color: #FFCC00; } .ds-btn-primary:focus-visible { outline: 2px solid #272727; outline-offset: 2px; }"
+    },
+    {
+      "name": "Secondary CTA Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Outline button for auxiliary CTAs (MORE ABOUT US, BROWSE MORE SERVICES).",
+      "html": "<button class=\"ds-btn-secondary\">MORE ABOUT US</button>",
+      "css": ".ds-btn-secondary { background: #FFFFFF; color: #272727; font-family: 'Roboto Condensed', sans-serif; font-weight: 700; font-size: 0.875rem; letter-spacing: 0.05em; text-transform: uppercase; padding: 10px 20px; border: 1px solid #272727; border-radius: 5px; cursor: pointer; transition: background 200ms ease-out, color 200ms ease-out; } .ds-btn-secondary:hover { background: #272727; color: #FFFFFF; } .ds-btn-secondary:focus-visible { outline: 2px solid #FFCC00; outline-offset: 2px; }"
+    },
+    {
+      "name": "Finance Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "White card carrying a finance offer (FINANCING DEALS / 0% APR / 60 MONTHS / $500 CVA). No carousel — three-up grid above the fold.",
+      "html": "<article class=\"ds-finance-card\"><span class=\"ds-eyebrow\">FINANCE</span><h3 class=\"ds-title\">0% FOR UP TO 60 MONTHS + $500 TOWARD CVA</h3><p class=\"ds-body\">On select Cat compact machines through October.</p><a class=\"ds-btn-primary\" href=\"#\">VIEW OFFER</a></article>",
+      "css": ".ds-finance-card { background: #FFFFFF; border-radius: 5px; padding: 24px; box-shadow: rgba(0,0,0,0.8) 0px 6px 16px 0px; border: 1px solid #EBEBEB; display: flex; flex-direction: column; gap: 12px; } .ds-finance-card .ds-eyebrow { font-family: 'Roboto Condensed', sans-serif; font-weight: 700; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: #FFCC00; } .ds-finance-card .ds-title { font-family: 'Roboto Condensed', sans-serif; font-weight: 700; font-size: 1.563rem; line-height: 1.15; letter-spacing: 0.02em; text-transform: uppercase; color: #272727; margin: 0; } .ds-finance-card .ds-body { font-family: 'Roboto', sans-serif; font-size: 1rem; line-height: 1.5; color: #454545; margin: 0; }"
+    },
+    {
+      "name": "Service Tile",
+      "kind": "card",
+      "refersTo": "service-tile",
+      "description": "Dark service tile with yellow icomoon glyph and ALL-CAPS heading. Used in the 6-up service row.",
+      "html": "<article class=\"ds-service-tile\"><svg class=\"ds-tile-icon\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M12 2 2 12h3v8h6v-6h2v6h6v-8h3z\"/></svg><h4 class=\"ds-tile-title\">FIELD SERVICE</h4><p class=\"ds-tile-body\">Same-day field service across 18 branches.</p></article>",
+      "css": ".ds-service-tile { background: #272727; color: #FFFFFF; padding: 24px; border-radius: 5px; display: flex; flex-direction: column; gap: 12px; align-items: flex-start; } .ds-service-tile .ds-tile-icon { width: 48px; height: 48px; color: #FFCC00; } .ds-service-tile .ds-tile-title { font-family: 'Roboto Condensed', sans-serif; font-weight: 700; font-size: 1.25rem; line-height: 1.2; letter-spacing: 0.02em; text-transform: uppercase; color: #FFFFFF; margin: 0; } .ds-service-tile .ds-tile-body { font-family: 'Roboto', sans-serif; font-size: 0.875rem; line-height: 1.4; color: #FFFFFF; opacity: 0.85; margin: 0; }"
+    },
+    {
+      "name": "Dark Utility Bar",
+      "kind": "nav",
+      "refersTo": "utility-bar",
+      "description": "Persistent above-header band carrying Sponsorships / Jobs / phone (icon + number). Universal chrome on every variant.",
+      "html": "<nav class=\"ds-utility-bar\" aria-label=\"utility\"><a class=\"ds-utility-link\" href=\"#\">SPONSORSHIPS</a><a class=\"ds-utility-link\" href=\"#\">JOBS</a><a class=\"ds-utility-phone\" href=\"tel:801-436-3672\"><svg viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.2 11 11 0 0 0 3.4.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A18 18 0 0 1 3 4a1 1 0 0 1 1-1h3.4a1 1 0 0 1 1 1 11 11 0 0 0 .6 3.4 1 1 0 0 1-.2 1z\"/></svg><span>801-436-3672</span></a></nav>",
+      "css": ".ds-utility-bar { background: #272727; color: #FFFFFF; display: flex; gap: 24px; align-items: center; padding: 8px 24px; font-family: 'Roboto Condensed', sans-serif; font-weight: 700; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; } .ds-utility-bar .ds-utility-link { color: #FFFFFF; text-decoration: none; } .ds-utility-bar .ds-utility-link:hover { color: #FFCC00; } .ds-utility-bar .ds-utility-phone { color: #FFCC00; margin-left: auto; display: inline-flex; align-items: center; gap: 8px; text-decoration: none; } .ds-utility-bar .ds-utility-phone svg { width: 16px; height: 16px; }"
+    },
+    {
+      "name": "Input",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Standard text input with 5px radius and yellow focus ring.",
+      "html": "<label class=\"ds-input-label\">EMAIL<input class=\"ds-input\" type=\"email\" placeholder=\"you@company.com\"/></label>",
+      "css": ".ds-input-label { display: flex; flex-direction: column; gap: 6px; font-family: 'Roboto Condensed', sans-serif; font-weight: 700; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: #272727; } .ds-input { background: #FFFFFF; color: #454545; border: 1px solid #B5B5B5; border-radius: 5px; padding: 10px 12px; font-family: 'Roboto', sans-serif; font-size: 1rem; transition: border-color 200ms, box-shadow 200ms; } .ds-input:focus-visible { border-color: #FFCC00; outline: 2px solid #FFCC00; outline-offset: 2px; }"
+    },
+    {
+      "name": "Eyebrow Badge",
+      "kind": "chip",
+      "refersTo": "badge",
+      "description": "Small yellow eyebrow used to label sections (FINANCE, SERVICE, LOCATIONS).",
+      "html": "<span class=\"ds-badge\">LOCATIONS</span>",
+      "css": ".ds-badge { display: inline-block; background: #FFCC00; color: #272727; font-family: 'Roboto Condensed', sans-serif; font-weight: 700; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 8px; border-radius: 5px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Signage on a Yellow Plate",
+    "overview": "Wheeler Cat is a regional Caterpillar dealer; the brand reads like the plate on a piece of Cat equipment — condensed caps stamped on a yellow ground, engineering precision, no decoration. The redesign is brand-faithful (Mode A): palette and typography pinned to the captured surface; composition discipline, density discipline, and (in variant C) motion choreography lets the signage register perform.",
+    "keyCharacteristics": [
+      "Cat-Yellow primary palette pinned to the captured surface (no invented colors)",
+      "Roboto Condensed display + Roboto body, modular scale at 1.250 (major third)",
+      "5px primary radius retained from captured site",
+      "Section padding capped at 64px desktop (multi-audience density floor)",
+      "Image-reuse contract: captured photography reused at semantic position",
+      "Three variant slots: A faithful + improvements · B yellow-as-surface · C kinetic-display"
+    ],
+    "rules": [
+      { "name": "The Cat-Yellow Voice Rule", "body": "Cat Yellow is the brand's signature gesture, not a CTA pigment. Every yellow appearance must be load-bearing.", "section": "colors" },
+      { "name": "The Pure-Color Retention Rule", "body": "#FFFFFF and #272727 are retained verbatim under Mode A brand-faithful inversion.", "section": "colors" },
+      { "name": "The Modular-Scale Rule", "body": "Every heading size is a step in the 1.250 (major third) scale — 16/20/25/31/39/49/61 px. No ad-hoc sizing.", "section": "typography" },
+      { "name": "The Tracking-By-Weight Rule", "body": "Display caps tracked at 0.02em; label caps at 0.08em; body normal. No ad-hoc per-element tracking.", "section": "typography" },
+      { "name": "The All-Caps Retention Rule", "body": "ALL-CAPS retained on H1/H2/H3 — the brand voice IS signage. Mixed case reserved for body / lead / link.", "section": "typography" },
+      { "name": "The Color-Block-Over-Shadow Rule", "body": "Depth comes from yellow-vs-dark-vs-stone color blocking, not from gradient or soft shadow effects.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do use Cat Yellow as a load-bearing brand surface (CTA, hero ground in B, service-tile ground in B, eyebrow band).",
+      "Do use Roboto Condensed 700 ALL-CAPS for display heads; track at 0.02em; size from the 1.250 modular scale only.",
+      "Do preserve the captured 5px primary radius on cards, buttons, inputs, tiles.",
+      "Do reuse captured images at semantic position.",
+      "Do group sentiment + partner proof into one band and locations + branch list into one band — no orphan headings.",
+      "Do require alt text on every image.",
+      "Do honor prefers-reduced-motion: reduce on variant C.",
+      "Do cap section padding at 64px desktop / 48px tablet / 32px mobile."
+    ],
+    "donts": [
+      "Don't spread Cat Yellow as decoration.",
+      "Don't use Slick.js or any draggable carousel above the fold for finance offers.",
+      "Don't render the 18/75/24 floating-numerals stat row.",
+      "Don't orphan section heads.",
+      "Don't invent a font outside the captured surface.",
+      "Don't invent a color outside the captured palette.",
+      "Don't apply the Generic-2026-SaaS silhouette.",
+      "Don't drop the utility-bar phone on any variant.",
+      "Don't apply editorial-register vocabulary.",
+      "Don't push section padding above 64px desktop, even on the highest-divergence variant.",
+      "Don't apply gradient text, glassmorphism, or side-stripes."
+    ]
+  }
+}

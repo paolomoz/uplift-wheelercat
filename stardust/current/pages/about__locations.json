@@ -1,0 +1,3170 @@
+{
+  "_provenance": {
+    "writtenBy": "stardust:extract",
+    "writtenAt": "2026-05-28T11:41:10.296Z",
+    "readArtifacts": [
+      "https://wheelercat.com/about/locations/"
+    ],
+    "synthesizedInputs": [],
+    "stardustVersion": "0.10.0",
+    "renderedBy": "playwright",
+    "fetchedAt": "2026-05-28T11:41:04.580Z",
+    "waitMode": "medium",
+    "waitMs": 4131,
+    "httpStatus": 200,
+    "contentType": "text/html"
+  },
+  "slug": "about__locations",
+  "url": "https://wheelercat.com/about/locations/",
+  "finalUrl": "https://wheelercat.com/about/locations/",
+  "title": "Wheeler Machinery Locations | Cat® Dealer Locations in UT & NV",
+  "metaDescription": "Wheeler Machinery is your trusted Cat® dealer with 11 convenient locations across Utah & Ely, NV. Find a location near you to buy or rent equipment today!",
+  "og": {
+    "title": "Wheeler Machinery Locations | Cat® Dealer Locations in UT & NV",
+    "description": "Wheeler Machinery is your trusted Cat® dealer with 11 convenient locations across Utah & Ely, NV. Find a location near you to buy or rent equipment today!",
+    "image": "https://wheelercat.com/wp-content/uploads/2022/08/half-img.jpg",
+    "type": "article",
+    "siteName": "Wheeler Machinery Co."
+  },
+  "themeColor": {
+    "light": null,
+    "dark": null
+  },
+  "language": "en-US",
+  "headings": [
+    {
+      "level": 1,
+      "text": "LOCATIONS",
+      "id": null,
+      "domPath": "body.wp-singular.page-template-default > section.masthead.masthead--innerpage > div.masthead__content.masthead--innerpage-details > div.container > h1",
+      "style": {
+        "fontFamily": "\"Roboto Condensed\", sans-serif",
+        "fontWeight": "700",
+        "fontSize": "60px",
+        "lineHeight": "78px",
+        "letterSpacing": "normal",
+        "color": "rgb(255, 204, 0)"
+      }
+    },
+    {
+      "level": 4,
+      "text": "(HQ) SALT LAKE CITY, UT",
+      "id": null,
+      "domPath": "section#locations_list > div.location-list-column > div > h4",
+      "style": {
+        "fontFamily": "\"Roboto Condensed\", sans-serif",
+        "fontWeight": "700",
+        "fontSize": "20px",
+        "lineHeight": "26px",
+        "letterSpacing": "normal",
+        "color": "rgb(255, 255, 255)"
+      }
+    },
+    {
+      "level": 4,
+      "text": "CAT® COMPACT AT WHEELER MACHINERY CO. IN LINDON, UT",
+      "id": null,
+      "domPath": "section#locations_list > div.location-list-column > div > h4",
+      "style": {
+        "fontFamily": "\"Roboto Condensed\", sans-serif",
+        "fontWeight": "700",
+        "fontSize": "20px",
+        "lineHeight": "26px",
+        "letterSpacing": "normal",
+        "color": "rgb(255, 255, 255)"
+      }
+    },
+    {
+      "level": 4,
+      "text": "CAT® COMPACT AT WHEELER MACHINERY CO. IN SANDY, UT",
+      "id": null,
+      "domPath": "section#locations_list > div.location-list-column > div > h4",
+      "style": {
+        "fontFamily": "\"Roboto Condensed\", sans-serif",
+        "fontWeight": "700",
+        "fontSize": "20px",
+        "lineHeight": "26px",
+        "letterSpacing": "normal",
+        "color": "rgb(255, 255, 255)"
+      }
+    },
+    {
+      "level": 4,
+      "text": "CEDAR CITY, UT",
+      "id": null,
+      "domPath": "section#locations_list > div.location-list-column > div > h4",
+      "style": {
+        "fontFamily": "\"Roboto Condensed\", sans-serif",
+        "fontWeight": "700",
+        "fontSize": "20px",
+        "lineHeight": "26px",
+        "letterSpacing": "normal",
+        "color": "rgb(255, 255, 255)"
+      }
+    },
+    {
+      "level": 4,
+      "text": "ELY, NV",
+      "id": null,
+      "domPath": "section#locations_list > div.location-list-column > div > h4",
+      "style": {
+        "fontFamily": "\"Roboto Condensed\", sans-serif",
+        "fontWeight": "700",
+        "fontSize": "20px",
+        "lineHeight": "26px",
+        "letterSpacing": "normal",
+        "color": "rgb(255, 255, 255)"
+      }
+    },
+    {
+      "level": 4,
+      "text": "HURRICANE, UT",
+      "id": null,
+      "domPath": "section#locations_list > div.location-list-column > div > h4",
+      "style": {
+        "fontFamily": "\"Roboto Condensed\", sans-serif",
+        "fontWeight": "700",
+        "fontSize": "20px",
+        "lineHeight": "26px",
+        "letterSpacing": "normal",
+        "color": "rgb(255, 255, 255)"
+      }
+    },
+    {
+      "level": 4,
+      "text": "KAYSVILLE, UT",
+      "id": null,
+      "domPath": "section#locations_list > div.location-list-column > div > h4",
+      "style": {
+        "fontFamily": "\"Roboto Condensed\", sans-serif",
+        "fontWeight": "700",
+        "fontSize": "20px",
+        "lineHeight": "26px",
+        "letterSpacing": "normal",
+        "color": "rgb(255, 255, 255)"
+      }
+    },
+    {
+      "level": 4,
+      "text": "LOGAN, UT",
+      "id": null,
+      "domPath": "section#locations_list > div.location-list-column > div > h4",
+      "style": {
+        "fontFamily": "\"Roboto Condensed\", sans-serif",
+        "fontWeight": "700",
+        "fontSize": "20px",
+        "lineHeight": "26px",
+        "letterSpacing": "normal",
+        "color": "rgb(255, 255, 255)"
+      }
+    },
+    {
+      "level": 4,
+      "text": "MOAB, UT",
+      "id": null,
+      "domPath": "section#locations_list > div.location-list-column > div > h4",
+      "style": {
+        "fontFamily": "\"Roboto Condensed\", sans-serif",
+        "fontWeight": "700",
+        "fontSize": "20px",
+        "lineHeight": "26px",
+        "letterSpacing": "normal",
+        "color": "rgb(255, 255, 255)"
+      }
+    },
+    {
+      "level": 4,
+      "text": "OGDEN, UT",
+      "id": null,
+      "domPath": "section#locations_list > div.location-list-column > div > h4",
+      "style": {
+        "fontFamily": "\"Roboto Condensed\", sans-serif",
+        "fontWeight": "700",
+        "fontSize": "20px",
+        "lineHeight": "26px",
+        "letterSpacing": "normal",
+        "color": "rgb(255, 255, 255)"
+      }
+    },
+    {
+      "level": 4,
+      "text": "PARK CITY, UT",
+      "id": null,
+      "domPath": "section#locations_list > div.location-list-column > div > h4",
+      "style": {
+        "fontFamily": "\"Roboto Condensed\", sans-serif",
+        "fontWeight": "700",
+        "fontSize": "20px",
+        "lineHeight": "26px",
+        "letterSpacing": "normal",
+        "color": "rgb(255, 255, 255)"
+      }
+    },
+    {
+      "level": 4,
+      "text": "SALINA, UT",
+      "id": null,
+      "domPath": "section#locations_list > div.location-list-column > div > h4",
+      "style": {
+        "fontFamily": "\"Roboto Condensed\", sans-serif",
+        "fontWeight": "700",
+        "fontSize": "20px",
+        "lineHeight": "26px",
+        "letterSpacing": "normal",
+        "color": "rgb(255, 255, 255)"
+      }
+    },
+    {
+      "level": 4,
+      "text": "TOOELE, UT",
+      "id": null,
+      "domPath": "section#locations_list > div.location-list-column > div > h4",
+      "style": {
+        "fontFamily": "\"Roboto Condensed\", sans-serif",
+        "fontWeight": "700",
+        "fontSize": "20px",
+        "lineHeight": "26px",
+        "letterSpacing": "normal",
+        "color": "rgb(255, 255, 255)"
+      }
+    },
+    {
+      "level": 4,
+      "text": "VERNAL, UT",
+      "id": null,
+      "domPath": "section#locations_list > div.location-list-column > div > h4",
+      "style": {
+        "fontFamily": "\"Roboto Condensed\", sans-serif",
+        "fontWeight": "700",
+        "fontSize": "20px",
+        "lineHeight": "26px",
+        "letterSpacing": "normal",
+        "color": "rgb(255, 255, 255)"
+      }
+    },
+    {
+      "level": 4,
+      "text": "WEST VALLEY, UT",
+      "id": null,
+      "domPath": "section#locations_list > div.location-list-column > div > h4",
+      "style": {
+        "fontFamily": "\"Roboto Condensed\", sans-serif",
+        "fontWeight": "700",
+        "fontSize": "20px",
+        "lineHeight": "26px",
+        "letterSpacing": "normal",
+        "color": "rgb(255, 255, 255)"
+      }
+    },
+    {
+      "level": 4,
+      "text": "QUICK LINKS",
+      "id": null,
+      "domPath": "footer.page-footer > div.container > div.row > div.col-lg-3.col-sm-6 > div.footer-link > h4",
+      "style": {
+        "fontFamily": "\"Roboto Condensed\", sans-serif",
+        "fontWeight": "700",
+        "fontSize": "24px",
+        "lineHeight": "31.2px",
+        "letterSpacing": "normal",
+        "color": "rgb(255, 255, 255)"
+      }
+    },
+    {
+      "level": 4,
+      "text": "CONTACT US",
+      "id": null,
+      "domPath": "footer.page-footer > div.container > div.row > div.col-lg-5.col-sm-6 > div.footer-address > h4",
+      "style": {
+        "fontFamily": "\"Roboto Condensed\", sans-serif",
+        "fontWeight": "700",
+        "fontSize": "24px",
+        "lineHeight": "31.2px",
+        "letterSpacing": "normal",
+        "color": "rgb(255, 255, 255)"
+      }
+    },
+    {
+      "level": 4,
+      "text": "CONNECT WITH US",
+      "id": null,
+      "domPath": "footer.page-footer > div.container > div.row > div.col-lg-4.col-sm-6 > div.footer-social > h4",
+      "style": {
+        "fontFamily": "\"Roboto Condensed\", sans-serif",
+        "fontWeight": "700",
+        "fontSize": "24px",
+        "lineHeight": "31.2px",
+        "letterSpacing": "normal",
+        "color": "rgb(255, 255, 255)"
+      }
+    }
+  ],
+  "landmarks": [
+    {
+      "tag": "header",
+      "role": null,
+      "id": "page-header",
+      "classes": [
+        "page-c-header",
+        "page-c-header--header",
+        "header-sticky",
+        "hideheader",
+        "js-scrolled"
+      ],
+      "innerText": "Login\nNEW EQUIPMENT\nUSED EQUIPMENT\nRENT NOW\nORDER PARTS\nREQUEST SERVICE\nGET TRAINING\nCREDIT APP\n801-436-3672\nQuotes\nOffers\nAttachments\nTrailers\nPower Systems\nParts\nService\nTechnology\nSupport\nJobs",
+      "children": [
+        {
+          "tag": "div",
+          "role": null,
+          "id": null,
+          "classes": [
+            "c-header-top",
+            "container"
+          ],
+          "purpose": "unknown",
+          "headlineRef": -1,
+          "innerTextSummary": "Login\nNEW EQUIPMENT\nUSED EQUIPMENT\nRENT NOW\nORDER PARTS\nREQUEST SERVICE\nGET TRAINING\nCREDIT APP\n801-436-3672",
+          "wordCount": 16,
+          "body": [],
+          "lists": [],
+          "qa": [],
+          "quotes": []
+        },
+        {
+          "tag": "div",
+          "role": null,
+          "id": null,
+          "classes": [
+            "c-header-main-nav"
+          ],
+          "purpose": "unknown",
+          "headlineRef": -1,
+          "innerTextSummary": "Quotes\nOffers\nAttachments\nTrailers\nPower Systems\nParts\nService\nTechnology\nSupport\nJobs",
+          "wordCount": 11,
+          "body": [],
+          "lists": [],
+          "qa": [],
+          "quotes": []
+        }
+      ]
+    },
+    {
+      "tag": "nav",
+      "role": null,
+      "id": "ubermenu-main-383-main_menu-2",
+      "classes": [
+        "ubermenu",
+        "ubermenu-main",
+        "ubermenu-menu-383",
+        "ubermenu-loc-main_menu",
+        "ubermenu-responsive",
+        "ubermenu-responsive-single-column"
+      ],
+      "innerText": "Quotes\nOffers\nAttachments\nTrailers\nPower Systems\nParts\nService\nTechnology\nSupport\nJobs",
+      "children": []
+    },
+    {
+      "tag": "header",
+      "role": null,
+      "id": "page-header",
+      "classes": [
+        "page-c-header-m",
+        "header-sticky"
+      ],
+      "innerText": "Menu\n                \n                \n                                    \n                \n                \n            \n\n            \n                \n                    \n                        \n                            \n                                        \n                                                \n                                            \n                                        \n                                                \n                                            \n                                        \n                                                \n                                            \n                                        \n                                                \n                                            \n                                        \n                        \n                    \n                    \n                        \n                    \n                \n                \n                    \n\n LoginOnline PaymentsRental PortalParts.Cat.comSIS 2.0Vision LinkEmployee LoginSponsorships\n\n                \n                \n                    \n\n NEW EQUIPMENTUSED EQUIPMENTRENT NOWORDER PARTSREQUEST SERVICEGET TRAININGCREDIT APP 801-436-3672\n\n                \n                \n                    \n\n QuotesOffersAttachmentsTrailersPower SystemsPartsServiceTechnologySupportJobs\n\n                \n            \n        \n        \n            \n            \t\t\n\t\t\t\n\t\t\t\t\t\t\t#searchwp-form-5 .swp-input,\n                #searchwp-form-5 .swp-select {\n                    border: 1px solid #000000;\n                    border-radius: 5px;\n                }\n\t\t\t\t#searchwp-form-5 .searchwp-form-input-container .swp-select {\n                    border-top-right-radius: 0;\n                    border-bottom-right-radius: 0;\n                    border-right: 0;\n                }\n\t\t\t\t#searchwp-form-5 .searchwp-form-input-container .swp-select + .swp-input {\n                    border-top-left-radius: 0;\n                    border-bottom-left-radius: 0;\n                }\n\t\t\t\t#searchwp-form-5 input[type=submit] {\n                    border-radius: 5px;\n                }\n\t\t\t\n\t\t\t\n\t\t\t                #searchwp-form-5 .swp-toggle-checkbox:checked + .swp-toggle-switch,\n                #searchwp-form-5 .swp-toggle-switch--checked  {\n                    background: #000000;\n                }\n\t\t\t\n\t\t\t\n\t\t\t\t\t\t\t#searchwp-form-5 input[type=submit] {\n                    background-color: #ffcc01;\n                }",
+      "children": [
+        {
+          "tag": "div",
+          "role": null,
+          "id": null,
+          "classes": [
+            "page-c-header-m__wrap"
+          ],
+          "purpose": "unknown",
+          "headlineRef": -1,
+          "innerTextSummary": "Menu\n                \n                \n                                    \n                \n                \n            \n\n            \n                \n                    \n                        \n                            \n           ",
+          "wordCount": 18,
+          "body": [],
+          "lists": [],
+          "qa": [],
+          "quotes": []
+        },
+        {
+          "tag": "div",
+          "role": null,
+          "id": null,
+          "classes": [
+            "c-header-top__search",
+            "c-header-top__search--mobile"
+          ],
+          "purpose": "unknown",
+          "headlineRef": -1,
+          "innerTextSummary": "#searchwp-form-5 .swp-input,\n                #searchwp-form-5 .swp-select {\n                    border: 1px solid #000000;\n                    border-radius: 5px;\n                }\n\t\t\t\t#searchwp-form-5 .searchwp-form-input-container .swp-se",
+          "wordCount": 56,
+          "body": [],
+          "lists": [],
+          "qa": [],
+          "quotes": []
+        }
+      ]
+    },
+    {
+      "tag": "nav",
+      "role": null,
+      "id": "ubermenu-main-525",
+      "classes": [
+        "ubermenu",
+        "ubermenu-main",
+        "ubermenu-menu-525",
+        "ubermenu-responsive",
+        "ubermenu-responsive-single-column",
+        "ubermenu-responsive-single-column-subs"
+      ],
+      "innerText": "LoginOnline PaymentsRental PortalParts.Cat.comSIS 2.0Vision LinkEmployee LoginSponsorships",
+      "children": []
+    },
+    {
+      "tag": "nav",
+      "role": null,
+      "id": "ubermenu-main-510",
+      "classes": [
+        "ubermenu",
+        "ubermenu-main",
+        "ubermenu-menu-510",
+        "ubermenu-responsive",
+        "ubermenu-responsive-single-column",
+        "ubermenu-responsive-single-column-subs"
+      ],
+      "innerText": "NEW EQUIPMENTUSED EQUIPMENTRENT NOWORDER PARTSREQUEST SERVICEGET TRAININGCREDIT APP 801-436-3672",
+      "children": []
+    },
+    {
+      "tag": "nav",
+      "role": null,
+      "id": "ubermenu-main-383-main_menu-4",
+      "classes": [
+        "ubermenu",
+        "ubermenu-main",
+        "ubermenu-menu-383",
+        "ubermenu-loc-main_menu",
+        "ubermenu-responsive",
+        "ubermenu-responsive-single-column"
+      ],
+      "innerText": "QuotesOffersAttachmentsTrailersPower SystemsPartsServiceTechnologySupportJobs",
+      "children": []
+    },
+    {
+      "tag": "div",
+      "role": "region",
+      "id": null,
+      "classes": [],
+      "innerText": "",
+      "children": [
+        {
+          "tag": "div",
+          "role": null,
+          "id": "7849E8A7-D677-4E29-AAA9-EA2453BADD20",
+          "classes": [],
+          "purpose": "unknown",
+          "headlineRef": -1,
+          "innerTextSummary": "←Move left→Move right↑Move up↓Move down+Zoom in-Zoom outHomeJump left by 75%EndJump right by 75%Page UpJump up by 75%Page DownJump down by 75%",
+          "wordCount": 21,
+          "body": [],
+          "lists": [],
+          "qa": [],
+          "quotes": []
+        }
+      ]
+    },
+    {
+      "tag": "footer",
+      "role": null,
+      "id": null,
+      "classes": [
+        "page-footer"
+      ],
+      "innerText": "QUICK LINKS\nSALES\nRENTALS\nCAT PARTS\nSERVICE\nLOCATIONS\nCONTACT\nABOUT\nSPONSORSHIP\nCONTACT US\n\n4901 West 2100 South,\nSalt Lake City,\nUT 84120\n\n801-436-3672\nCONNECT WITH US\nSitemap\nLegal\nCopyright © 2026. All Rights Reserved.\nA Campbell Company",
+      "children": [
+        {
+          "tag": "div",
+          "role": null,
+          "id": null,
+          "classes": [
+            "container"
+          ],
+          "purpose": "unknown",
+          "headlineRef": 16,
+          "innerTextSummary": "QUICK LINKS\nSALES\nRENTALS\nCAT PARTS\nSERVICE\nLOCATIONS\nCONTACT\nABOUT\nSPONSORSHIP\nCONTACT US\n\n4901 West 2100 South,\nSalt Lake City,\nUT 84120\n\n801-436-3672\nCONNECT WITH US\nSitemap\nLegal\nCopyright © 2026. All Rights Reserved.\nA Campbell Company",
+          "wordCount": 37,
+          "body": [],
+          "lists": [],
+          "qa": [],
+          "quotes": []
+        },
+        {
+          "tag": "div",
+          "role": null,
+          "id": null,
+          "classes": [
+            "back-top-btn",
+            "ease--out"
+          ],
+          "purpose": "unknown",
+          "headlineRef": -1,
+          "innerTextSummary": "",
+          "wordCount": 0,
+          "body": [],
+          "lists": [],
+          "qa": [],
+          "quotes": []
+        }
+      ]
+    },
+    {
+      "tag": "nav",
+      "role": null,
+      "id": null,
+      "classes": [
+        "footer-navigation"
+      ],
+      "innerText": "SALES\nRENTALS\nCAT PARTS\nSERVICE\nLOCATIONS\nCONTACT\nABOUT\nSPONSORSHIP",
+      "children": []
+    }
+  ],
+  "ctas": [
+    {
+      "label": "SHOW ALL",
+      "href": "javascript:void(0)",
+      "tag": "a",
+      "domPath": "div#wpcm_zip > form.wpcm-zip__form > div.row > div.col-lg-3 > div.show-all > a.btn.btn-secondary",
+      "style": {
+        "backgroundColor": "rgb(255, 255, 255)",
+        "color": "rgb(0, 0, 0)",
+        "fontFamily": "\"Roboto Condensed\", sans-serif",
+        "fontWeight": "700",
+        "borderRadius": "5px",
+        "padding": "20px 38px",
+        "boxShadow": "none"
+      },
+      "appearsAbove": "fold"
+    },
+    {
+      "label": "Keyboard shortcuts",
+      "href": null,
+      "tag": "button",
+      "domPath": "div > div > div.gmnoprint > div.gm-style-cc > div > button",
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(0, 0, 0)",
+        "fontFamily": "Roboto, Arial, sans-serif",
+        "fontWeight": "400",
+        "borderRadius": "0px",
+        "padding": "0px",
+        "boxShadow": "none"
+      },
+      "appearsAbove": "fold"
+    },
+    {
+      "label": "Map Data",
+      "href": null,
+      "tag": "button",
+      "domPath": "div > div > div.gmnoprint > div.gm-style-cc > div > button",
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(0, 0, 0)",
+        "fontFamily": "Roboto, Arial, sans-serif",
+        "fontWeight": "400",
+        "borderRadius": "0px",
+        "padding": "0px",
+        "boxShadow": "none"
+      },
+      "appearsAbove": "fold"
+    },
+    {
+      "label": "100 km Click to toggle between metric and imperial units",
+      "href": null,
+      "tag": "button",
+      "domPath": "div#locations_map > div > div.gm-style > div > div > button.gm-style-cc",
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(69, 69, 69)",
+        "fontFamily": "Roboto, Arial, sans-serif",
+        "fontWeight": "400",
+        "borderRadius": "0px",
+        "padding": "0px",
+        "boxShadow": "none"
+      },
+      "appearsAbove": "fold"
+    },
+    {
+      "label": "OK",
+      "href": null,
+      "tag": "button",
+      "domPath": "div#locations_map > div > table > tr > td > button.dismissButton",
+      "style": {
+        "backgroundColor": "rgb(255, 255, 255)",
+        "color": "rgb(26, 115, 232)",
+        "fontFamily": "Roboto, sans-serif",
+        "fontWeight": "500",
+        "borderRadius": "4px",
+        "padding": "0px 24px",
+        "boxShadow": "none"
+      },
+      "appearsAbove": "fold"
+    },
+    {
+      "label": "VIEW DETAILS",
+      "href": "https://wheelercat.com/about/locations/salt-lake/",
+      "tag": "a",
+      "domPath": "section#locations_list > div.location-list-column > div.location-links > a.btn.btn-primary",
+      "style": {
+        "backgroundColor": "rgb(255, 204, 0)",
+        "color": "rgb(0, 0, 0)",
+        "fontFamily": "\"Roboto Condensed\", sans-serif",
+        "fontWeight": "700",
+        "borderRadius": "5px",
+        "padding": "18px 30px",
+        "boxShadow": "none"
+      },
+      "appearsAbove": "fold"
+    },
+    {
+      "label": "VIEW DETAILS",
+      "href": "https://wheelercat.com/about/locations/lindon/",
+      "tag": "a",
+      "domPath": "section#locations_list > div.location-list-column > div.location-links > a.btn.btn-primary",
+      "style": {
+        "backgroundColor": "rgb(255, 204, 0)",
+        "color": "rgb(0, 0, 0)",
+        "fontFamily": "\"Roboto Condensed\", sans-serif",
+        "fontWeight": "700",
+        "borderRadius": "5px",
+        "padding": "18px 30px",
+        "boxShadow": "none"
+      },
+      "appearsAbove": "fold"
+    },
+    {
+      "label": "VIEW DETAILS",
+      "href": "https://wheelercat.com/about/locations/sandy/",
+      "tag": "a",
+      "domPath": "section#locations_list > div.location-list-column > div.location-links > a.btn.btn-primary",
+      "style": {
+        "backgroundColor": "rgb(255, 204, 0)",
+        "color": "rgb(0, 0, 0)",
+        "fontFamily": "\"Roboto Condensed\", sans-serif",
+        "fontWeight": "700",
+        "borderRadius": "5px",
+        "padding": "18px 30px",
+        "boxShadow": "none"
+      },
+      "appearsAbove": "fold"
+    },
+    {
+      "label": "VIEW DETAILS",
+      "href": "https://wheelercat.com/about/locations/cedar-city/",
+      "tag": "a",
+      "domPath": "section#locations_list > div.location-list-column > div.location-links > a.btn.btn-primary",
+      "style": {
+        "backgroundColor": "rgb(255, 204, 0)",
+        "color": "rgb(0, 0, 0)",
+        "fontFamily": "\"Roboto Condensed\", sans-serif",
+        "fontWeight": "700",
+        "borderRadius": "5px",
+        "padding": "18px 30px",
+        "boxShadow": "none"
+      },
+      "appearsAbove": "fold"
+    },
+    {
+      "label": "VIEW DETAILS",
+      "href": "https://wheelercat.com/about/locations/ely/",
+      "tag": "a",
+      "domPath": "section#locations_list > div.location-list-column > div.location-links > a.btn.btn-primary",
+      "style": {
+        "backgroundColor": "rgb(255, 204, 0)",
+        "color": "rgb(0, 0, 0)",
+        "fontFamily": "\"Roboto Condensed\", sans-serif",
+        "fontWeight": "700",
+        "borderRadius": "5px",
+        "padding": "18px 30px",
+        "boxShadow": "none"
+      },
+      "appearsAbove": "below-fold"
+    },
+    {
+      "label": "VIEW DETAILS",
+      "href": "https://wheelercat.com/about/locations/hurricane/",
+      "tag": "a",
+      "domPath": "section#locations_list > div.location-list-column > div.location-links > a.btn.btn-primary",
+      "style": {
+        "backgroundColor": "rgb(255, 204, 0)",
+        "color": "rgb(0, 0, 0)",
+        "fontFamily": "\"Roboto Condensed\", sans-serif",
+        "fontWeight": "700",
+        "borderRadius": "5px",
+        "padding": "18px 30px",
+        "boxShadow": "none"
+      },
+      "appearsAbove": "below-fold"
+    },
+    {
+      "label": "VIEW DETAILS",
+      "href": "https://wheelercat.com/about/locations/kaysville/",
+      "tag": "a",
+      "domPath": "section#locations_list > div.location-list-column > div.location-links > a.btn.btn-primary",
+      "style": {
+        "backgroundColor": "rgb(255, 204, 0)",
+        "color": "rgb(0, 0, 0)",
+        "fontFamily": "\"Roboto Condensed\", sans-serif",
+        "fontWeight": "700",
+        "borderRadius": "5px",
+        "padding": "18px 30px",
+        "boxShadow": "none"
+      },
+      "appearsAbove": "below-fold"
+    },
+    {
+      "label": "VIEW DETAILS",
+      "href": "https://wheelercat.com/about/locations/logan/",
+      "tag": "a",
+      "domPath": "section#locations_list > div.location-list-column > div.location-links > a.btn.btn-primary",
+      "style": {
+        "backgroundColor": "rgb(255, 204, 0)",
+        "color": "rgb(0, 0, 0)",
+        "fontFamily": "\"Roboto Condensed\", sans-serif",
+        "fontWeight": "700",
+        "borderRadius": "5px",
+        "padding": "18px 30px",
+        "boxShadow": "none"
+      },
+      "appearsAbove": "below-fold"
+    },
+    {
+      "label": "VIEW DETAILS",
+      "href": "https://wheelercat.com/about/locations/moab/",
+      "tag": "a",
+      "domPath": "section#locations_list > div.location-list-column > div.location-links > a.btn.btn-primary",
+      "style": {
+        "backgroundColor": "rgb(255, 204, 0)",
+        "color": "rgb(0, 0, 0)",
+        "fontFamily": "\"Roboto Condensed\", sans-serif",
+        "fontWeight": "700",
+        "borderRadius": "5px",
+        "padding": "18px 30px",
+        "boxShadow": "none"
+      },
+      "appearsAbove": "below-fold"
+    },
+    {
+      "label": "VIEW DETAILS",
+      "href": "https://wheelercat.com/about/locations/ogden/",
+      "tag": "a",
+      "domPath": "section#locations_list > div.location-list-column > div.location-links > a.btn.btn-primary",
+      "style": {
+        "backgroundColor": "rgb(255, 204, 0)",
+        "color": "rgb(0, 0, 0)",
+        "fontFamily": "\"Roboto Condensed\", sans-serif",
+        "fontWeight": "700",
+        "borderRadius": "5px",
+        "padding": "18px 30px",
+        "boxShadow": "none"
+      },
+      "appearsAbove": "below-fold"
+    },
+    {
+      "label": "VIEW DETAILS",
+      "href": "https://wheelercat.com/about/locations/park-city/",
+      "tag": "a",
+      "domPath": "section#locations_list > div.location-list-column > div.location-links > a.btn.btn-primary",
+      "style": {
+        "backgroundColor": "rgb(255, 204, 0)",
+        "color": "rgb(0, 0, 0)",
+        "fontFamily": "\"Roboto Condensed\", sans-serif",
+        "fontWeight": "700",
+        "borderRadius": "5px",
+        "padding": "18px 30px",
+        "boxShadow": "none"
+      },
+      "appearsAbove": "below-fold"
+    },
+    {
+      "label": "VIEW DETAILS",
+      "href": "https://wheelercat.com/about/locations/salina/",
+      "tag": "a",
+      "domPath": "section#locations_list > div.location-list-column > div.location-links > a.btn.btn-primary",
+      "style": {
+        "backgroundColor": "rgb(255, 204, 0)",
+        "color": "rgb(0, 0, 0)",
+        "fontFamily": "\"Roboto Condensed\", sans-serif",
+        "fontWeight": "700",
+        "borderRadius": "5px",
+        "padding": "18px 30px",
+        "boxShadow": "none"
+      },
+      "appearsAbove": "below-fold"
+    },
+    {
+      "label": "VIEW DETAILS",
+      "href": "https://wheelercat.com/about/locations/tooele/",
+      "tag": "a",
+      "domPath": "section#locations_list > div.location-list-column > div.location-links > a.btn.btn-primary",
+      "style": {
+        "backgroundColor": "rgb(255, 204, 0)",
+        "color": "rgb(0, 0, 0)",
+        "fontFamily": "\"Roboto Condensed\", sans-serif",
+        "fontWeight": "700",
+        "borderRadius": "5px",
+        "padding": "18px 30px",
+        "boxShadow": "none"
+      },
+      "appearsAbove": "below-fold"
+    },
+    {
+      "label": "VIEW DETAILS",
+      "href": "https://wheelercat.com/about/locations/vernal/",
+      "tag": "a",
+      "domPath": "section#locations_list > div.location-list-column > div.location-links > a.btn.btn-primary",
+      "style": {
+        "backgroundColor": "rgb(255, 204, 0)",
+        "color": "rgb(0, 0, 0)",
+        "fontFamily": "\"Roboto Condensed\", sans-serif",
+        "fontWeight": "700",
+        "borderRadius": "5px",
+        "padding": "18px 30px",
+        "boxShadow": "none"
+      },
+      "appearsAbove": "below-fold"
+    },
+    {
+      "label": "VIEW DETAILS",
+      "href": "https://wheelercat.com/about/locations/west-valley/",
+      "tag": "a",
+      "domPath": "section#locations_list > div.location-list-column > div.location-links > a.btn.btn-primary",
+      "style": {
+        "backgroundColor": "rgb(255, 204, 0)",
+        "color": "rgb(0, 0, 0)",
+        "fontFamily": "\"Roboto Condensed\", sans-serif",
+        "fontWeight": "700",
+        "borderRadius": "5px",
+        "padding": "18px 30px",
+        "boxShadow": "none"
+      },
+      "appearsAbove": "below-fold"
+    }
+  ],
+  "links": {
+    "internal": [
+      {
+        "href": "/",
+        "text": "",
+        "domPath": "header#page-header > div.c-header-top.container > div.container.c-header-top__cont > div.c-header-top__site-logo-container > a.c-header-top__site-logo"
+      },
+      {
+        "href": "/about/locations/",
+        "text": "",
+        "domPath": "header#page-header > div.c-header-top.container > div.container.c-header-top__cont > div.c-header-top__header-call > a.c-header-top__header-loc-pin"
+      },
+      {
+        "href": "/contact-us/",
+        "text": "<img width=\"65\" height=\"45\" src=\"/wp-content/uploads/2023/04/mail.png\"/>",
+        "domPath": "header#page-header > div.c-header-top.container > div.container.c-header-top__cont > div.c-header-top__header-call > a.c-header-top__header-email-mail"
+      },
+      {
+        "href": "/sponsorships/",
+        "text": "Sponsorships",
+        "domPath": "li#menu-item-74232 > a"
+      },
+      {
+        "href": "/new/",
+        "text": "NEW EQUIPMENT",
+        "domPath": "li#menu-item-51828 > a"
+      },
+      {
+        "href": "/used-equipment/machinery/",
+        "text": "USED EQUIPMENT",
+        "domPath": "li#menu-item-48727 > a"
+      },
+      {
+        "href": "/rental/",
+        "text": "RENT NOW",
+        "domPath": "li#menu-item-48502 > a"
+      },
+      {
+        "href": "/request-service/",
+        "text": "REQUEST SERVICE",
+        "domPath": "li#menu-item-48977 > a"
+      },
+      {
+        "href": "/credit-application/",
+        "text": "CREDIT APP",
+        "domPath": "li#menu-item-48609 > a"
+      },
+      {
+        "href": "/contact-us/",
+        "text": "801-436-3672",
+        "domPath": "li#menu-item-75054 > a"
+      },
+      {
+        "href": "/machine-quote-request/",
+        "text": "Quotes",
+        "domPath": "li#menu-item-76791 > a.ubermenu-target.ubermenu-item-layout-default"
+      },
+      {
+        "href": "/specials/",
+        "text": "Offers",
+        "domPath": "li#menu-item-42024 > a.ubermenu-target.ubermenu-item-layout-default"
+      },
+      {
+        "href": "/new/attachments/",
+        "text": "Attachments",
+        "domPath": "li#menu-item-76795 > a.ubermenu-target.ubermenu-item-layout-default"
+      },
+      {
+        "href": "/trailers/",
+        "text": "Trailers",
+        "domPath": "li#menu-item-56995 > a.ubermenu-target.ubermenu-item-layout-default"
+      },
+      {
+        "href": "/power/",
+        "text": "Power Systems",
+        "domPath": "li#menu-item-53659 > a.ubermenu-target.ubermenu-item-layout-default"
+      },
+      {
+        "href": "/parts/",
+        "text": "Parts",
+        "domPath": "li#menu-item-2994 > a.ubermenu-target.ubermenu-item-layout-default"
+      },
+      {
+        "href": "/service",
+        "text": "Service",
+        "domPath": "li#menu-item-2995 > a.ubermenu-target.ubermenu-item-layout-default"
+      },
+      {
+        "href": "/technology/",
+        "text": "Technology",
+        "domPath": "li#menu-item-50499 > a.ubermenu-target.ubermenu-item-layout-default"
+      },
+      {
+        "href": "/support",
+        "text": "Support",
+        "domPath": "li#menu-item-46687 > a.ubermenu-target.ubermenu-item-layout-default"
+      },
+      {
+        "href": "/careers/",
+        "text": "Jobs",
+        "domPath": "li#menu-item-52481 > a.ubermenu-target.ubermenu-item-layout-default"
+      },
+      {
+        "href": "/contact-us/",
+        "text": "",
+        "domPath": "header#page-header > div.page-c-header-m__wrap > div.page-c-header-m__menu > ul.mobile-custom-menu > li > a.c-header-top__header-email-mail--mobile"
+      },
+      {
+        "href": "/about/",
+        "text": "Back to About Us",
+        "domPath": "body.wp-singular.page-template-default > section.masthead.masthead--innerpage > div.masthead__content.masthead--innerpage-details > div.container > div.breadcrumbs.hidden-lg > a"
+      },
+      {
+        "href": "/",
+        "text": "Home",
+        "domPath": "div.masthead__content.masthead--innerpage-details > div.container > div.breadcrumbs.hidden-md-down > ul.clearfix > li > a"
+      },
+      {
+        "href": "/about/",
+        "text": "About Us",
+        "domPath": "div.masthead__content.masthead--innerpage-details > div.container > div.breadcrumbs.hidden-md-down > ul.clearfix > li > a"
+      },
+      {
+        "href": "/about/locations/salt-lake/",
+        "text": "VIEW DETAILS",
+        "domPath": "section#locations_list > div.location-list-column > div.location-links > a.btn.btn-primary"
+      },
+      {
+        "href": "/about/locations/lindon/",
+        "text": "VIEW DETAILS",
+        "domPath": "section#locations_list > div.location-list-column > div.location-links > a.btn.btn-primary"
+      },
+      {
+        "href": "/about/locations/sandy/",
+        "text": "VIEW DETAILS",
+        "domPath": "section#locations_list > div.location-list-column > div.location-links > a.btn.btn-primary"
+      },
+      {
+        "href": "/about/locations/cedar-city/",
+        "text": "VIEW DETAILS",
+        "domPath": "section#locations_list > div.location-list-column > div.location-links > a.btn.btn-primary"
+      },
+      {
+        "href": "/about/locations/ely/",
+        "text": "VIEW DETAILS",
+        "domPath": "section#locations_list > div.location-list-column > div.location-links > a.btn.btn-primary"
+      },
+      {
+        "href": "/about/locations/hurricane/",
+        "text": "VIEW DETAILS",
+        "domPath": "section#locations_list > div.location-list-column > div.location-links > a.btn.btn-primary"
+      },
+      {
+        "href": "/about/locations/kaysville/",
+        "text": "VIEW DETAILS",
+        "domPath": "section#locations_list > div.location-list-column > div.location-links > a.btn.btn-primary"
+      },
+      {
+        "href": "/about/locations/logan/",
+        "text": "VIEW DETAILS",
+        "domPath": "section#locations_list > div.location-list-column > div.location-links > a.btn.btn-primary"
+      },
+      {
+        "href": "/about/locations/moab/",
+        "text": "VIEW DETAILS",
+        "domPath": "section#locations_list > div.location-list-column > div.location-links > a.btn.btn-primary"
+      },
+      {
+        "href": "/about/locations/ogden/",
+        "text": "VIEW DETAILS",
+        "domPath": "section#locations_list > div.location-list-column > div.location-links > a.btn.btn-primary"
+      },
+      {
+        "href": "/about/locations/park-city/",
+        "text": "VIEW DETAILS",
+        "domPath": "section#locations_list > div.location-list-column > div.location-links > a.btn.btn-primary"
+      },
+      {
+        "href": "/about/locations/salina/",
+        "text": "VIEW DETAILS",
+        "domPath": "section#locations_list > div.location-list-column > div.location-links > a.btn.btn-primary"
+      },
+      {
+        "href": "/about/locations/tooele/",
+        "text": "VIEW DETAILS",
+        "domPath": "section#locations_list > div.location-list-column > div.location-links > a.btn.btn-primary"
+      },
+      {
+        "href": "/about/locations/vernal/",
+        "text": "VIEW DETAILS",
+        "domPath": "section#locations_list > div.location-list-column > div.location-links > a.btn.btn-primary"
+      },
+      {
+        "href": "/about/locations/west-valley/",
+        "text": "VIEW DETAILS",
+        "domPath": "section#locations_list > div.location-list-column > div.location-links > a.btn.btn-primary"
+      },
+      {
+        "href": "/equipment/",
+        "text": "SALES",
+        "domPath": "li#menu-item-3148 > a"
+      },
+      {
+        "href": "/rental/",
+        "text": "RENTALS",
+        "domPath": "li#menu-item-79193 > a"
+      },
+      {
+        "href": "/parts/",
+        "text": "CAT PARTS",
+        "domPath": "li#menu-item-3150 > a"
+      },
+      {
+        "href": "/service-old/",
+        "text": "SERVICE",
+        "domPath": "li#menu-item-3151 > a"
+      },
+      {
+        "href": "/about/locations/",
+        "text": "LOCATIONS",
+        "domPath": "li#menu-item-49060 > a"
+      },
+      {
+        "href": "/contact-us/",
+        "text": "CONTACT",
+        "domPath": "li#menu-item-44833 > a"
+      },
+      {
+        "href": "/about/",
+        "text": "ABOUT",
+        "domPath": "li#menu-item-50160 > a"
+      },
+      {
+        "href": "/sponsorships/",
+        "text": "SPONSORSHIP",
+        "domPath": "li#menu-item-74233 > a"
+      },
+      {
+        "href": "/sitemap/",
+        "text": "Sitemap",
+        "domPath": "footer.page-footer > div.container > div.footer-nav > ul.clearfix > li.footer-nav__item > a.footer-nav__link"
+      },
+      {
+        "href": "/legal/",
+        "text": "Legal",
+        "domPath": "footer.page-footer > div.container > div.footer-nav > ul.clearfix > li.footer-nav__item > a.footer-nav__link"
+      }
+    ],
+    "external": [
+      {
+        "href": "https://accessibe.com/blog/knowledgebase/screen-reader-guide",
+        "text": "Accessibility Screen-Reader Guide, Feedback, and Issue Reporting | New window",
+        "domPath": "body.wp-singular.page-template-default > a.acsb-sr-only"
+      },
+      {
+        "href": "https://www.mywheeler.net/",
+        "text": "Login",
+        "domPath": "li#menu-item-48757 > a.external"
+      },
+      {
+        "href": "https://my.wheelercat.com/",
+        "text": "Online Payments",
+        "domPath": "li#menu-item-48805 > a"
+      },
+      {
+        "href": "https://www.catrentalstore.com/wheeler/en_US/home.html?utm_content=cat_rental_portal&utm_source=wheelermachinery_login&utm_medium=referral&utm_campaign=rental&utm_term=rental_portal",
+        "text": "Rental Portal",
+        "domPath": "li#menu-item-48806 > a.external"
+      },
+      {
+        "href": "https://parts.cat.com/en/wheelermachinery?utm_content=loginmenu&utm_source=wheelermachinery&utm_medium=referral&utm_campaign=pcc&utm_term=login_menu",
+        "text": "Parts.Cat.com",
+        "domPath": "li#menu-item-48807 > a.external"
+      },
+      {
+        "href": "https://sis2.cat.com/",
+        "text": "SIS 2.0",
+        "domPath": "li#menu-item-48809 > a.external"
+      },
+      {
+        "href": "https://www.myvisionlink.com/cat",
+        "text": "Vision Link",
+        "domPath": "li#menu-item-48810 > a.external"
+      },
+      {
+        "href": "https://my.campbellcompanies.com/",
+        "text": "Employee Login",
+        "domPath": "li#menu-item-48811 > a.external"
+      },
+      {
+        "href": "https://parts.cat.com/en/wheelermachinery?utm_content=wheelermachinery_na_pcc&utm_source=wheelercat.com&utm_medium=referral&utm_campaign=wheelercat_na_2025&utm_term=cat_parts",
+        "text": "ORDER PARTS",
+        "domPath": "li#menu-item-48728 > a"
+      },
+      {
+        "href": "https://specials.wheelercat.com/wti",
+        "text": "GET TRAINING",
+        "domPath": "li#menu-item-49912 > a"
+      },
+      {
+        "href": "https://maps.google.com/maps?ll=39.486045,-112.174736&z=6&t=m&hl=en-US&gl=US&mapclient=apiv3",
+        "text": "",
+        "domPath": "div#locations_map > div > div.gm-style > div > div > a"
+      },
+      {
+        "href": "https://www.google.com/intl/en-US_US/help/terms_maps.html",
+        "text": "Terms",
+        "domPath": "div.gm-style > div > div > div.gmnoprint.gm-style-cc > div > a"
+      },
+      {
+        "href": "https://www.google.com/maps/@39.4860446,-112.1747364,6z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+        "text": "Report a map error",
+        "domPath": "div.gm-style > div > div > div.gm-style-cc > div > a"
+      },
+      {
+        "href": "http://g.co/dev/maps-no-account",
+        "text": "Do you own this website?",
+        "domPath": "div#locations_map > div > table > tr > td > a"
+      },
+      {
+        "href": "https://www.facebook.com/wheelermachinery/",
+        "text": "",
+        "domPath": "div.row > div.col-lg-4.col-sm-6 > div.footer-social > ul.clearfix > li.footer-social__item > a.footer-social__link.external"
+      },
+      {
+        "href": "https://www.instagram.com/wheelermachinery/",
+        "text": "",
+        "domPath": "div.row > div.col-lg-4.col-sm-6 > div.footer-social > ul.clearfix > li.footer-social__item > a.footer-social__link.external"
+      },
+      {
+        "href": "https://twitter.com/wheelercat",
+        "text": "",
+        "domPath": "div.row > div.col-lg-4.col-sm-6 > div.footer-social > ul.clearfix > li.footer-social__item > a.footer-social__link.external"
+      },
+      {
+        "href": "https://www.linkedin.com/company/wheelercat/",
+        "text": "",
+        "domPath": "div.row > div.col-lg-4.col-sm-6 > div.footer-social > ul.clearfix > li.footer-social__item > a.footer-social__link.external"
+      },
+      {
+        "href": "https://www.youtube.com/c/WheelerMachineryCo",
+        "text": "",
+        "domPath": "div.row > div.col-lg-4.col-sm-6 > div.footer-social > ul.clearfix > li.footer-social__item > a.footer-social__link.external"
+      },
+      {
+        "href": "https://campbellcompanies.com/",
+        "text": "A Campbell Company",
+        "domPath": "footer.page-footer > div.container > div.footer-nav > ul.clearfix > li.footer-nav__item > a.footer-nav__link.external"
+      }
+    ]
+  },
+  "media": {
+    "images": [
+      {
+        "src": "https://wheelercat.com/wp-content/uploads/2023/06/Wheeler-Logo-border-e1685733632890.png",
+        "srcset": null,
+        "alt": "Wheeler Machinery",
+        "naturalWidth": 268,
+        "naturalHeight": 67,
+        "localPath": "current/assets/media/Wheeler-Logo-border-e1685733632890-1facfc.png"
+      },
+      {
+        "src": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2065%2045'%3E%3C/svg%3E",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 217,
+        "naturalHeight": 150,
+        "localPath": null
+      },
+      {
+        "src": "https://wheelercat.com/wp-content/uploads/2023/06/Wheeler-Logo-border-e1685733632890.png",
+        "srcset": null,
+        "alt": "Wheeler Machinery",
+        "naturalWidth": 268,
+        "naturalHeight": 67,
+        "localPath": "current/assets/media/Wheeler-Logo-border-e1685733632890-1facfc.png"
+      },
+      {
+        "src": "https://wheelercat.com/wp-content/uploads/2023/08/MG_5034.webp",
+        "srcset": "https://wheelercat.com/wp-content/uploads/2023/08/MG_5034.webp 1920w, https://wheelercat.com/wp-content/uploads/2023/08/MG_5034-300x103.webp 300w, https://wheelercat.com/wp-content/uploads/2023/08/MG_5034-1024x353.webp 1024w, https://wheelercat.com/wp-content/uploads/2023/08/MG_5034-768x265.webp 768w, https://wheelercat.com/wp-content/uploads/2023/08/MG_5034-1536x530.webp 1536w, https://wheelercat.com/wp-content/uploads/2023/08/MG_5034-1740x600.webp 1740w",
+        "alt": "",
+        "naturalWidth": 1440,
+        "naturalHeight": 496,
+        "localPath": "current/assets/media/MG_5034-30f704.webp"
+      },
+      {
+        "src": "https://wheelercat.com/wp-content/themes/wheelermachinery/assets/img/pin.png",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 23,
+        "naturalHeight": 32,
+        "localPath": "current/assets/media/pin-30c0ce.png"
+      },
+      {
+        "src": "https://wheelercat.com/wp-content/themes/wheelermachinery/assets/img/pin.png",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 23,
+        "naturalHeight": 32,
+        "localPath": "current/assets/media/pin-30c0ce.png"
+      },
+      {
+        "src": "https://wheelercat.com/wp-content/themes/wheelermachinery/assets/img/pin.png",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 23,
+        "naturalHeight": 32,
+        "localPath": "current/assets/media/pin-30c0ce.png"
+      },
+      {
+        "src": "https://wheelercat.com/wp-content/themes/wheelermachinery/assets/img/pin.png",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 23,
+        "naturalHeight": 32,
+        "localPath": "current/assets/media/pin-30c0ce.png"
+      },
+      {
+        "src": "https://wheelercat.com/wp-content/themes/wheelermachinery/assets/img/pin.png",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 23,
+        "naturalHeight": 32,
+        "localPath": "current/assets/media/pin-30c0ce.png"
+      },
+      {
+        "src": "https://wheelercat.com/wp-content/themes/wheelermachinery/assets/img/pin.png",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 23,
+        "naturalHeight": 32,
+        "localPath": "current/assets/media/pin-30c0ce.png"
+      },
+      {
+        "src": "https://wheelercat.com/wp-content/themes/wheelermachinery/assets/img/pin.png",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 23,
+        "naturalHeight": 32,
+        "localPath": "current/assets/media/pin-30c0ce.png"
+      },
+      {
+        "src": "https://wheelercat.com/wp-content/themes/wheelermachinery/assets/img/pin.png",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 23,
+        "naturalHeight": 32,
+        "localPath": "current/assets/media/pin-30c0ce.png"
+      },
+      {
+        "src": "https://wheelercat.com/wp-content/themes/wheelermachinery/assets/img/pin.png",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 23,
+        "naturalHeight": 32,
+        "localPath": null
+      },
+      {
+        "src": "https://wheelercat.com/wp-content/themes/wheelermachinery/assets/img/pin.png",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 23,
+        "naturalHeight": 32,
+        "localPath": null
+      },
+      {
+        "src": "https://wheelercat.com/wp-content/themes/wheelermachinery/assets/img/pin.png",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 23,
+        "naturalHeight": 32,
+        "localPath": null
+      },
+      {
+        "src": "https://wheelercat.com/wp-content/themes/wheelermachinery/assets/img/pin.png",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 23,
+        "naturalHeight": 32,
+        "localPath": null
+      },
+      {
+        "src": "https://wheelercat.com/wp-content/themes/wheelermachinery/assets/img/pin.png",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 23,
+        "naturalHeight": 32,
+        "localPath": null
+      },
+      {
+        "src": "https://wheelercat.com/wp-content/themes/wheelermachinery/assets/img/pin.png",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 23,
+        "naturalHeight": 32,
+        "localPath": null
+      },
+      {
+        "src": "https://wheelercat.com/wp-content/themes/wheelermachinery/assets/img/pin.png",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 23,
+        "naturalHeight": 32,
+        "localPath": null
+      },
+      {
+        "src": "https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i6!2i12!3i24!4i256!2m3!1e0!2sm!3i780545096!2m3!1e2!6m1!3e5!3m18!2sen-US!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi02MHxwLmw6LTYw!4e0!5m2!1e3!5f2!23i46991212!23i47054750!23i47083502&key=AIzaSyBwMdR0y7tUDwhNpPgmtLpArE7Yp-HPBgM&token=46407",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 512,
+        "naturalHeight": 512,
+        "localPath": null
+      },
+      {
+        "src": "https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i6!2i11!3i24!4i256!2m3!1e0!2sm!3i780545096!2m3!1e2!6m1!3e5!3m18!2sen-US!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi02MHxwLmw6LTYw!4e0!5m2!1e3!5f2!23i46991212!23i47054750!23i47083502&key=AIzaSyBwMdR0y7tUDwhNpPgmtLpArE7Yp-HPBgM&token=44986",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 512,
+        "naturalHeight": 512,
+        "localPath": null
+      },
+      {
+        "src": "https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i6!2i11!3i23!4i256!2m3!1e0!2sm!3i780545144!2m3!1e2!6m1!3e5!3m18!2sen-US!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi02MHxwLmw6LTYw!4e0!5m2!1e3!5f2!23i46991212!23i47054750!23i47083502&key=AIzaSyBwMdR0y7tUDwhNpPgmtLpArE7Yp-HPBgM&token=25909",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 512,
+        "naturalHeight": 512,
+        "localPath": null
+      },
+      {
+        "src": "https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i6!2i12!3i23!4i256!2m3!1e0!2sm!3i780545144!2m3!1e2!6m1!3e5!3m18!2sen-US!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi02MHxwLmw6LTYw!4e0!5m2!1e3!5f2!23i46991212!23i47054750!23i47083502&key=AIzaSyBwMdR0y7tUDwhNpPgmtLpArE7Yp-HPBgM&token=27330",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 512,
+        "naturalHeight": 512,
+        "localPath": null
+      },
+      {
+        "src": "https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i6!2i13!3i23!4i256!2m3!1e0!2sm!3i780545144!2m3!1e2!6m1!3e5!3m18!2sen-US!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi02MHxwLmw6LTYw!4e0!5m2!1e3!5f2!23i46991212!23i47054750!23i47083502&key=AIzaSyBwMdR0y7tUDwhNpPgmtLpArE7Yp-HPBgM&token=28751",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 512,
+        "naturalHeight": 512,
+        "localPath": null
+      },
+      {
+        "src": "https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i6!2i13!3i24!4i256!2m3!1e0!2sm!3i780545096!2m3!1e2!6m1!3e5!3m18!2sen-US!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi02MHxwLmw6LTYw!4e0!5m2!1e3!5f2!23i46991212!23i47054750!23i47083502&key=AIzaSyBwMdR0y7tUDwhNpPgmtLpArE7Yp-HPBgM&token=47828",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 512,
+        "naturalHeight": 512,
+        "localPath": null
+      },
+      {
+        "src": "https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i6!2i13!3i25!4i256!2m3!1e0!2sm!3i780545096!2m3!1e2!6m1!3e5!3m18!2sen-US!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi02MHxwLmw6LTYw!4e0!5m2!1e3!5f2!23i46991212!23i47054750!23i47083502&key=AIzaSyBwMdR0y7tUDwhNpPgmtLpArE7Yp-HPBgM&token=116774",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 512,
+        "naturalHeight": 512,
+        "localPath": null
+      },
+      {
+        "src": "https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i6!2i10!3i25!4i256!2m3!1e0!2sm!3i780545096!2m3!1e2!6m1!3e5!3m18!2sen-US!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi02MHxwLmw6LTYw!4e0!5m2!1e3!5f2!23i46991212!23i47054750!23i47083502&key=AIzaSyBwMdR0y7tUDwhNpPgmtLpArE7Yp-HPBgM&token=112511",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 512,
+        "naturalHeight": 512,
+        "localPath": null
+      },
+      {
+        "src": "https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i6!2i10!3i24!4i256!2m3!1e0!2sm!3i780545096!2m3!1e2!6m1!3e5!3m18!2sen-US!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi02MHxwLmw6LTYw!4e0!5m2!1e3!5f2!23i46991212!23i47054750!23i47083502&key=AIzaSyBwMdR0y7tUDwhNpPgmtLpArE7Yp-HPBgM&token=43565",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 512,
+        "naturalHeight": 512,
+        "localPath": null
+      },
+      {
+        "src": "https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i6!2i10!3i23!4i256!2m3!1e0!2sm!3i780545096!2m3!1e2!6m1!3e5!3m18!2sen-US!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi02MHxwLmw6LTYw!4e0!5m2!1e3!5f2!23i46991212!23i47054750!23i47083502&key=AIzaSyBwMdR0y7tUDwhNpPgmtLpArE7Yp-HPBgM&token=105690",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 512,
+        "naturalHeight": 512,
+        "localPath": null
+      },
+      {
+        "src": "https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i6!2i14!3i23!4i256!2m3!1e0!2sm!3i780545096!2m3!1e2!6m1!3e5!3m18!2sen-US!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi02MHxwLmw6LTYw!4e0!5m2!1e3!5f2!23i46991212!23i47054750!23i47083502&key=AIzaSyBwMdR0y7tUDwhNpPgmtLpArE7Yp-HPBgM&token=111374",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 512,
+        "naturalHeight": 512,
+        "localPath": null
+      },
+      {
+        "src": "https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i6!2i14!3i24!4i256!2m3!1e0!2sm!3i780545096!2m3!1e2!6m1!3e5!3m18!2sen-US!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi02MHxwLmw6LTYw!4e0!5m2!1e3!5f2!23i46991212!23i47054750!23i47083502&key=AIzaSyBwMdR0y7tUDwhNpPgmtLpArE7Yp-HPBgM&token=49249",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 512,
+        "naturalHeight": 512,
+        "localPath": null
+      },
+      {
+        "src": "https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i6!2i14!3i25!4i256!2m3!1e0!2sm!3i780545096!2m3!1e2!6m1!3e5!3m18!2sen-US!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi02MHxwLmw6LTYw!4e0!5m2!1e3!5f2!23i46991212!23i47054750!23i47083502&key=AIzaSyBwMdR0y7tUDwhNpPgmtLpArE7Yp-HPBgM&token=118195",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 512,
+        "naturalHeight": 512,
+        "localPath": null
+      },
+      {
+        "src": "https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i6!2i9!3i25!4i256!2m3!1e0!2sm!3i780545096!2m3!1e2!6m1!3e5!3m18!2sen-US!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi02MHxwLmw6LTYw!4e0!5m2!1e3!5f2!23i46991212!23i47054750!23i47083502&key=AIzaSyBwMdR0y7tUDwhNpPgmtLpArE7Yp-HPBgM&token=126574",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 512,
+        "naturalHeight": 512,
+        "localPath": null
+      },
+      {
+        "src": "https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i6!2i9!3i24!4i256!2m3!1e0!2sm!3i780545096!2m3!1e2!6m1!3e5!3m18!2sen-US!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi02MHxwLmw6LTYw!4e0!5m2!1e3!5f2!23i46991212!23i47054750!23i47083502&key=AIzaSyBwMdR0y7tUDwhNpPgmtLpArE7Yp-HPBgM&token=57628",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 512,
+        "naturalHeight": 512,
+        "localPath": null
+      },
+      {
+        "src": "https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i6!2i12!3i25!4i256!2m3!1e0!2sm!3i780545096!2m3!1e2!6m1!3e5!3m18!2sen-US!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi02MHxwLmw6LTYw!4e0!5m2!1e3!5f2!23i46991212!23i47054750!23i47083502&key=AIzaSyBwMdR0y7tUDwhNpPgmtLpArE7Yp-HPBgM&token=115353",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 512,
+        "naturalHeight": 512,
+        "localPath": null
+      },
+      {
+        "src": "https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i6!2i9!3i23!4i256!2m3!1e0!2sm!3i780545096!2m3!1e2!6m1!3e5!3m18!2sen-US!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi02MHxwLmw6LTYw!4e0!5m2!1e3!5f2!23i46991212!23i47054750!23i47083502&key=AIzaSyBwMdR0y7tUDwhNpPgmtLpArE7Yp-HPBgM&token=119753",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 512,
+        "naturalHeight": 512,
+        "localPath": null
+      },
+      {
+        "src": "https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i6!2i11!3i25!4i256!2m3!1e0!2sm!3i780545096!2m3!1e2!6m1!3e5!3m18!2sen-US!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi02MHxwLmw6LTYw!4e0!5m2!1e3!5f2!23i46991212!23i47054750!23i47083502&key=AIzaSyBwMdR0y7tUDwhNpPgmtLpArE7Yp-HPBgM&token=113932",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 512,
+        "naturalHeight": 512,
+        "localPath": null
+      },
+      {
+        "src": "https://maps.gstatic.com/mapfiles/transparent.png",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 1,
+        "naturalHeight": 1,
+        "localPath": null
+      },
+      {
+        "src": "https://maps.gstatic.com/mapfiles/transparent.png",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 1,
+        "naturalHeight": 1,
+        "localPath": null
+      },
+      {
+        "src": "https://maps.gstatic.com/mapfiles/transparent.png",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 1,
+        "naturalHeight": 1,
+        "localPath": null
+      },
+      {
+        "src": "https://maps.gstatic.com/mapfiles/transparent.png",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 1,
+        "naturalHeight": 1,
+        "localPath": null
+      },
+      {
+        "src": "https://maps.gstatic.com/mapfiles/transparent.png",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 1,
+        "naturalHeight": 1,
+        "localPath": null
+      },
+      {
+        "src": "https://maps.gstatic.com/mapfiles/transparent.png",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 1,
+        "naturalHeight": 1,
+        "localPath": null
+      },
+      {
+        "src": "https://maps.gstatic.com/mapfiles/transparent.png",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 1,
+        "naturalHeight": 1,
+        "localPath": null
+      },
+      {
+        "src": "https://maps.gstatic.com/mapfiles/transparent.png",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 1,
+        "naturalHeight": 1,
+        "localPath": null
+      },
+      {
+        "src": "https://maps.gstatic.com/mapfiles/transparent.png",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 1,
+        "naturalHeight": 1,
+        "localPath": null
+      },
+      {
+        "src": "https://maps.gstatic.com/mapfiles/transparent.png",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 1,
+        "naturalHeight": 1,
+        "localPath": null
+      },
+      {
+        "src": "https://maps.gstatic.com/mapfiles/transparent.png",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 1,
+        "naturalHeight": 1,
+        "localPath": null
+      },
+      {
+        "src": "https://maps.gstatic.com/mapfiles/transparent.png",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 1,
+        "naturalHeight": 1,
+        "localPath": null
+      },
+      {
+        "src": "https://maps.gstatic.com/mapfiles/transparent.png",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 1,
+        "naturalHeight": 1,
+        "localPath": null
+      },
+      {
+        "src": "https://maps.gstatic.com/mapfiles/transparent.png",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 1,
+        "naturalHeight": 1,
+        "localPath": null
+      },
+      {
+        "src": "https://maps.gstatic.com/mapfiles/transparent.png",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 1,
+        "naturalHeight": 1,
+        "localPath": null
+      },
+      {
+        "src": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2018%2018%22%3E%3Cpath%20fill%3D%22%23666%22%20d%3D%22M0%200v6h2V2h4V0zm16%200h-4v2h4v4h2V0zm0%2016h-4v2h6v-6h-2zM2%2012H0v6h6v-2H2z%22/%3E%3C/svg%3E",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 150,
+        "naturalHeight": 150,
+        "localPath": null
+      },
+      {
+        "src": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2018%2018%22%3E%3Cpath%20fill%3D%22%23333%22%20d%3D%22M0%200v6h2V2h4V0zm16%200h-4v2h4v4h2V0zm0%2016h-4v2h6v-6h-2zM2%2012H0v6h6v-2H2z%22/%3E%3C/svg%3E",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 150,
+        "naturalHeight": 150,
+        "localPath": null
+      },
+      {
+        "src": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2018%2018%22%3E%3Cpath%20fill%3D%22%23111%22%20d%3D%22M0%200v6h2V2h4V0zm16%200h-4v2h4v4h2V0zm0%2016h-4v2h6v-6h-2zM2%2012H0v6h6v-2H2z%22/%3E%3C/svg%3E",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 150,
+        "naturalHeight": 150,
+        "localPath": null
+      },
+      {
+        "src": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22none%22%20d%3D%22M0%200h24v24H0z%22/%3E%3Cpath%20fill%3D%22%23666%22%20d%3D%22m12.06%209.06%204-4-4-4-1.41%201.41%201.59%201.59h-.18c-2.3%200-4.6.88-6.35%202.64-3.52%203.51-3.52%209.21%200%2012.72%201.5%201.5%203.4%202.36%205.36%202.58v-2.02c-1.44-.21-2.84-.86-3.95-1.97-2.73-2.73-2.73-7.17%200-9.9%201.37-1.37%203.16-2.05%204.95-2.05h.17l-1.59%201.59zm8.94%203c-.19-1.74-.88-3.32-1.91-4.61l-1.43%201.43c.69.92%201.15%202%201.32%203.18zm-7.94%207.92V22c1.74-.19%203.32-.88%204.61-1.91l-1.43-1.43c-.91.68-2%201.15-3.18%201.32m4.6-2.74%201.43%201.43c1.04-1.29%201.72-2.88%201.91-4.61h-2.02c-.17%201.18-.64%202.27-1.32%203.18%22/%3E%3C/svg%3E",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 150,
+        "naturalHeight": 150,
+        "localPath": null
+      },
+      {
+        "src": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22none%22%20d%3D%22M0%200h24v24H0z%22/%3E%3Cpath%20fill%3D%22%23333%22%20d%3D%22m12.06%209.06%204-4-4-4-1.41%201.41%201.59%201.59h-.18c-2.3%200-4.6.88-6.35%202.64-3.52%203.51-3.52%209.21%200%2012.72%201.5%201.5%203.4%202.36%205.36%202.58v-2.02c-1.44-.21-2.84-.86-3.95-1.97-2.73-2.73-2.73-7.17%200-9.9%201.37-1.37%203.16-2.05%204.95-2.05h.17l-1.59%201.59zm8.94%203c-.19-1.74-.88-3.32-1.91-4.61l-1.43%201.43c.69.92%201.15%202%201.32%203.18zm-7.94%207.92V22c1.74-.19%203.32-.88%204.61-1.91l-1.43-1.43c-.91.68-2%201.15-3.18%201.32m4.6-2.74%201.43%201.43c1.04-1.29%201.72-2.88%201.91-4.61h-2.02c-.17%201.18-.64%202.27-1.32%203.18%22/%3E%3C/svg%3E",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 150,
+        "naturalHeight": 150,
+        "localPath": null
+      },
+      {
+        "src": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22none%22%20d%3D%22M0%200h24v24H0z%22/%3E%3Cpath%20fill%3D%22%23111%22%20d%3D%22m12.06%209.06%204-4-4-4-1.41%201.41%201.59%201.59h-.18c-2.3%200-4.6.88-6.35%202.64-3.52%203.51-3.52%209.21%200%2012.72%201.5%201.5%203.4%202.36%205.36%202.58v-2.02c-1.44-.21-2.84-.86-3.95-1.97-2.73-2.73-2.73-7.17%200-9.9%201.37-1.37%203.16-2.05%204.95-2.05h.17l-1.59%201.59zm8.94%203c-.19-1.74-.88-3.32-1.91-4.61l-1.43%201.43c.69.92%201.15%202%201.32%203.18zm-7.94%207.92V22c1.74-.19%203.32-.88%204.61-1.91l-1.43-1.43c-.91.68-2%201.15-3.18%201.32m4.6-2.74%201.43%201.43c1.04-1.29%201.72-2.88%201.91-4.61h-2.02c-.17%201.18-.64%202.27-1.32%203.18%22/%3E%3C/svg%3E",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 150,
+        "naturalHeight": 150,
+        "localPath": null
+      },
+      {
+        "src": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22none%22%20d%3D%22M0%200h24v24H0z%22/%3E%3Cpath%20fill%3D%22%23666%22%20d%3D%22m12.06%209.06%204-4-4-4-1.41%201.41%201.59%201.59h-.18c-2.3%200-4.6.88-6.35%202.64-3.52%203.51-3.52%209.21%200%2012.72%201.5%201.5%203.4%202.36%205.36%202.58v-2.02c-1.44-.21-2.84-.86-3.95-1.97-2.73-2.73-2.73-7.17%200-9.9%201.37-1.37%203.16-2.05%204.95-2.05h.17l-1.59%201.59zm8.94%203c-.19-1.74-.88-3.32-1.91-4.61l-1.43%201.43c.69.92%201.15%202%201.32%203.18zm-7.94%207.92V22c1.74-.19%203.32-.88%204.61-1.91l-1.43-1.43c-.91.68-2%201.15-3.18%201.32m4.6-2.74%201.43%201.43c1.04-1.29%201.72-2.88%201.91-4.61h-2.02c-.17%201.18-.64%202.27-1.32%203.18%22/%3E%3C/svg%3E",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 150,
+        "naturalHeight": 150,
+        "localPath": null
+      },
+      {
+        "src": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22none%22%20d%3D%22M0%200h24v24H0z%22/%3E%3Cpath%20fill%3D%22%23333%22%20d%3D%22m12.06%209.06%204-4-4-4-1.41%201.41%201.59%201.59h-.18c-2.3%200-4.6.88-6.35%202.64-3.52%203.51-3.52%209.21%200%2012.72%201.5%201.5%203.4%202.36%205.36%202.58v-2.02c-1.44-.21-2.84-.86-3.95-1.97-2.73-2.73-2.73-7.17%200-9.9%201.37-1.37%203.16-2.05%204.95-2.05h.17l-1.59%201.59zm8.94%203c-.19-1.74-.88-3.32-1.91-4.61l-1.43%201.43c.69.92%201.15%202%201.32%203.18zm-7.94%207.92V22c1.74-.19%203.32-.88%204.61-1.91l-1.43-1.43c-.91.68-2%201.15-3.18%201.32m4.6-2.74%201.43%201.43c1.04-1.29%201.72-2.88%201.91-4.61h-2.02c-.17%201.18-.64%202.27-1.32%203.18%22/%3E%3C/svg%3E",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 150,
+        "naturalHeight": 150,
+        "localPath": null
+      },
+      {
+        "src": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22none%22%20d%3D%22M0%200h24v24H0z%22/%3E%3Cpath%20fill%3D%22%23111%22%20d%3D%22m12.06%209.06%204-4-4-4-1.41%201.41%201.59%201.59h-.18c-2.3%200-4.6.88-6.35%202.64-3.52%203.51-3.52%209.21%200%2012.72%201.5%201.5%203.4%202.36%205.36%202.58v-2.02c-1.44-.21-2.84-.86-3.95-1.97-2.73-2.73-2.73-7.17%200-9.9%201.37-1.37%203.16-2.05%204.95-2.05h.17l-1.59%201.59zm8.94%203c-.19-1.74-.88-3.32-1.91-4.61l-1.43%201.43c.69.92%201.15%202%201.32%203.18zm-7.94%207.92V22c1.74-.19%203.32-.88%204.61-1.91l-1.43-1.43c-.91.68-2%201.15-3.18%201.32m4.6-2.74%201.43%201.43c1.04-1.29%201.72-2.88%201.91-4.61h-2.02c-.17%201.18-.64%202.27-1.32%203.18%22/%3E%3C/svg%3E",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 150,
+        "naturalHeight": 150,
+        "localPath": null
+      },
+      {
+        "src": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2018%2016%22%3E%3Cpath%20fill%3D%22%23666%22%20d%3D%22M0%2016h8V9H0zm10%200h8V9h-8zM0%207h8V0H0zm10-7v7h8V0z%22/%3E%3C/svg%3E",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 169,
+        "naturalHeight": 150,
+        "localPath": null
+      },
+      {
+        "src": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2018%2016%22%3E%3Cpath%20fill%3D%22%23333%22%20d%3D%22M0%2016h8V9H0zm10%200h8V9h-8zM0%207h8V0H0zm10-7v7h8V0z%22/%3E%3C/svg%3E",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 169,
+        "naturalHeight": 150,
+        "localPath": null
+      },
+      {
+        "src": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2018%2016%22%3E%3Cpath%20fill%3D%22%23111%22%20d%3D%22M0%2016h8V9H0zm10%200h8V9h-8zM0%207h8V0H0zm10-7v7h8V0z%22/%3E%3C/svg%3E",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 169,
+        "naturalHeight": 150,
+        "localPath": null
+      },
+      {
+        "src": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23666%22%20d%3D%22m12%2019.175%202.125-2.125%201.425%201.4L12%2022l-3.55-3.55%201.425-1.4zM4.825%2012l2.125%202.125-1.4%201.425L2%2012l3.55-3.55%201.4%201.425zm14.35%200L17.05%209.875l1.4-1.425L22%2012l-3.55%203.55-1.4-1.425zM12%204.825%209.875%206.95%208.45%205.55%2012%202l3.55%203.55-1.425%201.4z%22/%3E%3C/svg%3E",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 150,
+        "naturalHeight": 150,
+        "localPath": null
+      },
+      {
+        "src": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23666%22%20d%3D%22m12%2019.175%202.125-2.125%201.425%201.4L12%2022l-3.55-3.55%201.425-1.4zM4.825%2012l2.125%202.125-1.4%201.425L2%2012l3.55-3.55%201.4%201.425zm14.35%200L17.05%209.875l1.4-1.425L22%2012l-3.55%203.55-1.4-1.425zM12%204.825%209.875%206.95%208.45%205.55%2012%202l3.55%203.55-1.425%201.4z%22/%3E%3C/svg%3E",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 150,
+        "naturalHeight": 150,
+        "localPath": null
+      },
+      {
+        "src": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%231a73e8%22%20d%3D%22m12%2019.175%202.125-2.125%201.425%201.4L12%2022l-3.55-3.55%201.425-1.4zM4.825%2012l2.125%202.125-1.4%201.425L2%2012l3.55-3.55%201.4%201.425zm14.35%200L17.05%209.875l1.4-1.425L22%2012l-3.55%203.55-1.4-1.425zM12%204.825%209.875%206.95%208.45%205.55%2012%202l3.55%203.55-1.425%201.4z%22/%3E%3C/svg%3E",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 150,
+        "naturalHeight": 150,
+        "localPath": null
+      },
+      {
+        "src": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23d1d1d1%22%20d%3D%22m12%2019.175%202.125-2.125%201.425%201.4L12%2022l-3.55-3.55%201.425-1.4zM4.825%2012l2.125%202.125-1.4%201.425L2%2012l3.55-3.55%201.4%201.425zm14.35%200L17.05%209.875l1.4-1.425L22%2012l-3.55%203.55-1.4-1.425zM12%204.825%209.875%206.95%208.45%205.55%2012%202l3.55%203.55-1.425%201.4z%22/%3E%3C/svg%3E",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 150,
+        "naturalHeight": 150,
+        "localPath": null
+      },
+      {
+        "src": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23666%22%20d%3D%22m12%2010.8-4.6%204.6L6%2014l6-6%206%206-1.4%201.4z%22/%3E%3C/svg%3E",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 150,
+        "naturalHeight": 150,
+        "localPath": null
+      },
+      {
+        "src": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23333%22%20d%3D%22m12%2010.8-4.6%204.6L6%2014l6-6%206%206-1.4%201.4z%22/%3E%3C/svg%3E",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 150,
+        "naturalHeight": 150,
+        "localPath": null
+      },
+      {
+        "src": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23666%22%20d%3D%22m12%2010.8-4.6%204.6L6%2014l6-6%206%206-1.4%201.4z%22/%3E%3C/svg%3E",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 150,
+        "naturalHeight": 150,
+        "localPath": null
+      },
+      {
+        "src": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23d1d1d1%22%20d%3D%22m12%2010.8-4.6%204.6L6%2014l6-6%206%206-1.4%201.4z%22/%3E%3C/svg%3E",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 150,
+        "naturalHeight": 150,
+        "localPath": null
+      },
+      {
+        "src": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23666%22%20d%3D%22m14%2018-6-6%206-6%201.4%201.4-4.6%204.6%204.6%204.6z%22/%3E%3C/svg%3E",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 150,
+        "naturalHeight": 150,
+        "localPath": null
+      },
+      {
+        "src": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23333%22%20d%3D%22m14%2018-6-6%206-6%201.4%201.4-4.6%204.6%204.6%204.6z%22/%3E%3C/svg%3E",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 150,
+        "naturalHeight": 150,
+        "localPath": null
+      },
+      {
+        "src": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23666%22%20d%3D%22m14%2018-6-6%206-6%201.4%201.4-4.6%204.6%204.6%204.6z%22/%3E%3C/svg%3E",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 150,
+        "naturalHeight": 150,
+        "localPath": null
+      },
+      {
+        "src": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23d1d1d1%22%20d%3D%22m14%2018-6-6%206-6%201.4%201.4-4.6%204.6%204.6%204.6z%22/%3E%3C/svg%3E",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 150,
+        "naturalHeight": 150,
+        "localPath": null
+      },
+      {
+        "src": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23666%22%20d%3D%22M12.6%2012%208%207.4%209.4%206l6%206-6%206L8%2016.6z%22/%3E%3C/svg%3E",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 150,
+        "naturalHeight": 150,
+        "localPath": null
+      },
+      {
+        "src": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23333%22%20d%3D%22M12.6%2012%208%207.4%209.4%206l6%206-6%206L8%2016.6z%22/%3E%3C/svg%3E",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 150,
+        "naturalHeight": 150,
+        "localPath": null
+      },
+      {
+        "src": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23666%22%20d%3D%22M12.6%2012%208%207.4%209.4%206l6%206-6%206L8%2016.6z%22/%3E%3C/svg%3E",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 150,
+        "naturalHeight": 150,
+        "localPath": null
+      },
+      {
+        "src": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23d1d1d1%22%20d%3D%22M12.6%2012%208%207.4%209.4%206l6%206-6%206L8%2016.6z%22/%3E%3C/svg%3E",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 150,
+        "naturalHeight": 150,
+        "localPath": null
+      },
+      {
+        "src": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23666%22%20d%3D%22m12%2015.4-6-6L7.4%208l4.6%204.6L16.6%208%2018%209.4z%22/%3E%3C/svg%3E",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 150,
+        "naturalHeight": 150,
+        "localPath": null
+      },
+      {
+        "src": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23333%22%20d%3D%22m12%2015.4-6-6L7.4%208l4.6%204.6L16.6%208%2018%209.4z%22/%3E%3C/svg%3E",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 150,
+        "naturalHeight": 150,
+        "localPath": null
+      },
+      {
+        "src": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23666%22%20d%3D%22m12%2015.4-6-6L7.4%208l4.6%204.6L16.6%208%2018%209.4z%22/%3E%3C/svg%3E",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 150,
+        "naturalHeight": 150,
+        "localPath": null
+      },
+      {
+        "src": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23666%22%20d%3D%22m12%2015.4-6-6L7.4%208l4.6%204.6L16.6%208%2018%209.4z%22/%3E%3C/svg%3E",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 150,
+        "naturalHeight": 150,
+        "localPath": null
+      },
+      {
+        "src": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22%23666%22%20viewBox%3D%220%20-960%20960%20960%22%3E%3Cpath%20d%3D%22M440-440H200v-80h240v-240h80v240h240v80H520v240h-80z%22/%3E%3C/svg%3E",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 150,
+        "naturalHeight": 150,
+        "localPath": null
+      },
+      {
+        "src": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22%23333%22%20viewBox%3D%220%20-960%20960%20960%22%3E%3Cpath%20d%3D%22M440-440H200v-80h240v-240h80v240h240v80H520v240h-80z%22/%3E%3C/svg%3E",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 150,
+        "naturalHeight": 150,
+        "localPath": null
+      },
+      {
+        "src": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22%23111%22%20viewBox%3D%220%20-960%20960%20960%22%3E%3Cpath%20d%3D%22M440-440H200v-80h240v-240h80v240h240v80H520v240h-80z%22/%3E%3C/svg%3E",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 150,
+        "naturalHeight": 150,
+        "localPath": null
+      },
+      {
+        "src": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22%23d1d1d1%22%20viewBox%3D%220%20-960%20960%20960%22%3E%3Cpath%20d%3D%22M440-440H200v-80h240v-240h80v240h240v80H520v240h-80z%22/%3E%3C/svg%3E",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 150,
+        "naturalHeight": 150,
+        "localPath": null
+      },
+      {
+        "src": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22%23666%22%20viewBox%3D%220%20-960%20960%20960%22%3E%3Cpath%20d%3D%22M200-440v-80h560v80z%22/%3E%3C/svg%3E",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 150,
+        "naturalHeight": 150,
+        "localPath": null
+      },
+      {
+        "src": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22%23333%22%20viewBox%3D%220%20-960%20960%20960%22%3E%3Cpath%20d%3D%22M200-440v-80h560v80z%22/%3E%3C/svg%3E",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 150,
+        "naturalHeight": 150,
+        "localPath": null
+      },
+      {
+        "src": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22%23111%22%20viewBox%3D%220%20-960%20960%20960%22%3E%3Cpath%20d%3D%22M200-440v-80h560v80z%22/%3E%3C/svg%3E",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 150,
+        "naturalHeight": 150,
+        "localPath": null
+      },
+      {
+        "src": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22%23d1d1d1%22%20viewBox%3D%220%20-960%20960%20960%22%3E%3Cpath%20d%3D%22M200-440v-80h560v80z%22/%3E%3C/svg%3E",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 150,
+        "naturalHeight": 150,
+        "localPath": null
+      },
+      {
+        "src": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2069%2029%22%3E%3Cg%20fill%3D%22%23fff%22%20stroke%3D%22%23fff%22%20stroke-width%3D%221.5%22%20opacity%3D%22.9%22%3E%3Cpath%20d%3D%22m17.4706%207.33616.5412-.54112-.5519-.53011c-1.3636-1.30974-3.2017-2.31971-5.7591-2.31971-4.6137%200-8.50262%203.75517-8.50262%208.39578%200%204.6407%203.88892%208.3958%208.50262%208.3958%202.4704%200%204.3765-.8188%205.8732-2.3679%201.5695-1.5729%202.0216-3.7363%202.0216-5.4119%200-.5232-.044-1.0254-.1295-1.4529l-.1206-.6029h-8.3947v3.5942h4.8301c-.1724.5966-.4321%201.0286-.7491%201.3461-.6288.6214-1.5823%201.3094-3.331%201.3094-2.65245%200-4.73598-2.1312-4.73598-4.8099%200-2.67861%202.08353-4.80981%204.73598-4.80981%201.4362%200%202.4752.5607%203.257%201.29229l.5298.49574.513-.51303z%22/%3E%3Cpath%20d%3D%22M24.8656%2020.7286c3.089%200%205.6036-2.4192%205.6036-5.6692%200-3.2681-2.5162-5.66931-5.6036-5.66931-3.0873%200-5.6035%202.40121-5.6035%205.66931%200%203.25%202.5145%205.6692%205.6035%205.6692Zm0-7.9004c1.014%200%201.9766.837%201.9766%202.2312%200%201.3805-.9653%202.2311-1.9766%202.2311-1.0099%200-1.9765-.8574-1.9765-2.2311%200-1.3874.9639-2.2312%201.9765-2.2312Z%22/%3E%3Cpath%20d%3D%22M35.7511%2017.2905h-.0042c-1.0099%200-1.9766-.8574-1.9766-2.2311%200-1.3874.964-2.2312%201.9766-2.2312%201.0139%200%201.9765.837%201.9765%202.2312%200%201.3845-.968%202.2367-1.9723%202.2311Zm-.0124%203.4381c3.089%200%205.6035-2.4192%205.6035-5.6692%200-3.2681-2.5162-5.66931-5.6035-5.66931-3.0874%200-5.6036%202.40121-5.6036%205.66931%200%203.2508%202.5236%205.6692%205.6036%205.6692Z%22/%3E%3Cpath%20d%3D%22M51.953%2010.4357v-.74997h-3.5531v.12253c-.55-.26178-1.2022-.42639-1.9191-.42639-2.8837%200-5.464%202.51793-5.464%205.69393%200%202.1269%201.164%203.9479%202.8033%204.9137l-.0658.0273-1.8806.7802-.6929.2874.2876.6928c.6228%201.5004%202.2776%203.3697%205.0535%203.3697%201.4105%200%202.787-.4145%203.814-1.4093%201.0332-1.0009%201.6171-2.4965%201.6171-4.4653zm-7.2194%209.9844-.0002-.0005c.5552.2005%201.1446.309%201.7474.309.6808%200%201.3058-.1467%201.841-.3891-.0876.3891-.2417.671-.4252.8682-.2812.3022-.7202.5011-1.3747.5011-.91190000000001%200-1.5201-.6476-1.7883-1.2887Zm1.9361-7.5919c.9722%200%201.878.8483%201.878%202.2558%200%201.3796-.8956%202.2147-1.878%202.2147-1.0428%200-1.993-.8738-1.993-2.2147%200-1.3754.9595-2.2558%201.993-2.2558Zm9.069-7.60739v-.75h-3.6599V20.4412h3.6599z%22/%3E%3Cpath%20d%3D%22m63.9128%2016.0614-.6183-.4122-.4179.6145c-.4562.6709-1.0102%201.0432-1.8025%201.0432-.4306%200-.7595-.0981-1.0197-.2622-.07-.0441-.1383-.0951-.2046-.1536l5.6999-2.3625.6825-.283L65.9596%2013.5589l-.219-.5514c-.4528-1.2075-1.8899-3.60918-4.9128-3.60918-2.9833%200-5.3244%202.36358-5.3244%205.66928%200%203.1475%202.3222%205.6693%205.5625%205.6693%202.6043%200%204.1111-1.5991%204.7283-2.5156l.421-.625L65.5882%2017.1783zm-2.5667-3.2103-1.9353.8015c.3795-.5743%201.0107-.8572%201.4909-.8572.1653%200%20.3136.0207.4444.0557Z%22/%3E%3C/g%3E%3Cpath%20fill%3D%22%233c4043%22%20d%3D%22M11.7008%2019.9868c-4.21304%200-7.75262-3.4328-7.75262-7.6458%200-4.21297%203.53958-7.64578%207.75262-7.64578%202.3323%200%203.9912.91159%205.2395%202.11061l-1.47%201.47003c-.8952-.83767-2.1106-1.49467-3.7695-1.49467-3.07972%200-5.48598%202.48016-5.48598%205.55981%200%203.0797%202.40626%205.5599%205.48598%205.5599%201.9956%200%203.1289-.8048%203.8598-1.5275.5995-.5996.9855-1.4537%201.1333-2.628h-4.9931v-2.0942h7.0298c.0739.3695.115.8212.115%201.3058%200%201.5685-.427%203.5067-1.8067%204.8864-1.3469%201.3961-3.0551%202.1434-5.3381%202.1434m18.0184-4.9274c0%202.8333-2.1763%204.9192-4.8536%204.9192-2.6772%200-4.8535-2.0859-4.8535-4.9192%200-2.8498%202.1763-4.9193%204.8535-4.9193%202.6773%200%204.8536%202.0695%204.8536%204.9193m-2.127%200c0-1.7739-1.2648-2.9812-2.7266-2.9812s-2.7265%201.2155-2.7265%202.9812c0%201.7492%201.2647%202.9811%202.7265%202.9811s2.7266-1.2237%202.7266-2.9811m13%200c0%202.8333-2.1763%204.9192-4.8535%204.9192-2.6691%200-4.8536-2.0859-4.8536-4.9192%200-2.8498%202.1763-4.9193%204.8536-4.9193%202.6772%200%204.8535%202.0695%204.8535%204.9193m-2.1188%200c0-1.7739-1.2647-2.9812-2.7265-2.9812s-2.7266%201.2155-2.7266%202.9812c0%201.7492%201.2648%202.9811%202.7266%202.9811%201.4618.0082%202.7265-1.2237%202.7265-2.9811m12.7296-4.6237v8.8366c0%203.6382-2.1435%205.1246-4.6811%205.1246-2.3899%200-3.8188-1.6014-4.3609-2.9072l1.8807-.7802c.3367.8048%201.158%201.7493%202.4802%201.7493%201.626%200%202.628-1.0101%202.628-2.8908v-.7063h-.074c-.4845.5995-1.4207%201.1169-2.5951%201.1169-2.4637%200-4.714-2.1434-4.714-4.9028%200-2.7758%202.2585-4.9439%204.714-4.9439%201.1744%200%202.1106.5256%202.5951%201.1004h.074v-.7966zm-1.9053%204.6483c0-1.7328-1.158-3.0058-2.628-3.0058-1.4947%200-2.743%201.2647-2.743%203.0058%200%201.7164%201.2483%202.9647%202.743%202.9647%201.47%200%202.628-1.2483%202.628-2.9647m5.691-9.86319V19.6912h-2.1599V5.22081zm8.5081%2011.46459%201.6754%201.1169c-.5421.8049-1.8478%202.1846-4.1063%202.1846-2.8004%200-4.8125-2.1599-4.8125-4.9193%200-2.9237%202.0367-4.9193%204.5744-4.9193%202.554%200%203.8023%202.0285%204.213%203.129l.2217.5584-6.5782%202.7266c.501.9855%201.2894%201.4946%202.3898%201.4946%201.1005%200%201.8643-.5502%202.4227-1.3715m-5.1656-1.7739%204.4019-1.8231c-.2464-.616-.9691-1.043-1.8314-1.043-1.1005%200-2.628.9691-2.5705%202.8661%22/%3E%3C/svg%3E",
+        "srcset": null,
+        "alt": "Google",
+        "naturalWidth": 300,
+        "naturalHeight": 126,
+        "localPath": null
+      },
+      {
+        "src": "https://maps.gstatic.com/mapfiles/api-3/images/google_gray.svg",
+        "srcset": null,
+        "alt": "",
+        "naturalWidth": 300,
+        "naturalHeight": 98,
+        "localPath": null
+      },
+      {
+        "src": "https://wheelercat.com/wp-content/uploads/2023/06/Wheeler-Logo-border-e1685733632890.png",
+        "srcset": null,
+        "alt": "Wheeler Machinery",
+        "naturalWidth": 268,
+        "naturalHeight": 67,
+        "localPath": null
+      }
+    ],
+    "inlineSvgs": [
+      {
+        "viewBox": "0 0 512 512",
+        "domPath": "div.page-c-header-m__wrap > div.page-c-header-m__menu > ul.mobile-custom-menu > li > a.c-header-top__header-email-mail--mobile > svg",
+        "markupHash": null
+      }
+    ],
+    "cssBackgrounds": [],
+    "videos": [],
+    "iframes": [
+      {
+        "src": null,
+        "title": null
+      },
+      {
+        "src": null,
+        "title": null
+      },
+      {
+        "src": null,
+        "title": "archetype"
+      },
+      {
+        "src": "https://insight.adsrvr.org/track/cei?advertiser_id=3mfjrz3&cookie_sync=1&upv=3.0.0&upid=zfuxbqz&ref=https://wheelercat.com/about/locations/",
+        "title": "TTD Universal Pixel"
+      }
+    ]
+  },
+  "forms": [
+    {
+      "action": "https://wheelercat.com/",
+      "method": "get",
+      "fields": [
+        {
+          "type": "hidden",
+          "name": "swp_form[form_id]",
+          "label": "swp_form[form_id]",
+          "required": false
+        },
+        {
+          "type": "search",
+          "name": "swps",
+          "label": "What can we help you find?",
+          "required": false
+        },
+        {
+          "type": "hidden",
+          "name": "_mcfx_submission_id",
+          "label": "_mcfx_submission_id",
+          "required": false
+        }
+      ],
+      "thirdParty": null
+    },
+    {
+      "action": "https://wheelercat.com/",
+      "method": "get",
+      "fields": [
+        {
+          "type": "hidden",
+          "name": "swp_form[form_id]",
+          "label": "swp_form[form_id]",
+          "required": false
+        },
+        {
+          "type": "search",
+          "name": "swps",
+          "label": "What can we help you find?",
+          "required": false
+        },
+        {
+          "type": "hidden",
+          "name": "_mcfx_submission_id",
+          "label": "_mcfx_submission_id",
+          "required": false
+        }
+      ],
+      "thirdParty": null
+    },
+    {
+      "action": "https://wheelercat.com/about/locations/",
+      "method": "post",
+      "fields": [
+        {
+          "type": "text",
+          "name": "zipcode",
+          "label": "Enter Your Zip Code",
+          "required": false
+        },
+        {
+          "type": "submit",
+          "name": "submit",
+          "label": "submit",
+          "required": false
+        },
+        {
+          "type": "select-one",
+          "name": "wpcm-zip__industry",
+          "label": "wpcm-zip__industry",
+          "required": false
+        },
+        {
+          "type": "text",
+          "name": null,
+          "label": null,
+          "required": false
+        },
+        {
+          "type": "submit",
+          "name": "submit",
+          "label": "submit",
+          "required": false
+        },
+        {
+          "type": "hidden",
+          "name": "distance",
+          "label": "distance",
+          "required": false
+        },
+        {
+          "type": "hidden",
+          "name": "imahuman",
+          "label": "imahuman",
+          "required": false
+        },
+        {
+          "type": "hidden",
+          "name": "_mcfx_submission_id",
+          "label": "_mcfx_submission_id",
+          "required": false
+        }
+      ],
+      "thirdParty": null
+    }
+  ],
+  "widgets": {
+    "modals": [],
+    "accordions": [],
+    "tabs": []
+  },
+  "components": {
+    "cards": {
+      "count": 0,
+      "examples": []
+    },
+    "grids": {
+      "count": 0,
+      "examples": []
+    },
+    "accordions": {
+      "count": 0,
+      "examples": []
+    },
+    "tabs": {
+      "count": 0,
+      "examples": []
+    },
+    "tables": {
+      "count": 2,
+      "examples": []
+    },
+    "modals": {
+      "count": 0,
+      "examples": []
+    },
+    "carousels": {
+      "count": 0,
+      "examples": []
+    },
+    "videos": {
+      "count": 0,
+      "examples": []
+    },
+    "iframes": {
+      "count": 4,
+      "examples": []
+    },
+    "dataVizEmbeds": {
+      "count": 0,
+      "examples": []
+    },
+    "teamTiles": {
+      "count": 0,
+      "examples": []
+    },
+    "pricingTiles": {
+      "count": 0,
+      "examples": []
+    },
+    "testimonialCards": {
+      "count": 0,
+      "examples": []
+    },
+    "logoStrip": {
+      "count": 0,
+      "examples": []
+    },
+    "timeline": {
+      "count": 0,
+      "examples": []
+    },
+    "breadcrumbs": {
+      "count": 3,
+      "examples": []
+    },
+    "statRow": {
+      "count": 0,
+      "examples": []
+    },
+    "ctaBand": {
+      "count": 0,
+      "examples": []
+    },
+    "formFields": {
+      "count": 14,
+      "examples": []
+    },
+    "other": []
+  },
+  "perSectionStyle": [
+    {
+      "sectionRef": "body > span:nth-child(1)",
+      "purpose": "unknown",
+      "background": {
+        "color": "rgba(0, 0, 0, 0)",
+        "hasImage": false,
+        "hasGradient": false
+      },
+      "text": {
+        "dominantColor": "rgb(69, 69, 69)"
+      },
+      "spacing": {
+        "paddingBlock": "0px",
+        "paddingInline": "0px",
+        "gap": "normal"
+      },
+      "borderRadius": "0px",
+      "fontFamilies": [
+        "Roboto, sans-serif"
+      ],
+      "shadowsUsed": []
+    },
+    {
+      "sectionRef": "body > access-widget-ui:nth-child(2)",
+      "purpose": "unknown",
+      "background": {
+        "color": "rgba(0, 0, 0, 0)",
+        "hasImage": false,
+        "hasGradient": false
+      },
+      "text": {
+        "dominantColor": "rgb(0, 0, 0)"
+      },
+      "spacing": {
+        "paddingBlock": "0px",
+        "paddingInline": "0px",
+        "gap": "normal"
+      },
+      "borderRadius": "0px",
+      "fontFamilies": [
+        "Times"
+      ],
+      "shadowsUsed": []
+    },
+    {
+      "sectionRef": "body > a:nth-child(3)",
+      "purpose": "unknown",
+      "background": {
+        "color": "rgba(0, 0, 0, 0)",
+        "hasImage": false,
+        "hasGradient": false
+      },
+      "text": {
+        "dominantColor": "rgb(69, 69, 69)"
+      },
+      "spacing": {
+        "paddingBlock": "0px",
+        "paddingInline": "0px",
+        "gap": "normal"
+      },
+      "borderRadius": "0px",
+      "fontFamilies": [
+        "Roboto, sans-serif"
+      ],
+      "shadowsUsed": []
+    },
+    {
+      "sectionRef": "body > access-widget-ui:nth-child(4)",
+      "purpose": "unknown",
+      "background": {
+        "color": "rgba(0, 0, 0, 0)",
+        "hasImage": false,
+        "hasGradient": false
+      },
+      "text": {
+        "dominantColor": "rgb(0, 0, 0)"
+      },
+      "spacing": {
+        "paddingBlock": "0px",
+        "paddingInline": "0px",
+        "gap": "normal"
+      },
+      "borderRadius": "0px",
+      "fontFamilies": [
+        "Times"
+      ],
+      "shadowsUsed": []
+    },
+    {
+      "sectionRef": "body > access-widget-ui:nth-child(5)",
+      "purpose": "unknown",
+      "background": {
+        "color": "rgba(0, 0, 0, 0)",
+        "hasImage": false,
+        "hasGradient": false
+      },
+      "text": {
+        "dominantColor": "rgb(0, 0, 0)"
+      },
+      "spacing": {
+        "paddingBlock": "0px",
+        "paddingInline": "0px",
+        "gap": "normal"
+      },
+      "borderRadius": "0px",
+      "fontFamilies": [
+        "Times"
+      ],
+      "shadowsUsed": []
+    },
+    {
+      "sectionRef": "body > access-widget-ui:nth-child(6)",
+      "purpose": "unknown",
+      "background": {
+        "color": "rgba(0, 0, 0, 0)",
+        "hasImage": false,
+        "hasGradient": false
+      },
+      "text": {
+        "dominantColor": "rgb(0, 0, 0)"
+      },
+      "spacing": {
+        "paddingBlock": "0px",
+        "paddingInline": "0px",
+        "gap": "normal"
+      },
+      "borderRadius": "0px",
+      "fontFamilies": [
+        "Times"
+      ],
+      "shadowsUsed": []
+    },
+    {
+      "sectionRef": "body > noscript:nth-child(7)",
+      "purpose": "unknown",
+      "background": {
+        "color": "rgba(0, 0, 0, 0)",
+        "hasImage": false,
+        "hasGradient": false
+      },
+      "text": {
+        "dominantColor": "rgb(69, 69, 69)"
+      },
+      "spacing": {
+        "paddingBlock": "0px",
+        "paddingInline": "0px",
+        "gap": "normal"
+      },
+      "borderRadius": "0px",
+      "fontFamilies": [
+        "Roboto, sans-serif"
+      ],
+      "shadowsUsed": []
+    },
+    {
+      "sectionRef": "body > noscript:nth-child(8)",
+      "purpose": "unknown",
+      "background": {
+        "color": "rgba(0, 0, 0, 0)",
+        "hasImage": false,
+        "hasGradient": false
+      },
+      "text": {
+        "dominantColor": "rgb(69, 69, 69)"
+      },
+      "spacing": {
+        "paddingBlock": "0px",
+        "paddingInline": "0px",
+        "gap": "normal"
+      },
+      "borderRadius": "0px",
+      "fontFamilies": [
+        "Roboto, sans-serif"
+      ],
+      "shadowsUsed": []
+    },
+    {
+      "sectionRef": "body > noscript:nth-child(9)",
+      "purpose": "unknown",
+      "background": {
+        "color": "rgba(0, 0, 0, 0)",
+        "hasImage": false,
+        "hasGradient": false
+      },
+      "text": {
+        "dominantColor": "rgb(69, 69, 69)"
+      },
+      "spacing": {
+        "paddingBlock": "0px",
+        "paddingInline": "0px",
+        "gap": "normal"
+      },
+      "borderRadius": "0px",
+      "fontFamilies": [
+        "Roboto, sans-serif"
+      ],
+      "shadowsUsed": []
+    },
+    {
+      "sectionRef": "body > header:nth-child(10)",
+      "purpose": "unknown",
+      "background": {
+        "color": "rgb(255, 255, 255)",
+        "hasImage": false,
+        "hasGradient": false
+      },
+      "text": {
+        "dominantColor": "rgb(69, 69, 69)"
+      },
+      "spacing": {
+        "paddingBlock": "0px",
+        "paddingInline": "0px",
+        "gap": "normal"
+      },
+      "borderRadius": "0px",
+      "fontFamilies": [
+        "Roboto, sans-serif"
+      ],
+      "shadowsUsed": [
+        "rgba(0, 0, 0, 0.1) 0px 3px 6px 0px"
+      ]
+    },
+    {
+      "sectionRef": "body > header:nth-child(11)",
+      "purpose": "unknown",
+      "background": {
+        "color": "rgba(0, 0, 0, 0)",
+        "hasImage": false,
+        "hasGradient": false
+      },
+      "text": {
+        "dominantColor": "rgb(69, 69, 69)"
+      },
+      "spacing": {
+        "paddingBlock": "0px",
+        "paddingInline": "0px",
+        "gap": "normal"
+      },
+      "borderRadius": "0px",
+      "fontFamilies": [
+        "Roboto, sans-serif"
+      ],
+      "shadowsUsed": []
+    },
+    {
+      "sectionRef": "body > section:nth-child(12)",
+      "purpose": "unknown",
+      "background": {
+        "color": "rgba(20, 20, 20, 0.9)",
+        "hasImage": false,
+        "hasGradient": false
+      },
+      "text": {
+        "dominantColor": "rgb(69, 69, 69)"
+      },
+      "spacing": {
+        "paddingBlock": "0px",
+        "paddingInline": "0px",
+        "gap": "normal"
+      },
+      "borderRadius": "0px",
+      "fontFamilies": [
+        "Roboto, sans-serif"
+      ],
+      "shadowsUsed": []
+    },
+    {
+      "sectionRef": "body > article:nth-child(13)",
+      "purpose": "unknown",
+      "background": {
+        "color": "rgba(0, 0, 0, 0)",
+        "hasImage": false,
+        "hasGradient": false
+      },
+      "text": {
+        "dominantColor": "rgb(69, 69, 69)"
+      },
+      "spacing": {
+        "paddingBlock": "0px",
+        "paddingInline": "0px",
+        "gap": "normal"
+      },
+      "borderRadius": "0px",
+      "fontFamilies": [
+        "Roboto, sans-serif"
+      ],
+      "shadowsUsed": []
+    },
+    {
+      "sectionRef": "body > footer:nth-child(14)",
+      "purpose": "unknown",
+      "background": {
+        "color": "rgb(39, 39, 39)",
+        "hasImage": false,
+        "hasGradient": false
+      },
+      "text": {
+        "dominantColor": "rgb(255, 255, 255)"
+      },
+      "spacing": {
+        "paddingBlock": "60px",
+        "paddingInline": "0px",
+        "gap": "normal"
+      },
+      "borderRadius": "0px",
+      "fontFamilies": [
+        "Roboto, sans-serif"
+      ],
+      "shadowsUsed": []
+    },
+    {
+      "sectionRef": "body > script:nth-child(15)",
+      "purpose": "unknown",
+      "background": {
+        "color": "rgba(0, 0, 0, 0)",
+        "hasImage": false,
+        "hasGradient": false
+      },
+      "text": {
+        "dominantColor": "rgb(69, 69, 69)"
+      },
+      "spacing": {
+        "paddingBlock": "0px",
+        "paddingInline": "0px",
+        "gap": "normal"
+      },
+      "borderRadius": "0px",
+      "fontFamilies": [
+        "Roboto, sans-serif"
+      ],
+      "shadowsUsed": []
+    },
+    {
+      "sectionRef": "body > script:nth-child(16)",
+      "purpose": "unknown",
+      "background": {
+        "color": "rgba(0, 0, 0, 0)",
+        "hasImage": false,
+        "hasGradient": false
+      },
+      "text": {
+        "dominantColor": "rgb(69, 69, 69)"
+      },
+      "spacing": {
+        "paddingBlock": "0px",
+        "paddingInline": "0px",
+        "gap": "normal"
+      },
+      "borderRadius": "0px",
+      "fontFamilies": [
+        "Roboto, sans-serif"
+      ],
+      "shadowsUsed": []
+    },
+    {
+      "sectionRef": "body > script:nth-child(17)",
+      "purpose": "unknown",
+      "background": {
+        "color": "rgba(0, 0, 0, 0)",
+        "hasImage": false,
+        "hasGradient": false
+      },
+      "text": {
+        "dominantColor": "rgb(69, 69, 69)"
+      },
+      "spacing": {
+        "paddingBlock": "0px",
+        "paddingInline": "0px",
+        "gap": "normal"
+      },
+      "borderRadius": "0px",
+      "fontFamilies": [
+        "Roboto, sans-serif"
+      ],
+      "shadowsUsed": []
+    },
+    {
+      "sectionRef": "body > script:nth-child(18)",
+      "purpose": "unknown",
+      "background": {
+        "color": "rgba(0, 0, 0, 0)",
+        "hasImage": false,
+        "hasGradient": false
+      },
+      "text": {
+        "dominantColor": "rgb(69, 69, 69)"
+      },
+      "spacing": {
+        "paddingBlock": "0px",
+        "paddingInline": "0px",
+        "gap": "normal"
+      },
+      "borderRadius": "0px",
+      "fontFamilies": [
+        "Roboto, sans-serif"
+      ],
+      "shadowsUsed": []
+    },
+    {
+      "sectionRef": "body > script:nth-child(19)",
+      "purpose": "unknown",
+      "background": {
+        "color": "rgba(0, 0, 0, 0)",
+        "hasImage": false,
+        "hasGradient": false
+      },
+      "text": {
+        "dominantColor": "rgb(69, 69, 69)"
+      },
+      "spacing": {
+        "paddingBlock": "0px",
+        "paddingInline": "0px",
+        "gap": "normal"
+      },
+      "borderRadius": "0px",
+      "fontFamilies": [
+        "Roboto, sans-serif"
+      ],
+      "shadowsUsed": []
+    },
+    {
+      "sectionRef": "body > style:nth-child(20)",
+      "purpose": "unknown",
+      "background": {
+        "color": "rgba(0, 0, 0, 0)",
+        "hasImage": false,
+        "hasGradient": false
+      },
+      "text": {
+        "dominantColor": "rgb(69, 69, 69)"
+      },
+      "spacing": {
+        "paddingBlock": "0px",
+        "paddingInline": "0px",
+        "gap": "normal"
+      },
+      "borderRadius": "0px",
+      "fontFamilies": [
+        "Roboto, sans-serif"
+      ],
+      "shadowsUsed": []
+    },
+    {
+      "sectionRef": "body > script:nth-child(21)",
+      "purpose": "unknown",
+      "background": {
+        "color": "rgba(0, 0, 0, 0)",
+        "hasImage": false,
+        "hasGradient": false
+      },
+      "text": {
+        "dominantColor": "rgb(69, 69, 69)"
+      },
+      "spacing": {
+        "paddingBlock": "0px",
+        "paddingInline": "0px",
+        "gap": "normal"
+      },
+      "borderRadius": "0px",
+      "fontFamilies": [
+        "Roboto, sans-serif"
+      ],
+      "shadowsUsed": []
+    },
+    {
+      "sectionRef": "body > script:nth-child(22)",
+      "purpose": "unknown",
+      "background": {
+        "color": "rgba(0, 0, 0, 0)",
+        "hasImage": false,
+        "hasGradient": false
+      },
+      "text": {
+        "dominantColor": "rgb(69, 69, 69)"
+      },
+      "spacing": {
+        "paddingBlock": "0px",
+        "paddingInline": "0px",
+        "gap": "normal"
+      },
+      "borderRadius": "0px",
+      "fontFamilies": [
+        "Roboto, sans-serif"
+      ],
+      "shadowsUsed": []
+    },
+    {
+      "sectionRef": "body > script:nth-child(23)",
+      "purpose": "unknown",
+      "background": {
+        "color": "rgba(0, 0, 0, 0)",
+        "hasImage": false,
+        "hasGradient": false
+      },
+      "text": {
+        "dominantColor": "rgb(69, 69, 69)"
+      },
+      "spacing": {
+        "paddingBlock": "0px",
+        "paddingInline": "0px",
+        "gap": "normal"
+      },
+      "borderRadius": "0px",
+      "fontFamilies": [
+        "Roboto, sans-serif"
+      ],
+      "shadowsUsed": []
+    },
+    {
+      "sectionRef": "body > script:nth-child(24)",
+      "purpose": "unknown",
+      "background": {
+        "color": "rgba(0, 0, 0, 0)",
+        "hasImage": false,
+        "hasGradient": false
+      },
+      "text": {
+        "dominantColor": "rgb(69, 69, 69)"
+      },
+      "spacing": {
+        "paddingBlock": "0px",
+        "paddingInline": "0px",
+        "gap": "normal"
+      },
+      "borderRadius": "0px",
+      "fontFamilies": [
+        "Roboto, sans-serif"
+      ],
+      "shadowsUsed": []
+    },
+    {
+      "sectionRef": "body > script:nth-child(25)",
+      "purpose": "unknown",
+      "background": {
+        "color": "rgba(0, 0, 0, 0)",
+        "hasImage": false,
+        "hasGradient": false
+      },
+      "text": {
+        "dominantColor": "rgb(69, 69, 69)"
+      },
+      "spacing": {
+        "paddingBlock": "0px",
+        "paddingInline": "0px",
+        "gap": "normal"
+      },
+      "borderRadius": "0px",
+      "fontFamilies": [
+        "Roboto, sans-serif"
+      ],
+      "shadowsUsed": []
+    },
+    {
+      "sectionRef": "body > script:nth-child(26)",
+      "purpose": "unknown",
+      "background": {
+        "color": "rgba(0, 0, 0, 0)",
+        "hasImage": false,
+        "hasGradient": false
+      },
+      "text": {
+        "dominantColor": "rgb(69, 69, 69)"
+      },
+      "spacing": {
+        "paddingBlock": "0px",
+        "paddingInline": "0px",
+        "gap": "normal"
+      },
+      "borderRadius": "0px",
+      "fontFamilies": [
+        "Roboto, sans-serif"
+      ],
+      "shadowsUsed": []
+    },
+    {
+      "sectionRef": "body > script:nth-child(27)",
+      "purpose": "unknown",
+      "background": {
+        "color": "rgba(0, 0, 0, 0)",
+        "hasImage": false,
+        "hasGradient": false
+      },
+      "text": {
+        "dominantColor": "rgb(69, 69, 69)"
+      },
+      "spacing": {
+        "paddingBlock": "0px",
+        "paddingInline": "0px",
+        "gap": "normal"
+      },
+      "borderRadius": "0px",
+      "fontFamilies": [
+        "Roboto, sans-serif"
+      ],
+      "shadowsUsed": []
+    },
+    {
+      "sectionRef": "body > script:nth-child(28)",
+      "purpose": "unknown",
+      "background": {
+        "color": "rgba(0, 0, 0, 0)",
+        "hasImage": false,
+        "hasGradient": false
+      },
+      "text": {
+        "dominantColor": "rgb(69, 69, 69)"
+      },
+      "spacing": {
+        "paddingBlock": "0px",
+        "paddingInline": "0px",
+        "gap": "normal"
+      },
+      "borderRadius": "0px",
+      "fontFamilies": [
+        "Roboto, sans-serif"
+      ],
+      "shadowsUsed": []
+    },
+    {
+      "sectionRef": "body > style:nth-child(29)",
+      "purpose": "unknown",
+      "background": {
+        "color": "rgba(0, 0, 0, 0)",
+        "hasImage": false,
+        "hasGradient": false
+      },
+      "text": {
+        "dominantColor": "rgb(69, 69, 69)"
+      },
+      "spacing": {
+        "paddingBlock": "0px",
+        "paddingInline": "0px",
+        "gap": "normal"
+      },
+      "borderRadius": "0px",
+      "fontFamilies": [
+        "Roboto, sans-serif"
+      ],
+      "shadowsUsed": []
+    },
+    {
+      "sectionRef": "body > script:nth-child(30)",
+      "purpose": "unknown",
+      "background": {
+        "color": "rgba(0, 0, 0, 0)",
+        "hasImage": false,
+        "hasGradient": false
+      },
+      "text": {
+        "dominantColor": "rgb(69, 69, 69)"
+      },
+      "spacing": {
+        "paddingBlock": "0px",
+        "paddingInline": "0px",
+        "gap": "normal"
+      },
+      "borderRadius": "0px",
+      "fontFamilies": [
+        "Roboto, sans-serif"
+      ],
+      "shadowsUsed": []
+    }
+  ],
+  "embedDominance": {
+    "dominated": false,
+    "iframeSrc": null,
+    "viewportCoveragePct": null,
+    "mainHeightCoveragePct": null,
+    "screenshot": null
+  },
+  "cssCustomProperties": [
+    {
+      "name": "--wp--preset--gradient--midnight",
+      "value": "linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%)"
+    },
+    {
+      "name": "--yellow",
+      "value": "#fc0"
+    },
+    {
+      "name": "--wp-admin-theme-color-darker-20",
+      "value": "#005a87"
+    },
+    {
+      "name": "--wp--preset--font-size--large",
+      "value": "36px"
+    },
+    {
+      "name": "--wp--preset--shadow--outlined",
+      "value": "6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0)"
+    },
+    {
+      "name": "--section-margins",
+      "value": "80px"
+    },
+    {
+      "name": "--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan",
+      "value": "linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%)"
+    },
+    {
+      "name": "--wp--preset--color--vivid-purple",
+      "value": "#9b51e0"
+    },
+    {
+      "name": "--wp--preset--gradient--blush-light-purple",
+      "value": "linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%)"
+    },
+    {
+      "name": "--wp--preset--aspect-ratio--16-9",
+      "value": "16/9"
+    },
+    {
+      "name": "--section-margins--half",
+      "value": "30px"
+    },
+    {
+      "name": "--wp--preset--color--pale-pink",
+      "value": "#f78da7"
+    },
+    {
+      "name": "--wp-block-synced-color--rgb",
+      "value": "122,0,223"
+    },
+    {
+      "name": "--wp-bound-block-color",
+      "value": "#7a00df"
+    },
+    {
+      "name": "--wp--preset--color--cyan-bluish-gray",
+      "value": "#abb8c3"
+    },
+    {
+      "name": "--red",
+      "value": "#a91321"
+    },
+    {
+      "name": "--wp--preset--gradient--electric-grass",
+      "value": "linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%)"
+    },
+    {
+      "name": "--wp--preset--gradient--blush-bordeaux",
+      "value": "linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%)"
+    },
+    {
+      "name": "--wp--preset--spacing--60",
+      "value": "2.25rem"
+    },
+    {
+      "name": "--lighter-gray",
+      "value": "#f0f0f0"
+    },
+    {
+      "name": "--wp--preset--color--vivid-green-cyan",
+      "value": "#00d084"
+    },
+    {
+      "name": "--wp--preset--shadow--deep",
+      "value": "12px 12px 50px rgba(0, 0, 0, 0.4)"
+    },
+    {
+      "name": "--easing-leave",
+      "value": "cubic-bezier(.4,0,1,1)"
+    },
+    {
+      "name": "--wp-editor-canvas-background",
+      "value": "#ddd"
+    },
+    {
+      "name": "--wp-admin-theme-color-darker-20--rgb",
+      "value": "0,90,135"
+    },
+    {
+      "name": "--border-gray",
+      "value": "#b5b5b5"
+    },
+    {
+      "name": "--wp--preset--spacing--40",
+      "value": "1rem"
+    },
+    {
+      "name": "--wp-admin-theme-color--rgb",
+      "value": "0,124,186"
+    },
+    {
+      "name": "--wp-admin-theme-color",
+      "value": "#007cba"
+    },
+    {
+      "name": "--wp--preset--aspect-ratio--3-2",
+      "value": "3/2"
+    },
+    {
+      "name": "--wp--preset--color--luminous-vivid-orange",
+      "value": "#ff6900"
+    },
+    {
+      "name": "--wp--preset--font-size--x-large",
+      "value": "42px"
+    },
+    {
+      "name": "--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple",
+      "value": "linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%)"
+    },
+    {
+      "name": "--wp--preset--font-size--huge",
+      "value": "42px"
+    },
+    {
+      "name": "--wp--preset--aspect-ratio--2-3",
+      "value": "2/3"
+    },
+    {
+      "name": "--menu-gray",
+      "value": "#7B7770"
+    },
+    {
+      "name": "--wp--preset--font-size--normal",
+      "value": "16px"
+    },
+    {
+      "name": "--wp-admin-theme-color-darker-10--rgb",
+      "value": "0,107,160.5"
+    },
+    {
+      "name": "--wp--preset--color--vivid-cyan-blue",
+      "value": "#0693e3"
+    },
+    {
+      "name": "--wp--preset--shadow--natural",
+      "value": "6px 6px 9px rgba(0, 0, 0, 0.2)"
+    },
+    {
+      "name": "--wp--preset--spacing--30",
+      "value": "0.67rem"
+    },
+    {
+      "name": "--wp--preset--aspect-ratio--4-3",
+      "value": "4/3"
+    },
+    {
+      "name": "--wp--preset--spacing--50",
+      "value": "1.5rem"
+    },
+    {
+      "name": "--easing-standard",
+      "value": "cubic-bezier(.4,0,.2,1)"
+    },
+    {
+      "name": "--wp--preset--color--pale-cyan-blue",
+      "value": "#8ed1fc"
+    },
+    {
+      "name": "--wp--preset--font-size--small",
+      "value": "13px"
+    },
+    {
+      "name": "--black",
+      "value": "#000"
+    },
+    {
+      "name": "--wp--preset--spacing--70",
+      "value": "3.38rem"
+    },
+    {
+      "name": "--wp--preset--gradient--luminous-dusk",
+      "value": "linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%)"
+    },
+    {
+      "name": "--wp-block-synced-color",
+      "value": "#7a00df"
+    },
+    {
+      "name": "--wp--preset--color--luminous-vivid-amber",
+      "value": "#fcb900"
+    },
+    {
+      "name": "--light-gray",
+      "value": "#ebebeb"
+    },
+    {
+      "name": "--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange",
+      "value": "linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%)"
+    },
+    {
+      "name": "--wp--preset--aspect-ratio--9-16",
+      "value": "9/16"
+    },
+    {
+      "name": "--wp--preset--color--vivid-red",
+      "value": "#cf2e2e"
+    },
+    {
+      "name": "--wp--preset--shadow--crisp",
+      "value": "6px 6px 0px rgb(0, 0, 0)"
+    },
+    {
+      "name": "--text-gray",
+      "value": "#454545"
+    },
+    {
+      "name": "--wp--preset--color--light-green-cyan",
+      "value": "#7bdcb5"
+    },
+    {
+      "name": "--easing-enter",
+      "value": "cubic-bezier(0,0,.2,1)"
+    },
+    {
+      "name": "--wp-admin-border-width-focus",
+      "value": "1.5px"
+    },
+    {
+      "name": "--dark-gray",
+      "value": "#272727"
+    },
+    {
+      "name": "--wp--preset--aspect-ratio--square",
+      "value": "1"
+    },
+    {
+      "name": "--wp--preset--shadow--sharp",
+      "value": "6px 6px 0px rgba(0, 0, 0, 0.2)"
+    },
+    {
+      "name": "--wp--preset--gradient--pale-ocean",
+      "value": "linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%)"
+    },
+    {
+      "name": "--wp--preset--color--white",
+      "value": "#ffffff"
+    },
+    {
+      "name": "--wp--preset--spacing--80",
+      "value": "5.06rem"
+    },
+    {
+      "name": "--yellow-hover",
+      "value": "#ffba00"
+    },
+    {
+      "name": "--wp--preset--font-size--medium",
+      "value": "20px"
+    },
+    {
+      "name": "--wp--preset--aspect-ratio--3-4",
+      "value": "3/4"
+    },
+    {
+      "name": "--wp-admin-theme-color-darker-10",
+      "value": "#006ba1"
+    },
+    {
+      "name": "--wp--preset--color--black",
+      "value": "#000000"
+    },
+    {
+      "name": "--wp--preset--gradient--luminous-vivid-orange-to-vivid-red",
+      "value": "linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%)"
+    },
+    {
+      "name": "--wp--preset--spacing--20",
+      "value": "0.44rem"
+    },
+    {
+      "name": "--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray",
+      "value": "linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%)"
+    },
+    {
+      "name": "--wp--preset--gradient--cool-to-warm-spectrum",
+      "value": "linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%)"
+    }
+  ],
+  "stats": {
+    "wordCount": 398,
+    "ctaCount": 20,
+    "internalLinkCount": 49,
+    "externalLinkCount": 20,
+    "imageCount": 95
+  },
+  "screenshot": "current/assets/screenshots/about__locations.png"
+}

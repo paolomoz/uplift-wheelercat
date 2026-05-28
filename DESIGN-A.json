@@ -1,0 +1,145 @@
+{
+  "_provenance": {
+    "writtenBy": "stardust:direct (Phase 4 of stardust:uplift)",
+    "writtenAt": "2026-05-28T00:00:00Z",
+    "variant": "A",
+    "parent": "DESIGN.json",
+    "readArtifacts": [
+      "DESIGN.json",
+      "stardust/uplift-improvements.md",
+      "stardust/direction.md"
+    ],
+    "stardustVersion": "0.10.0"
+  },
+  "schemaVersion": 2,
+  "title": "Design System: Wheeler Cat — Variant A (faithful + improvements)",
+  "variant": {
+    "id": "A",
+    "role": "faithful + improvements",
+    "bet": "improvements-list applied; no motion; palette proportions unchanged",
+    "static": true,
+    "cinematic": false,
+    "siblings": ["B", "C"]
+  },
+  "inherits": {
+    "from": "DESIGN.json",
+    "items": [
+      "colorMeta",
+      "typographyMeta",
+      "modularScale",
+      "shadows",
+      "breakpoints",
+      "sectionPadding",
+      "iaPriorities",
+      "componentStyle",
+      "motifs",
+      "voice",
+      "systemComponentRoles",
+      "iconFont",
+      "divergence"
+    ]
+  },
+  "extensions": {
+    "compositionDeltas": {
+      "financeBand": {
+        "layout": "3-up CSS grid (grid-template-columns: repeat(3, 1fr) at desktop; repeat(2, 1fr) at tablet; 1fr at mobile)",
+        "ground": "#FFFFFF (page surface)",
+        "cardGround": "#FFFFFF",
+        "cardShadow": "rgba(0,0,0,0.8) 0px 6px 16px 0px",
+        "noCarousel": true,
+        "rationale": "Improvement #1 — retire slick.js carousel; all deals visible above the fold."
+      },
+      "partnerSentimentBand": {
+        "ground": "#E5E3DF (warm stone)",
+        "headline": "merged-into-band (was orphan h5; promoted to h3 inline with partner-logo strip)",
+        "rationale": "Improvement #2 — collapse sentiment + partner into one band."
+      },
+      "statRow": {
+        "status": "retired",
+        "replacedBy": "single narrative-proof line at locations band lead",
+        "rationale": "Improvement #4 — narrative proofs replace floating numerals."
+      },
+      "locationsBand": {
+        "ground": "#FFFFFF (page surface)",
+        "leadLine": "narrative-proof (lead 20px Roboto 400)",
+        "mapWidth": "1400px container",
+        "branchList": "18 rows in 2-col or 3-col grid"
+      },
+      "heroBand": {
+        "ground": "captured photographic hero with overlay-dark rgba(18,18,18,0.5)",
+        "headline": "Roboto Condensed 700 ALL-CAPS at display size (61px desktop)",
+        "cta": "primary yellow"
+      }
+    },
+    "palette": {
+      "proportions": "captured (unchanged)",
+      "surfaceMap": {
+        "page": "#FFFFFF",
+        "hero": "captured photographic ground (overlay-dark scrim)",
+        "financeBand": "#FFFFFF",
+        "serviceTileRow": "#FFFFFF (page) with #272727 dark tiles",
+        "partnerSentimentBand": "#E5E3DF",
+        "locationsBand": "#FFFFFF",
+        "footer": "#272727",
+        "utilityBar": "#272727",
+        "mainHeader": "#272727"
+      },
+      "catYellowDeployment": "CTA + eyebrow + 1px border (captured proportion held)"
+    },
+    "typography": {
+      "modularScale": {
+        "ratio": 1.25,
+        "name": "major third (1.250)",
+        "applied": "all heading levels"
+      },
+      "tracking": {
+        "displayCaps": "0.02em",
+        "labelCaps": "0.08em",
+        "body": "normal"
+      }
+    },
+    "improvementsApplied": [
+      {
+        "id": 1,
+        "category": "dated-pattern",
+        "fix": "Replace slick.js finance carousel with 3-up card grid; all deals visible above the fold."
+      },
+      {
+        "id": 2,
+        "category": "ia-clutter",
+        "fix": "Collapse 'WE PROUDLY SUPPORT THE ONES WHO BUILD OUR WORLD' into one band with the partner-logo strip."
+      },
+      {
+        "id": 3,
+        "category": "contrast-or-density",
+        "fix": "Adopt modular type scale 1.250; pin tracking by weight (display 0.02em; label 0.08em)."
+      },
+      {
+        "id": 4,
+        "category": "cliche",
+        "fix": "Retire 18/75/24 floating-numerals stat row; replace with single narrative-proof line."
+      },
+      {
+        "id": 5,
+        "category": "palette-proportion",
+        "fix": "Hold Cat Yellow at captured proportion (CTA + eyebrow + 1px border). The yellow promotion is variant B's bet, not A's."
+      }
+    ],
+    "bonusContentRules": [
+      "Alt text required on every image (hero, service tiles, partner logos, branch map).",
+      "Plan a monochrome / inverted SVG logo set for downstream variants (B / C); A renders the captured PNG."
+    ],
+    "antiToolboxCheck": {
+      "betAxes": ["IA grouping", "type scale", "content (stat row → narrative)"],
+      "rejectedMoves": [
+        "Custom font (Roboto Condensed + Roboto only — Mode A pinning)",
+        "Invented color (captured palette pinned)",
+        "Motion register (A is the static green-light variant)",
+        "Yellow as primary surface (B's bet, not A's)",
+        "Editorial-register vocabulary (anti-reference)",
+        "Generic-2026-SaaS silhouette (anti-reference)",
+        "Glassmorphism / gradient text / side-stripes (impeccable absolute bans)"
+      ]
+    }
+  }
+}

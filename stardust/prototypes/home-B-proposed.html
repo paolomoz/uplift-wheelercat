@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- stardust:provenance
+  writtenBy:         stardust:uplift (Phase 5 — prototype × 3)
+  writtenAt:         2026-05-28T00:00:00Z
+  page:              home
+  variant:           B (Cat Yellow as primary surface)
+  pageUrl:           https://wheelercat.com/
+  againstDirection:  stardust/direction.md (Active 2026-05-28T00:00:00Z)
+  readArtifacts:
+    - stardust/current/pages/home.json
+    - stardust/current/_brand-extraction.json
+    - DESIGN.md
+    - DESIGN.json
+    - DESIGN-B.md
+    - DESIGN-B.json
+    - stardust/prototypes/home-B-shape.md
+  divergenceVersion: v1.0 (stardust v2)
+  fontDeck:          brand-inherited (Roboto Condensed + Roboto + icomoon)
+  paletteSource:     captured (Mode A brand-faithful) — proportions INVERTED per B's bet
+  derivedColors:
+    - "#E6B800 — yellow hover (10% darker; documented derived state)"
+    - "#1A1A1A — dark hover (8% darker than #272727)"
+  unsourcedContent:
+    - selector: "section[data-section='support-partners'] .partner-logo"
+      type: brand-logo
+      count: 5
+      reason: "Partner names sourced from captured page; image assets not matched in stardust/current/assets/media/. Rendered as text-as-logo placeholder."
+  stardustVersion:   0.10.0
+-->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wheeler Cat - Construction Equipment, Tool & Trailer Rental & Sales</title>
+<meta name="description" content="Wheeler Cat offers Construction Equipment, Tool & Trailer Rental & Sales across 18 locations in Utah and parts of Arizona, Nevada & Wyoming.">
+<style>
+:root {
+  /* Colors (captured palette, Mode A — proportions inverted) */
+  --color-page: #FFFFFF;
+  --color-body: #454545;
+  --color-heading: #272727;
+  --color-cat-yellow: #FFCC00;
+  --color-cat-yellow-hover: #E6B800;
+  --color-surface-dark: #272727;
+  --color-surface-dark-hover: #1A1A1A;
+  --color-warm-stone: #E5E3DF;
+  --color-text-on-dark: #FFFFFF;
+  --color-text-on-yellow: #272727;
+  --color-overlay: rgba(18,18,18,0.5);
+
+  /* Modular type scale (1.250 major third) */
+  --fs-100: 1rem;
+  --fs-125: 1.25rem;
+  --fs-156: 1.563rem;
+  --fs-195: 1.953rem;
+  --fs-244: 2.441rem;
+  --fs-305: 3.052rem;
+  --fs-381: 3.815rem;
+  --fs-label: 0.8rem;
+
+  --sp-xs: 4px; --sp-sm: 8px; --sp-md: 16px; --sp-lg: 24px; --sp-xl: 32px; --sp-xxl: 48px; --sp-section: 64px;
+  --r-primary: 5px; --r-sharp: 0px; --r-pill: 999px;
+  --container-max: 1400px;
+  --grid-gap: 24px;
+  --shadow-card-strong: rgba(0,0,0,0.8) 0px 6px 16px 0px;
+  --shadow-card-stone: rgba(0,0,0,0.12) 0px 6px 16px 0px;
+  --font-display: "Roboto Condensed", "Roboto", system-ui, sans-serif;
+  --font-body: "Roboto", system-ui, sans-serif;
+  --font-icon: "icomoon";
+  --ease-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+@font-face { font-family: "Roboto Condensed"; font-weight: 400 700; font-display: swap; src: url("../current/assets/fonts/ieVl2ZhZI2eCN5jzbjEETS9weq8-19K7DQ.woff2") format("woff2"); }
+@font-face { font-family: "Roboto"; font-weight: 300 700; font-display: swap; src: url("../current/assets/fonts/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2") format("woff2"); }
+@font-face { font-family: "Roboto"; font-weight: 700; font-display: swap; src: url("../current/assets/fonts/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBHMdazQ.woff2") format("woff2"); }
+@font-face { font-family: "icomoon"; src: url("../current/assets/fonts/icomoon.ttf") format("truetype"); font-weight: normal; font-style: normal; font-display: block; }
+
+*, *::before, *::after { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--fs-100);
+  line-height: 1.5;
+  color: var(--color-body);
+  background: var(--color-page);
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; cursor: pointer; }
+
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding-left: var(--sp-lg);
+  padding-right: var(--sp-lg);
+}
+
+.display, .headline, .title, .sub-title, .label {
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-heading);
+  margin: 0;
+}
+.display { font-size: clamp(2.441rem, 6vw, var(--fs-381)); line-height: 1.0; letter-spacing: 0.01em; }
+.headline { font-size: clamp(1.953rem, 3.5vw, var(--fs-305)); line-height: 1.1; letter-spacing: 0.02em; }
+.title { font-size: var(--fs-195); line-height: 1.15; letter-spacing: 0.015em; }
+.sub-title { font-size: var(--fs-156); line-height: 1.2; letter-spacing: 0.015em; }
+.label { font-size: var(--fs-label); line-height: 1.2; letter-spacing: 0.08em; }
+
+.body-copy { font-size: var(--fs-100); line-height: 1.5; color: var(--color-body); margin: 0; }
+.lead-copy { font-size: var(--fs-125); line-height: 1.4; color: var(--color-body); margin: 0; }
+
+.icon {
+  font-family: var(--font-icon) !important;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+}
+.icon-menu::before { content: "\e904"; }
+.icon-map-pin::before { content: "\e906"; }
+.icon-new::before { content: "\e907"; }
+.icon-used::before { content: "\e90c"; }
+.icon-rent::before { content: "\e909"; }
+.icon-order::before { content: "\e908"; }
+.icon-service::before { content: "\e90a"; }
+.icon-phone::before { content: "\e90b"; }
+.icon-facebook::before { content: "\e900"; }
+.icon-instagram::before { content: "\e902"; }
+.icon-linkedin::before { content: "\e903"; }
+.icon-youtube::before { content: "\e90d"; }
+.icon-twitter::before { content: "\e905"; }
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-sm);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  border-radius: var(--r-primary);
+  border: 1px solid transparent;
+  transition: background 200ms var(--ease-out), color 200ms var(--ease-out), border-color 200ms var(--ease-out);
+  cursor: pointer;
+}
+/* On-yellow primary (inverted — dark ground for contrast within yellow surfaces) */
+.btn-on-yellow {
+  background: var(--color-surface-dark);
+  color: var(--color-cat-yellow);
+  border-color: var(--color-surface-dark);
+}
+.btn-on-yellow:hover, .btn-on-yellow:focus-visible {
+  background: var(--color-text-on-yellow);
+  color: var(--color-cat-yellow);
+  border-color: var(--color-text-on-yellow);
+  outline: none;
+}
+/* On-dark primary (yellow ground for contrast within dark surfaces) */
+.btn-on-dark {
+  background: var(--color-cat-yellow);
+  color: var(--color-text-on-yellow);
+  border-color: var(--color-cat-yellow);
+}
+.btn-on-dark:hover, .btn-on-dark:focus-visible {
+  background: var(--color-text-on-dark);
+  color: var(--color-surface-dark);
+  border-color: var(--color-text-on-dark);
+  outline: none;
+}
+/* On-stone primary */
+.btn-primary {
+  background: var(--color-cat-yellow);
+  color: var(--color-text-on-yellow);
+  border-color: var(--color-cat-yellow);
+}
+.btn-primary:hover { background: var(--color-surface-dark); color: var(--color-cat-yellow); border-color: var(--color-surface-dark); }
+
+.btn-ghost-dark {
+  background: transparent;
+  color: var(--color-heading);
+  border-color: var(--color-heading);
+}
+.btn-ghost-dark:hover { background: var(--color-surface-dark); color: var(--color-text-on-dark); border-color: var(--color-surface-dark); }
+
+/* ───────── HEADER ───────── */
+.site-header {
+  position: sticky; top: 0; z-index: 50;
+  background: var(--color-surface-dark);
+  color: var(--color-text-on-dark);
+}
+.utility-bar {
+  background: #1a1a1a;
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.utility-bar__inner {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 8px 0; gap: var(--sp-md);
+}
+.utility-bar a { color: var(--color-text-on-dark); }
+.utility-bar a:hover { color: var(--color-cat-yellow); }
+.utility-bar__right { display: inline-flex; gap: var(--sp-lg); align-items: center; }
+.utility-bar__phone { color: var(--color-cat-yellow); display: inline-flex; gap: var(--sp-sm); align-items: center; }
+
+.main-header__inner {
+  display: flex; justify-content: space-between; align-items: stretch;
+  padding: 16px 0; gap: var(--sp-md);
+}
+.main-header__logo img { height: 56px; width: auto; }
+.main-nav__list {
+  display: flex; list-style: none; margin: 0; padding: 0; gap: 0; align-items: stretch;
+}
+.main-nav__list a {
+  display: inline-flex; align-items: center;
+  padding: 0 var(--sp-md);
+  font-family: var(--font-display); font-weight: 700;
+  font-size: 0.875rem; letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--color-text-on-dark);
+  transition: color 150ms var(--ease-out);
+}
+.main-nav__list a:hover { color: var(--color-cat-yellow); }
+.main-nav { display: flex; align-items: stretch; }
+.main-nav__phone {
+  display: inline-flex; align-items: center; gap: var(--sp-sm);
+  background: var(--color-cat-yellow);
+  color: var(--color-text-on-yellow);
+  padding: 0 var(--sp-lg);
+  font-family: var(--font-display); font-weight: 700;
+  font-size: 0.9rem; letter-spacing: 0.05em;
+}
+.main-nav__phone:hover { background: var(--color-cat-yellow-hover); }
+.burger {
+  display: none; background: transparent;
+  border: 1px solid var(--color-text-on-dark); color: var(--color-text-on-dark);
+  width: 44px; height: 44px; border-radius: var(--r-primary);
+  align-items: center; justify-content: center; font-size: 1.5rem;
+}
+.burger:focus-visible { outline: 2px solid var(--color-cat-yellow); outline-offset: 2px; }
+
+/* ───────── HERO — Yellow ground (B's bet) ───────── */
+.hero-yellow {
+  background: var(--color-cat-yellow);
+  color: var(--color-text-on-yellow);
+  padding: calc(var(--sp-section) * 1.5) 0;
+  position: relative;
+  overflow: hidden;
+}
+.hero-yellow__inner {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: var(--sp-xxl);
+  align-items: center;
+}
+.hero-yellow__copy { max-width: 720px; }
+.hero-yellow__eyebrow {
+  color: var(--color-surface-dark);
+  margin-bottom: var(--sp-md);
+  font-size: 0.9rem;
+  letter-spacing: 0.12em;
+}
+.hero-yellow__display {
+  color: var(--color-text-on-yellow);
+  font-size: clamp(2.8rem, 7vw, 5rem);
+  line-height: 0.95;
+  margin: 0 0 var(--sp-lg);
+  letter-spacing: 0.005em;
+}
+.hero-yellow__supporting {
+  font-size: var(--fs-125); line-height: 1.45;
+  color: var(--color-surface-dark);
+  margin-bottom: var(--sp-xl);
+  max-width: 56ch;
+  font-weight: 500;
+}
+.hero-yellow__actions { display: inline-flex; gap: var(--sp-md); flex-wrap: wrap; }
+.hero-yellow__photo {
+  border-radius: var(--r-primary);
+  overflow: hidden;
+  box-shadow: rgba(0,0,0,0.25) 0 12px 32px;
+  aspect-ratio: 5/3;
+}
+.hero-yellow__photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* ───────── FINANCE BAND — Dark inverted (B) ───────── */
+.finance-dark {
+  background: var(--color-surface-dark);
+  color: var(--color-text-on-dark);
+  padding: var(--sp-section) 0;
+}
+.finance-dark__head {
+  text-align: center;
+  margin-bottom: var(--sp-xxl);
+  color: var(--color-text-on-dark);
+}
+.finance-dark__head .label { color: var(--color-cat-yellow); display: inline-block; margin-bottom: var(--sp-sm); }
+.finance-dark__head h2 { color: var(--color-text-on-dark); }
+.finance-dark__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-lg);
+}
+.finance-dark-card {
+  background: #1f1f1f;
+  color: var(--color-text-on-dark);
+  border-radius: var(--r-primary);
+  padding: var(--sp-xl);
+  box-shadow: var(--shadow-card-strong);
+  display: flex; flex-direction: column; gap: var(--sp-md);
+  min-height: 320px;
+  position: relative; overflow: hidden;
+  border-top: 4px solid var(--color-cat-yellow);
+}
+.finance-dark-card__eyebrow { color: var(--color-cat-yellow); }
+.finance-dark-card__title {
+  color: var(--color-text-on-dark);
+  font-size: var(--fs-156); line-height: 1.15;
+}
+.finance-dark-card__title .num { color: var(--color-cat-yellow); }
+.finance-dark-card__cta { margin-top: auto; align-self: flex-start; }
+
+/* ───────── SERVICES — Yellow tiles on dark band (B's most striking inversion) ───────── */
+.services-yellow {
+  background: var(--color-surface-dark);
+  padding: var(--sp-section) 0;
+  color: var(--color-text-on-dark);
+}
+.services-yellow__head {
+  text-align: center;
+  margin-bottom: var(--sp-xxl);
+}
+.services-yellow__head .label { color: var(--color-cat-yellow); display: inline-block; margin-bottom: var(--sp-sm); }
+.services-yellow__head h2 { color: var(--color-text-on-dark); }
+.services-yellow__grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: var(--sp-md);
+}
+.service-tile-yellow {
+  background: var(--color-cat-yellow);
+  color: var(--color-text-on-yellow);
+  border-radius: var(--r-primary);
+  padding: var(--sp-lg);
+  display: flex; flex-direction: column; gap: var(--sp-md);
+  min-height: 220px;
+  text-decoration: none;
+  transition: background 200ms var(--ease-out), transform 200ms var(--ease-out);
+}
+.service-tile-yellow:hover { background: var(--color-cat-yellow-hover); transform: translateY(-2px); }
+.service-tile-yellow__icon {
+  font-size: 40px;
+  color: var(--color-surface-dark);
+  line-height: 1;
+}
+.service-tile-yellow__title {
+  font-family: var(--font-display); font-weight: 700;
+  font-size: 1.125rem; text-transform: uppercase; letter-spacing: 0.02em;
+  color: var(--color-text-on-yellow);
+  margin-top: auto;
+}
+.services-yellow__footer { margin-top: var(--sp-xxl); text-align: center; }
+.btn-on-dark-band {
+  background: var(--color-cat-yellow); color: var(--color-text-on-yellow); border-color: var(--color-cat-yellow);
+}
+.btn-on-dark-band:hover { background: #fff; color: var(--color-surface-dark); border-color: #fff; }
+
+/* ───────── SUPPORT + PARTNERS — Warm stone (quiet) ───────── */
+.support-partners {
+  background: var(--color-warm-stone);
+  padding: var(--sp-section) 0;
+}
+.support-partners__head { text-align: center; margin-bottom: var(--sp-xxl); }
+.support-partners__eyebrow { color: var(--color-heading); display: inline-block; margin-bottom: var(--sp-sm); }
+.support-partners__sentiment { color: var(--color-heading); max-width: 22ch; margin: 0 auto; }
+.partner-strip {
+  display: grid; grid-template-columns: repeat(5, 1fr); gap: var(--sp-lg);
+  align-items: center;
+}
+.partner-logo {
+  background: rgba(255,255,255,0.7);
+  border: 2px dashed var(--color-cat-yellow);
+  border-radius: var(--r-primary);
+  padding: var(--sp-md);
+  min-height: 96px;
+  display: flex; flex-direction: column; justify-content: center; align-items: center;
+  text-align: center; gap: 4px;
+}
+.partner-logo__eyebrow {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.65rem; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--color-heading); opacity: 0.7;
+}
+.partner-logo__name {
+  font-family: var(--font-display); font-weight: 700;
+  font-size: 1rem; text-transform: uppercase; letter-spacing: 0.04em;
+  color: var(--color-heading);
+}
+
+/* ───────── LOCATIONS — Yellow eyebrow + dark branch list (B) ───────── */
+.locations-b-eyebrow {
+  background: var(--color-cat-yellow);
+  color: var(--color-text-on-yellow);
+  padding: var(--sp-xxl) 0;
+  text-align: center;
+}
+.locations-b-eyebrow__proof {
+  font-size: var(--fs-125); line-height: 1.5;
+  color: var(--color-surface-dark);
+  margin: 0 auto var(--sp-lg);
+  max-width: 70ch;
+  font-weight: 500;
+}
+.locations-b-eyebrow__proof strong { color: var(--color-surface-dark); font-weight: 700; }
+.locations-b-eyebrow h2 {
+  color: var(--color-text-on-yellow);
+  margin: 0;
+}
+.locations-b-list-band {
+  background: var(--color-surface-dark);
+  color: var(--color-text-on-dark);
+  padding: var(--sp-section) 0;
+}
+.branch-grid-dark {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-md) var(--sp-xl);
+  max-width: 900px; margin: 0 auto;
+  list-style: none; padding: 0;
+}
+.branch-grid-dark li {
+  padding: var(--sp-sm) 0;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+  font-family: var(--font-display); font-weight: 700;
+  font-size: 1.05rem; letter-spacing: 0.02em; text-transform: uppercase;
+  color: var(--color-text-on-dark);
+  display: flex; align-items: center; gap: var(--sp-sm);
+}
+.branch-grid-dark li .icon { font-size: 0.9rem; color: var(--color-cat-yellow); }
+.locations-b-list-band__more {
+  text-align: center; margin-top: var(--sp-xl);
+  font-size: 0.9rem; color: rgba(255,255,255,0.7);
+}
+.locations-b-list-band__more a { color: var(--color-cat-yellow); text-decoration: underline; }
+
+/* ───────── FOOTER ───────── */
+.site-footer {
+  background: var(--color-surface-dark);
+  color: var(--color-text-on-dark);
+  padding: var(--sp-section) 0 var(--sp-xl);
+}
+.footer__grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: var(--sp-xxl);
+  margin-bottom: var(--sp-xxl);
+}
+.footer__brand img { max-width: 220px; }
+.footer__brand p {
+  margin-top: var(--sp-md);
+  color: rgba(255,255,255,0.7);
+  font-size: 0.9rem; max-width: 38ch;
+}
+.footer__col h2 {
+  font-family: var(--font-display); font-weight: 700;
+  font-size: 1.05rem; text-transform: uppercase; letter-spacing: 0.06em;
+  color: var(--color-text-on-dark); margin: 0 0 var(--sp-md);
+}
+.footer__col ul {
+  list-style: none; padding: 0; margin: 0;
+  display: flex; flex-direction: column; gap: var(--sp-sm);
+}
+.footer__col a {
+  color: rgba(255,255,255,0.78); font-size: 0.92rem;
+  transition: color 150ms var(--ease-out);
+}
+.footer__col a:hover { color: var(--color-cat-yellow); }
+.footer__address {
+  font-size: 0.92rem; line-height: 1.55;
+  color: rgba(255,255,255,0.78); font-style: normal;
+}
+.footer__phone {
+  display: inline-flex; align-items: center; gap: var(--sp-sm);
+  margin-top: var(--sp-md);
+  color: var(--color-cat-yellow);
+  font-family: var(--font-display); font-weight: 700;
+  font-size: 1.1rem; letter-spacing: 0.04em;
+}
+.footer__social { display: flex; gap: var(--sp-md); margin-top: var(--sp-sm); }
+.footer__social a {
+  width: 40px; height: 40px;
+  display: inline-flex; align-items: center; justify-content: center;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: var(--r-pill);
+  color: var(--color-text-on-dark);
+}
+.footer__social a:hover { background: var(--color-cat-yellow); color: var(--color-text-on-yellow); border-color: var(--color-cat-yellow); }
+.footer__legal {
+  padding-top: var(--sp-lg);
+  border-top: 1px solid rgba(255,255,255,0.12);
+  display: flex; justify-content: space-between; gap: var(--sp-md);
+  font-size: 0.8rem; color: rgba(255,255,255,0.55);
+  flex-wrap: wrap;
+}
+.footer__legal ul { display: flex; gap: var(--sp-lg); list-style: none; margin: 0; padding: 0; }
+
+/* ───────── RESPONSIVE ───────── */
+@media (max-width: 1024px) {
+  :root { --sp-section: 48px; }
+  .services-yellow__grid { grid-template-columns: repeat(3, 1fr); }
+  .footer__grid { grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: var(--sp-xl); }
+  .hero-yellow__inner { grid-template-columns: 1fr; }
+}
+@media (max-width: 768px) {
+  .main-nav__list, .main-nav__phone { display: none; }
+  .burger { display: inline-flex; }
+  .main-nav.is-open .main-nav__list {
+    display: flex; position: absolute; top: 100%; left: 0; right: 0;
+    background: var(--color-surface-dark); flex-direction: column; gap: 0;
+    padding: var(--sp-md) 0; border-top: 1px solid rgba(255,255,255,0.1);
+  }
+  .main-nav.is-open .main-nav__list a { padding: var(--sp-md) var(--sp-lg); width: 100%; }
+  .main-nav.is-open .main-nav__phone {
+    display: inline-flex; margin: var(--sp-md) var(--sp-lg); padding: var(--sp-md) var(--sp-lg);
+  }
+  .main-header { position: relative; }
+  .finance-dark__grid { grid-template-columns: repeat(2, 1fr); }
+  .partner-strip { grid-template-columns: repeat(3, 1fr); }
+  .footer__grid { grid-template-columns: 1fr 1fr; }
+  .hero-yellow { padding: var(--sp-xxl) 0; }
+}
+@media (max-width: 640px) {
+  :root { --sp-section: 32px; }
+  .utility-bar__inner { font-size: 0.65rem; gap: var(--sp-sm); }
+  .utility-bar__right { gap: var(--sp-md); }
+  .hero-yellow__display { font-size: 2.5rem; }
+  .hero-yellow__supporting { font-size: 1rem; }
+  .finance-dark__grid { grid-template-columns: 1fr; }
+  .services-yellow__grid { grid-template-columns: repeat(2, 1fr); }
+  .partner-strip { grid-template-columns: repeat(2, 1fr); }
+  .branch-grid-dark { grid-template-columns: repeat(2, 1fr); }
+  .footer__grid { grid-template-columns: 1fr; gap: var(--sp-xl); }
+  .footer__legal { flex-direction: column; }
+}
+
+:focus-visible { outline: 2px solid var(--color-cat-yellow); outline-offset: 2px; }
+</style>
+</head>
+<body>
+
+<header class="site-header" data-section="header" data-intent="navigate" data-layout="full-width-dark" data-nav-collapse="hamburger">
+
+  <div class="utility-bar">
+    <div class="container utility-bar__inner">
+      <nav aria-label="utility">
+        <a href="/sponsorships/">Sponsorships</a>
+      </nav>
+      <div class="utility-bar__right">
+        <a href="/about/locations/"><span class="icon icon-map-pin" aria-hidden="true"></span> 18 Branches</a>
+        <a class="utility-bar__phone" href="tel:801-436-3672"><span class="icon icon-phone" aria-hidden="true"></span> 801-436-3672</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-header">
+    <div class="container main-header__inner">
+      <a class="main-header__logo" href="/" aria-label="Wheeler Machinery Co. — home">
+        <img src="../current/assets/logo.png" alt="Wheeler Machinery Co.">
+      </a>
+      <button class="burger" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="icon icon-menu" aria-hidden="true"></span>
+      </button>
+      <nav class="main-nav" id="primary-nav" aria-label="primary">
+        <ul class="main-nav__list">
+          <li><a href="/new/">New Equipment</a></li>
+          <li><a href="/used-equipment/machinery/">Used Equipment</a></li>
+          <li><a href="/rental/">Rent Now</a></li>
+          <li><a href="/request-service/">Request Service</a></li>
+          <li><a href="/credit-application/">Credit App</a></li>
+        </ul>
+        <a class="main-nav__phone" href="tel:801-436-3672"><span class="icon icon-phone" aria-hidden="true"></span> 801-436-3672</a>
+      </nav>
+    </div>
+  </div>
+
+</header>
+
+<main>
+
+  <!-- ───────── HERO — YELLOW ground (B's signature) ───────── -->
+  <section class="hero-yellow" data-section="hero" data-intent="promo-finance" data-layout="split-media" data-media="image">
+    <div class="container hero-yellow__inner">
+      <div class="hero-yellow__copy">
+        <span class="label hero-yellow__eyebrow">Caterpillar · Current Offers</span>
+        <h1 class="display hero-yellow__display">FINANCING DEALS &amp; SPECIAL OFFERS</h1>
+        <p class="hero-yellow__supporting">Cat finance offers, fuel-payback programs, and the CVA bonus — current incentives across our fleet.</p>
+        <div class="hero-yellow__actions">
+          <a class="btn btn-on-yellow" href="#services">Browse More Services</a>
+          <a class="btn btn-ghost-dark" href="/about/">More About Us</a>
+        </div>
+      </div>
+      <div class="hero-yellow__photo">
+        <img src="../current/assets/media/SC_Hero-292cc4.jpg" alt="Caterpillar Cat machinery — current Wheeler Cat finance offers">
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── FINANCE BAND — DARK inverted (B) ───────── -->
+  <section class="finance-dark" data-section="finance" data-intent="promo-offers" data-layout="grid" data-items="3">
+    <div class="container">
+      <div class="finance-dark__head">
+        <span class="label">Finance</span>
+        <h2 class="headline">Current Finance Offers</h2>
+      </div>
+      <div class="finance-dark__grid">
+        <article class="finance-dark-card">
+          <span class="label finance-dark-card__eyebrow">Finance</span>
+          <h3 class="title finance-dark-card__title"><span class="num">0%</span> FOR UP TO <span class="num">60</span> MONTHS + <span class="num">$500</span> TOWARD CVA</h3>
+          <p class="body-copy" style="color: rgba(255,255,255,0.85);">On select Cat compact machines. Cat Vehicle Agreement bonus included.</p>
+          <a class="btn btn-on-dark finance-dark-card__cta" href="/specials/">Learn More</a>
+        </article>
+        <article class="finance-dark-card">
+          <span class="label finance-dark-card__eyebrow">Finance</span>
+          <h3 class="title finance-dark-card__title">FINANCING &amp; FUEL PAYBACK OFFERS</h3>
+          <p class="body-copy" style="color: rgba(255,255,255,0.85);">Combined fuel-payback programs across active Cat machinery.</p>
+          <a class="btn btn-on-dark finance-dark-card__cta" href="/specials/">Learn More</a>
+        </article>
+        <article class="finance-dark-card">
+          <span class="label finance-dark-card__eyebrow">Finance</span>
+          <h3 class="title finance-dark-card__title">CAT® CARD IS NOW CAT® COMMERCIAL ACCOUNT</h3>
+          <p class="body-copy" style="color: rgba(255,255,255,0.85);">Streamlined parts &amp; service purchasing on a single Cat account.</p>
+          <a class="btn btn-on-dark finance-dark-card__cta" href="/specials/">Learn More</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── SERVICES — YELLOW tiles on dark band (B) ───────── -->
+  <section class="services-yellow" id="services" data-section="services" data-intent="service-tiles" data-layout="grid" data-items="6">
+    <div class="container">
+      <div class="services-yellow__head">
+        <span class="label">Service &amp; Support</span>
+        <h2 class="headline">YOUR HEAVY MACHINERY EXPERTS</h2>
+      </div>
+      <div class="services-yellow__grid">
+        <a class="service-tile-yellow" href="/service/">
+          <span class="service-tile-yellow__icon icon icon-service" aria-hidden="true"></span>
+          <span class="service-tile-yellow__title">Field Service</span>
+        </a>
+        <a class="service-tile-yellow" href="/service/">
+          <span class="service-tile-yellow__icon icon icon-service" aria-hidden="true"></span>
+          <span class="service-tile-yellow__title">Shop Service</span>
+        </a>
+        <a class="service-tile-yellow" href="https://parts.cat.com/">
+          <span class="service-tile-yellow__icon icon icon-order" aria-hidden="true"></span>
+          <span class="service-tile-yellow__title">Parts.Cat.com</span>
+        </a>
+        <a class="service-tile-yellow" href="/customer-value-agreements/">
+          <span class="service-tile-yellow__icon icon icon-new" aria-hidden="true"></span>
+          <span class="service-tile-yellow__title">Maintenance Service</span>
+        </a>
+        <a class="service-tile-yellow" href="/service/">
+          <span class="service-tile-yellow__icon icon icon-used" aria-hidden="true"></span>
+          <span class="service-tile-yellow__title">Equipment Rebuilds</span>
+        </a>
+        <a class="service-tile-yellow" href="/request-service/">
+          <span class="service-tile-yellow__icon icon icon-phone" aria-hidden="true"></span>
+          <span class="service-tile-yellow__title">Request Service Online</span>
+        </a>
+      </div>
+      <div class="services-yellow__footer">
+        <a class="btn btn-on-dark-band" href="/service/">Browse More Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── SUPPORT + PARTNERS (warm stone, quiet — merged) ───────── -->
+  <section class="support-partners" data-section="support-partners" data-intent="brand-proof" data-layout="stack" data-items="5">
+    <div class="container">
+      <div class="support-partners__head">
+        <span class="label support-partners__eyebrow">Our Partners</span>
+        <h2 class="headline support-partners__sentiment">WE PROUDLY SUPPORT THE ONES WHO BUILD OUR WORLD</h2>
+      </div>
+      <div class="partner-strip">
+        <span class="partner-logo" data-placeholder="true" data-placeholder-type="brand-logo">
+          <span class="partner-logo__eyebrow">PLACEHOLDER · brand-logo</span>
+          <span class="partner-logo__name">Campbell Companies</span>
+        </span>
+        <span class="partner-logo" data-placeholder="true" data-placeholder-type="brand-logo">
+          <span class="partner-logo__eyebrow">PLACEHOLDER · brand-logo</span>
+          <span class="partner-logo__name">JLG</span>
+        </span>
+        <span class="partner-logo" data-placeholder="true" data-placeholder-type="brand-logo">
+          <span class="partner-logo__eyebrow">PLACEHOLDER · brand-logo</span>
+          <span class="partner-logo__name">Monson</span>
+        </span>
+        <span class="partner-logo" data-placeholder="true" data-placeholder-type="brand-logo">
+          <span class="partner-logo__eyebrow">PLACEHOLDER · brand-logo</span>
+          <span class="partner-logo__name">Gardner</span>
+        </span>
+        <span class="partner-logo" data-placeholder="true" data-placeholder-type="brand-logo">
+          <span class="partner-logo__eyebrow">PLACEHOLDER · brand-logo</span>
+          <span class="partner-logo__name">SFS</span>
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── LOCATIONS — Yellow eyebrow + dark list (B) ───────── -->
+  <section class="locations-b-eyebrow" data-section="locations-proof" data-intent="locations-stats" data-layout="full-bleed">
+    <div class="container">
+      <p class="locations-b-eyebrow__proof"><strong>18 branches</strong> across Utah, Arizona, Nevada &amp; Wyoming — <strong>same-day field service</strong> and <strong>24/7 phone support</strong> since 1951.</p>
+      <h2 class="headline">FIND YOUR NEAREST BRANCH</h2>
+    </div>
+  </section>
+  <section class="locations-b-list-band" data-section="locations-list" data-intent="branch-list" data-layout="grid" data-items="15">
+    <div class="container">
+      <ul class="branch-grid-dark" aria-label="Wheeler Cat branch locations">
+        <li><span class="icon icon-map-pin" aria-hidden="true"></span>Salt Lake City (HQ)</li>
+        <li><span class="icon icon-map-pin" aria-hidden="true"></span>Lindon</li>
+        <li><span class="icon icon-map-pin" aria-hidden="true"></span>Sandy</li>
+        <li><span class="icon icon-map-pin" aria-hidden="true"></span>Cedar City, UT</li>
+        <li><span class="icon icon-map-pin" aria-hidden="true"></span>Ely</li>
+        <li><span class="icon icon-map-pin" aria-hidden="true"></span>Hurricane</li>
+        <li><span class="icon icon-map-pin" aria-hidden="true"></span>Kaysville</li>
+        <li><span class="icon icon-map-pin" aria-hidden="true"></span>Logan</li>
+        <li><span class="icon icon-map-pin" aria-hidden="true"></span>Moab</li>
+        <li><span class="icon icon-map-pin" aria-hidden="true"></span>Ogden</li>
+        <li><span class="icon icon-map-pin" aria-hidden="true"></span>Park City</li>
+        <li><span class="icon icon-map-pin" aria-hidden="true"></span>Salina</li>
+        <li><span class="icon icon-map-pin" aria-hidden="true"></span>Tooele</li>
+        <li><span class="icon icon-map-pin" aria-hidden="true"></span>Vernal</li>
+        <li><span class="icon icon-map-pin" aria-hidden="true"></span>West Valley</li>
+      </ul>
+      <p class="locations-b-list-band__more">Plus 3 additional locations · <a href="/about/locations/">View all 18 branches</a></p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer" data-section="footer" data-intent="navigate" data-layout="mega">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <img src="../current/assets/logo.png" alt="Wheeler Machinery Co.">
+        <p>Construction Equipment, Tool &amp; Trailer Rental &amp; Sales across 18 locations in Utah and parts of Arizona, Nevada &amp; Wyoming.</p>
+      </div>
+      <div class="footer__col">
+        <h2>Quick Links</h2>
+        <ul>
+          <li><a href="/new/">Sales</a></li>
+          <li><a href="/rental/">Rentals</a></li>
+          <li><a href="/parts/">Cat Parts</a></li>
+          <li><a href="/service/">Service</a></li>
+          <li><a href="/about/locations/">Locations</a></li>
+          <li><a href="/contact-us/">Contact</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/sponsorships/">Sponsorship</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h2>Contact Us</h2>
+        <address class="footer__address">
+          4901 West 2100 South,<br>Salt Lake City,<br>UT 84120
+        </address>
+        <a class="footer__phone" href="tel:801-436-3672"><span class="icon icon-phone" aria-hidden="true"></span> 801-436-3672</a>
+      </div>
+      <div class="footer__col">
+        <h2>Connect With Us</h2>
+        <div class="footer__social">
+          <a href="#" aria-label="Facebook"><span class="icon icon-facebook" aria-hidden="true"></span></a>
+          <a href="#" aria-label="Instagram"><span class="icon icon-instagram" aria-hidden="true"></span></a>
+          <a href="#" aria-label="LinkedIn"><span class="icon icon-linkedin" aria-hidden="true"></span></a>
+          <a href="#" aria-label="YouTube"><span class="icon icon-youtube" aria-hidden="true"></span></a>
+          <a href="#" aria-label="Twitter"><span class="icon icon-twitter" aria-hidden="true"></span></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__legal">
+      <span>Copyright © 2026. All Rights Reserved. A Campbell Company</span>
+      <ul>
+        <li><a href="/sitemap/">Sitemap</a></li>
+        <li><a href="/legal/">Legal</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var burger = document.querySelector('.burger');
+    var nav = document.getElementById('primary-nav');
+    if (!burger || !nav) return;
+    burger.addEventListener('click', function () {
+      var open = nav.classList.toggle('is-open');
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && nav.classList.contains('is-open')) {
+        nav.classList.remove('is-open');
+        burger.setAttribute('aria-expanded', 'false');
+        burger.focus();
+      }
+    });
+  })();
+</script>
+
+</body>
+</html>

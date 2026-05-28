@@ -1,0 +1,97 @@
+{
+  "_provenance": {
+    "writtenBy": "stardust:direct (--add-variant I)",
+    "writtenAt": "2026-05-28T00:30:00Z",
+    "variant": "I",
+    "parent": "DESIGN.json",
+    "inheritanceChain": "I → active-direction (Mode A)",
+    "readArtifacts": [
+      "DESIGN.json",
+      "stardust/uplift-improvements.md",
+      "stardust/uplift-questions.md",
+      "stardust/current/_brand-extraction.json"
+    ],
+    "stardustVersion": "0.10.0"
+  },
+  "schemaVersion": 2,
+  "title": "Design System: Wheeler Cat — Variant I (motif vocabulary swap: spec-sheet primitive)",
+  "variant": {
+    "id": "I",
+    "role": "one captured trait amplified (composition primitive swap)",
+    "bet": "replace dominant 'image-with-overlay-headline' primitive with an equipment spec-sheet primitive — a fleet table (model code · category · branches stocking · CTA) becomes the hero composition; substantive read over promo carousel",
+    "capturedTraitAmplified": "equipment-spec vocabulary (model codes like CAT 259D3, Cat 308 are present in captured industry language; the iconic 'Cat ®' wordmark; the implicit spec-sheet primitive in the equipment dealer industry that the captured page never deploys)",
+    "evidence": "_brand-extraction.json#motifs.patterns shows 6 patterns, dominated by 'hero-with-cta-strip' + 'icon-tile-row' + 'image-with-overlay-headline'; no spec-table / no model-code grid / no fleet-list captured. Wheeler IS an equipment dealer — spec sheets are the brand's substantive vocabulary",
+    "static": true,
+    "cinematic": false,
+    "siblings": ["A", "B", "C", "D", "E", "F", "G", "H"],
+    "differentiationFrom": {
+      "A": "A keeps captured hero composition (photo + overlay + finance carousel→3-up); I replaces hero with a spec-table primitive (rows of MODEL · CATEGORY · BRANCHES STOCKING · CTA). 3 diffs: hero primitive (photo-overlay vs spec-table), second-band content (finance cards vs filterable category nav above spec-table), reading rhythm (promo-led in A vs catalogue-led in I).",
+      "H": "H reframes IA to renter audience but keeps photo-led composition; I keeps captured multi-audience IA but swaps the composition primitive to spec-sheet. 3 diffs: hero verb retention (H demotes finance vs I keeps finance), hero composition (photo/headline vs spec-table), second-band (rental-fleet grid vs filterable spec rows).",
+      "E": "E foregrounds photography; I foregrounds tabular spec data. They are opposites on the composition axis. 3 diffs.",
+      "naturalRegister": "Pairs naturally with kinetic-grid register if a future cinematic sibling is wanted (table-row cascades, sortable column transitions). I itself is static — the bet is the primitive, not the motion."
+    }
+  },
+  "inherits": {
+    "from": "DESIGN.json",
+    "items": [
+      "colorMeta",
+      "typographyMeta",
+      "modularScale (1.250)",
+      "shadows",
+      "breakpoints",
+      "sectionPadding",
+      "iaPriorities",
+      "componentStyle (base)",
+      "voice (base)",
+      "systemComponentRoles",
+      "iconFont",
+      "divergence (base)"
+    ]
+  },
+  "extensions": {
+    "compositionPrimitive": {
+      "rationale": "I's bet — swap dominant captured primitive (image-with-overlay-headline) for an equipment spec-sheet primitive. The dealer industry's substantive vocabulary; what a contractor actually scrolls.",
+      "specSheetSpec": {
+        "structure": "table with columns: ▲ MODEL · CATEGORY · BRANCHES STOCKING · STARTING AT · CTA",
+        "rowExample": "▲ CAT 259D3 · Compact Track Loader · 14 of 18 · $48,500 · BROWSE",
+        "rowCount": "8-12 rows above the fold (filterable); pagination below",
+        "filterBar": "category chips at top (NEW · USED · RENT · ATTACHMENTS · COMPACT · MID · LARGE) — captured icomoon icon set provides chip glyphs",
+        "typography": "Roboto Condensed 700 for MODEL column (tabular-nums on numeric components); Roboto 400 for CATEGORY; Roboto 700 tabular-nums for STARTING AT",
+        "ground": "white with hairline #E5E3DF row borders; alternating row tint at 0.02 opacity for scanability",
+        "hoverState": "row picks up #FFCC00 left rule (4px) and yellow CTA hover"
+      }
+    },
+    "compositionDeltas": {
+      "hero": {
+        "primitive": "SPEC TABLE (not photo + overlay)",
+        "headline": "Roboto Condensed 700 caps eyebrow ABOVE the table: 'TODAY'S FLEET · 18 BRANCHES · UT · AZ · NV · WY' (direction-authorized synthesis from captured tagline + branch claim)",
+        "table": "see compositionPrimitive.specSheetSpec",
+        "noPhoto": true,
+        "rationale": "Substantive read replaces promo creative. Photo doesn't disappear from the page — see compositionDeltas.serviceTiles which retains photo-card option."
+      },
+      "filterBar": {
+        "position": "below hero eyebrow, above table",
+        "treatment": "horizontal chip rail using captured icomoon glyphs (icon-new, icon-used, icon-rent, icon-order, plus icon-service); active chip yellow #FFCC00",
+        "rationale": "Chip rail signals filterability without invented controls"
+      },
+      "financeBand": {
+        "position": "second band (was first in captured); demoted by the table-hero taking primary canvas",
+        "layout": "3-up grid inherited from improvement #1",
+        "ground": "warm stone #E5E3DF",
+        "rationale": "Finance retains 3-up grid presentation but loses first-viewport canvas. Spec-table is the substantive hero; finance is the price-context band."
+      },
+      "serviceTiles": {
+        "treatment": "captured 6-up icomoon row preserved (services don't need the spec-table treatment — they're calls-to-action, not catalogues)"
+      },
+      "specRowCount": {
+        "renderedRows": "8 placeholder rows minimum (PLACEHOLDER · spec-row signature for each unsourced row); shape hints with realistic model codes from Cat's public catalog to communicate the primitive's intent",
+        "rationale": "The primitive needs visible rows to land the bet. Placeholder signature enforces the migrate-guard refusal until real fleet data flows in."
+      }
+    },
+    "antiToolboxAudit": {
+      "hits": [],
+      "rationale": "Single bet (composition primitive swap). Spec-table primitive is industry-native to equipment dealers (every Cat OEM site ships one; Wheeler is conspicuously absent of one). No invented fonts, no invented colors. Captured icomoon glyphs reused in filter bar at semantic position (NEW glyph for 'new equipment' filter, etc.). Placeholder content flagged with mandatory signature for migrate-guard refusal."
+    },
+    "unsourcedContent": "8-12 spec-table rows (model code · category · branches stocking · starting at · CTA per row). Wheeler's actual fleet inventory is not in captured page. The primitive renders with PLACEHOLDER · spec-row signatures and realistic Cat model codes as shape hints (CAT 259D3, CAT 308 — public Cat catalog references, classified as direction-authorized example data). 5 partner logos (inherited from A/B/C)."
+  }
+}

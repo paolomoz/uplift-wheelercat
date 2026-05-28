@@ -1,0 +1,26 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*~
+
+# Node (in case any scripts are added later)
+node_modules/
+npm-debug.log*
+
+# Local sandbox / Playwright artifacts
+playwright-report/
+test-results/
+
+# Local Claude settings (keep .claude/settings.json if needed but not local overrides)
+.claude/settings.local.json
+
+# Captured screenshots (~127MB) — derived artifacts; regenerable by re-running
+# stardust:extract. Prototypes don't reference these. Excluded to keep the
+# repo cloneable. The captured media + fonts + logo + per-page JSON stay.
+stardust/current/assets/screenshots/

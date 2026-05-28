@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- stardust:provenance
+  writtenBy:         stardust:prototype (Phase render — variant E)
+  writtenAt:         2026-05-28T01:30:00Z
+  page:              home
+  variant:           E (photography re-foregrounding, static)
+  pageUrl:           https://wheelercat.com/
+  againstDirection:  stardust/direction.md (Active 2026-05-28T00:00:00Z — six-candidate exploration fork)
+  readArtifacts:
+    - stardust/current/pages/home.json
+    - stardust/current/_brand-extraction.json
+    - DESIGN.md
+    - DESIGN.json
+    - DESIGN-E.md
+    - DESIGN-E.json
+    - stardust/uplift-improvements.md
+    - stardust/prototypes/home-E-shape.md
+    - stardust/prototypes/home-A-proposed.html
+  divergenceVersion: v1.0 (stardust v2)
+  fontDeck:          brand-inherited (Roboto Condensed + Roboto + icomoon)
+  paletteSource:     captured (Mode A brand-faithful)
+  derivedColors:
+    - "#E6B800 — yellow hover (10% darker; documented derived state)"
+    - "linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.85) 100%) — photo-tile caption gradient; uses captured dark for legibility, not invented color"
+  brandFaithfulInversions:
+    - "Page ground #FFFFFF and surface-dark #272727 are pure values per Mode A brand-faithful inversion of impeccable's no-pure-white/black rule. Both pinned by captured palette."
+  voiceClassification:
+    - section: "hero.caption-plate.headline"
+      basis: "captured-verbatim — FINANCING DEALS & SPECIAL OFFERS"
+    - section: "hero.caption-plate.supporting"
+      basis: "direction-authorized rewrite of captured tagline — Cat finance offers and current incentives across the Wheeler fleet."
+    - section: "hero.caption-plate.cta"
+      basis: "captured-verbatim — BROWSE MORE SERVICES"
+    - section: "service-tiles"
+      basis: "captured-verbatim service labels; photo-card composition is direction-authorized per E's photography re-foregrounding bet"
+    - section: "finance-cards"
+      basis: "captured-verbatim copy; warm-stone band demotion per E's composition delta"
+    - section: "support-partners"
+      basis: "captured-verbatim sentiment; Wheeler_Campus photo-as-background composition is direction-authorized per E's bet"
+    - section: "locations-proof"
+      basis: "captured 18/75/24 row retired (improvement #4); narrative proof from captured assertions"
+    - section: "header.utility-bar.main-nav.footer"
+      basis: "captured-verbatim system components per _brand-extraction.json#systemComponents"
+  wcagContrast:
+    - "white on #272727: 14.7 (AAA)"
+    - "dark #272727 on white caption plate: 17.0 (AAA)"
+    - "dark #272727 on #FFCC00: 12.6 (AAA)"
+    - "#454545 on #FFFFFF: 9.7 (AAA)"
+    - "#454545 on #E5E3DF: 7.4 (AAA)"
+    - "white tile label on dark gradient bottom of photo tile: 14.7+ (AAA, computed against #1A1A1A floor of gradient)"
+    - "dark #272727 on Wheeler_Campus rgba(255,255,255,0.85) overlay: ~14:1 (AAA)"
+  photographyMaturityNote: "Captured photography is product-documentation tier (subject-on-yard backgrounds, no editorial direction). The render makes this gap visible at editorial scale per DESIGN-E.json. The gap is the presales artifact."
+  unsourcedContent:
+    - selector: "section[data-section='services'] .service-tile--placeholder-photo"
+      type: photo-needed
+      count: 4
+      reason: "Captured service categories (FIELD SERVICE, SHOP SERVICE, PARTS.CAT.COM, MAINTENANCE SERVICE) are abstract verbs — no captured equipment photo maps to them. Rendered with PLACEHOLDER · photo-needed ribbon over warm-stone tile holding icomoon glyph."
+    - selector: "section[data-section='support-partners'] .partner-logo"
+      type: brand-logo
+      count: 5
+      reason: "Partner names captured (Campbell Companies, JLG, Monson, Gardner, SFS); image assets not matched in stardust/current/assets/media/."
+  stardustVersion:   0.10.0
+-->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wheeler Cat - Construction Equipment, Tool & Trailer Rental & Sales</title>
+<meta name="description" content="Wheeler Cat offers Construction Equipment, Tool & Trailer Rental & Sales across 18 locations in Utah and parts of Arizona, Nevada & Wyoming.">
+<style>
+:root {
+  --color-page: #FFFFFF;
+  --color-body: #454545;
+  --color-heading: #272727;
+  --color-cat-yellow: #FFCC00;
+  --color-cat-yellow-hover: #E6B800;
+  --color-surface-dark: #272727;
+  --color-surface-dark-hover: #1A1A1A;
+  --color-warm-stone: #E5E3DF;
+  --color-text-on-dark: #FFFFFF;
+  --color-text-on-yellow: #272727;
+  --color-overlay: rgba(18,18,18,0.5);
+
+  /* Modular scale 1.250 (inherited from DESIGN.json) */
+  --fs-100: 1rem;
+  --fs-125: 1.25rem;
+  --fs-156: 1.563rem;
+  --fs-195: 1.953rem;
+  --fs-244: 2.441rem;
+  --fs-305: 3.052rem;
+  --fs-381: 3.815rem;
+  --fs-label: 0.8rem;
+
+  --sp-xs: 4px; --sp-sm: 8px; --sp-md: 16px; --sp-lg: 24px;
+  --sp-xl: 32px; --sp-xxl: 48px; --sp-section: 64px;
+
+  --r-primary: 5px;
+  --r-pill: 999px;
+
+  --container-max: 1400px;
+  --grid-gap: 24px;
+
+  --shadow-card-strong: rgba(0,0,0,0.18) 0px 16px 40px 0px;
+
+  --font-display: "Roboto Condensed", "Roboto", system-ui, sans-serif;
+  --font-body: "Roboto", system-ui, sans-serif;
+  --font-icon: "icomoon";
+
+  --ease-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+@font-face { font-family: "Roboto Condensed"; font-weight: 400 700; font-style: normal; font-display: swap; src: url("../current/assets/fonts/ieVl2ZhZI2eCN5jzbjEETS9weq8-19K7DQ.woff2") format("woff2"); }
+@font-face { font-family: "Roboto"; font-weight: 300 700; font-style: normal; font-display: swap; src: url("../current/assets/fonts/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2") format("woff2"); }
+@font-face { font-family: "Roboto"; font-weight: 700; font-style: normal; font-display: swap; src: url("../current/assets/fonts/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBHMdazQ.woff2") format("woff2"); }
+@font-face { font-family: "icomoon"; src: url("../current/assets/fonts/icomoon.ttf") format("truetype"); font-weight: normal; font-style: normal; font-display: block; }
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--fs-100);
+  line-height: 1.5;
+  color: var(--color-body);
+  background: var(--color-page);
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; cursor: pointer; }
+
+.container { width: 100%; max-width: var(--container-max); margin: 0 auto; padding-left: var(--sp-lg); padding-right: var(--sp-lg); }
+
+.display, .headline, .title, .sub-title, .label {
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-heading);
+  margin: 0;
+}
+.display { font-size: clamp(2.441rem, 5vw, var(--fs-381)); line-height: 1.05; letter-spacing: 0.02em; }
+.headline { font-size: clamp(1.953rem, 3.5vw, var(--fs-305)); line-height: 1.1; letter-spacing: 0.02em; }
+.title { font-size: var(--fs-195); line-height: 1.15; letter-spacing: 0.015em; }
+.sub-title { font-size: var(--fs-156); line-height: 1.2; letter-spacing: 0.015em; }
+.label { font-size: var(--fs-label); line-height: 1.2; letter-spacing: 0.08em; }
+
+.body-copy { font-size: var(--fs-100); line-height: 1.5; color: var(--color-body); margin: 0; }
+.lead-copy { font-size: var(--fs-125); line-height: 1.45; color: var(--color-body); margin: 0; }
+
+.icon {
+  font-family: var(--font-icon) !important;
+  font-style: normal; font-weight: normal; font-variant: normal;
+  text-transform: none; line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: inline-block;
+}
+.icon-menu::before     { content: "\e904"; }
+.icon-map-pin::before  { content: "\e906"; }
+.icon-new::before      { content: "\e907"; }
+.icon-used::before     { content: "\e90c"; }
+.icon-rent::before     { content: "\e909"; }
+.icon-order::before    { content: "\e908"; }
+.icon-service::before  { content: "\e90a"; }
+.icon-phone::before    { content: "\e90b"; }
+.icon-facebook::before { content: "\e900"; }
+.icon-instagram::before{ content: "\e902"; }
+.icon-linkedin::before { content: "\e903"; }
+.icon-youtube::before  { content: "\e90d"; }
+.icon-twitter::before  { content: "\e905"; }
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  gap: var(--sp-sm);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 12px 24px;
+  border-radius: var(--r-primary);
+  border: 1px solid transparent;
+  transition: background 200ms var(--ease-out), color 200ms var(--ease-out), border-color 200ms var(--ease-out);
+  cursor: pointer; text-decoration: none;
+}
+.btn-primary {
+  background: var(--color-cat-yellow);
+  color: var(--color-text-on-yellow);
+  border-color: var(--color-cat-yellow);
+}
+.btn-primary:hover, .btn-primary:focus-visible {
+  background: var(--color-surface-dark);
+  color: var(--color-cat-yellow);
+  border-color: var(--color-surface-dark);
+  outline: none;
+}
+.btn-secondary {
+  background: transparent;
+  color: var(--color-heading);
+  border-color: var(--color-heading);
+  padding: 10px 20px;
+}
+.btn-secondary:hover, .btn-secondary:focus-visible {
+  background: var(--color-surface-dark);
+  color: var(--color-text-on-dark);
+  outline: none;
+}
+.btn-ghost-light {
+  background: transparent;
+  color: var(--color-text-on-dark);
+  border-color: var(--color-text-on-dark);
+  padding: 10px 20px;
+}
+.btn-ghost-light:hover { background: var(--color-cat-yellow); color: var(--color-text-on-yellow); border-color: var(--color-cat-yellow); }
+
+/* ───────── HEADER (captured chrome verbatim) ───────── */
+.site-header { position: sticky; top: 0; z-index: 50; background: var(--color-surface-dark); color: var(--color-text-on-dark); }
+.utility-bar { background: #1A1A1A; color: var(--color-text-on-dark); font-family: var(--font-display); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+.utility-bar__inner { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; gap: var(--sp-md); }
+.utility-bar a { color: var(--color-text-on-dark); }
+.utility-bar a:hover { color: var(--color-cat-yellow); }
+.utility-bar__right { display: inline-flex; gap: var(--sp-lg); align-items: center; }
+.utility-bar__phone { color: var(--color-cat-yellow); display: inline-flex; gap: var(--sp-sm); align-items: center; }
+.main-header { background: var(--color-surface-dark); }
+.main-header__inner { display: flex; justify-content: space-between; align-items: stretch; padding: 16px 0; gap: var(--sp-md); }
+.main-header__logo img { height: 56px; width: auto; }
+.main-nav { display: flex; gap: 0; align-items: stretch; }
+.main-nav__list { display: flex; list-style: none; margin: 0; padding: 0; gap: 0; align-items: stretch; }
+.main-nav__list a {
+  display: inline-flex; align-items: center;
+  padding: 0 var(--sp-md);
+  font-family: var(--font-display); font-weight: 700;
+  font-size: 0.875rem; letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--color-text-on-dark);
+  transition: color 150ms var(--ease-out);
+}
+.main-nav__list a:hover { color: var(--color-cat-yellow); }
+.main-nav__phone {
+  display: inline-flex; align-items: center; gap: var(--sp-sm);
+  background: var(--color-cat-yellow); color: var(--color-text-on-yellow);
+  padding: 0 var(--sp-lg);
+  font-family: var(--font-display); font-weight: 700;
+  font-size: 0.9rem; letter-spacing: 0.05em;
+}
+.main-nav__phone:hover { background: var(--color-cat-yellow-hover); }
+.burger {
+  display: none; background: transparent;
+  border: 1px solid var(--color-text-on-dark);
+  color: var(--color-text-on-dark);
+  width: 44px; height: 44px;
+  border-radius: var(--r-primary);
+  align-items: center; justify-content: center; font-size: 1.5rem;
+}
+.burger:focus-visible { outline: 2px solid var(--color-cat-yellow); outline-offset: 2px; }
+
+/* ───────── HERO (E · photo-foreground, no overlay, caption-plate) ───────── */
+.hero-photo {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  max-height: 720px;
+  background-image: url("../current/assets/media/Compact_Track_Loader-3b9bd4.webp");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+.hero-caption {
+  position: absolute;
+  left: var(--sp-lg);
+  bottom: var(--sp-lg);
+  width: min(480px, calc(100% - var(--sp-lg) * 2));
+  background: var(--color-page);
+  padding: var(--sp-xl);
+  box-shadow: var(--shadow-card-strong);
+  display: flex; flex-direction: column;
+  gap: var(--sp-md);
+}
+.hero-caption__eyebrow {
+  color: var(--color-heading);
+  font-family: var(--font-display);
+  font-weight: 700; font-size: 0.75rem;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  padding-bottom: 4px;
+  border-bottom: 2px solid var(--color-cat-yellow);
+  display: inline-block; align-self: flex-start;
+}
+.hero-caption__headline {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--fs-244);
+  line-height: 1.05;
+  letter-spacing: 0.015em;
+  text-transform: uppercase;
+  color: var(--color-heading);
+  margin: 0;
+}
+.hero-caption__supporting {
+  font-size: var(--fs-100);
+  line-height: 1.5;
+  color: var(--color-body);
+  margin: 0;
+}
+.hero-caption__cta { align-self: flex-start; margin-top: var(--sp-sm); }
+
+@media (min-width: 1200px) {
+  .hero-photo { aspect-ratio: 21 / 9; max-height: 640px; }
+  .hero-caption {
+    left: calc((100vw - var(--container-max)) / 2 + var(--sp-lg));
+    bottom: var(--sp-xl);
+  }
+}
+
+/* ───────── SERVICE TILES (E · photo-card pattern) ───────── */
+.services { background: var(--color-page); padding: var(--sp-section) 0; }
+.services__head { text-align: center; margin-bottom: var(--sp-xxl); }
+.services__eyebrow { color: var(--color-cat-yellow); display: inline-block; margin-bottom: var(--sp-sm); }
+.services__title { color: var(--color-heading); }
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-lg);
+}
+.service-tile {
+  position: relative;
+  display: block;
+  aspect-ratio: 4 / 5;
+  border-radius: var(--r-primary);
+  overflow: hidden;
+  background: var(--color-warm-stone);
+  text-decoration: none;
+  transition: transform 200ms var(--ease-out);
+}
+.service-tile:hover { transform: translateY(-3px); }
+.service-tile__img {
+  position: absolute; inset: 0;
+  width: 100%; height: 60%;
+  background-size: cover; background-position: center;
+}
+.service-tile__caption {
+  position: absolute; left: 0; right: 0;
+  bottom: 0;
+  height: 40%;
+  background: var(--color-surface-dark);
+  color: var(--color-text-on-dark);
+  padding: var(--sp-lg);
+  display: flex; flex-direction: column; justify-content: flex-end;
+  gap: var(--sp-sm);
+}
+.service-tile__gradient {
+  position: absolute; left: 0; right: 0;
+  height: 80px;
+  bottom: 40%;
+  background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.85) 100%);
+  pointer-events: none;
+}
+.service-tile__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--fs-156);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--color-text-on-dark);
+  line-height: 1.1;
+  margin: 0;
+}
+.service-tile__label {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-cat-yellow);
+}
+
+/* E · photo-needed fallback tile */
+.service-tile--placeholder-photo .service-tile__img {
+  background: var(--color-warm-stone);
+  display: flex; align-items: center; justify-content: center;
+  height: 60%;
+}
+.service-tile--placeholder-photo .service-tile__img-icon {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 60%;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--color-warm-stone);
+  color: var(--color-surface-dark);
+  font-size: 64px;
+}
+.placeholder-ribbon {
+  position: absolute;
+  top: var(--sp-md);
+  left: var(--sp-md);
+  background: rgba(255,204,0,0.95);
+  color: var(--color-heading);
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 8px;
+  border: 2px dashed var(--color-surface-dark);
+  z-index: 2;
+}
+.services__footer { margin-top: var(--sp-xxl); text-align: center; }
+
+/* ───────── FINANCE BAND (E · DEMOTED to 3rd, warm-stone ground) ───────── */
+.finance { background: var(--color-warm-stone); padding: var(--sp-section) 0; }
+.finance__head { text-align: center; margin-bottom: var(--sp-xxl); }
+.finance__head .label { color: var(--color-heading); display: inline-block; margin-bottom: var(--sp-sm); }
+.finance__grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--sp-lg);
+}
+.finance-card {
+  background: var(--color-page);
+  color: var(--color-body);
+  border-radius: var(--r-primary);
+  padding: var(--sp-xl);
+  box-shadow: var(--shadow-card-strong);
+  display: flex; flex-direction: column;
+  gap: var(--sp-md);
+  min-height: 320px;
+  position: relative; overflow: hidden;
+}
+.finance-card::before {
+  content: ""; position: absolute; inset: 0 0 auto 0;
+  height: 4px; background: var(--color-cat-yellow);
+}
+.finance-card__eyebrow { color: var(--color-heading); }
+.finance-card__title { color: var(--color-heading); font-size: var(--fs-156); line-height: 1.15; }
+.finance-card__cta { margin-top: auto; align-self: flex-start; }
+
+/* ───────── SUPPORT + PARTNERS (E · photo-as-background) ───────── */
+.support-partners {
+  position: relative;
+  padding: calc(var(--sp-section) * 1.5) 0;
+  background-image: url("../current/assets/media/Wheeler_Campus-0d3589.webp");
+  background-size: cover;
+  background-position: center;
+}
+.support-partners::before {
+  content: ""; position: absolute; inset: 0;
+  background: rgba(255,255,255,0.85);
+  pointer-events: none;
+}
+.support-partners .container { position: relative; z-index: 1; }
+.support-partners__card {
+  max-width: 720px;
+  margin: 0 auto;
+  background: var(--color-page);
+  padding: var(--sp-xl);
+  box-shadow: var(--shadow-card-strong);
+  text-align: center;
+}
+.support-partners__head { margin-bottom: var(--sp-xl); }
+.support-partners__eyebrow { color: var(--color-heading); display: inline-block; margin-bottom: var(--sp-sm); }
+.support-partners__sentiment { color: var(--color-heading); max-width: 22ch; margin: 0 auto; }
+.partner-strip {
+  display: grid; grid-template-columns: repeat(5, 1fr); gap: var(--sp-md);
+  align-items: center;
+}
+.partner-logo {
+  background: rgba(229,227,223,0.5);
+  border: 2px dashed var(--color-cat-yellow);
+  border-radius: var(--r-primary);
+  padding: var(--sp-md);
+  min-height: 84px;
+  display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
+  gap: 4px;
+}
+.partner-logo__eyebrow {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.62rem; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--color-heading); opacity: 0.7;
+}
+.partner-logo__name {
+  font-family: var(--font-display); font-weight: 700;
+  font-size: 0.9rem; text-transform: uppercase;
+  letter-spacing: 0.04em; color: var(--color-heading);
+}
+
+/* ───────── LOCATIONS PROOF ───────── */
+.locations { background: var(--color-page); padding: var(--sp-section) 0; }
+.locations__proof {
+  font-size: var(--fs-125); line-height: 1.5;
+  color: var(--color-body);
+  text-align: center;
+  max-width: 70ch; margin: 0 auto var(--sp-xxl);
+}
+.locations__proof strong { color: var(--color-heading); font-weight: 700; }
+.locations__sub-head { text-align: center; color: var(--color-heading); margin-bottom: var(--sp-xl); }
+.branch-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-md) var(--sp-xl);
+  max-width: 900px; margin: 0 auto;
+  list-style: none; padding: 0;
+}
+.branch-grid li {
+  padding: var(--sp-sm) 0;
+  border-bottom: 1px solid rgba(39,39,39,0.12);
+  font-family: var(--font-display); font-weight: 700;
+  font-size: 1.05rem; letter-spacing: 0.02em; text-transform: uppercase;
+  color: var(--color-heading);
+  display: flex; align-items: center; gap: var(--sp-sm);
+}
+.branch-grid li .icon { font-size: 0.9rem; color: var(--color-cat-yellow); }
+.locations__more { text-align: center; margin-top: var(--sp-xl); font-size: 0.9rem; color: var(--color-body); }
+
+/* ───────── FOOTER ───────── */
+.site-footer { background: var(--color-surface-dark); color: var(--color-text-on-dark); padding: var(--sp-section) 0 var(--sp-xl); }
+.footer__grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: var(--sp-xxl); margin-bottom: var(--sp-xxl); }
+.footer__brand img { max-width: 220px; }
+.footer__brand p { margin-top: var(--sp-md); color: rgba(255,255,255,0.7); font-size: 0.9rem; max-width: 38ch; }
+.footer__col h2 {
+  font-family: var(--font-display); font-weight: 700;
+  font-size: 1.05rem; text-transform: uppercase; letter-spacing: 0.06em;
+  color: var(--color-text-on-dark);
+  margin: 0 0 var(--sp-md);
+}
+.footer__col ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: var(--sp-sm); }
+.footer__col a { color: rgba(255,255,255,0.78); font-size: 0.92rem; transition: color 150ms var(--ease-out); }
+.footer__col a:hover { color: var(--color-cat-yellow); }
+.footer__address { font-size: 0.92rem; line-height: 1.55; color: rgba(255,255,255,0.78); font-style: normal; }
+.footer__address a:hover { color: var(--color-cat-yellow); }
+.footer__phone { display: inline-flex; align-items: center; gap: var(--sp-sm); margin-top: var(--sp-md); color: var(--color-cat-yellow); font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; letter-spacing: 0.04em; }
+.footer__social { display: flex; gap: var(--sp-md); margin-top: var(--sp-sm); }
+.footer__social a { width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,0.3); border-radius: var(--r-pill); color: var(--color-text-on-dark); font-size: 1rem; }
+.footer__social a:hover { background: var(--color-cat-yellow); color: var(--color-text-on-yellow); border-color: var(--color-cat-yellow); }
+.footer__legal { padding-top: var(--sp-lg); border-top: 1px solid rgba(255,255,255,0.12); display: flex; justify-content: space-between; gap: var(--sp-md); font-size: 0.8rem; color: rgba(255,255,255,0.55); flex-wrap: wrap; }
+.footer__legal ul { display: flex; gap: var(--sp-lg); list-style: none; margin: 0; padding: 0; }
+
+@media (max-width: 1024px) {
+  :root { --sp-section: 48px; }
+  .services__grid { grid-template-columns: repeat(2, 1fr); }
+  .footer__grid { grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: var(--sp-xl); }
+}
+@media (max-width: 768px) {
+  .main-nav__list, .main-nav__phone { display: none; }
+  .burger { display: inline-flex; }
+  .main-nav.is-open .main-nav__list {
+    display: flex; position: absolute; top: 100%; left: 0; right: 0;
+    background: var(--color-surface-dark);
+    flex-direction: column; gap: 0; padding: var(--sp-md) 0;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+  .main-nav.is-open .main-nav__list a { padding: var(--sp-md) var(--sp-lg); width: 100%; }
+  .main-nav.is-open .main-nav__phone { display: inline-flex; margin: var(--sp-md) var(--sp-lg); padding: var(--sp-md) var(--sp-lg); }
+  .main-header { position: relative; }
+  .hero-photo { aspect-ratio: 4 / 5; }
+  .hero-caption { position: relative; left: 0; bottom: 0; width: 100%; box-shadow: none; }
+  .hero-caption__headline { font-size: var(--fs-195); }
+  .finance__grid { grid-template-columns: 1fr; }
+  .partner-strip { grid-template-columns: repeat(3, 1fr); }
+  .footer__grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+  :root { --sp-section: 32px; }
+  .utility-bar__inner { font-size: 0.65rem; gap: var(--sp-sm); }
+  .utility-bar__right { gap: var(--sp-md); }
+  .services__grid { grid-template-columns: 1fr; }
+  .partner-strip { grid-template-columns: repeat(2, 1fr); }
+  .branch-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer__grid { grid-template-columns: 1fr; gap: var(--sp-xl); }
+  .footer__legal { flex-direction: column; }
+}
+
+:focus-visible { outline: 2px solid var(--color-cat-yellow); outline-offset: 2px; }
+</style>
+</head>
+<body>
+
+<header class="site-header" data-section="header" data-intent="navigate" data-layout="full-width-dark" data-nav-collapse="hamburger">
+  <div class="utility-bar" data-section="utility-bar" data-intent="meta-actions">
+    <div class="container utility-bar__inner">
+      <nav aria-label="utility"><a href="/sponsorships/">Sponsorships</a></nav>
+      <div class="utility-bar__right">
+        <a href="/about/locations/"><span class="icon icon-map-pin" aria-hidden="true"></span> 18 Branches</a>
+        <a class="utility-bar__phone" href="tel:801-436-3672"><span class="icon icon-phone" aria-hidden="true"></span> 801-436-3672</a>
+      </div>
+    </div>
+  </div>
+  <div class="main-header">
+    <div class="container main-header__inner">
+      <a class="main-header__logo" href="/" aria-label="Wheeler Machinery Co. — home">
+        <img src="../current/assets/logo.png" alt="Wheeler Machinery Co.">
+      </a>
+      <button class="burger" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+        <span class="icon icon-menu" aria-hidden="true"></span>
+      </button>
+      <nav class="main-nav" id="primary-nav" aria-label="primary">
+        <ul class="main-nav__list">
+          <li><a href="/new/">New Equipment</a></li>
+          <li><a href="/used-equipment/machinery/">Used Equipment</a></li>
+          <li><a href="/rental/">Rent Now</a></li>
+          <li><a href="/request-service/">Request Service</a></li>
+          <li><a href="/credit-application/">Credit App</a></li>
+        </ul>
+        <a class="main-nav__phone" href="tel:801-436-3672"><span class="icon icon-phone" aria-hidden="true"></span> 801-436-3672</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- ───────── HERO (E · photo-foreground caption-plate) ───────── -->
+  <section class="hero-photo" data-section="hero" data-intent="promo-finance" data-layout="full-bleed-photo" data-media="image">
+    <div class="hero-caption">
+      <span class="hero-caption__eyebrow">FINANCE</span>
+      <h1 class="hero-caption__headline">FINANCING DEALS &amp; SPECIAL OFFERS</h1>
+      <p class="hero-caption__supporting">Cat&reg; finance offers and current incentives across the Wheeler fleet.</p>
+      <a class="btn btn-primary hero-caption__cta" href="#services">BROWSE MORE SERVICES</a>
+    </div>
+  </section>
+
+  <!-- ───────── SERVICE TILES (E · photo-card pattern, 2nd band) ───────── -->
+  <section class="services" id="services" data-section="services" data-intent="service-tiles" data-layout="photo-cards" data-items="6">
+    <div class="container">
+      <div class="services__head">
+        <span class="label services__eyebrow">WE PROUDLY SUPPORT THE ONES WHO BUILD OUR WORLD</span>
+        <h2 class="headline services__title" style="margin-top: var(--sp-sm);">YOUR HEAVY MACHINERY EXPERTS</h2>
+      </div>
+      <div class="services__grid">
+
+        <a class="service-tile service-tile--placeholder-photo" href="/service/" data-placeholder="true" data-placeholder-type="photo-needed" data-placeholder-source="Service category FIELD SERVICE is abstract — no captured equipment photo maps to it. Icomoon glyph + ribbon stands in.">
+          <span class="placeholder-ribbon">PLACEHOLDER · photo-needed</span>
+          <span class="service-tile__img-icon"><span class="icon icon-service" aria-hidden="true"></span></span>
+          <div class="service-tile__caption">
+            <span class="service-tile__label">Service</span>
+            <h3 class="service-tile__title">Field Service</h3>
+          </div>
+        </a>
+
+        <a class="service-tile service-tile--placeholder-photo" href="/service/" data-placeholder="true" data-placeholder-type="photo-needed" data-placeholder-source="Service category SHOP SERVICE is abstract — no captured equipment photo maps to it.">
+          <span class="placeholder-ribbon">PLACEHOLDER · photo-needed</span>
+          <span class="service-tile__img-icon"><span class="icon icon-service" aria-hidden="true"></span></span>
+          <div class="service-tile__caption">
+            <span class="service-tile__label">Service</span>
+            <h3 class="service-tile__title">Shop Service</h3>
+          </div>
+        </a>
+
+        <a class="service-tile service-tile--placeholder-photo" href="https://parts.cat.com/" data-placeholder="true" data-placeholder-type="photo-needed" data-placeholder-source="Service category PARTS.CAT.COM is abstract — no captured equipment photo maps to it.">
+          <span class="placeholder-ribbon">PLACEHOLDER · photo-needed</span>
+          <span class="service-tile__img-icon"><span class="icon icon-order" aria-hidden="true"></span></span>
+          <div class="service-tile__caption">
+            <span class="service-tile__label">Parts</span>
+            <h3 class="service-tile__title">Parts.Cat.com</h3>
+          </div>
+        </a>
+
+        <a class="service-tile service-tile--placeholder-photo" href="/customer-value-agreements/" data-placeholder="true" data-placeholder-type="photo-needed" data-placeholder-source="Service category MAINTENANCE SERVICE is abstract — no captured photo maps to it.">
+          <span class="placeholder-ribbon">PLACEHOLDER · photo-needed</span>
+          <span class="service-tile__img-icon"><span class="icon icon-new" aria-hidden="true"></span></span>
+          <div class="service-tile__caption">
+            <span class="service-tile__label">Service</span>
+            <h3 class="service-tile__title">Maintenance Service</h3>
+          </div>
+        </a>
+
+        <a class="service-tile" href="/request-service/">
+          <div class="service-tile__img" style="background-image: url('../current/assets/media/Excavators-24bfa6.webp');"></div>
+          <span class="service-tile__gradient" aria-hidden="true"></span>
+          <div class="service-tile__caption">
+            <span class="service-tile__label">Equipment</span>
+            <h3 class="service-tile__title">Request Service</h3>
+          </div>
+        </a>
+
+        <a class="service-tile" href="/service/">
+          <div class="service-tile__img" style="background-image: url('../current/assets/media/Compact_Track_Loader-3b9bd4.webp');"></div>
+          <span class="service-tile__gradient" aria-hidden="true"></span>
+          <div class="service-tile__caption">
+            <span class="service-tile__label">Equipment</span>
+            <h3 class="service-tile__title">Rebuilds</h3>
+          </div>
+        </a>
+
+      </div>
+      <div class="services__footer">
+        <a class="btn btn-secondary" href="/service/">BROWSE MORE SERVICES</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── FINANCE BAND (E · DEMOTED 3rd band, warm-stone ground) ───────── -->
+  <section class="finance" data-section="finance" data-intent="promo-offers" data-layout="grid" data-items="3">
+    <div class="container">
+      <div class="finance__head">
+        <span class="label">FINANCE</span>
+        <h2 class="headline" style="margin-top: var(--sp-sm);">CURRENT FINANCE OFFERS</h2>
+      </div>
+      <div class="finance__grid">
+        <article class="finance-card">
+          <span class="label finance-card__eyebrow">FINANCE</span>
+          <h3 class="title finance-card__title">0% FOR UP TO 60 MONTHS + $500 TOWARD CVA</h3>
+          <a class="btn btn-primary finance-card__cta" href="/specials/">LEARN MORE</a>
+        </article>
+        <article class="finance-card">
+          <span class="label finance-card__eyebrow">FINANCE</span>
+          <h3 class="title finance-card__title">FINANCING &amp; FUEL PAYBACK OFFERS</h3>
+          <a class="btn btn-primary finance-card__cta" href="/specials/">LEARN MORE</a>
+        </article>
+        <article class="finance-card">
+          <span class="label finance-card__eyebrow">FINANCE</span>
+          <h3 class="title finance-card__title">CAT&reg; CARD IS NOW CAT&reg; COMMERCIAL ACCOUNT</h3>
+          <a class="btn btn-primary finance-card__cta" href="/specials/">LEARN MORE</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── SUPPORT + PARTNERS (E · Wheeler_Campus photo as section bg) ───────── -->
+  <section class="support-partners" data-section="support-partners" data-intent="brand-proof" data-layout="stack-on-photo" data-items="5">
+    <div class="container">
+      <div class="support-partners__card">
+        <div class="support-partners__head">
+          <span class="label support-partners__eyebrow">OUR PARTNERS</span>
+          <h2 class="headline support-partners__sentiment" style="margin-top: var(--sp-sm);">WE PROUDLY SUPPORT THE ONES WHO BUILD OUR WORLD</h2>
+        </div>
+        <div class="partner-strip">
+          <span class="partner-logo" data-placeholder="true" data-placeholder-type="brand-logo" data-placeholder-source="Partner name captured (Campbell Companies); image asset not in assets/media/">
+            <span class="partner-logo__eyebrow">PLACEHOLDER · brand-logo</span>
+            <span class="partner-logo__name">Campbell Companies</span>
+          </span>
+          <span class="partner-logo" data-placeholder="true" data-placeholder-type="brand-logo" data-placeholder-source="Partner name captured; image asset not matched">
+            <span class="partner-logo__eyebrow">PLACEHOLDER · brand-logo</span>
+            <span class="partner-logo__name">JLG</span>
+          </span>
+          <span class="partner-logo" data-placeholder="true" data-placeholder-type="brand-logo" data-placeholder-source="Partner name captured; image asset not matched">
+            <span class="partner-logo__eyebrow">PLACEHOLDER · brand-logo</span>
+            <span class="partner-logo__name">Monson</span>
+          </span>
+          <span class="partner-logo" data-placeholder="true" data-placeholder-type="brand-logo" data-placeholder-source="Partner name captured; image asset not matched">
+            <span class="partner-logo__eyebrow">PLACEHOLDER · brand-logo</span>
+            <span class="partner-logo__name">Gardner</span>
+          </span>
+          <span class="partner-logo" data-placeholder="true" data-placeholder-type="brand-logo" data-placeholder-source="Partner name captured; image asset not matched">
+            <span class="partner-logo__eyebrow">PLACEHOLDER · brand-logo</span>
+            <span class="partner-logo__name">SFS</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── LOCATIONS PROOF ───────── -->
+  <section class="locations" data-section="locations-proof" data-intent="locations-stats" data-layout="stack" data-items="15">
+    <div class="container">
+      <p class="locations__proof"><strong>18 branches</strong> across Utah, Arizona, Nevada &amp; Wyoming — <strong>same-day field service</strong> and <strong>24/7 phone support</strong> since 1951.</p>
+      <h2 class="headline locations__sub-head">FIND YOUR NEAREST BRANCH</h2>
+      <ul class="branch-grid" aria-label="Wheeler Cat branch locations">
+        <li><span class="icon icon-map-pin" aria-hidden="true"></span>Salt Lake City (HQ)</li>
+        <li><span class="icon icon-map-pin" aria-hidden="true"></span>Lindon</li>
+        <li><span class="icon icon-map-pin" aria-hidden="true"></span>Sandy</li>
+        <li><span class="icon icon-map-pin" aria-hidden="true"></span>Cedar City, UT</li>
+        <li><span class="icon icon-map-pin" aria-hidden="true"></span>Ely</li>
+        <li><span class="icon icon-map-pin" aria-hidden="true"></span>Hurricane</li>
+        <li><span class="icon icon-map-pin" aria-hidden="true"></span>Kaysville</li>
+        <li><span class="icon icon-map-pin" aria-hidden="true"></span>Logan</li>
+        <li><span class="icon icon-map-pin" aria-hidden="true"></span>Moab</li>
+        <li><span class="icon icon-map-pin" aria-hidden="true"></span>Ogden</li>
+        <li><span class="icon icon-map-pin" aria-hidden="true"></span>Park City</li>
+        <li><span class="icon icon-map-pin" aria-hidden="true"></span>Salina</li>
+        <li><span class="icon icon-map-pin" aria-hidden="true"></span>Tooele</li>
+        <li><span class="icon icon-map-pin" aria-hidden="true"></span>Vernal</li>
+        <li><span class="icon icon-map-pin" aria-hidden="true"></span>West Valley</li>
+      </ul>
+      <p class="locations__more">Plus 3 additional locations · <a href="/about/locations/" style="color: var(--color-heading); text-decoration: underline;">View all 18 branches</a></p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer" data-section="footer" data-intent="navigate" data-layout="mega">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <img src="../current/assets/logo.png" alt="Wheeler Machinery Co.">
+        <p>Construction Equipment, Tool &amp; Trailer Rental &amp; Sales across 18 locations in Utah and parts of Arizona, Nevada &amp; Wyoming.</p>
+      </div>
+      <div class="footer__col">
+        <h2>QUICK LINKS</h2>
+        <ul>
+          <li><a href="/new/">Sales</a></li>
+          <li><a href="/rental/">Rentals</a></li>
+          <li><a href="/parts/">Cat Parts</a></li>
+          <li><a href="/service/">Service</a></li>
+          <li><a href="/about/locations/">Locations</a></li>
+          <li><a href="/contact-us/">Contact</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/sponsorships/">Sponsorship</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h2>CONTACT US</h2>
+        <address class="footer__address">
+          4901 West 2100 South,<br>
+          Salt Lake City,<br>
+          UT 84120
+        </address>
+        <a class="footer__phone" href="tel:801-436-3672"><span class="icon icon-phone" aria-hidden="true"></span> 801-436-3672</a>
+      </div>
+      <div class="footer__col">
+        <h2>CONNECT WITH US</h2>
+        <div class="footer__social">
+          <a href="#" aria-label="Facebook"><span class="icon icon-facebook" aria-hidden="true"></span></a>
+          <a href="#" aria-label="Instagram"><span class="icon icon-instagram" aria-hidden="true"></span></a>
+          <a href="#" aria-label="LinkedIn"><span class="icon icon-linkedin" aria-hidden="true"></span></a>
+          <a href="#" aria-label="YouTube"><span class="icon icon-youtube" aria-hidden="true"></span></a>
+          <a href="#" aria-label="Twitter"><span class="icon icon-twitter" aria-hidden="true"></span></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__legal">
+      <span>Copyright &copy; 2026. All Rights Reserved. A Campbell Company</span>
+      <ul>
+        <li><a href="/sitemap/">Sitemap</a></li>
+        <li><a href="/legal/">Legal</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var burger = document.querySelector('.burger');
+    var nav = document.getElementById('primary-nav');
+    if (!burger || !nav) return;
+    burger.addEventListener('click', function () {
+      var open = nav.classList.toggle('is-open');
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && nav.classList.contains('is-open')) {
+        nav.classList.remove('is-open');
+        burger.setAttribute('aria-expanded', 'false');
+        burger.focus();
+      }
+    });
+  })();
+</script>
+
+</body>
+</html>

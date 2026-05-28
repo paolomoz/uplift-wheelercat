@@ -1,0 +1,99 @@
+{
+  "_provenance": {
+    "writtenBy": "stardust:direct (--add-variant F)",
+    "writtenAt": "2026-05-28T00:30:00Z",
+    "variant": "F",
+    "parent": "DESIGN.json",
+    "inheritanceChain": "F → active-direction (Mode A)",
+    "readArtifacts": [
+      "DESIGN.json",
+      "stardust/uplift-improvements.md",
+      "stardust/uplift-questions.md",
+      "stardust/current/_brand-extraction.json"
+    ],
+    "stardustVersion": "0.10.0"
+  },
+  "schemaVersion": 2,
+  "title": "Design System: Wheeler Cat — Variant F (signature-gesture extension)",
+  "variant": {
+    "id": "F",
+    "role": "one captured trait amplified (chain-identity gesture)",
+    "bet": "Cat® dealer-chain identity extended from logo confinement into a structural system — Cat-triangle motif as eyebrow mark and section-divider rule; Wheeler wordmark wipes at footer; chain-affiliation made visible without invention",
+    "capturedTraitAmplified": "dealer-chain identity (Wheeler is one of 50+ Caterpillar US dealers; the chain identity is currently confined to the logo + 'Cat' in copy)",
+    "evidence": "voice.heroHeadline contains 'Cat®' wordmark trademark; CTA samples include 'CAT® CARD IS NOW CAT® COMMERCIAL ACCOUNT' (h3); 'parts.cat.com' is a captured nav target; brand register is bold-direct dealer-aligned",
+    "static": true,
+    "cinematic": false,
+    "siblings": ["A", "B", "C", "D", "E", "G", "H", "I"],
+    "differentiationFrom": {
+      "A": "A applies the improvements as systemic fixes; F introduces Cat-triangle eyebrow motif on every section + footer wordmark wipe. 3 diffs: section eyebrow vocabulary (none in A vs triangle-marked in F), footer composition (link grid in A vs wordmark plate in F), header treatment (captured chrome in A vs triangle-marked nav dividers in F).",
+      "D": "D extends type scope; F extends gesture scope. 3 diffs: F preserves captured type scale; F adds Cat-triangle motif (not in D); F's footer wordmark wipe is a divergent composition primitive D doesn't carry.",
+      "rationale": "F is captured-evidence-driven: the Cat® wordmark and Caterpillar's iconic equilateral triangle are already in the brand's identity inheritance. F surfaces them as structural language."
+    }
+  },
+  "inherits": {
+    "from": "DESIGN.json",
+    "items": [
+      "colorMeta",
+      "typographyMeta",
+      "modularScale (1.250)",
+      "shadows",
+      "breakpoints",
+      "sectionPadding",
+      "iaPriorities",
+      "componentStyle (base)",
+      "voice (base)",
+      "systemComponentRoles",
+      "iconFont",
+      "divergence (base)"
+    ]
+  },
+  "extensions": {
+    "signatureGesture": {
+      "rationale": "F's bet — extend Cat® chain-identity from logo + copy into a structural system. No invented marks (Cat-triangle is the Caterpillar corporate identity, in public use across every dealer); no invented wordmarks (Wheeler wordmark is captured).",
+      "marks": [
+        {
+          "id": "cat-triangle",
+          "form": "equilateral triangle, point-up, 12px on a side at default; renders as a hairline yellow stroke or solid yellow fill",
+          "usedAs": "eyebrow mark before every section title; section-divider rule (triangle row at 24px spacing across the section boundary); footer wordmark anchor",
+          "fallback": "if triangle SVG is not safely renderable inline, render as the Unicode equivalent ▲ in Roboto Condensed 700 with kerning 0.1em",
+          "rationale": "Cat-triangle is the strongest unowned-by-Wheeler-but-shared-by-the-dealer-chain identity element. Using it brand-faithfully signals dealer affiliation without inventing a Wheeler-specific motif."
+        },
+        {
+          "id": "wheeler-wordmark-plate",
+          "form": "Wheeler logo at 4× scale (1072×268) on a dark-on-yellow plate; positioned as footer wordmark with clip-path wipe-up on scroll into footer",
+          "usedAs": "footer hero plate — replaces the standard footer link grid as the visual anchor; link grid retreats to a sub-band below the wordmark",
+          "rationale": "Captured logo is reused as-is (Mode A image-reuse contract); only its scale and position are direction-authorized."
+        }
+      ]
+    },
+    "compositionDeltas": {
+      "header": {
+        "treatment": "every nav link prefixed with cat-triangle eyebrow mark in yellow at 6px; dividers between links are triangle-row instead of vertical pipe",
+        "rationale": "Chain-identity marker enters the navigation chrome"
+      },
+      "sectionHeads": {
+        "pattern": "▲ EYEBROW · h2 SECTION TITLE — every section opens with a cat-triangle eyebrow mark (8px yellow filled) followed by the captured eyebrow text",
+        "rationale": "Marks the page rhythm; readers learn the triangle = chain-identity in 2 sections"
+      },
+      "sectionDividers": {
+        "pattern": "between bands, a row of cat-triangles at 24px spacing (yellow hairline stroke at #FFCC00, 1px) spanning the section gutter",
+        "rationale": "Replaces the captured pattern of plain whitespace gutters with a structural rule that ties section transitions to chain-identity"
+      },
+      "footer": {
+        "composition": "Wheeler wordmark plate (4× scale) at top of footer on yellow #FFCC00 band; below the plate, captured 3-col link grid (QUICK LINKS / CONTACT US / CONNECT WITH US) on dark #272727",
+        "wordmarkTreatment": "static under F (no clip-path wipe — that would belong to a cinematic sibling); wordmark sits anchored at top edge of footer band",
+        "rationale": "Wordmark becomes the brand summary; link grid demoted to functional"
+      }
+    },
+    "antiToolboxAudit": {
+      "hits": [
+        {
+          "rule": "Side stripes > 1px",
+          "applicableTo": "section-divider triangle rows",
+          "justification": "Triangles are not side stripes — they are typographic / iconographic marks. The triangle-row at 24px spacing is a brand-identity gesture, not a decorative stripe. Rule does not fire."
+        }
+      ],
+      "rationale": "Single bet (chain-identity gesture extension). One adjacent-rule check, cleared with citation. Cat-triangle is captured brand inheritance (Caterpillar's shared dealer identity), not invented."
+    }
+  }
+}

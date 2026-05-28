@@ -1,0 +1,124 @@
+{
+  "_provenance": {
+    "writtenBy": "stardust:direct (--add-variant D)",
+    "writtenAt": "2026-05-28T00:30:00Z",
+    "variant": "D",
+    "parent": "DESIGN.json",
+    "inheritanceChain": "D → active-direction (Mode A)",
+    "readArtifacts": [
+      "DESIGN.json",
+      "DESIGN-A.json",
+      "DESIGN-C.json",
+      "stardust/uplift-improvements.md",
+      "stardust/uplift-questions.md",
+      "stardust/direction.md",
+      "stardust/current/_brand-extraction.json"
+    ],
+    "stardustVersion": "0.10.0"
+  },
+  "schemaVersion": 2,
+  "title": "Design System: Wheeler Cat — Variant D (display-typography amplification, static)",
+  "variant": {
+    "id": "D",
+    "role": "one captured trait amplified (static composition bet)",
+    "bet": "Roboto Condensed CAPS promoted from h-tags-only into nav labels, primary CTA labels, section eyebrows, and key body callouts — type scope expansion",
+    "capturedTraitAmplified": "display-typography scope (currently confined to h1-h5; family + weight already pinned by brand)",
+    "evidence": "_brand-extraction.json#type.headingFamily — Roboto Condensed 700 at 18/20/22/29/30/40/42 px; voiceTable.toneMetrics 53% headings ALL-CAPS; voice.ctaSamples ALL-CAPS imperatives",
+    "static": true,
+    "cinematic": false,
+    "siblings": ["A", "B", "C", "E", "F", "G", "H", "I"],
+    "differentiationFrom": {
+      "A": "A applies 1.250 modular scale across the captured 7 headings; D applies a larger 1.333 (perfect-fourth) display scale AND extends Roboto Condensed CAPS into nav + CTAs + eyebrows. 3 diffs: (1) type scale 1.250 vs 1.333, (2) nav rendered Roboto Condensed CAPS (not mixed-case captured), (3) primary CTA labels rendered Roboto Condensed 700 not Roboto.",
+      "C": "C is kinetic-display cinematic motion layered on captured composition; D is static composition with display-type scope expansion. 3 diffs: (1) C has motion runtime + lenis; D has none. (2) C keeps captured ad-hoc sizes; D applies 1.333 modular scale. (3) C adds top signage marquee; D does not (static)."
+    }
+  },
+  "inherits": {
+    "from": "DESIGN.json",
+    "items": [
+      "colorMeta",
+      "typographyMeta",
+      "shadows",
+      "breakpoints",
+      "sectionPadding",
+      "iaPriorities",
+      "componentStyle (base)",
+      "motifs",
+      "voice (base)",
+      "systemComponentRoles",
+      "iconFont",
+      "divergence (base)"
+    ]
+  },
+  "extensions": {
+    "typographyScale": {
+      "kind": "modular",
+      "ratio": 1.333,
+      "rationale": "Perfect-fourth scale amplifies display-type as structural voice; the 1.250 of A (major-third) is too narrow for D's type-foregrounding bet. The ratio still respects density floor (sectionPadding 64px desktop) because vertical rhythm is independent of inline type scale.",
+      "scale": {
+        "12": "12px (eyebrow micro)",
+        "16": "16px (body)",
+        "21": "21px (body lift)",
+        "28": "28px (h4)",
+        "37": "37px (h3)",
+        "49": "49px (h2)",
+        "65": "65px (h1 / hero)"
+      }
+    },
+    "typeScopeExpansions": {
+      "rationale": "D's bet — promote Roboto Condensed CAPS from heading-tag confinement to a structural voice across the page.",
+      "applications": [
+        {
+          "surface": "nav links (header main row)",
+          "from": "Roboto 400 mixed-case (captured: 'Sponsorships' sentence case + 'NEW EQUIPMENT' all-caps inconsistently)",
+          "to": "Roboto Condensed 700 ALL-CAPS letter-spacing 0.04em — every link rendered as a typographic plate",
+          "evidence": "voice.navItems has mixed casing; the 53% all-caps headings rate signals the brand register tolerates this expansion"
+        },
+        {
+          "surface": "primary CTA button labels",
+          "from": "Roboto 700 ALL-CAPS (captured: '.btn-yellow' uses workhorse Roboto for button labels)",
+          "to": "Roboto Condensed 700 ALL-CAPS — CTAs become the same display register as headings",
+          "evidence": "voice.ctaSamples (NEW QUOTE / SHOP USED / RENT NOW / CREDIT APP) are already imperative caps; condensed face strengthens the plate quality"
+        },
+        {
+          "surface": "section eyebrows + finance-card eyebrows ('FINANCE')",
+          "from": "Roboto Condensed 400 18px letter-spacing 1.8px (captured: h4 eyebrow on finance slides)",
+          "to": "Roboto Condensed 700 12px letter-spacing 0.12em with hairline yellow underline — eyebrow as structural plate",
+          "evidence": "captured eyebrow weight was 400; weight up to 700 promotes the eyebrow from label to plate without inventing the family"
+        },
+        {
+          "surface": "stat-row numerals (now narrative-proof leads)",
+          "from": "captured Roboto Condensed 700 large (e.g. '18' '75' '24' at hero scale)",
+          "to": "Roboto Condensed 700 tabular-nums 65px with a thin Roboto-Condensed 400 caps label inline ('18 BRANCHES · UT / AZ / NV / WY')",
+          "evidence": "tabular-nums available in Roboto Condensed; no font invention"
+        },
+        {
+          "surface": "footer headings (QUICK LINKS / CONTACT US / CONNECT WITH US)",
+          "from": "captured 400 weight footer heading style",
+          "to": "Roboto Condensed 700 21px letter-spacing 0.08em — footer headings as condensed-cap plates",
+          "evidence": "captured footer headings ARE all-caps; D upweights without re-typing"
+        }
+      ]
+    },
+    "compositionDeltas": {
+      "hero": {
+        "ground": "white (captured page surface)",
+        "headline": "FINANCING DEALS & SPECIAL OFFERS rendered at 65px Roboto Condensed 700 with -0.005em letter-spacing — display-cap hero plate",
+        "subhead": "Roboto Condensed 400 21px ALL-CAPS letter-spacing 0.06em — subhead reads as a continuation of the display register, not a sentence-case break"
+      },
+      "financeBand": {
+        "layout": "3-up CSS grid (same as A)",
+        "ground": "white",
+        "eyebrowTreatment": "Roboto Condensed 700 12px caps with hairline yellow underline — see typeScopeExpansions[eyebrow]",
+        "rationale": "Improvement #1 inherited (no carousel); eyebrow upweighting is D's bet"
+      },
+      "navHeader": {
+        "treatment": "every nav link rendered Roboto Condensed 700 ALL-CAPS — see typeScopeExpansions[nav]; current site has mixed 'Sponsorships' + 'NEW EQUIPMENT' inconsistency, D resolves to all-caps display plates",
+        "phoneStrip": "Roboto Condensed 700 ALL-CAPS retained"
+      }
+    },
+    "antiToolboxAudit": {
+      "hits": [],
+      "rationale": "D's single bet is type-scope expansion using the captured family + weight. No invented fonts, no invented colors. The 1.333 ratio is within the brand-register hard rule (≥ 1.25). All-caps expansion is consistent with the captured surface (53% headings already caps, all CTAs caps)."
+    }
+  }
+}

@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- stardust:provenance
+  writtenBy:         stardust:prototype (variant A surface-fork A-verbatim, ia-fidelity: verbatim)
+  writtenAt:         2026-05-28T03:00:00Z
+  page:              home
+  variant:           A-verbatim (IA + content verbatim sibling of A)
+  parentVariant:     A
+  pageUrl:           https://wheelercat.com/
+  againstDirection:  stardust/direction.md (Active — six-candidate fork; A-verbatim added per user refinement)
+  iaFidelity:        verbatim (all 10 captured sections preserved at captured order; improvements list NOT applied)
+  surface:           target DESIGN system (Mode A palette, modular 1.250, hamburger, AAA contrast)
+  readArtifacts:
+    - stardust/prototypes/home-A-proposed.html (sibling source for chrome + tokens)
+    - stardust/prototypes/home-A-shape.md
+    - stardust/current/pages/home.json (captured content verbatim)
+    - stardust/current/_brand-extraction.json
+    - DESIGN.md / DESIGN.json / DESIGN-A.md / DESIGN-A.json / PRODUCT.md
+  divergenceVersion: v1.0
+  fontDeck:          brand-inherited (Roboto Condensed + Roboto + icomoon)
+  paletteSource:     captured (Mode A brand-faithful)
+  colorStrategy:     Restrained (Cat Yellow ≤ 10% of surface)
+  selfContainedException:
+    rule:    "no external CSS/JS loads (proposed-file-shell.md)"
+    breach:  "embedded Google Maps iframe (https://www.google.com/maps embed) in section.our-locations"
+    rationale: "User-specified verbatim concession — captured page renders Google Maps embed. Logged here per content-sourcing audit trail."
+  improvementsListStatus:
+    rationale: "verbatim ia-fidelity FORBIDS structural changes; all 5 improvements from uplift-improvements.md are STRUCTURAL"
+    reverted:
+      - "#1 carousel: restored as vanilla JS slider (was 3-up grid in A)"
+      - "#2 sentiment + partner merge: REVERTED — sentiment stays as standalone h5 inside service section; partner logos stay in separate logo-carousel band per captured order"
+      - "#3 modular type scale: KEPT (verbatim allows surface tunings including type-scale per intent-dimensions.md §9)"
+      - "#4 stat-row pattern: restored as captured 12-numeral grid (DEPENDABLE AND RELIABLE)"
+      - "#5 locations consolidation: REVERTED — OUR LOCATIONS (map) + DEPENDABLE AND RELIABLE (stats) are separate captured sections"
+  brandFaithfulInversions:
+    - pure-white-as-page-ground (captured #FFFFFF)
+    - pure-#272727-as-headings (captured pure-near-black)
+    - hex-format-not-OKLCH (captured + Stitch validator pin)
+    - saturated-yellow (Cat brand-protected color)
+  derivedColors:
+    - "#E6B800 — yellow hover (10% darker)"
+    - "#1A1A1A — utility bar / dark hover"
+  voiceClassification:
+    - { section: "header.utility-bar",  classification: captured-verbatim, source: "landmarks[3] innerText" }
+    - { section: "header.main-nav",     classification: captured-verbatim, source: "landmarks[0,4] innerText + voice.navItems" }
+    - { section: "hero.heading",        classification: captured-verbatim, source: "headings[0]" }
+    - { section: "finance.slides",      classification: captured-verbatim, source: "headings[1-6]" }
+    - { section: "services.eyebrow",    classification: captured-verbatim, source: "headings[7] h5 'WE PROUDLY...'" }
+    - { section: "services.title",      classification: captured-verbatim, source: "headings[8] h4 'YOUR HEAVY...'" }
+    - { section: "services.tiles",      classification: captured-verbatim, source: "headings[9-14]" }
+    - { section: "our-locations.title", classification: captured-verbatim, source: "headings[15] h3 'OUR LOCATIONS'" }
+    - { section: "dependable.title",    classification: captured-verbatim, source: "headings[16] h3 'DEPENDABLE AND RELIABLE'" }
+    - { section: "dependable.numerals", classification: captured-verbatim, source: "headings[17-28] — 12 numerals: 18, 75, 24, 90, 3,300, 15, 62,051, 400, 150,000, 100, 5, 3,100" }
+    - { section: "dependable.labels",   classification: placeholder, source: "captured page rendered labels under each numeral but innerText not captured; only first 3 inferrable (LOCATIONS, YEARS, HOURS OF SERVICE) per brand-extraction" }
+    - { section: "image-text.copy",     classification: placeholder, source: "captured h4 empty; body copy not captured" }
+    - { section: "logo-carousel.heading", classification: placeholder, source: "captured h4 empty" }
+    - { section: "logo-carousel.logos", classification: captured-verbatim, source: "media.images[114-119,141-144] — Campbell Companies, JLG, Monson, Gardner, SFS all captured" }
+    - { section: "resources.heading",   classification: placeholder, source: "captured h3 empty" }
+    - { section: "resources.tiles",     classification: placeholder, source: "captured h4 empty x3" }
+    - { section: "campbell.title",      classification: captured-verbatim, source: "headings[35] h4 'LOCALLY OWNED AND OPERATED'" }
+    - { section: "campbell.subheading", classification: captured-verbatim, source: "headings[36] h5 'Campbell Companies:'" }
+    - { section: "campbell.copy",       classification: placeholder, source: "body copy not captured" }
+    - { section: "footer.headings",     classification: captured-verbatim, source: "headings[37-39] + voice.footerHeadings" }
+    - { section: "footer.quicklinks",   classification: captured-verbatim, source: "landmarks[6] innerText" }
+    - { section: "footer.contact",      classification: captured-verbatim, source: "landmarks[7] innerText (address + phone + legal)" }
+  unsourcedContent:
+    - { selector: "section[data-section='dependable'] .stat-card .stat-label", type: "stat-label", count: 9, reason: "Captured page rendered labels beneath each of 12 numerals but body innerText was not captured. First 3 inferred from brand-extraction (LOCATIONS, YEARS, HOURS OF SERVICE); remaining 9 PLACEHOLDER" }
+    - { selector: "section[data-section='image-text'] .image-text__copy", type: "section-copy", count: 1, reason: "Captured section h4 empty; body copy not in capture" }
+    - { selector: "section[data-section='logo-carousel'] h2", type: "section-heading", count: 1, reason: "Captured h4 empty (likely 'OUR PARTNERS' or 'BRANDS WE SUPPORT')" }
+    - { selector: "section[data-section='resources'] h2", type: "section-heading", count: 1, reason: "Captured h3 empty" }
+    - { selector: "section[data-section='resources'] .resource-tile h3", type: "resource-title", count: 3, reason: "Captured h4 empty x3" }
+    - { selector: "section[data-section='campbell'] .half-text__copy", type: "section-copy", count: 1, reason: "Body copy not in capture" }
+    - { selector: "section[data-section='finance'] .slide__cta", type: "slide-cta", count: 3, reason: "Per-slide CTA labels not in capture; using captured site-wide voice 'LEARN MORE' per ctaSamples" }
+  wcagContrast:
+    - "#272727 on #FFFFFF (heading on page): 14.0:1 AAA"
+    - "#454545 on #FFFFFF (body on page): 9.7:1 AAA"
+    - "#FFFFFF on #272727 (text on dark surfaces): 14.7:1 AAA"
+    - "#272727 on #FFCC00 (text on Cat Yellow CTAs): 12.6:1 AAA"
+    - "#FFCC00 on #272727 (yellow on dark): 8.6:1 AAA"
+    - "#454545 on #E5E3DF (body on warm stone): 7.4:1 AAA"
+    - "REFUSED: #FFFFFF on #FFCC00 (1.95:1) — never paired"
+  stardustVersion:   0.10.0
+-->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wheeler Cat - Construction Equipment, Tool & Trailer Rental & Sales</title>
+<meta name="description" content="Wheeler Cat offers Construction Equipment, Tool & Trailer Rental & Sales across 18 locations in Utah and parts of Arizona, Nevada & Wyoming.">
+<style>
+:root {
+  --color-page: #FFFFFF;
+  --color-body: #454545;
+  --color-heading: #272727;
+  --color-cat-yellow: #FFCC00;
+  --color-cat-yellow-hover: #E6B800;
+  --color-surface-dark: #272727;
+  --color-surface-dark-hover: #1A1A1A;
+  --color-warm-stone: #E5E3DF;
+  --color-text-on-dark: #FFFFFF;
+  --color-text-on-yellow: #272727;
+  --color-overlay: rgba(18,18,18,0.5);
+  --color-border-soft: rgba(255,255,255,0.12);
+  --color-border-light: rgba(39,39,39,0.12);
+
+  /* Modular type scale (1.250 major third — A's scale, kept under verbatim) */
+  --fs-100: 1rem;        /* 16px body */
+  --fs-125: 1.25rem;     /* 20px lead */
+  --fs-156: 1.563rem;    /* 25px sub-title */
+  --fs-195: 1.953rem;    /* 31px title */
+  --fs-244: 2.441rem;    /* 39px large title */
+  --fs-305: 3.052rem;    /* 49px headline */
+  --fs-381: 3.815rem;    /* 61px display */
+  --fs-label: 0.8rem;
+  --fs-stat: 4.5rem;     /* 72px stat numeral */
+
+  --sp-xs: 4px;
+  --sp-sm: 8px;
+  --sp-md: 16px;
+  --sp-lg: 24px;
+  --sp-xl: 32px;
+  --sp-xxl: 48px;
+  --sp-section: 64px;
+
+  --r-primary: 5px;
+  --r-pill: 999px;
+
+  --container-max: 1400px;
+  --grid-gap: 24px;
+
+  --shadow-card: rgba(0,0,0,0.18) 0px 6px 16px 0px;
+  --shadow-card-strong: rgba(0,0,0,0.8) 0px 6px 16px 0px;
+
+  --font-display: "Roboto Condensed", "Roboto", system-ui, sans-serif;
+  --font-body: "Roboto", system-ui, sans-serif;
+  --font-icon: "icomoon";
+
+  --ease-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Fonts (self-contained except for the embedded Maps iframe, see provenance) */
+@font-face { font-family: "Roboto Condensed"; font-weight: 400 700; font-style: normal; font-display: swap; src: url("../current/assets/fonts/ieVl2ZhZI2eCN5jzbjEETS9weq8-19K7DQ.woff2") format("woff2"); }
+@font-face { font-family: "Roboto"; font-weight: 300 700; font-style: normal; font-display: swap; src: url("../current/assets/fonts/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2") format("woff2"); }
+@font-face { font-family: "Roboto"; font-weight: 700; font-style: normal; font-display: swap; src: url("../current/assets/fonts/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBHMdazQ.woff2") format("woff2"); }
+@font-face { font-family: "icomoon"; src: url("../current/assets/fonts/icomoon.ttf") format("truetype"); font-weight: normal; font-style: normal; font-display: block; }
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--fs-100);
+  line-height: 1.5;
+  color: var(--color-body);
+  background: var(--color-page);
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; cursor: pointer; }
+
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding-left: var(--sp-lg);
+  padding-right: var(--sp-lg);
+}
+
+.burger { display: none; }
+
+/* Type system */
+.display, .headline, .title, .sub-title, .label {
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-heading);
+  margin: 0;
+  text-wrap: balance;
+}
+.display { font-size: clamp(2.441rem, 5vw, var(--fs-381)); line-height: 1.05; letter-spacing: 0.02em; }
+.headline { font-size: clamp(1.953rem, 3.5vw, var(--fs-305)); line-height: 1.1; letter-spacing: 0.02em; }
+.title { font-size: var(--fs-195); line-height: 1.15; letter-spacing: 0.015em; }
+.sub-title { font-size: var(--fs-156); line-height: 1.2; letter-spacing: 0.015em; }
+.label { font-size: var(--fs-label); line-height: 1.2; letter-spacing: 0.08em; }
+.body-copy { font-size: var(--fs-100); line-height: 1.55; color: var(--color-body); margin: 0; max-width: 65ch; text-wrap: pretty; }
+.lead-copy { font-size: var(--fs-125); line-height: 1.45; color: var(--color-body); margin: 0; max-width: 60ch; text-wrap: pretty; }
+
+/* Icomoon glyphs */
+.icon {
+  font-family: var(--font-icon) !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  speak: never;
+  display: inline-block;
+}
+.icon-menu::before     { content: "\e904"; }
+.icon-map-pin::before  { content: "\e906"; }
+.icon-new::before      { content: "\e907"; }
+.icon-used::before     { content: "\e90c"; }
+.icon-rent::before     { content: "\e909"; }
+.icon-order::before    { content: "\e908"; }
+.icon-service::before  { content: "\e90a"; }
+.icon-phone::before    { content: "\e90b"; }
+.icon-facebook::before { content: "\e900"; }
+.icon-instagram::before{ content: "\e902"; }
+.icon-linkedin::before { content: "\e903"; }
+.icon-youtube::before  { content: "\e90d"; }
+.icon-twitter::before  { content: "\e905"; }
+.icon-left-arrow::before { content: "\e901"; }
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-sm);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 12px 24px;
+  border-radius: var(--r-primary);
+  border: 1px solid transparent;
+  transition: background 200ms var(--ease-out), color 200ms var(--ease-out), border-color 200ms var(--ease-out);
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn-primary { background: var(--color-cat-yellow); color: var(--color-text-on-yellow); border-color: var(--color-cat-yellow); }
+.btn-primary:hover, .btn-primary:focus-visible { background: var(--color-surface-dark); color: var(--color-cat-yellow); border-color: var(--color-surface-dark); outline: none; }
+.btn-secondary { background: transparent; color: var(--color-heading); border-color: var(--color-heading); padding: 10px 20px; }
+.btn-secondary:hover, .btn-secondary:focus-visible { background: var(--color-surface-dark); color: var(--color-text-on-dark); outline: none; }
+.btn-ghost-light { background: transparent; color: var(--color-text-on-dark); border-color: var(--color-text-on-dark); padding: 10px 20px; }
+.btn-ghost-light:hover { background: var(--color-cat-yellow); color: var(--color-text-on-yellow); border-color: var(--color-cat-yellow); }
+
+/* ───────── PLACEHOLDER signature (mandatory visual signature) ───────── */
+[data-placeholder="true"] {
+  border: 2px dashed var(--color-cat-yellow);
+  background: rgba(229,227,223,0.55);
+  padding: var(--sp-md);
+  display: inline-block;
+}
+.placeholder-eyebrow {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-heading);
+  opacity: 0.7;
+  display: block;
+  margin-bottom: 4px;
+}
+.placeholder-shape {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--color-body);
+  display: block;
+  font-style: italic;
+}
+
+/* ───────── HEADER (captured chrome verbatim) ───────── */
+.site-header { position: sticky; top: 0; z-index: 50; background: var(--color-surface-dark); color: var(--color-text-on-dark); }
+.utility-bar {
+  background: #1a1a1a;
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.utility-bar__inner {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 6px 0;
+  gap: var(--sp-md);
+  flex-wrap: wrap;
+}
+.utility-bar a { color: var(--color-text-on-dark); transition: color 150ms; }
+.utility-bar a:hover { color: var(--color-cat-yellow); }
+.utility-bar__list { display: inline-flex; gap: var(--sp-md); list-style: none; margin: 0; padding: 0; }
+
+.main-header { background: var(--color-surface-dark); }
+.main-header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 14px 0;
+  gap: var(--sp-md);
+}
+.main-header__logo img { height: 56px; width: auto; }
+.main-nav { display: flex; gap: 0; align-items: stretch; }
+.main-nav__list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 0;
+  align-items: stretch;
+}
+.main-nav__list a {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 12px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.825rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-text-on-dark);
+  transition: color 150ms var(--ease-out);
+}
+.main-nav__list a:hover { color: var(--color-cat-yellow); }
+.main-nav__phone {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-sm);
+  background: var(--color-cat-yellow);
+  color: var(--color-text-on-yellow);
+  padding: 0 var(--sp-md);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+}
+.main-nav__phone:hover { background: var(--color-cat-yellow-hover); }
+
+.burger {
+  background: transparent;
+  border: 1px solid var(--color-text-on-dark);
+  color: var(--color-text-on-dark);
+  width: 44px;
+  height: 44px;
+  border-radius: var(--r-primary);
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+.burger:focus-visible { outline: 2px solid var(--color-cat-yellow); outline-offset: 2px; }
+
+/* Mega-menu (secondary nav) */
+.mega-nav { background: #1a1a1a; }
+.mega-nav__inner {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--sp-lg);
+  padding: 10px 0;
+}
+.mega-nav__inner a {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-on-dark);
+  transition: color 150ms;
+}
+.mega-nav__inner a:hover { color: var(--color-cat-yellow); }
+
+/* ───────── HERO / FINANCE CAROUSEL (captured Slick replaced with vanilla JS slider) ───────── */
+.finance-hero {
+  padding: var(--sp-section) 0 var(--sp-xxl);
+  background: var(--color-page);
+}
+.finance-hero__head { text-align: center; margin-bottom: var(--sp-xxl); }
+.finance-hero__title { color: var(--color-heading); }
+
+.carousel { position: relative; max-width: var(--container-max); margin: 0 auto; padding: 0 var(--sp-xxl); }
+.carousel__viewport { overflow: hidden; border-radius: var(--r-primary); }
+.carousel__track {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-auto-flow: column;
+  grid-auto-columns: 100%;
+  transition: transform 600ms var(--ease-out);
+  will-change: transform;
+}
+.slide {
+  position: relative;
+  min-height: 460px;
+  display: flex;
+  align-items: flex-end;
+  background-size: cover;
+  background-position: center;
+  color: var(--color-text-on-dark);
+}
+.slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(18,18,18,0.85) 0%, rgba(18,18,18,0.4) 50%, rgba(18,18,18,0.15) 100%);
+}
+.slide__inner {
+  position: relative;
+  z-index: 1;
+  padding: var(--sp-xxl);
+  max-width: 720px;
+}
+.slide__eyebrow {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--fs-label);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-cat-yellow);
+  margin-bottom: var(--sp-md);
+}
+.slide__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.75rem, 3vw, var(--fs-244));
+  text-transform: uppercase;
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+  color: var(--color-text-on-dark);
+  margin: 0 0 var(--sp-lg);
+  text-wrap: balance;
+}
+.slide__cta { margin-top: var(--sp-sm); }
+
+/* Carousel controls */
+.carousel__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border: none;
+  background: var(--color-surface-dark);
+  color: var(--color-cat-yellow);
+  border-radius: var(--r-pill);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 2;
+  transition: background 200ms;
+}
+.carousel__arrow:hover, .carousel__arrow:focus-visible {
+  background: var(--color-cat-yellow);
+  color: var(--color-text-on-yellow);
+  outline: none;
+}
+.carousel__arrow--prev { left: 0; }
+.carousel__arrow--next { right: 0; }
+.carousel__dots {
+  display: flex;
+  justify-content: center;
+  gap: var(--sp-sm);
+  margin-top: var(--sp-xl);
+}
+.carousel__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid var(--color-cat-yellow);
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  transition: background 200ms;
+}
+.carousel__dot[aria-current="true"] { background: var(--color-cat-yellow); }
+
+/* ───────── SERVICES (sentiment + title + 6 tiles, captured order) ───────── */
+.services { background: var(--color-page); padding: var(--sp-section) 0; }
+.services__head { text-align: center; margin-bottom: var(--sp-xxl); }
+.services__sentiment {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-body);
+  margin: 0 0 var(--sp-md);
+  text-wrap: balance;
+}
+.services__title { color: var(--color-heading); }
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: var(--sp-md);
+}
+.service-tile {
+  background: var(--color-surface-dark);
+  color: var(--color-text-on-dark);
+  border-radius: var(--r-primary);
+  padding: var(--sp-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-md);
+  min-height: 220px;
+  text-decoration: none;
+  transition: background 200ms var(--ease-out), transform 200ms var(--ease-out);
+}
+.service-tile:hover { background: var(--color-surface-dark-hover); transform: translateY(-2px); }
+.service-tile__icon { font-size: 40px; color: var(--color-cat-yellow); line-height: 1; }
+.service-tile__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--color-text-on-dark);
+  margin-top: auto;
+}
+.services__footer { margin-top: var(--sp-xxl); text-align: center; }
+
+/* ───────── OUR LOCATIONS (Google Maps iframe — verbatim concession) ───────── */
+.our-locations { background: var(--color-page); padding: var(--sp-section) 0; }
+.our-locations__head { text-align: center; margin-bottom: var(--sp-xl); }
+.our-locations__map-wrap {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 50%;
+  overflow: hidden;
+  border-radius: var(--r-primary);
+  background: var(--color-warm-stone);
+}
+.our-locations__map-wrap iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* ───────── DEPENDABLE AND RELIABLE (12-stat grid) ───────── */
+.dependable {
+  background: var(--color-warm-stone);
+  padding: var(--sp-section) 0;
+  background-image: linear-gradient(rgba(229,227,223,0.85), rgba(229,227,223,0.85)), url("../current/assets/media/reliable-v3-scaled-c2c1e1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.dependable__head { text-align: center; margin-bottom: var(--sp-xxl); }
+.dependable__title { color: var(--color-heading); }
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: var(--sp-md);
+}
+.stat-card {
+  background: var(--color-page);
+  padding: var(--sp-lg);
+  border-radius: var(--r-primary);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-xs);
+  box-shadow: var(--shadow-card);
+  min-height: 140px;
+  justify-content: center;
+}
+.stat-card__numeral {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 2.6rem;
+  line-height: 1;
+  color: var(--color-heading);
+  font-variant-numeric: tabular-nums;
+}
+.stat-card__label {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-body);
+  line-height: 1.15;
+}
+.stat-card__label.is-placeholder {
+  border: 1.5px dashed var(--color-cat-yellow);
+  padding: 4px 6px;
+  border-radius: var(--r-primary);
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.6rem;
+  color: var(--color-heading);
+  opacity: 0.75;
+}
+
+/* ───────── IMAGE-TEXT (2-col half-and-half) ───────── */
+.image-text { background: var(--color-page); padding: var(--sp-section) 0; }
+.image-text__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-xxl);
+  align-items: center;
+}
+.image-text__image img { width: 100%; height: auto; border-radius: var(--r-primary); display: block; }
+.image-text__copy { display: flex; flex-direction: column; gap: var(--sp-md); }
+
+/* ───────── LOGO CAROUSEL ───────── */
+.logo-carousel { background: var(--color-warm-stone); padding: var(--sp-section) 0; }
+.logo-carousel__head { text-align: center; margin-bottom: var(--sp-xl); }
+.logo-track {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--sp-lg);
+  align-items: center;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.logo-track img {
+  max-height: 72px;
+  width: auto;
+  margin: 0 auto;
+  filter: grayscale(100%);
+  opacity: 0.8;
+  transition: opacity 200ms, filter 200ms;
+}
+.logo-track img:hover { filter: grayscale(0%); opacity: 1; }
+
+/* ───────── RESOURCES (3 tiles) ───────── */
+.resources { background: var(--color-page); padding: var(--sp-section) 0; }
+.resources__head { text-align: center; margin-bottom: var(--sp-xxl); }
+.resources__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-lg);
+}
+.resource-tile {
+  position: relative;
+  min-height: 320px;
+  border-radius: var(--r-primary);
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  color: var(--color-text-on-dark);
+  display: flex;
+  align-items: flex-end;
+  text-decoration: none;
+  transition: transform 200ms var(--ease-out);
+}
+.resource-tile:hover { transform: translateY(-2px); }
+.resource-tile::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(18,18,18,0.85) 0%, rgba(18,18,18,0.1) 70%);
+}
+.resource-tile__inner {
+  position: relative;
+  z-index: 1;
+  padding: var(--sp-lg);
+  width: 100%;
+}
+.resource-tile__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  font-size: 1.25rem;
+  color: var(--color-text-on-dark);
+  margin: 0;
+}
+
+/* ───────── HALF-AND-HALF (Campbell Companies) ───────── */
+.campbell { background: var(--color-surface-dark); color: var(--color-text-on-dark); padding: var(--sp-section) 0; }
+.campbell__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-xxl);
+  align-items: center;
+}
+.campbell__image img { width: 100%; height: auto; border-radius: var(--r-primary); }
+.campbell__copy { display: flex; flex-direction: column; gap: var(--sp-md); }
+.campbell__title { color: var(--color-text-on-dark); }
+.campbell__subheading {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--fs-156);
+  color: var(--color-cat-yellow);
+  margin: 0;
+}
+
+/* ───────── FOOTER ───────── */
+.site-footer { background: var(--color-surface-dark); color: var(--color-text-on-dark); padding: var(--sp-section) 0 var(--sp-xl); }
+.footer__grid { display: grid; grid-template-columns: 2fr 1fr 1.5fr 1fr; gap: var(--sp-xxl); margin-bottom: var(--sp-xxl); }
+.footer__brand img { max-width: 220px; }
+.footer__brand p { margin-top: var(--sp-md); color: rgba(255,255,255,0.7); font-size: 0.9rem; max-width: 38ch; }
+.footer__col h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-on-dark);
+  margin: 0 0 var(--sp-md);
+}
+.footer__col ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: var(--sp-sm); }
+.footer__col a { color: rgba(255,255,255,0.78); font-size: 0.92rem; transition: color 150ms var(--ease-out); }
+.footer__col a:hover { color: var(--color-cat-yellow); }
+.footer__address { font-size: 0.92rem; line-height: 1.55; color: rgba(255,255,255,0.78); font-style: normal; }
+.footer__phone {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-sm);
+  margin-top: var(--sp-md);
+  color: var(--color-cat-yellow);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.04em;
+}
+.footer__social { display: flex; gap: var(--sp-md); margin-top: var(--sp-sm); }
+.footer__social a {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: var(--r-pill);
+  color: var(--color-text-on-dark);
+  font-size: 1rem;
+}
+.footer__social a:hover { background: var(--color-cat-yellow); color: var(--color-text-on-yellow); border-color: var(--color-cat-yellow); }
+.footer__legal {
+  padding-top: var(--sp-lg);
+  border-top: 1px solid var(--color-border-soft);
+  display: flex;
+  justify-content: space-between;
+  gap: var(--sp-md);
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.55);
+  flex-wrap: wrap;
+}
+.footer__legal ul { display: flex; gap: var(--sp-lg); list-style: none; margin: 0; padding: 0; }
+
+/* ───────── RESPONSIVE ───────── */
+@media (max-width: 1100px) and (min-width: 769px) {
+  .main-nav__list a { padding: 0 8px; font-size: 0.78rem; }
+  .main-nav__phone { padding: 0 12px; font-size: 0.8rem; }
+}
+
+@media (max-width: 1024px) {
+  :root { --sp-section: 48px; }
+  .services__grid { grid-template-columns: repeat(3, 1fr); }
+  .stat-grid { grid-template-columns: repeat(4, 1fr); }
+  .footer__grid { grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: var(--sp-xl); }
+  .image-text__grid { grid-template-columns: 1fr; }
+  .campbell__grid { grid-template-columns: 1fr; }
+  .resources__grid { grid-template-columns: repeat(2, 1fr); }
+  .logo-track { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .main-nav__list, .main-nav__phone { display: none; }
+  .burger { display: inline-flex; }
+  .main-nav.is-open .main-nav__list {
+    display: flex;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--color-surface-dark);
+    flex-direction: column;
+    gap: 0;
+    padding: var(--sp-md) 0;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    z-index: 60;
+  }
+  .main-nav.is-open .main-nav__list a { padding: var(--sp-md) var(--sp-lg); width: 100%; font-size: 1rem; }
+  .main-nav.is-open .main-nav__phone { display: inline-flex; margin: var(--sp-md) var(--sp-lg); padding: var(--sp-md) var(--sp-lg); }
+  .main-header { position: relative; }
+  .utility-bar__list { display: none; } /* condense on mobile; tap utility items via burger if needed */
+  .mega-nav__inner { gap: var(--sp-md); padding: 8px var(--sp-md); }
+  .stat-grid { grid-template-columns: repeat(3, 1fr); }
+  .resources__grid { grid-template-columns: 1fr; }
+  .footer__grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 640px) {
+  :root { --sp-section: 32px; }
+  .slide { min-height: 380px; }
+  .slide__inner { padding: var(--sp-lg); }
+  .services__grid { grid-template-columns: repeat(2, 1fr); }
+  .stat-grid { grid-template-columns: repeat(2, 1fr); }
+  .logo-track { grid-template-columns: repeat(2, 1fr); gap: var(--sp-md); }
+  .footer__grid { grid-template-columns: 1fr; gap: var(--sp-xl); }
+  .footer__legal { flex-direction: column; }
+  .carousel { padding: 0 var(--sp-lg); }
+  .carousel__arrow { width: 40px; height: 40px; }
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-cat-yellow);
+  outline-offset: 2px;
+}
+</style>
+</head>
+<body>
+
+<a href="#main" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;background:var(--color-cat-yellow);color:var(--color-text-on-yellow);padding:8px 16px;z-index:100;" onfocus="this.style.left='8px';this.style.top='8px';this.style.width='auto';this.style.height='auto';" onblur="this.style.left='-9999px';">Skip to main content</a>
+
+<header class="site-header" data-section="header" data-intent="navigate" data-layout="full-width-dark" data-nav-collapse="hamburger">
+
+  <!-- UTILITY BAR (captured: Login | Online Payments | Rental Portal | Parts.Cat.com | SIS 2.0 | Vision Link | Employee Login | Sponsorships) -->
+  <div class="utility-bar" data-section="utility-bar" data-intent="secondary-nav">
+    <div class="container utility-bar__inner">
+      <ul class="utility-bar__list">
+        <li><a href="/login/">Login</a></li>
+        <li><a href="/online-payments/">Online Payments</a></li>
+        <li><a href="/rental-portal/">Rental Portal</a></li>
+        <li><a href="https://parts.cat.com/">Parts.Cat.com</a></li>
+        <li><a href="/sis2/">SIS 2.0</a></li>
+        <li><a href="/visionlink/">Vision Link</a></li>
+        <li><a href="/employee-login/">Employee Login</a></li>
+        <li><a href="/sponsorships/">Sponsorships</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- MAIN HEADER (captured: 7-item primary nav + phone strip) -->
+  <div class="main-header">
+    <div class="container main-header__inner">
+      <a class="main-header__logo" href="/" aria-label="Wheeler Machinery Co. — home">
+        <img src="../current/assets/logo.png" alt="Wheeler Machinery Co.">
+      </a>
+      <button class="burger" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="icon icon-menu" aria-hidden="true"></span>
+      </button>
+      <nav class="main-nav" id="primary-nav" aria-label="primary">
+        <ul class="main-nav__list">
+          <li><a href="/new/">New Equipment</a></li>
+          <li><a href="/used-equipment/machinery/">Used Equipment</a></li>
+          <li><a href="/rental/">Rent Now</a></li>
+          <li><a href="/parts/">Order Parts</a></li>
+          <li><a href="/request-service/">Request Service</a></li>
+          <li><a href="/get-training/">Get Training</a></li>
+          <li><a href="/credit-application/">Credit App</a></li>
+        </ul>
+        <a class="main-nav__phone" href="tel:801-436-3672"><span class="icon icon-phone" aria-hidden="true"></span> 801-436-3672</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- MEGA NAV (captured: Quotes | Offers | Attachments | Trailers | Power Systems | Parts | Service | Technology | Support | Jobs) -->
+  <div class="mega-nav" data-section="mega-nav" data-intent="department-nav">
+    <div class="container mega-nav__inner">
+      <a href="/quotes/">Quotes</a>
+      <a href="/specials/">Offers</a>
+      <a href="/attachments/">Attachments</a>
+      <a href="/trailers/">Trailers</a>
+      <a href="/power-systems/">Power Systems</a>
+      <a href="/parts/">Parts</a>
+      <a href="/service/">Service</a>
+      <a href="/technology/">Technology</a>
+      <a href="/support/">Support</a>
+      <a href="/jobs/">Jobs</a>
+    </div>
+  </div>
+
+</header>
+
+<main id="main">
+
+  <!-- ───────── HERO + FINANCE CAROUSEL (captured: section.image-buttons w/ Slick) ───────── -->
+  <section class="finance-hero" data-section="hero-finance" data-intent="promo-offers" data-layout="carousel" data-items="3">
+    <div class="container">
+      <div class="finance-hero__head">
+        <h1 class="headline finance-hero__title">Financing Deals &amp; Special Offers</h1>
+      </div>
+    </div>
+    <div class="carousel" data-carousel data-autoplay="6000">
+      <button class="carousel__arrow carousel__arrow--prev" type="button" aria-label="Previous offer" data-carousel-prev>
+        <span class="icon icon-left-arrow" aria-hidden="true"></span>
+      </button>
+      <div class="carousel__viewport">
+        <div class="carousel__track" data-carousel-track>
+          <article class="slide" style="background-image: url('../current/assets/media/img-bttn-1-4bfe31.png');" aria-roledescription="slide" aria-label="1 of 3">
+            <div class="slide__inner">
+              <span class="slide__eyebrow">Finance</span>
+              <h2 class="slide__title">0% for up to 60 months + $500 toward CVA</h2>
+              <a class="btn btn-primary slide__cta" href="/specials/">Learn More <span data-placeholder="true" data-placeholder-type="slide-cta" data-placeholder-source="per-slide CTA label not in capture; using captured site-wide voice.ctaSamples" style="border:none;background:transparent;padding:0;margin-left:4px;font-size:0.6rem;font-family:ui-monospace,Menlo,monospace;opacity:0.55;">·</span></a>
+            </div>
+          </article>
+          <article class="slide" style="background-image: url('../current/assets/media/img-bttn-2-03b247.png');" aria-roledescription="slide" aria-label="2 of 3">
+            <div class="slide__inner">
+              <span class="slide__eyebrow">Finance</span>
+              <h2 class="slide__title">Financing &amp; Fuel Payback Offers</h2>
+              <a class="btn btn-primary slide__cta" href="/specials/">Learn More</a>
+            </div>
+          </article>
+          <article class="slide" style="background-image: url('../current/assets/media/img-bttn-3-3eab39.png');" aria-roledescription="slide" aria-label="3 of 3">
+            <div class="slide__inner">
+              <span class="slide__eyebrow">Finance</span>
+              <h2 class="slide__title">Cat® Card is now Cat® Commercial Account</h2>
+              <a class="btn btn-primary slide__cta" href="/specials/">Learn More</a>
+            </div>
+          </article>
+        </div>
+      </div>
+      <button class="carousel__arrow carousel__arrow--next" type="button" aria-label="Next offer" data-carousel-next>
+        <span class="icon icon-left-arrow" aria-hidden="true" style="transform: rotate(180deg);"></span>
+      </button>
+      <div class="carousel__dots" role="tablist" data-carousel-dots>
+        <button class="carousel__dot" type="button" aria-current="true" aria-label="Slide 1"></button>
+        <button class="carousel__dot" type="button" aria-current="false" aria-label="Slide 2"></button>
+        <button class="carousel__dot" type="button" aria-current="false" aria-label="Slide 3"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── SERVICES (captured: sentiment h5 + title h4 + 6 tiles, NOT merged with partners) ───────── -->
+  <section class="services" id="services" data-section="services" data-intent="service-tiles" data-layout="grid" data-items="6">
+    <div class="container">
+      <div class="services__head">
+        <h5 class="services__sentiment">We Proudly Support The Ones Who Build Our World</h5>
+        <h2 class="headline services__title">Your Heavy Machinery Experts</h2>
+      </div>
+      <div class="services__grid">
+        <a class="service-tile" href="/service/">
+          <span class="service-tile__icon icon icon-service" aria-hidden="true"></span>
+          <span class="service-tile__title">Field Service</span>
+        </a>
+        <a class="service-tile" href="/service/">
+          <span class="service-tile__icon icon icon-service" aria-hidden="true"></span>
+          <span class="service-tile__title">Shop Service</span>
+        </a>
+        <a class="service-tile" href="https://parts.cat.com/">
+          <span class="service-tile__icon icon icon-order" aria-hidden="true"></span>
+          <span class="service-tile__title">Parts.Cat.com</span>
+        </a>
+        <a class="service-tile" href="/customer-value-agreements/">
+          <span class="service-tile__icon icon icon-new" aria-hidden="true"></span>
+          <span class="service-tile__title">Maintenance Service</span>
+        </a>
+        <a class="service-tile" href="/equipment-rebuilds/">
+          <span class="service-tile__icon icon icon-used" aria-hidden="true"></span>
+          <span class="service-tile__title">Equipment Rebuilds</span>
+        </a>
+        <a class="service-tile" href="/request-service/">
+          <span class="service-tile__icon icon icon-phone" aria-hidden="true"></span>
+          <span class="service-tile__title">Request Service Online</span>
+        </a>
+      </div>
+      <div class="services__footer">
+        <a class="btn btn-primary" href="/service/">Browse More Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── OUR LOCATIONS (captured: section.our-locations + Google Maps iframe — verbatim concession) ───────── -->
+  <section class="our-locations" data-section="our-locations" data-intent="locations-map" data-layout="map-embed">
+    <div class="container">
+      <div class="our-locations__head">
+        <h2 class="headline">Our Locations</h2>
+      </div>
+      <div class="our-locations__map-wrap">
+        <iframe src="https://maps.google.com/maps?q=Wheeler+Machinery+Co+Salt+Lake+City+Utah&amp;output=embed&amp;hl=en&amp;z=7" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Wheeler Machinery Co. branch locations across Utah, Arizona, Nevada and Wyoming"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── DEPENDABLE AND RELIABLE (captured: section.number-cards w/ 12 numerals) ───────── -->
+  <section class="dependable" data-section="dependable" data-intent="brand-stats" data-layout="stat-grid" data-items="12">
+    <div class="container">
+      <div class="dependable__head">
+        <h2 class="headline dependable__title">Dependable and Reliable</h2>
+      </div>
+      <div class="stat-grid">
+        <div class="stat-card"><span class="stat-card__numeral">18</span><span class="stat-card__label">Locations</span></div>
+        <div class="stat-card"><span class="stat-card__numeral">75</span><span class="stat-card__label">Years</span></div>
+        <div class="stat-card"><span class="stat-card__numeral">24</span><span class="stat-card__label">Hours of Service</span></div>
+        <div class="stat-card"><span class="stat-card__numeral">90</span><span class="stat-card__label is-placeholder" data-placeholder="true" data-placeholder-type="stat-label" data-placeholder-source="label not in capture">e.g. employees</span></div>
+        <div class="stat-card"><span class="stat-card__numeral">3,300</span><span class="stat-card__label is-placeholder" data-placeholder="true" data-placeholder-type="stat-label" data-placeholder-source="label not in capture">e.g. customers served</span></div>
+        <div class="stat-card"><span class="stat-card__numeral">15</span><span class="stat-card__label is-placeholder" data-placeholder="true" data-placeholder-type="stat-label" data-placeholder-source="label not in capture">e.g. service trucks</span></div>
+        <div class="stat-card"><span class="stat-card__numeral">62,051</span><span class="stat-card__label is-placeholder" data-placeholder="true" data-placeholder-type="stat-label" data-placeholder-source="label not in capture">e.g. service hours</span></div>
+        <div class="stat-card"><span class="stat-card__numeral">400</span><span class="stat-card__label is-placeholder" data-placeholder="true" data-placeholder-type="stat-label" data-placeholder-source="label not in capture">e.g. rebuilds</span></div>
+        <div class="stat-card"><span class="stat-card__numeral">150,000</span><span class="stat-card__label is-placeholder" data-placeholder="true" data-placeholder-type="stat-label" data-placeholder-source="label not in capture">e.g. parts in stock</span></div>
+        <div class="stat-card"><span class="stat-card__numeral">100</span><span class="stat-card__label is-placeholder" data-placeholder="true" data-placeholder-type="stat-label" data-placeholder-source="label not in capture">e.g. technicians</span></div>
+        <div class="stat-card"><span class="stat-card__numeral">5</span><span class="stat-card__label is-placeholder" data-placeholder="true" data-placeholder-type="stat-label" data-placeholder-source="label not in capture">e.g. states served</span></div>
+        <div class="stat-card"><span class="stat-card__numeral">3,100</span><span class="stat-card__label is-placeholder" data-placeholder="true" data-placeholder-type="stat-label" data-placeholder-source="label not in capture">e.g. machines in fleet</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── IMAGE-TEXT (captured: section.image-text w/ empty h4 — body copy not in capture) ───────── -->
+  <section class="image-text" data-section="image-text" data-intent="brand-narrative" data-layout="half-and-half">
+    <div class="container">
+      <div class="image-text__grid">
+        <div class="image-text__image">
+          <img src="../current/assets/media/Wheeler_Campus-0d3589.webp" alt="Wheeler Machinery Co. headquarters campus">
+        </div>
+        <div class="image-text__copy">
+          <span data-placeholder="true" data-placeholder-type="section-heading" data-placeholder-source="captured h4 empty">
+            <span class="placeholder-eyebrow">PLACEHOLDER · section-heading</span>
+            <span class="placeholder-shape">e.g. SINCE 1951</span>
+          </span>
+          <span data-placeholder="true" data-placeholder-type="section-copy" data-placeholder-source="captured body copy not in extraction; section ships visibly empty on captured page or content lives outside captured DOM" style="display:block;">
+            <span class="placeholder-eyebrow">PLACEHOLDER · section-copy</span>
+            <span class="placeholder-shape">e.g. Multi-paragraph brand story about Wheeler Machinery's 75 years as Utah's authorized Cat dealer.</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── LOGO CAROUSEL (captured: section.logo-carousel w/ partner logos) ───────── -->
+  <section class="logo-carousel" data-section="logo-carousel" data-intent="brand-proof" data-layout="logo-strip" data-items="5">
+    <div class="container">
+      <div class="logo-carousel__head">
+        <span data-placeholder="true" data-placeholder-type="section-heading" data-placeholder-source="captured h4 empty">
+          <span class="placeholder-eyebrow">PLACEHOLDER · section-heading</span>
+          <span class="placeholder-shape">e.g. OUR PARTNERS</span>
+        </span>
+      </div>
+      <div class="logo-track">
+        <img src="../current/assets/media/Campbell-Companies-HorzV2-68ea90.webp" alt="Campbell Companies">
+        <img src="../current/assets/media/JLG_logo-1-1-60b1d8.jpeg" alt="JLG">
+        <img src="../current/assets/media/MonsonLogo-8a32ac.webp" alt="Monson">
+        <img src="../current/assets/media/Gardner-Logo-1a36da.webp" alt="Gardner">
+        <img src="../current/assets/media/SFS-e7162d.webp" alt="SFS">
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── RESOURCES (captured: section.resources w/ 3 image-resources tiles — empty headings) ───────── -->
+  <section class="resources" data-section="resources" data-intent="explore-more" data-layout="grid" data-items="3">
+    <div class="container">
+      <div class="resources__head">
+        <span data-placeholder="true" data-placeholder-type="section-heading" data-placeholder-source="captured h3 empty">
+          <span class="placeholder-eyebrow">PLACEHOLDER · section-heading</span>
+          <span class="placeholder-shape">e.g. RESOURCES</span>
+        </span>
+      </div>
+      <div class="resources__grid">
+        <a class="resource-tile" href="/news/" style="background-image: url('../current/assets/media/Compact_Track_Loader-3b9bd4.webp');">
+          <div class="resource-tile__inner">
+            <span data-placeholder="true" data-placeholder-type="resource-title" data-placeholder-source="captured h4 empty" style="background:rgba(255,255,255,0.9);color:var(--color-heading);">
+              <span class="placeholder-eyebrow">PLACEHOLDER · resource-title</span>
+              <span class="placeholder-shape">e.g. NEWS &amp; UPDATES</span>
+            </span>
+          </div>
+        </a>
+        <a class="resource-tile" href="/blog/" style="background-image: url('../current/assets/media/Excavators-24bfa6.webp');">
+          <div class="resource-tile__inner">
+            <span data-placeholder="true" data-placeholder-type="resource-title" data-placeholder-source="captured h4 empty" style="background:rgba(255,255,255,0.9);color:var(--color-heading);">
+              <span class="placeholder-eyebrow">PLACEHOLDER · resource-title</span>
+              <span class="placeholder-shape">e.g. CAT EQUIPMENT BLOG</span>
+            </span>
+          </div>
+        </a>
+        <a class="resource-tile" href="/about/" style="background-image: url('../current/assets/media/aerial_resource-e5e159.webp');">
+          <div class="resource-tile__inner">
+            <span data-placeholder="true" data-placeholder-type="resource-title" data-placeholder-source="captured h4 empty" style="background:rgba(255,255,255,0.9);color:var(--color-heading);">
+              <span class="placeholder-eyebrow">PLACEHOLDER · resource-title</span>
+              <span class="placeholder-shape">e.g. WHEELER FOUNDATION</span>
+            </span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── LOCALLY OWNED AND OPERATED (captured: section.half-and-half) ───────── -->
+  <section class="campbell" data-section="campbell" data-intent="parent-company" data-layout="half-and-half">
+    <div class="container">
+      <div class="campbell__grid">
+        <div class="campbell__image">
+          <img src="../current/assets/media/Campbell-Companies-HorzV2-68ea90.webp" alt="A Campbell Company">
+        </div>
+        <div class="campbell__copy">
+          <h2 class="headline campbell__title">Locally Owned and Operated</h2>
+          <h3 class="campbell__subheading">Campbell Companies:</h3>
+          <span data-placeholder="true" data-placeholder-type="section-copy" data-placeholder-source="captured body copy not in extraction" style="background:rgba(255,255,255,0.08);color:var(--color-text-on-dark);">
+            <span class="placeholder-eyebrow" style="color:var(--color-cat-yellow);opacity:1;">PLACEHOLDER · section-copy</span>
+            <span class="placeholder-shape" style="color:rgba(255,255,255,0.85);">e.g. Wheeler Machinery is a Campbell Company, family-owned and Utah-rooted since 1951.</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ───────── FOOTER (captured: 4-col + Quick Links + Contact + Connect) ───────── -->
+<footer class="site-footer" data-section="footer" data-intent="navigate" data-layout="mega">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <img src="../current/assets/logo.png" alt="Wheeler Machinery Co.">
+        <p>Wheeler Cat offers Construction Equipment, Tool &amp; Trailer Rental &amp; Sales across 18 locations in Utah and parts of Arizona, Nevada &amp; Wyoming.</p>
+      </div>
+      <div class="footer__col">
+        <h2>Quick Links</h2>
+        <ul>
+          <li><a href="/new/">Sales</a></li>
+          <li><a href="/rental/">Rentals</a></li>
+          <li><a href="/parts/">Cat Parts</a></li>
+          <li><a href="/service/">Service</a></li>
+          <li><a href="/about/locations/">Locations</a></li>
+          <li><a href="/contact-us/">Contact</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/sponsorships/">Sponsorship</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h2>Contact Us</h2>
+        <address class="footer__address">
+          4901 West 2100 South,<br>
+          Salt Lake City,<br>
+          UT 84120
+        </address>
+        <a class="footer__phone" href="tel:801-436-3672"><span class="icon icon-phone" aria-hidden="true"></span> 801-436-3672</a>
+      </div>
+      <div class="footer__col">
+        <h2>Connect With Us</h2>
+        <div class="footer__social">
+          <a href="#" aria-label="Facebook"><span class="icon icon-facebook" aria-hidden="true"></span></a>
+          <a href="#" aria-label="Instagram"><span class="icon icon-instagram" aria-hidden="true"></span></a>
+          <a href="#" aria-label="LinkedIn"><span class="icon icon-linkedin" aria-hidden="true"></span></a>
+          <a href="#" aria-label="YouTube"><span class="icon icon-youtube" aria-hidden="true"></span></a>
+          <a href="#" aria-label="Twitter"><span class="icon icon-twitter" aria-hidden="true"></span></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__legal">
+      <span>Copyright © 2026. All Rights Reserved. A Campbell Company</span>
+      <ul>
+        <li><a href="/sitemap/">Sitemap</a></li>
+        <li><a href="/legal/">Legal</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Hamburger nav a11y sync + Escape close
+  (function () {
+    var burger = document.querySelector('.burger');
+    var nav = document.getElementById('primary-nav');
+    if (burger && nav) {
+      burger.addEventListener('click', function () {
+        var open = nav.classList.toggle('is-open');
+        burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('is-open')) {
+          nav.classList.remove('is-open');
+          burger.setAttribute('aria-expanded', 'false');
+          burger.focus();
+        }
+      });
+    }
+  })();
+
+  // Finance carousel (vanilla JS — replaces captured Slick.js with same UX)
+  (function () {
+    var car = document.querySelector('[data-carousel]');
+    if (!car) return;
+    var track = car.querySelector('[data-carousel-track]');
+    var slides = track.querySelectorAll('.slide');
+    var dots = car.querySelectorAll('[data-carousel-dots] .carousel__dot');
+    var prev = car.querySelector('[data-carousel-prev]');
+    var next = car.querySelector('[data-carousel-next]');
+    var index = 0;
+    var total = slides.length;
+    var autoplay = parseInt(car.dataset.autoplay || '0', 10);
+    var timer = null;
+
+    function go(i) {
+      index = (i + total) % total;
+      track.style.transform = 'translateX(-' + (index * 100) + '%)';
+      dots.forEach(function (d, di) { d.setAttribute('aria-current', di === index ? 'true' : 'false'); });
+    }
+    function step() { go(index + 1); }
+    function start() { if (autoplay > 0) timer = setInterval(step, autoplay); }
+    function stop() { if (timer) { clearInterval(timer); timer = null; } }
+
+    if (prev) prev.addEventListener('click', function () { stop(); go(index - 1); start(); });
+    if (next) next.addEventListener('click', function () { stop(); go(index + 1); start(); });
+    dots.forEach(function (d, di) {
+      d.addEventListener('click', function () { stop(); go(di); start(); });
+    });
+    car.addEventListener('mouseenter', stop);
+    car.addEventListener('mouseleave', start);
+    car.addEventListener('focusin', stop);
+    car.addEventListener('focusout', start);
+    // Reduced-motion: pin to first slide, no autoplay
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      track.style.transition = 'none';
+      autoplay = 0;
+    } else {
+      start();
+    }
+  })();
+</script>
+
+</body>
+</html>

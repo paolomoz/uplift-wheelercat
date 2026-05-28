@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- stardust:provenance
+  writtenBy:         stardust:uplift (Phase 5 — prototype × 3, cinematic)
+  writtenAt:         2026-05-28T00:00:00Z
+  page:              home
+  variant:           C — kinetic-display (cinematic)
+  pageUrl:           https://wheelercat.com/
+  againstDirection:  stardust/direction.md (Active 2026-05-28T00:00:00Z)
+  readArtifacts:
+    - stardust/current/pages/home.json
+    - stardust/current/_brand-extraction.json
+    - DESIGN.md
+    - DESIGN.json
+    - DESIGN-C.md
+    - DESIGN-C.json
+    - stardust/prototypes/home-C-shape.md
+    - skills/prototype/reference/motion-runtime.md (canonical script embedded verbatim)
+  divergenceVersion: v1.0 (stardust v2)
+  fontDeck:          brand-inherited (Roboto Condensed + Roboto + icomoon)
+  paletteSource:     captured (Mode A brand-faithful) — proportions match variant A
+  motion:
+    register:        kinetic-display
+    registerSource:  auto-picked-from-brand-personality (signage-led + display-typography-signature + wayfinding-first)
+    runtime:         canonical inline IIFE (verbatim from motion-runtime.md § The canonical script)
+    lenis:           ./lenis.min.js + ./lenis.min.css (local-relative)
+    moves:
+      - monogram-unmask-on-load (data-split on "WHEELER" hero eyebrow)
+      - signage-marquee-top-of-page (.hero-marquee + .marquee__track, 30s loop)
+      - split-flap-financing-numerals (data-flip="60", data-flip="500")
+      - stat-row-count-up (data-countup="18" / "75" / "24" inline in locations narrative)
+      - section-head-wipe-left-to-right (.display-head .word clip-path reveals)
+      - blur-reveal-display-copy ([data-anim] cards + tile rotateX cascade [data-tile-anim])
+    reducedMotion:   "@media (prefers-reduced-motion: reduce)" neutralizes all animation
+    noScriptFallback:"<noscript><style>...</style></noscript>" inline in <head>
+  derivedColors:
+    - "#E6B800 — yellow hover"
+    - "#1A1A1A — dark hover"
+  unsourcedContent:
+    - selector: "section[data-section='support-partners'] .partner-logo"
+      type: brand-logo
+      count: 5
+      reason: "Partner names sourced from captured page; image assets not matched in stardust/current/assets/media/."
+  stardustVersion:   0.10.0
+-->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wheeler Cat - Construction Equipment, Tool & Trailer Rental & Sales</title>
+<meta name="description" content="Wheeler Cat offers Construction Equipment, Tool & Trailer Rental & Sales across 18 locations in Utah and parts of Arizona, Nevada & Wyoming.">
+<link rel="stylesheet" href="lenis.min.css">
+<noscript><style>
+  [data-anim], [data-tile-anim], [data-split] span {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    clip-path: none !important;
+  }
+  .word { clip-path: none !important; transform: none !important; }
+  [data-parallax] { transform: none !important; }
+  .hero-marquee { transform: none !important; }
+  .post-hero { transform: none !important; }
+  .marquee__track { animation: none !important; }
+  [data-countup], [data-flip] { visibility: visible !important; }
+</style></noscript>
+<style>
+:root {
+  --color-page: #FFFFFF;
+  --color-body: #454545;
+  --color-heading: #272727;
+  --color-cat-yellow: #FFCC00;
+  --color-cat-yellow-hover: #E6B800;
+  --color-surface-dark: #272727;
+  --color-warm-stone: #E5E3DF;
+  --color-text-on-dark: #FFFFFF;
+  --color-text-on-yellow: #272727;
+  --color-overlay: rgba(18,18,18,0.5);
+
+  /* Captured ad-hoc sizes — C inherits captured proportions */
+  --fs-body: 16px;
+  --fs-eyebrow: 18px;
+  --fs-tile: 22px;
+  --fs-card-title: 29px;
+  --fs-section-head: 30px;
+  --fs-headline: 40px;
+  --fs-stat: 42px;
+  --fs-label: 14px;
+  --fs-monogram: clamp(48px, 8vw, 96px);
+
+  --sp-xs: 4px; --sp-sm: 8px; --sp-md: 16px; --sp-lg: 24px; --sp-xl: 32px; --sp-xxl: 48px; --sp-section: 64px;
+  --r-primary: 5px; --r-pill: 999px;
+  --container-max: 1400px;
+  --shadow-card-strong: rgba(0,0,0,0.8) 0px 6px 16px 0px;
+  --font-display: "Roboto Condensed", "Roboto", system-ui, sans-serif;
+  --font-body: "Roboto", system-ui, sans-serif;
+  --font-icon: "icomoon";
+  --ease-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --parallax-progress: 0;
+}
+
+@font-face { font-family: "Roboto Condensed"; font-weight: 400 700; font-display: swap; src: url("../current/assets/fonts/ieVl2ZhZI2eCN5jzbjEETS9weq8-19K7DQ.woff2") format("woff2"); }
+@font-face { font-family: "Roboto"; font-weight: 300 700; font-display: swap; src: url("../current/assets/fonts/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2") format("woff2"); }
+@font-face { font-family: "Roboto"; font-weight: 700; font-display: swap; src: url("../current/assets/fonts/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBHMdazQ.woff2") format("woff2"); }
+@font-face { font-family: "icomoon"; src: url("../current/assets/fonts/icomoon.ttf") format("truetype"); font-display: block; }
+
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; font-family: var(--font-body); font-size: var(--fs-body); line-height: 1.5; color: var(--color-body); background: var(--color-page); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; cursor: pointer; }
+
+.container { width: 100%; max-width: var(--container-max); margin: 0 auto; padding-left: var(--sp-lg); padding-right: var(--sp-lg); }
+
+.display, .headline, .title, .sub-title, .label {
+  font-family: var(--font-display); font-weight: 700; text-transform: uppercase;
+  color: var(--color-heading); margin: 0;
+}
+.display { font-size: var(--fs-headline); line-height: 1.3; }
+.headline { font-size: var(--fs-section-head); line-height: 1.3; }
+.title { font-size: var(--fs-card-title); line-height: 1.1; }
+.label { font-size: var(--fs-label); line-height: 1.3; letter-spacing: 0.13em; }
+.body-copy { font-size: var(--fs-body); line-height: 1.5; color: var(--color-body); margin: 0; }
+.lead-copy { font-size: var(--fs-eyebrow); line-height: 1.45; color: var(--color-body); margin: 0; }
+
+.icon {
+  font-family: var(--font-icon) !important;
+  font-style: normal; font-weight: normal; line-height: 1;
+  -webkit-font-smoothing: antialiased; display: inline-block;
+}
+.icon-menu::before { content: "\e904"; }
+.icon-map-pin::before { content: "\e906"; }
+.icon-new::before { content: "\e907"; }
+.icon-used::before { content: "\e90c"; }
+.icon-rent::before { content: "\e909"; }
+.icon-order::before { content: "\e908"; }
+.icon-service::before { content: "\e90a"; }
+.icon-phone::before { content: "\e90b"; }
+.icon-facebook::before { content: "\e900"; }
+.icon-instagram::before { content: "\e902"; }
+.icon-linkedin::before { content: "\e903"; }
+.icon-youtube::before { content: "\e90d"; }
+.icon-twitter::before { content: "\e905"; }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: var(--sp-sm); font-family: var(--font-display); font-weight: 700; font-size: 0.875rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 12px 24px; border-radius: var(--r-primary); border: 1px solid transparent; transition: background 200ms var(--ease-out), color 200ms var(--ease-out); cursor: pointer; }
+.btn-primary { background: var(--color-cat-yellow); color: var(--color-text-on-yellow); border-color: var(--color-cat-yellow); }
+.btn-primary:hover { background: var(--color-surface-dark); color: var(--color-cat-yellow); border-color: var(--color-surface-dark); }
+.btn-secondary { background: transparent; color: var(--color-heading); border-color: var(--color-heading); padding: 10px 20px; }
+.btn-secondary:hover { background: var(--color-surface-dark); color: var(--color-text-on-dark); }
+.btn-ghost-light { background: transparent; color: var(--color-text-on-dark); border-color: var(--color-text-on-dark); padding: 10px 20px; }
+.btn-ghost-light:hover { background: var(--color-cat-yellow); color: var(--color-text-on-yellow); border-color: var(--color-cat-yellow); }
+
+/* HEADER */
+.site-header { position: sticky; top: 0; z-index: 50; background: var(--color-surface-dark); color: var(--color-text-on-dark); }
+.utility-bar { background: #1a1a1a; font-family: var(--font-display); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+.utility-bar__inner { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; gap: var(--sp-md); }
+.utility-bar a { color: var(--color-text-on-dark); }
+.utility-bar a:hover { color: var(--color-cat-yellow); }
+.utility-bar__right { display: inline-flex; gap: var(--sp-lg); align-items: center; }
+.utility-bar__phone { color: var(--color-cat-yellow); display: inline-flex; gap: var(--sp-sm); align-items: center; }
+.main-header__inner { display: flex; justify-content: space-between; align-items: stretch; padding: 16px 0; gap: var(--sp-md); }
+.main-header__logo img { height: 56px; width: auto; }
+.main-nav { display: flex; align-items: stretch; }
+.main-nav__list { display: flex; list-style: none; margin: 0; padding: 0; align-items: stretch; }
+.main-nav__list a { display: inline-flex; align-items: center; padding: 0 var(--sp-md); font-family: var(--font-display); font-weight: 700; font-size: 0.875rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-text-on-dark); transition: color 150ms var(--ease-out); }
+.main-nav__list a:hover { color: var(--color-cat-yellow); }
+.main-nav__phone { display: inline-flex; align-items: center; gap: var(--sp-sm); background: var(--color-cat-yellow); color: var(--color-text-on-yellow); padding: 0 var(--sp-lg); font-family: var(--font-display); font-weight: 700; font-size: 0.9rem; letter-spacing: 0.05em; }
+.burger { display: none; background: transparent; border: 1px solid var(--color-text-on-dark); color: var(--color-text-on-dark); width: 44px; height: 44px; border-radius: var(--r-primary); align-items: center; justify-content: center; font-size: 1.5rem; }
+
+/* SIGNAGE MARQUEE (kinetic-display signature move) */
+.hero-marquee {
+  background: var(--color-cat-yellow);
+  color: var(--color-text-on-yellow);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 10px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  border-bottom: 1px solid rgba(39,39,39,0.15);
+  will-change: transform;
+}
+.marquee__track {
+  display: inline-flex;
+  gap: 2em;
+  animation: marqueeScroll 30s linear infinite;
+  will-change: transform;
+  padding-left: 100%;
+}
+.marquee__track > span { padding-right: 2em; }
+@keyframes marqueeScroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* HERO */
+.hero {
+  position: relative; min-height: 600px;
+  display: flex; align-items: center;
+  background-image: linear-gradient(var(--color-overlay), var(--color-overlay)), url("../current/assets/media/SC_Hero-292cc4.jpg");
+  background-size: cover; background-position: center;
+  color: var(--color-text-on-dark);
+  padding: var(--sp-section) 0;
+  overflow: hidden;
+}
+.hero__inner { max-width: 920px; }
+.hero__monogram {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--fs-monogram);
+  line-height: 1;
+  letter-spacing: 0.04em;
+  color: var(--color-cat-yellow);
+  margin: 0 0 var(--sp-md);
+  display: inline-block;
+  text-transform: uppercase;
+}
+.hero__monogram span { display: inline-block; }
+.hero__eyebrow { color: var(--color-cat-yellow); margin-bottom: var(--sp-md); }
+.hero__headline { color: var(--color-text-on-dark); margin-bottom: var(--sp-lg); }
+.hero__headline .word { display: inline-block; overflow: hidden; will-change: clip-path, transform; }
+.hero__supporting { font-size: var(--fs-eyebrow); line-height: 1.45; margin-bottom: var(--sp-xl); color: rgba(255,255,255,0.92); max-width: 64ch; }
+.hero__actions { display: inline-flex; gap: var(--sp-md); flex-wrap: wrap; }
+
+/* FINANCE */
+.finance { background: var(--color-page); padding: var(--sp-section) 0; }
+.finance__head { text-align: center; margin-bottom: var(--sp-xxl); }
+.finance__head .label { color: var(--color-cat-yellow); display: inline-block; margin-bottom: var(--sp-sm); }
+.finance__head h2 .word { display: inline-block; overflow: hidden; }
+.finance__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--sp-lg); }
+.finance-card {
+  background: var(--color-surface-dark); color: var(--color-text-on-dark);
+  border-radius: var(--r-primary); padding: var(--sp-xl);
+  box-shadow: var(--shadow-card-strong);
+  display: flex; flex-direction: column; gap: var(--sp-md);
+  min-height: 320px; position: relative; overflow: hidden;
+}
+.finance-card::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 4px; background: var(--color-cat-yellow); }
+.finance-card__eyebrow { color: var(--color-cat-yellow); }
+.finance-card__title { color: var(--color-text-on-dark); font-size: var(--fs-card-title); line-height: 1.1; }
+.finance-card__title [data-flip] {
+  color: var(--color-cat-yellow);
+  display: inline-block;
+  font-variant-numeric: tabular-nums;
+  min-width: 1.2em;
+  text-align: center;
+}
+.finance-card__cta { margin-top: auto; align-self: flex-start; }
+
+/* SERVICES */
+.services { background: var(--color-page); padding: var(--sp-section) 0; }
+.services__head { text-align: center; margin-bottom: var(--sp-xxl); }
+.services__eyebrow { color: var(--color-cat-yellow); display: inline-block; margin-bottom: var(--sp-sm); }
+.services__title { color: var(--color-heading); }
+.services__title .word { display: inline-block; overflow: hidden; }
+.services__grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: var(--sp-md); }
+.service-tile {
+  background: var(--color-surface-dark); color: var(--color-text-on-dark);
+  border-radius: var(--r-primary); padding: var(--sp-lg);
+  display: flex; flex-direction: column; gap: var(--sp-md);
+  min-height: 220px; text-decoration: none;
+  transition: background 200ms var(--ease-out), transform 200ms var(--ease-out);
+  perspective: 800px;
+}
+.service-tile:hover { background: #1a1a1a; transform: translateY(-2px); }
+.service-tile__icon { font-size: 40px; color: var(--color-cat-yellow); line-height: 1; }
+.service-tile__title { font-family: var(--font-display); font-weight: 700; font-size: var(--fs-tile); text-transform: uppercase; color: var(--color-text-on-dark); margin-top: auto; }
+.services__footer { margin-top: var(--sp-xxl); text-align: center; }
+
+/* SUPPORT + PARTNERS */
+.support-partners { background: var(--color-warm-stone); padding: var(--sp-section) 0; }
+.support-partners__head { text-align: center; margin-bottom: var(--sp-xxl); }
+.support-partners__eyebrow { color: var(--color-heading); display: inline-block; margin-bottom: var(--sp-sm); }
+.support-partners__sentiment { color: var(--color-heading); max-width: 32ch; margin: 0 auto; }
+.support-partners__sentiment .word { display: inline-block; overflow: hidden; }
+.partner-strip { display: grid; grid-template-columns: repeat(5, 1fr); gap: var(--sp-lg); align-items: center; }
+.partner-logo {
+  background: rgba(255,255,255,0.6); border: 2px dashed var(--color-cat-yellow); border-radius: var(--r-primary);
+  padding: var(--sp-md); min-height: 96px;
+  display: flex; flex-direction: column; justify-content: center; align-items: center;
+  text-align: center; gap: 4px;
+}
+.partner-logo__eyebrow { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 0.65rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-heading); opacity: 0.7; }
+.partner-logo__name { font-family: var(--font-display); font-weight: 700; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-heading); }
+
+/* LOCATIONS */
+.locations { background: var(--color-page); padding: var(--sp-section) 0; }
+.locations__proof { font-size: var(--fs-eyebrow); line-height: 1.5; color: var(--color-body); text-align: center; max-width: 70ch; margin: 0 auto var(--sp-xxl); }
+.locations__proof strong { color: var(--color-heading); font-weight: 700; }
+.locations__proof [data-countup] { font-family: var(--font-display); font-weight: 700; color: var(--color-heading); font-size: 1.05em; font-variant-numeric: tabular-nums; min-width: 1.5em; display: inline-block; text-align: right; }
+.locations__sub-head { text-align: center; color: var(--color-heading); margin-bottom: var(--sp-xl); }
+.locations__sub-head .word { display: inline-block; overflow: hidden; }
+.branch-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--sp-md) var(--sp-xl); max-width: 900px; margin: 0 auto; list-style: none; padding: 0; }
+.branch-grid li { padding: var(--sp-sm) 0; border-bottom: 1px solid rgba(39,39,39,0.12); font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; letter-spacing: 0.02em; text-transform: uppercase; color: var(--color-heading); display: flex; align-items: center; gap: var(--sp-sm); }
+.branch-grid li .icon { font-size: 0.9rem; color: var(--color-cat-yellow); }
+.locations__more { text-align: center; margin-top: var(--sp-xl); font-size: 0.9rem; color: var(--color-body); }
+
+/* FOOTER */
+.site-footer { background: var(--color-surface-dark); color: var(--color-text-on-dark); padding: var(--sp-section) 0 var(--sp-xl); }
+.footer__grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: var(--sp-xxl); margin-bottom: var(--sp-xxl); }
+.footer__brand img { max-width: 220px; }
+.footer__brand p { margin-top: var(--sp-md); color: rgba(255,255,255,0.7); font-size: 0.9rem; max-width: 38ch; }
+.footer__col h2 { font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-text-on-dark); margin: 0 0 var(--sp-md); }
+.footer__col ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: var(--sp-sm); }
+.footer__col a { color: rgba(255,255,255,0.78); font-size: 0.92rem; }
+.footer__col a:hover { color: var(--color-cat-yellow); }
+.footer__address { font-size: 0.92rem; line-height: 1.55; color: rgba(255,255,255,0.78); font-style: normal; }
+.footer__phone { display: inline-flex; align-items: center; gap: var(--sp-sm); margin-top: var(--sp-md); color: var(--color-cat-yellow); font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; }
+.footer__social { display: flex; gap: var(--sp-md); margin-top: var(--sp-sm); }
+.footer__social a { width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,0.3); border-radius: var(--r-pill); color: var(--color-text-on-dark); }
+.footer__social a:hover { background: var(--color-cat-yellow); color: var(--color-text-on-yellow); border-color: var(--color-cat-yellow); }
+.footer__legal { padding-top: var(--sp-lg); border-top: 1px solid rgba(255,255,255,0.12); display: flex; justify-content: space-between; gap: var(--sp-md); font-size: 0.8rem; color: rgba(255,255,255,0.55); flex-wrap: wrap; }
+.footer__legal ul { display: flex; gap: var(--sp-lg); list-style: none; margin: 0; padding: 0; }
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .marquee__track { animation: none !important; }
+  [data-anim], [data-tile-anim], [data-split] span {
+    opacity: 1 !important; transform: none !important; filter: none !important; clip-path: none !important;
+  }
+  .word { clip-path: none !important; transform: none !important; }
+  [data-parallax], .hero-marquee { transform: none !important; }
+}
+
+@media (max-width: 1024px) {
+  :root { --sp-section: 48px; }
+  .services__grid { grid-template-columns: repeat(3, 1fr); }
+  .footer__grid { grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: var(--sp-xl); }
+}
+@media (max-width: 768px) {
+  .main-nav__list, .main-nav__phone { display: none; }
+  .burger { display: inline-flex; }
+  .main-nav.is-open .main-nav__list { display: flex; position: absolute; top: 100%; left: 0; right: 0; background: var(--color-surface-dark); flex-direction: column; padding: var(--sp-md) 0; border-top: 1px solid rgba(255,255,255,0.1); }
+  .main-nav.is-open .main-nav__list a { padding: var(--sp-md) var(--sp-lg); width: 100%; }
+  .main-nav.is-open .main-nav__phone { display: inline-flex; margin: var(--sp-md) var(--sp-lg); padding: var(--sp-md) var(--sp-lg); }
+  .main-header { position: relative; }
+  .finance__grid { grid-template-columns: repeat(2, 1fr); }
+  .partner-strip { grid-template-columns: repeat(3, 1fr); }
+  .footer__grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+  :root { --sp-section: 32px; }
+  .utility-bar__inner { font-size: 0.65rem; gap: var(--sp-sm); }
+  .utility-bar__right { gap: var(--sp-md); }
+  .hero { min-height: 480px; padding: var(--sp-xl) 0; }
+  .finance__grid { grid-template-columns: 1fr; }
+  .services__grid { grid-template-columns: repeat(2, 1fr); }
+  .partner-strip { grid-template-columns: repeat(2, 1fr); }
+  .branch-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer__grid { grid-template-columns: 1fr; gap: var(--sp-xl); }
+  .footer__legal { flex-direction: column; }
+  .hero-marquee { font-size: 0.8rem; }
+}
+
+:focus-visible { outline: 2px solid var(--color-cat-yellow); outline-offset: 2px; }
+</style>
+</head>
+<body>
+
+<header class="site-header" id="nav" data-section="header" data-intent="navigate" data-layout="full-width-dark" data-nav-collapse="hamburger">
+  <div class="utility-bar">
+    <div class="container utility-bar__inner">
+      <nav aria-label="utility"><a href="/sponsorships/">Sponsorships</a></nav>
+      <div class="utility-bar__right">
+        <a href="/about/locations/"><span class="icon icon-map-pin" aria-hidden="true"></span> 18 Branches</a>
+        <a class="utility-bar__phone" href="tel:801-436-3672"><span class="icon icon-phone" aria-hidden="true"></span> 801-436-3672</a>
+      </div>
+    </div>
+  </div>
+  <div class="main-header">
+    <div class="container main-header__inner">
+      <a class="main-header__logo" href="/" aria-label="Wheeler Machinery Co. — home"><img src="../current/assets/logo.png" alt="Wheeler Machinery Co."></a>
+      <button class="burger" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation"><span class="icon icon-menu" aria-hidden="true"></span></button>
+      <nav class="main-nav" id="primary-nav" aria-label="primary">
+        <ul class="main-nav__list">
+          <li><a href="/new/">New Equipment</a></li>
+          <li><a href="/used-equipment/machinery/">Used Equipment</a></li>
+          <li><a href="/rental/">Rent Now</a></li>
+          <li><a href="/request-service/">Request Service</a></li>
+          <li><a href="/credit-application/">Credit App</a></li>
+        </ul>
+        <a class="main-nav__phone" href="tel:801-436-3672"><span class="icon icon-phone" aria-hidden="true"></span> 801-436-3672</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<!-- SIGNAGE MARQUEE — kinetic-display signature move -->
+<div class="hero-marquee" data-section="signage-marquee" data-intent="kinetic-signage" data-layout="full-bleed" aria-hidden="true">
+  <div class="marquee__track">
+    <span>FINANCING DEALS · 0% APR · FUEL PAYBACK · CVA BONUS · SHOP USED · NEW QUOTE · REQUEST SERVICE · </span>
+    <span>FINANCING DEALS · 0% APR · FUEL PAYBACK · CVA BONUS · SHOP USED · NEW QUOTE · REQUEST SERVICE · </span>
+  </div>
+</div>
+
+<main>
+
+  <section class="hero" data-section="hero" data-intent="promo-finance" data-layout="full-bleed" data-media="image">
+    <div class="container hero__inner">
+      <div class="hero__monogram" data-split>WHEELER</div>
+      <span class="label hero__eyebrow" data-anim>Caterpillar · Current Offers</span>
+      <h1 class="display hero__headline display-head"><span class="word">FINANCING</span> <span class="word">DEALS</span> <span class="word">&amp;</span> <span class="word">SPECIAL</span> <span class="word">OFFERS</span></h1>
+      <p class="hero__supporting" data-anim>Cat finance offers, fuel-payback programs, and the CVA bonus — current incentives across our fleet.</p>
+      <div class="hero__actions" data-anim>
+        <a class="btn btn-primary" href="#services">Browse More Services</a>
+        <a class="btn btn-ghost-light" href="/about/">More About Us</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="finance" data-section="finance" data-intent="promo-offers" data-layout="grid" data-items="3">
+    <div class="container">
+      <div class="finance__head">
+        <span class="label" style="color: var(--color-cat-yellow);" data-anim>Finance</span>
+        <h2 class="headline display-head"><span class="word">CURRENT</span> <span class="word">FINANCE</span> <span class="word">OFFERS</span></h2>
+      </div>
+      <div class="finance__grid">
+        <article class="finance-card" data-anim>
+          <span class="label finance-card__eyebrow">Finance</span>
+          <h3 class="title finance-card__title">0% FOR UP TO <span data-flip="60">60</span> MONTHS + $<span data-flip="500">500</span> TOWARD CVA</h3>
+          <p class="body-copy" style="color: rgba(255,255,255,0.85);">On select Cat compact machines. Cat Vehicle Agreement bonus included.</p>
+          <a class="btn btn-primary finance-card__cta" href="/specials/">Learn More</a>
+        </article>
+        <article class="finance-card" data-anim>
+          <span class="label finance-card__eyebrow">Finance</span>
+          <h3 class="title finance-card__title">FINANCING &amp; FUEL PAYBACK OFFERS</h3>
+          <p class="body-copy" style="color: rgba(255,255,255,0.85);">Combined fuel-payback programs across active Cat machinery.</p>
+          <a class="btn btn-primary finance-card__cta" href="/specials/">Learn More</a>
+        </article>
+        <article class="finance-card" data-anim>
+          <span class="label finance-card__eyebrow">Finance</span>
+          <h3 class="title finance-card__title">CAT® CARD IS NOW CAT® COMMERCIAL ACCOUNT</h3>
+          <p class="body-copy" style="color: rgba(255,255,255,0.85);">Streamlined parts &amp; service purchasing on a single Cat account.</p>
+          <a class="btn btn-primary finance-card__cta" href="/specials/">Learn More</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services" data-section="services" data-intent="service-tiles" data-layout="grid" data-items="6">
+    <div class="container">
+      <div class="services__head">
+        <span class="label services__eyebrow" data-anim>Service &amp; Support</span>
+        <h2 class="headline services__title display-head"><span class="word">YOUR</span> <span class="word">HEAVY</span> <span class="word">MACHINERY</span> <span class="word">EXPERTS</span></h2>
+      </div>
+      <div class="services__grid">
+        <a class="service-tile" data-tile-anim href="/service/"><span class="service-tile__icon icon icon-service" aria-hidden="true"></span><span class="service-tile__title">Field Service</span></a>
+        <a class="service-tile" data-tile-anim href="/service/"><span class="service-tile__icon icon icon-service" aria-hidden="true"></span><span class="service-tile__title">Shop Service</span></a>
+        <a class="service-tile" data-tile-anim href="https://parts.cat.com/"><span class="service-tile__icon icon icon-order" aria-hidden="true"></span><span class="service-tile__title">Parts.Cat.com</span></a>
+        <a class="service-tile" data-tile-anim href="/customer-value-agreements/"><span class="service-tile__icon icon icon-new" aria-hidden="true"></span><span class="service-tile__title">Maintenance Service</span></a>
+        <a class="service-tile" data-tile-anim href="/service/"><span class="service-tile__icon icon icon-used" aria-hidden="true"></span><span class="service-tile__title">Equipment Rebuilds</span></a>
+        <a class="service-tile" data-tile-anim href="/request-service/"><span class="service-tile__icon icon icon-phone" aria-hidden="true"></span><span class="service-tile__title">Request Service Online</span></a>
+      </div>
+      <div class="services__footer" data-anim><a class="btn btn-secondary" href="/service/">Browse More Services</a></div>
+    </div>
+  </section>
+
+  <section class="support-partners" data-section="support-partners" data-intent="brand-proof" data-layout="stack" data-items="5">
+    <div class="container">
+      <div class="support-partners__head">
+        <span class="label support-partners__eyebrow" data-anim>Our Partners</span>
+        <h2 class="headline support-partners__sentiment display-head"><span class="word">WE</span> <span class="word">PROUDLY</span> <span class="word">SUPPORT</span> <span class="word">THE</span> <span class="word">ONES</span> <span class="word">WHO</span> <span class="word">BUILD</span> <span class="word">OUR</span> <span class="word">WORLD</span></h2>
+      </div>
+      <div class="partner-strip">
+        <span class="partner-logo" data-anim data-placeholder="true" data-placeholder-type="brand-logo"><span class="partner-logo__eyebrow">PLACEHOLDER · brand-logo</span><span class="partner-logo__name">Campbell Companies</span></span>
+        <span class="partner-logo" data-anim data-placeholder="true" data-placeholder-type="brand-logo"><span class="partner-logo__eyebrow">PLACEHOLDER · brand-logo</span><span class="partner-logo__name">JLG</span></span>
+        <span class="partner-logo" data-anim data-placeholder="true" data-placeholder-type="brand-logo"><span class="partner-logo__eyebrow">PLACEHOLDER · brand-logo</span><span class="partner-logo__name">Monson</span></span>
+        <span class="partner-logo" data-anim data-placeholder="true" data-placeholder-type="brand-logo"><span class="partner-logo__eyebrow">PLACEHOLDER · brand-logo</span><span class="partner-logo__name">Gardner</span></span>
+        <span class="partner-logo" data-anim data-placeholder="true" data-placeholder-type="brand-logo"><span class="partner-logo__eyebrow">PLACEHOLDER · brand-logo</span><span class="partner-logo__name">SFS</span></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="locations" data-section="locations-proof" data-intent="locations-stats" data-layout="stack" data-items="15">
+    <div class="container">
+      <p class="locations__proof" data-anim><strong><span data-countup="18">18</span> branches</strong> across Utah, Arizona, Nevada &amp; Wyoming — <strong>same-day field service</strong> for <strong><span data-countup="75">75</span> years</strong> and <strong><span data-countup="24">24</span>/7 phone support</strong> since 1951.</p>
+      <h2 class="headline locations__sub-head display-head"><span class="word">FIND</span> <span class="word">YOUR</span> <span class="word">NEAREST</span> <span class="word">BRANCH</span></h2>
+      <ul class="branch-grid" aria-label="Wheeler Cat branch locations">
+        <li data-anim><span class="icon icon-map-pin" aria-hidden="true"></span>Salt Lake City (HQ)</li>
+        <li data-anim><span class="icon icon-map-pin" aria-hidden="true"></span>Lindon</li>
+        <li data-anim><span class="icon icon-map-pin" aria-hidden="true"></span>Sandy</li>
+        <li data-anim><span class="icon icon-map-pin" aria-hidden="true"></span>Cedar City, UT</li>
+        <li data-anim><span class="icon icon-map-pin" aria-hidden="true"></span>Ely</li>
+        <li data-anim><span class="icon icon-map-pin" aria-hidden="true"></span>Hurricane</li>
+        <li data-anim><span class="icon icon-map-pin" aria-hidden="true"></span>Kaysville</li>
+        <li data-anim><span class="icon icon-map-pin" aria-hidden="true"></span>Logan</li>
+        <li data-anim><span class="icon icon-map-pin" aria-hidden="true"></span>Moab</li>
+        <li data-anim><span class="icon icon-map-pin" aria-hidden="true"></span>Ogden</li>
+        <li data-anim><span class="icon icon-map-pin" aria-hidden="true"></span>Park City</li>
+        <li data-anim><span class="icon icon-map-pin" aria-hidden="true"></span>Salina</li>
+        <li data-anim><span class="icon icon-map-pin" aria-hidden="true"></span>Tooele</li>
+        <li data-anim><span class="icon icon-map-pin" aria-hidden="true"></span>Vernal</li>
+        <li data-anim><span class="icon icon-map-pin" aria-hidden="true"></span>West Valley</li>
+      </ul>
+      <p class="locations__more" data-anim>Plus 3 additional locations · <a href="/about/locations/" style="color: var(--color-heading); text-decoration: underline;">View all 18 branches</a></p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer" data-section="footer" data-intent="navigate" data-layout="mega">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <img src="../current/assets/logo.png" alt="Wheeler Machinery Co.">
+        <p>Construction Equipment, Tool &amp; Trailer Rental &amp; Sales across 18 locations in Utah and parts of Arizona, Nevada &amp; Wyoming.</p>
+      </div>
+      <div class="footer__col">
+        <h2>Quick Links</h2>
+        <ul>
+          <li><a href="/new/">Sales</a></li>
+          <li><a href="/rental/">Rentals</a></li>
+          <li><a href="/parts/">Cat Parts</a></li>
+          <li><a href="/service/">Service</a></li>
+          <li><a href="/about/locations/">Locations</a></li>
+          <li><a href="/contact-us/">Contact</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/sponsorships/">Sponsorship</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h2>Contact Us</h2>
+        <address class="footer__address">4901 West 2100 South,<br>Salt Lake City,<br>UT 84120</address>
+        <a class="footer__phone" href="tel:801-436-3672"><span class="icon icon-phone" aria-hidden="true"></span> 801-436-3672</a>
+      </div>
+      <div class="footer__col">
+        <h2>Connect With Us</h2>
+        <div class="footer__social">
+          <a href="#" aria-label="Facebook"><span class="icon icon-facebook" aria-hidden="true"></span></a>
+          <a href="#" aria-label="Instagram"><span class="icon icon-instagram" aria-hidden="true"></span></a>
+          <a href="#" aria-label="LinkedIn"><span class="icon icon-linkedin" aria-hidden="true"></span></a>
+          <a href="#" aria-label="YouTube"><span class="icon icon-youtube" aria-hidden="true"></span></a>
+          <a href="#" aria-label="Twitter"><span class="icon icon-twitter" aria-hidden="true"></span></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__legal">
+      <span>Copyright © 2026. All Rights Reserved. A Campbell Company</span>
+      <ul>
+        <li><a href="/sitemap/">Sitemap</a></li>
+        <li><a href="/legal/">Legal</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile nav (a11y exception)
+  (function () {
+    var burger = document.querySelector('.burger');
+    var nav = document.getElementById('primary-nav');
+    if (!burger || !nav) return;
+    burger.addEventListener('click', function () {
+      var open = nav.classList.toggle('is-open');
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && nav.classList.contains('is-open')) {
+        nav.classList.remove('is-open');
+        burger.setAttribute('aria-expanded', 'false');
+        burger.focus();
+      }
+    });
+  })();
+</script>
+
+<script src="lenis.min.js"></script>
+<script>
+/* ─────────────────────────────────────────────────────────────
+   Canonical motion runtime — kinetic-display register
+   Embedded verbatim from skills/prototype/reference/motion-runtime.md
+   Tuned animConfig per kinetic-display:
+     parallax.translate: 30, fade: 0.55
+     cards.slide: 48, stagger: 0.16
+     wordmark.clip: 80
+   ───────────────────────────────────────────────────────────── */
+(function () {
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // ── Lenis bootstrap ────────────────────────────────────────────
+  const lenis = new Lenis({ lerp: 0.1, smoothWheel: !prefersReducedMotion });
+  window.__lenis = lenis;
+  (function raf(t) { lenis.raf(t); requestAnimationFrame(raf); })(performance.now());
+
+  // ── Nav scrolled state ─────────────────────────────────────────
+  const nav = document.getElementById('nav');
+  if (nav) lenis.on('scroll', ({ scroll }) => {
+    nav.classList.toggle('scrolled', scroll > 40);
+  });
+
+  // ── Helpers ────────────────────────────────────────────────────
+  const clamp = (v, lo, hi) => v < lo ? lo : v > hi ? hi : v;
+  const easeOut3 = t => 1 - Math.pow(1 - t, 3);
+  const getDocTop = el => el.getBoundingClientRect().top + (window.__lenis ? window.__lenis.scroll : window.scrollY);
+
+  // ── Register-specific configuration (kinetic-display tuning) ──
+  const animConfig = {
+    parallax:      { translate: 30, fade: 0.55, rangeStart: 0, range: 80 },
+    plansParallax: { translate: 16, rangeStart: 0, range: 80 },
+    cards:         { trigger: 0.85, range: 0.32, slide: 48, stagger: 0.16 },
+    wordmark:      { range: 0.6, clip: 80 },
+  };
+
+  // ── data-split: pre-process letter spans ───────────────────────
+  document.querySelectorAll('[data-split]').forEach((el) => {
+    const text = el.textContent;
+    el.textContent = '';
+    text.split('').forEach((ch) => {
+      const s = document.createElement('span');
+      s.textContent = ch === ' ' ? ' ' : ch;
+      s.style.opacity = '0';
+      s.style.transform = 'translateY(60%)';
+      s.style.filter = 'blur(8px)';
+      el.appendChild(s);
+    });
+  });
+
+  // ── Register lists ─────────────────────────────────────────────
+  const animList = [];
+  const headWords = [];
+  const splitLetters = [];
+  let wordmarkEl = null, wordmarkTop = 0;
+
+  function measure() {
+    const postHeroEl = document.querySelector('.post-hero');
+    const savedTransform = postHeroEl ? postHeroEl.style.transform : '';
+    if (postHeroEl) postHeroEl.style.transform = '';
+
+    animList.forEach(({ el }) => { el.style.opacity = el.style.transform = el.style.willChange = ''; });
+    animList.length = 0;
+    headWords.length = 0;
+    splitLetters.length = 0;
+
+    document.querySelectorAll('[data-anim], [data-tile-anim]').forEach((el) => {
+      const parent = el.closest('.band, .ops-band, .alerts, .access, .news, .ops-section > div, .ops-tiles, .ops-alerts, .ops-mini, section');
+      let stagger = 0;
+      if (parent) {
+        const peers = parent.querySelectorAll('[data-anim], [data-tile-anim]');
+        const idx = Array.prototype.indexOf.call(peers, el);
+        stagger = (idx % 8) * animConfig.cards.stagger;
+      }
+      el.style.opacity = '0';
+      el.style.transform = el.hasAttribute('data-tile-anim')
+        ? `translateY(28px) rotateX(8deg)`
+        : `translateY(${animConfig.cards.slide}px)`;
+      el.style.willChange = 'opacity, transform';
+      animList.push({ el, triggerTop: getDocTop(el), staggerDelay: stagger });
+    });
+
+    document.querySelectorAll('.display-head, .terminals-band__head h2').forEach((head) => {
+      const words = head.querySelectorAll('.word');
+      const top = getDocTop(head);
+      words.forEach((w, i) => {
+        w.style.clipPath = 'inset(0 100% 0 0)';
+        w.style.transform = 'translateY(110%)';
+        w.style.willChange = 'clip-path, transform';
+        headWords.push({ el: w, triggerTop: top, staggerDelay: i * 0.15 });
+      });
+    });
+
+    document.querySelectorAll('[data-split]').forEach((el) => {
+      const top = getDocTop(el);
+      el.querySelectorAll('span').forEach((s, i) => {
+        splitLetters.push({ el: s, triggerTop: top, staggerDelay: i * 0.05 });
+      });
+    });
+
+    wordmarkEl = document.querySelector('.site-footer__wordmark');
+    if (wordmarkEl) {
+      wordmarkTop = getDocTop(wordmarkEl);
+      wordmarkEl.style.clipPath = `inset(${animConfig.wordmark.clip}% 0 0 0)`;
+      wordmarkEl.style.willChange = 'clip-path';
+    }
+
+    if (postHeroEl) postHeroEl.style.transform = savedTransform;
+  }
+
+  // ── [data-countup] ─────────────────────────────────────────────
+  const countSeen = new WeakSet();
+  const countObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting || countSeen.has(entry.target)) return;
+      countSeen.add(entry.target);
+      const target = +entry.target.getAttribute('data-countup');
+      const duration = target > 20 ? 1400 : target > 5 ? 900 : 600;
+      const start = performance.now();
+      (function step(now) {
+        const t = clamp((now - start) / duration, 0, 1);
+        entry.target.textContent = String(Math.round(easeOut3(t) * target));
+        if (t < 1) requestAnimationFrame(step);
+      })(performance.now());
+    });
+  }, { threshold: 0.4 });
+  document.querySelectorAll('[data-countup]').forEach((el) => countObserver.observe(el));
+
+  // ── [data-flip] ────────────────────────────────────────────────
+  const flipObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting || entry.target.dataset.flipped === '1') return;
+      entry.target.dataset.flipped = '1';
+      const target = +entry.target.getAttribute('data-flip');
+      const total = 8 + Math.floor(Math.random() * 4);
+      let i = 0;
+      (function flap() {
+        if (i >= total) { entry.target.textContent = String(target); return; }
+        entry.target.textContent = String(Math.floor(Math.random() * 10));
+        i++;
+        setTimeout(flap, 60);
+      })();
+    });
+  }, { threshold: 0.5 });
+  document.querySelectorAll('[data-flip]').forEach((el) => flipObserver.observe(el));
+
+  // ── [data-fill] ────────────────────────────────────────────────
+  const fillObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting || entry.target.dataset.filled === '1') return;
+      entry.target.dataset.filled = '1';
+      const pct = +entry.target.getAttribute('data-fill');
+      setTimeout(() => { entry.target.style.width = pct + '%'; }, 120);
+    });
+  }, { threshold: 0.4 });
+  document.querySelectorAll('[data-fill]').forEach((el) => fillObserver.observe(el));
+
+  // ── Live refresh sweep ─────────────────────────────────────────
+  const sweepEl = document.querySelector('.live-sweep');
+  if (sweepEl && !prefersReducedMotion) {
+    setInterval(() => {
+      sweepEl.classList.add('sweep');
+      setTimeout(() => sweepEl.classList.remove('sweep'), 1700);
+    }, 5400);
+  }
+
+  // ── rAF loop ───────────────────────────────────────────────────
+  const heroMarqueeEl = document.querySelector('.hero-marquee');
+  const postHeroEl = document.querySelector('.post-hero');
+  let _lastMB = null;
+
+  (function tick() {
+    if (prefersReducedMotion) { requestAnimationFrame(tick); return; }
+    const sY = window.__lenis ? window.__lenis.scroll : window.scrollY;
+    const vh = window.innerHeight;
+    const isDesktop = window.innerWidth > 767;
+
+    if (heroMarqueeEl) {
+      const pp = animConfig.parallax;
+      if (isDesktop) {
+        const rs = pp.rangeStart / 100 * vh;
+        const re = pp.range / 100 * vh;
+        const p = easeOut3(clamp((sY - rs) / (re - rs), 0, 1));
+        heroMarqueeEl.style.transform = `translateY(${p * -pp.translate}vh)`;
+        document.documentElement.style.setProperty('--parallax-progress', p);
+      } else {
+        heroMarqueeEl.style.transform = '';
+        document.documentElement.style.setProperty('--parallax-progress', 0);
+      }
+    }
+
+    let postHeroOffsetPx = 0;
+    if (postHeroEl) {
+      const pp2 = animConfig.plansParallax;
+      if (isDesktop) {
+        const rs = pp2.rangeStart / 100 * vh;
+        const re = pp2.range / 100 * vh;
+        const p = easeOut3(clamp((sY - rs) / (re - rs), 0, 1));
+        postHeroOffsetPx = p * -pp2.translate / 100 * vh;
+        postHeroEl.style.transform = `translateY(${p * -pp2.translate}vh)`;
+        const newMB = `${p * -pp2.translate}vh`;
+        if (newMB !== _lastMB) { postHeroEl.style.marginBottom = newMB; _lastMB = newMB; }
+      } else {
+        postHeroEl.style.transform = '';
+        if (_lastMB !== '') { postHeroEl.style.marginBottom = ''; _lastMB = ''; }
+      }
+    }
+
+    for (let i = 0; i < animList.length; i++) {
+      const item = animList[i];
+      const { trigger, range, slide } = animConfig.cards;
+      const raw = (sY + vh * trigger - (item.triggerTop + postHeroOffsetPx)) / (vh * range);
+      const p = easeOut3(clamp(raw - item.staggerDelay, 0, 1));
+      item.el.style.opacity = String(p);
+      if (item.el.hasAttribute('data-tile-anim')) {
+        item.el.style.transform = `translateY(${(1 - p) * 28}px) rotateX(${(1 - p) * 8}deg)`;
+      } else {
+        item.el.style.transform = `translateY(${(1 - p) * slide}px)`;
+      }
+    }
+
+    for (let i = 0; i < headWords.length; i++) {
+      const item = headWords[i];
+      const raw = (sY + vh * 0.85 - (item.triggerTop + postHeroOffsetPx)) / (vh * 0.30);
+      const p = easeOut3(clamp(raw - item.staggerDelay, 0, 1));
+      item.el.style.clipPath = `inset(0 ${(1 - p) * 100}% 0 0)`;
+      item.el.style.transform = `translateY(${(1 - p) * 110}%)`;
+    }
+
+    for (let i = 0; i < splitLetters.length; i++) {
+      const item = splitLetters[i];
+      const raw = (sY + vh * 0.85 - (item.triggerTop + postHeroOffsetPx)) / (vh * 0.35);
+      const p = easeOut3(clamp(raw - item.staggerDelay, 0, 1));
+      item.el.style.opacity = String(p);
+      item.el.style.transform = `translateY(${(1 - p) * 60}%)`;
+      item.el.style.filter = `blur(${(1 - p) * 8}px)`;
+    }
+
+    if (wordmarkEl) {
+      const adjustedTop = wordmarkTop + postHeroOffsetPx;
+      const wP = easeOut3(clamp((sY + vh - adjustedTop) / (vh * animConfig.wordmark.range), 0, 1));
+      wordmarkEl.style.clipPath = `inset(${(1 - wP) * animConfig.wordmark.clip}% 0 0 0)`;
+    }
+
+    requestAnimationFrame(tick);
+  })();
+
+  measure();
+  window.addEventListener('load',   () => requestAnimationFrame(measure), { once: true });
+  window.addEventListener('resize', measure, { passive: true });
+
+  // Reduced-motion: force final states
+  if (prefersReducedMotion) {
+    document.querySelectorAll('[data-anim], [data-tile-anim], [data-split] span').forEach((el) => {
+      el.style.opacity = '1';
+      el.style.transform = 'none';
+      el.style.filter = 'none';
+      el.style.clipPath = 'none';
+    });
+    document.querySelectorAll('.word').forEach((el) => {
+      el.style.clipPath = 'none';
+      el.style.transform = 'none';
+    });
+    document.querySelectorAll('[data-countup]').forEach((el) => { el.textContent = el.getAttribute('data-countup'); });
+    document.querySelectorAll('[data-flip]').forEach((el) => { el.textContent = el.getAttribute('data-flip'); });
+    document.querySelectorAll('[data-fill]').forEach((el) => { el.style.width = el.getAttribute('data-fill') + '%'; });
+  }
+})();
+</script>
+
+</body>
+</html>

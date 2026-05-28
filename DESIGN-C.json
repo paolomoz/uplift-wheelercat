@@ -1,0 +1,170 @@
+{
+  "_provenance": {
+    "writtenBy": "stardust:direct (Phase 4 of stardust:uplift)",
+    "writtenAt": "2026-05-28T00:00:00Z",
+    "variant": "C",
+    "parent": "DESIGN.json",
+    "readArtifacts": [
+      "DESIGN.json",
+      "stardust/uplift-improvements.md",
+      "stardust/uplift-questions.md",
+      "stardust/direction.md",
+      "prototype/reference/motion-registers.md (kinetic-display)"
+    ],
+    "stardustVersion": "0.10.0"
+  },
+  "schemaVersion": 2,
+  "title": "Design System: Wheeler Cat — Variant C (display-typography amplification, kinetic-display)",
+  "variant": {
+    "id": "C",
+    "role": "different captured trait amplified — display-typography amplification",
+    "bet": "kinetic-display motion register engaged; palette proportions match A; composition matches A; both static and cinematic renders ship",
+    "static": false,
+    "cinematic": true,
+    "siblings": ["A", "B"]
+  },
+  "inherits": {
+    "from": "DESIGN.json",
+    "items": [
+      "colorMeta",
+      "typographyMeta",
+      "modularScale",
+      "shadows",
+      "breakpoints",
+      "sectionPadding",
+      "iaPriorities",
+      "componentStyle",
+      "motifs",
+      "voice",
+      "systemComponentRoles",
+      "iconFont",
+      "divergence"
+    ],
+    "compositionInheritFrom": "DESIGN-A (palette proportions, band ground assignments, IA, section sequence)"
+  },
+  "extensions": {
+    "palette": {
+      "proportions": "match variant A (captured proportions); NOT inverted (B is the inverted variant)",
+      "catYellowDeployment": "CTA + eyebrow + 1px border (captured proportion held — same as A)"
+    },
+    "composition": {
+      "matchesVariant": "A",
+      "sectionSequence": ["header", "hero", "finance-band", "service-tile-row", "partner-sentiment-band", "locations-band", "footer"],
+      "improvements_1_through_5_applied": true,
+      "note": "C inherits A's composition verbatim. The bet is motion, not layout."
+    },
+    "motion": {
+      "register": "kinetic-display",
+      "registerSource": "auto-picked-from-brand-personality",
+      "registerRationale": "PRODUCT.md Brand Personality traits: signage-led ✓, display-typography-signature ✓, wayfinding-first ✓ (partial). Tie-broken against arrival/kinetic-grid/editorial/live-systems per motion-registers.md § Selection heuristic. kinetic-display refuses clause (long fades, decorative serifs, editorial body copy as canvas) does not conflict with any captured trait.",
+      "tokens": {
+        "easings": {
+          "entrance": "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+          "expo": "cubic-bezier(0.16, 1, 0.3, 1)"
+        },
+        "durations": {
+          "enter": 800,
+          "stagger": 110,
+          "letterStagger": 50
+        },
+        "marquee": {
+          "speed": 30
+        }
+      },
+      "moves": [
+        {
+          "id": "monogram-unmask-on-load",
+          "trigger": "page-load",
+          "target": "hero WHEELER monogram / hero headline",
+          "behavior": "clip-path: inset(0 0 100% 0) → inset(0 0 0% 0) per letter, 120ms letter stagger, 800ms total",
+          "reducedMotionFallback": "render fully visible at load"
+        },
+        {
+          "id": "signage-marquee-top-of-page",
+          "trigger": "always",
+          "target": "top-of-page marquee strip below utility bar",
+          "behavior": "infinite marquee scrolling 'FINANCING DEALS · 0% APR · FUEL PAYBACK · CVA BONUS · SHOP USED', 30s loop",
+          "reducedMotionFallback": "marquee frozen at initial position; content readable"
+        },
+        {
+          "id": "split-flap-financing-numerals",
+          "trigger": "IO-enter",
+          "target": "finance numerals 0%, 60 MONTHS, $500 within finance cards",
+          "behavior": "cycle through random digits 600–900ms before landing on target value with expo ease",
+          "reducedMotionFallback": "render at target value statically"
+        },
+        {
+          "id": "stat-row-count-up",
+          "trigger": "IO-enter",
+          "target": "narrative-proof numerals in locations band (18, 75, 24)",
+          "behavior": "count up 0 → target value in 1100ms",
+          "reducedMotionFallback": "land at target value statically"
+        },
+        {
+          "id": "section-head-wipe-left-to-right",
+          "trigger": "IO-enter",
+          "target": "section heads (YOUR HEAVY MACHINERY EXPERTS, WE PROUDLY SUPPORT THE ONES WHO BUILD OUR WORLD, etc.)",
+          "behavior": "clip-path: inset(0 100% 0 0) → inset(0 0 0 0), 800ms with entrance ease",
+          "reducedMotionFallback": "render full-opacity at load"
+        },
+        {
+          "id": "blur-reveal-display-copy",
+          "trigger": "IO-enter",
+          "target": "large display copy (hero headline, finance card titles, section heads)",
+          "behavior": "filter: blur(8px) → blur(0) + opacity 0 → 1 over 800ms",
+          "reducedMotionFallback": "collapse to opacity-only fade-in 300ms"
+        }
+      ],
+      "reducedMotionFallback": "marquees-freeze, splits-render-static, counts-land-at-target, blurs-collapse-to-opacity",
+      "dataAttributes": [
+        "[data-anim] — generic IO-enter trigger",
+        "[data-split] — split-flap numerals",
+        "[data-flip] — flip-board variants of split",
+        "[data-countup] — count-up numerals",
+        ".marquee__track — marquee container"
+      ]
+    },
+    "renderOutputs": [
+      {
+        "filename": "home-C-proposed.html",
+        "type": "static",
+        "purpose": "static fallback / cinematic-vs-static comparison gate (Pass 6f); reads as variant A composition with no motion declared"
+      },
+      {
+        "filename": "home-C-cinematic.html",
+        "type": "cinematic",
+        "purpose": "visionary pitch surface with kinetic-display register engaged"
+      }
+    ],
+    "antiToolboxCheck": {
+      "betAxis": "motion register",
+      "rejectedMoves": [
+        "Layout change (composition matches A verbatim)",
+        "Palette change (proportions match A — captured)",
+        "Custom font (Mode A pinning)",
+        "Invented color (palette set pinned)",
+        "Editorial-register vocabulary (signage vocabulary is the amplified trait)",
+        "Glassmorphism / gradient text / side-stripes",
+        "Mixed motion registers (kinetic-display only; no arrival / editorial / live-systems / kinetic-grid sections)",
+        "Decorative-only motion (every move references a captured surface element — headline, numerals, section heads, marquee content)",
+        "Long fades (kinetic-display refuses; entrances use hard reveals like wipe, split-flap, blur-resolve)"
+      ]
+    },
+    "whatCIsNot": [
+      "Not 'B with motion'. Palette proportions match A (captured), not B (yellow-surface). C and B differ on both motion AND palette ground.",
+      "Not 'more variant A'. C reuses A's composition exactly; the bet is motion.",
+      "Not a free-for-all. The register is kinetic-display; moves are bound by the register's signature-moves list and refuses clause.",
+      "Not an excuse to skip the reduced-motion fallback. Every move has a static fallback; static render ships alongside the cinematic."
+    ],
+    "capturedSourceBasis": {
+      "headingFamily": "Roboto Condensed (display-cap signature)",
+      "uppercasePercent": 53,
+      "distinctCtaLabels": 42,
+      "heroHeadline": "FINANCING DEALS & SPECIAL OFFERS (display-cap)",
+      "numericalContent": "0% FOR UP TO 60 MONTHS + $500 TOWARD CVA; stat row 18/75/24; model codes; financing percentages",
+      "logoBrand": "WHEELER (7-letter horizontal wordmark — monogram-shaped)",
+      "branches": 18,
+      "wayfinding": "embedded Google map + branch list as structural element"
+    }
+  }
+}

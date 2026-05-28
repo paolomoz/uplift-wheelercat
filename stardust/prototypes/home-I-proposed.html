@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- stardust:provenance
+  writtenBy:         stardust:prototype (Phase render — variant I)
+  writtenAt:         2026-05-28T01:30:00Z
+  page:              home
+  variant:           I (motif vocabulary swap — equipment spec-sheet primitive, static)
+  pageUrl:           https://wheelercat.com/
+  againstDirection:  stardust/direction.md (Active 2026-05-28T00:00:00Z — six-candidate exploration fork)
+  readArtifacts:
+    - stardust/current/pages/home.json
+    - stardust/current/_brand-extraction.json
+    - DESIGN.md
+    - DESIGN.json
+    - DESIGN-I.md
+    - DESIGN-I.json
+    - stardust/uplift-improvements.md
+    - stardust/prototypes/home-I-shape.md
+    - stardust/prototypes/home-A-proposed.html
+  divergenceVersion: v1.0 (stardust v2)
+  fontDeck:          brand-inherited (Roboto Condensed + Roboto + icomoon)
+  paletteSource:     captured (Mode A brand-faithful)
+  derivedColors:
+    - "#E6B800 — yellow hover (10% darker; documented derived state)"
+    - "rgba(229,227,223,0.3) — zebra row tint, derived from captured warm-stone #E5E3DF"
+  brandFaithfulInversions:
+    - "Page ground #FFFFFF and surface-dark #272727 are pure values per Mode A brand-faithful inversion. Pinned by captured palette."
+  voiceClassification:
+    - section: "hero.eyebrow-strip"
+      basis: "direction-authorized synthesis from captured tagline + branch claim (TODAY'S FLEET · 18 BRANCHES · UT · AZ · NV · WY; fleet stat as PLACEHOLDER)"
+    - section: "filter-chips"
+      basis: "direction-authorized industry vocabulary; icomoon glyphs reused at semantic position (icon-new, icon-used, icon-rent, icon-order); size chips use brand-faithful text-only treatment"
+    - section: "spec-table.columns"
+      basis: "direction-authorized chrome (MODEL / CATEGORY / BRANCHES STOCKING / STARTING AT / CTA) — equipment-dealer industry vocabulary"
+    - section: "spec-table.rows"
+      basis: "PLACEHOLDER · spec-row with Cat model code shape hints (public Cat catalog references as example data per placeholder contract)"
+    - section: "all-other-headings-and-copy"
+      basis: "captured-verbatim"
+  wcagContrast:
+    - "white on #272727: 14.7 (AAA)"
+    - "dark #272727 on #FFCC00: 12.6 (AAA) — active chip + spec-table hover CTA"
+    - "white on #FFCC00: 1.95 (FAIL) — never paired"
+    - "#454545 on #FFFFFF: 9.7 (AAA)"
+    - "#454545 on rgba(229,227,223,0.3) zebra: ~9.5 (AAA)"
+    - "#FFCC00 on #272727: 8.6 (AAA) — spec-table BROWSE link"
+  unsourcedContent:
+    - selector: "section[data-section='hero-eyebrow-strip'] .fleet-stat"
+      type: fleet-stat
+      count: 1
+      reason: "Total in-stock machine count not in captured data; requires fleet-system integration. Shape hint: '1,200+'."
+    - selector: "section[data-section='spec-table'] tr[data-placeholder='true'] td.spec-model"
+      type: spec-row
+      count: 10
+      reason: "Real-time fleet inventory not in captured data. Rendered with Cat model code shape hints (CAT 259D3, CAT 308, CAT 938M, CAT D6, CAT 950M, CAT 320, CAT 336, CAT 305.5, CAT 277D3, CAT 299D3 — public Cat catalog references as example data per placeholder contract)."
+    - selector: "section[data-section='spec-table'] td.spec-branches"
+      type: stocking-count
+      count: 10
+      reason: "Per-model branch stocking count requires fleet-system integration. Shape hint per cell: '14 of 18'."
+    - selector: "section[data-section='spec-table'] td.spec-price"
+      type: price
+      count: 10
+      reason: "Per-model starting price requires fleet-system integration. Shape hint per cell: '$48,500'."
+    - selector: "section[data-section='spec-table'] nav.spec-pagination"
+      type: pagination-count
+      count: 1
+      reason: "Total catalog page count derived from fleet-system query; shape hint: '47 pages'."
+    - selector: "section[data-section='support-partners'] .partner-logo"
+      type: brand-logo
+      count: 5
+      reason: "Partner names captured; image assets not in assets/media/."
+  stardustVersion:   0.10.0
+-->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wheeler Cat - Construction Equipment, Tool & Trailer Rental & Sales</title>
+<meta name="description" content="Wheeler Cat offers Construction Equipment, Tool & Trailer Rental & Sales across 18 locations in Utah and parts of Arizona, Nevada & Wyoming.">
+<style>
+:root {
+  --color-page: #FFFFFF;
+  --color-body: #454545;
+  --color-heading: #272727;
+  --color-cat-yellow: #FFCC00;
+  --color-cat-yellow-hover: #E6B800;
+  --color-surface-dark: #272727;
+  --color-surface-dark-hover: #1A1A1A;
+  --color-warm-stone: #E5E3DF;
+  --color-warm-stone-zebra: rgba(229,227,223,0.3);
+  --color-text-on-dark: #FFFFFF;
+  --color-text-on-yellow: #272727;
+  --color-overlay: rgba(18,18,18,0.5);
+
+  --fs-100: 1rem;
+  --fs-125: 1.25rem;
+  --fs-156: 1.563rem;
+  --fs-195: 1.953rem;
+  --fs-244: 2.441rem;
+  --fs-305: 3.052rem;
+  --fs-381: 3.815rem;
+  --fs-label: 0.8rem;
+
+  --sp-xs: 4px; --sp-sm: 8px; --sp-md: 16px; --sp-lg: 24px;
+  --sp-xl: 32px; --sp-xxl: 48px; --sp-section: 64px;
+
+  --r-primary: 5px;
+  --r-pill: 999px;
+
+  --container-max: 1400px;
+  --grid-gap: 24px;
+
+  --shadow-card-strong: rgba(0,0,0,0.18) 0px 6px 16px 0px;
+
+  --font-display: "Roboto Condensed", "Roboto", system-ui, sans-serif;
+  --font-body: "Roboto", system-ui, sans-serif;
+  --font-icon: "icomoon";
+
+  --ease-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+@font-face { font-family: "Roboto Condensed"; font-weight: 400 700; font-style: normal; font-display: swap; src: url("../current/assets/fonts/ieVl2ZhZI2eCN5jzbjEETS9weq8-19K7DQ.woff2") format("woff2"); }
+@font-face { font-family: "Roboto"; font-weight: 300 700; font-style: normal; font-display: swap; src: url("../current/assets/fonts/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2") format("woff2"); }
+@font-face { font-family: "Roboto"; font-weight: 700; font-style: normal; font-display: swap; src: url("../current/assets/fonts/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBHMdazQ.woff2") format("woff2"); }
+@font-face { font-family: "icomoon"; src: url("../current/assets/fonts/icomoon.ttf") format("truetype"); font-weight: normal; font-style: normal; font-display: block; }
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--fs-100);
+  line-height: 1.5;
+  color: var(--color-body);
+  background: var(--color-page);
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; cursor: pointer; }
+
+.container { width: 100%; max-width: var(--container-max); margin: 0 auto; padding-left: var(--sp-lg); padding-right: var(--sp-lg); }
+
+.display, .headline, .title, .sub-title, .label {
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-heading);
+  margin: 0;
+}
+.display { font-size: clamp(2.441rem, 5vw, var(--fs-381)); line-height: 1.05; letter-spacing: 0.02em; }
+.headline { font-size: clamp(1.953rem, 3.5vw, var(--fs-305)); line-height: 1.1; letter-spacing: 0.02em; }
+.title { font-size: var(--fs-195); line-height: 1.15; letter-spacing: 0.015em; }
+.sub-title { font-size: var(--fs-156); line-height: 1.2; letter-spacing: 0.015em; }
+.label { font-size: var(--fs-label); line-height: 1.2; letter-spacing: 0.08em; }
+
+.body-copy { font-size: var(--fs-100); line-height: 1.5; color: var(--color-body); margin: 0; }
+.lead-copy { font-size: var(--fs-125); line-height: 1.4; color: var(--color-body); margin: 0; }
+
+.icon {
+  font-family: var(--font-icon) !important;
+  font-style: normal; font-weight: normal; font-variant: normal;
+  text-transform: none; line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: inline-block;
+}
+.icon-menu::before     { content: "\e904"; }
+.icon-map-pin::before  { content: "\e906"; }
+.icon-new::before      { content: "\e907"; }
+.icon-used::before     { content: "\e90c"; }
+.icon-rent::before     { content: "\e909"; }
+.icon-order::before    { content: "\e908"; }
+.icon-service::before  { content: "\e90a"; }
+.icon-phone::before    { content: "\e90b"; }
+.icon-facebook::before { content: "\e900"; }
+.icon-instagram::before{ content: "\e902"; }
+.icon-linkedin::before { content: "\e903"; }
+.icon-youtube::before  { content: "\e90d"; }
+.icon-twitter::before  { content: "\e905"; }
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  gap: var(--sp-sm);
+  font-family: var(--font-display); font-weight: 700;
+  font-size: 0.875rem; letter-spacing: 0.06em; text-transform: uppercase;
+  padding: 12px 24px;
+  border-radius: var(--r-primary);
+  border: 1px solid transparent;
+  transition: background 200ms var(--ease-out), color 200ms var(--ease-out), border-color 200ms var(--ease-out);
+  cursor: pointer; text-decoration: none;
+}
+.btn-primary { background: var(--color-cat-yellow); color: var(--color-text-on-yellow); border-color: var(--color-cat-yellow); }
+.btn-primary:hover, .btn-primary:focus-visible { background: var(--color-surface-dark); color: var(--color-cat-yellow); border-color: var(--color-surface-dark); outline: none; }
+.btn-secondary { background: transparent; color: var(--color-heading); border-color: var(--color-heading); padding: 10px 20px; }
+.btn-secondary:hover, .btn-secondary:focus-visible { background: var(--color-surface-dark); color: var(--color-text-on-dark); outline: none; }
+.btn-ghost-light { background: transparent; color: var(--color-text-on-dark); border-color: var(--color-text-on-dark); padding: 10px 20px; }
+.btn-ghost-light:hover { background: var(--color-cat-yellow); color: var(--color-text-on-yellow); border-color: var(--color-cat-yellow); }
+
+/* ───────── HEADER ───────── */
+.site-header { position: sticky; top: 0; z-index: 50; background: var(--color-surface-dark); color: var(--color-text-on-dark); }
+.utility-bar { background: #1A1A1A; color: var(--color-text-on-dark); font-family: var(--font-display); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+.utility-bar__inner { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; gap: var(--sp-md); }
+.utility-bar a { color: var(--color-text-on-dark); }
+.utility-bar a:hover { color: var(--color-cat-yellow); }
+.utility-bar__right { display: inline-flex; gap: var(--sp-lg); align-items: center; }
+.utility-bar__phone { color: var(--color-cat-yellow); display: inline-flex; gap: var(--sp-sm); align-items: center; }
+.main-header { background: var(--color-surface-dark); }
+.main-header__inner { display: flex; justify-content: space-between; align-items: stretch; padding: 16px 0; gap: var(--sp-md); }
+.main-header__logo img { height: 56px; width: auto; }
+.main-nav { display: flex; gap: 0; align-items: stretch; }
+.main-nav__list { display: flex; list-style: none; margin: 0; padding: 0; gap: 0; align-items: stretch; }
+.main-nav__list a {
+  display: inline-flex; align-items: center;
+  padding: 0 var(--sp-md);
+  font-family: var(--font-display); font-weight: 700;
+  font-size: 0.875rem; letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--color-text-on-dark);
+}
+.main-nav__list a:hover { color: var(--color-cat-yellow); }
+.main-nav__phone {
+  display: inline-flex; align-items: center; gap: var(--sp-sm);
+  background: var(--color-cat-yellow); color: var(--color-text-on-yellow);
+  padding: 0 var(--sp-lg);
+  font-family: var(--font-display); font-weight: 700;
+  font-size: 0.9rem; letter-spacing: 0.05em;
+}
+.main-nav__phone:hover { background: var(--color-cat-yellow-hover); }
+.burger {
+  display: none; background: transparent;
+  border: 1px solid var(--color-text-on-dark); color: var(--color-text-on-dark);
+  width: 44px; height: 44px; border-radius: var(--r-primary);
+  align-items: center; justify-content: center; font-size: 1.5rem;
+}
+.burger:focus-visible { outline: 2px solid var(--color-cat-yellow); outline-offset: 2px; }
+
+/* ───────── HERO EYEBROW STRIP (I · spec-sheet system header) ───────── */
+.hero-eyebrow-strip {
+  background: var(--color-surface-dark);
+  color: var(--color-text-on-dark);
+  height: 64px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-weight: 700;
+  font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase;
+  padding: 0 var(--sp-lg);
+  text-align: center;
+  gap: var(--sp-md);
+  flex-wrap: wrap;
+}
+.hero-eyebrow-strip__sep { color: var(--color-cat-yellow); }
+.fleet-stat {
+  display: inline-flex; align-items: center; gap: 0.3em;
+  border: 2px dashed var(--color-cat-yellow);
+  padding: 2px 8px;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.7rem; letter-spacing: 0.08em;
+}
+
+/* ───────── FILTER CHIP RAIL (I · NEW) ───────── */
+.chip-rail {
+  background: var(--color-page);
+  padding: var(--sp-md) 0;
+  border-bottom: 1px solid rgba(39,39,39,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 30;
+}
+.chip-rail__inner {
+  display: flex;
+  gap: var(--sp-sm);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 4px 0;
+}
+.chip {
+  display: inline-flex; align-items: center; gap: var(--sp-sm);
+  padding: 8px 16px;
+  border: 1px solid var(--color-warm-stone);
+  background: var(--color-page);
+  border-radius: var(--r-pill);
+  font-family: var(--font-display); font-weight: 700;
+  font-size: 0.85rem; letter-spacing: 0.04em; text-transform: uppercase;
+  color: var(--color-heading);
+  cursor: pointer;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: background 150ms var(--ease-out), border-color 150ms var(--ease-out);
+}
+.chip:hover { border-color: var(--color-cat-yellow); }
+.chip--active { background: var(--color-cat-yellow); border-color: var(--color-cat-yellow); color: var(--color-text-on-yellow); }
+.chip .icon { font-size: 1rem; color: var(--color-cat-yellow); }
+.chip--active .icon { color: var(--color-text-on-yellow); }
+.chip-symbol { font-family: "Roboto Condensed", sans-serif; font-weight: 700; font-size: 1rem; }
+
+/* ───────── SPEC TABLE (I · bet) ───────── */
+.spec-section { background: var(--color-page); padding: var(--sp-xxl) 0 var(--sp-section); }
+.spec-section__head {
+  display: flex; align-items: flex-end; justify-content: space-between; gap: var(--sp-md);
+  margin-bottom: var(--sp-lg);
+  flex-wrap: wrap;
+}
+.spec-section__title { color: var(--color-heading); font-size: var(--fs-244); }
+.spec-section__count { color: var(--color-body); font-size: var(--fs-100); }
+.spec-section__count strong { color: var(--color-heading); }
+.spec-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--fs-100);
+  color: var(--color-body);
+}
+.spec-table thead th {
+  background: var(--color-surface-dark);
+  color: var(--color-text-on-dark);
+  font-family: var(--font-display); font-weight: 700;
+  font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase;
+  padding: var(--sp-md) var(--sp-md);
+  text-align: left;
+}
+.spec-table thead th:first-child { padding-left: var(--sp-lg); }
+.spec-table thead th:last-child { padding-right: var(--sp-lg); text-align: right; }
+.spec-table tbody tr {
+  border-bottom: 1px solid var(--color-warm-stone);
+  transition: background 150ms var(--ease-out);
+}
+.spec-table tbody tr:nth-child(even) { background: var(--color-warm-stone-zebra); }
+.spec-table tbody tr:hover { background: rgba(255,204,0,0.08); border-left: 4px solid var(--color-cat-yellow); }
+.spec-table tbody tr:hover .spec-cta { background: var(--color-cat-yellow); color: var(--color-text-on-yellow); border-color: var(--color-cat-yellow); }
+.spec-table tbody td {
+  padding: var(--sp-md);
+  vertical-align: middle;
+}
+.spec-table tbody td:first-child { padding-left: var(--sp-lg); }
+.spec-table tbody td:last-child { padding-right: var(--sp-lg); text-align: right; }
+.spec-model {
+  font-family: var(--font-display); font-weight: 700;
+  font-size: var(--fs-125);
+  color: var(--color-heading);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.01em;
+}
+.spec-model .cat-tri { color: var(--color-cat-yellow); margin-right: 0.3em; font-weight: 700; }
+.spec-category {
+  font-family: var(--font-body); font-weight: 400;
+  font-size: var(--fs-100);
+  color: var(--color-body);
+}
+.spec-branches {
+  font-family: var(--font-body); font-weight: 700;
+  font-size: var(--fs-100);
+  font-variant-numeric: tabular-nums;
+  color: var(--color-heading);
+}
+.spec-price {
+  font-family: var(--font-body); font-weight: 700;
+  font-size: var(--fs-125);
+  font-variant-numeric: tabular-nums;
+  color: var(--color-heading);
+}
+.placeholder-cell {
+  display: inline-flex; flex-direction: column; align-items: flex-start; gap: 2px;
+  border: 2px dashed var(--color-cat-yellow);
+  padding: 2px 6px;
+  background: rgba(255,204,0,0.08);
+}
+.placeholder-cell__tag {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.55rem; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--color-heading); opacity: 0.7;
+}
+.placeholder-cell__shape {
+  font-family: var(--font-display); font-weight: 700;
+  color: var(--color-heading);
+}
+.spec-cta {
+  display: inline-block;
+  font-family: var(--font-display); font-weight: 700;
+  font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--color-cat-yellow);
+  background: transparent;
+  border: 1px solid var(--color-cat-yellow);
+  padding: 6px 14px;
+  border-radius: var(--r-primary);
+  text-decoration: none;
+  transition: all 150ms var(--ease-out);
+}
+
+.spec-pagination {
+  display: flex; align-items: center; justify-content: center; gap: var(--sp-sm);
+  margin-top: var(--sp-xl);
+  font-family: var(--font-display); font-weight: 700;
+  font-size: 0.9rem; letter-spacing: 0.04em;
+}
+.spec-pagination a {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 36px; height: 36px;
+  border-radius: var(--r-primary);
+  color: var(--color-heading);
+  border: 1px solid transparent;
+  transition: background 150ms var(--ease-out);
+}
+.spec-pagination a:hover { border-color: var(--color-cat-yellow); }
+.spec-pagination a.is-active { background: var(--color-cat-yellow); color: var(--color-text-on-yellow); }
+.spec-pagination .placeholder-cell { margin-left: var(--sp-sm); }
+
+/* ───────── FINANCE BAND (I · DEMOTED 2nd band after spec table, warm-stone) ───────── */
+.finance { background: var(--color-warm-stone); padding: var(--sp-section) 0; }
+.finance__head { text-align: center; margin-bottom: var(--sp-xxl); }
+.finance__head .label { color: var(--color-heading); display: inline-block; margin-bottom: var(--sp-sm); }
+.finance__head .headline { color: var(--color-heading); }
+.finance__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--sp-lg); }
+.finance-card {
+  background: var(--color-page);
+  color: var(--color-body);
+  border-radius: var(--r-primary);
+  padding: var(--sp-xl);
+  box-shadow: var(--shadow-card-strong);
+  display: flex; flex-direction: column;
+  gap: var(--sp-md);
+  min-height: 280px;
+  position: relative; overflow: hidden;
+}
+.finance-card::before {
+  content: ""; position: absolute; inset: 0 0 auto 0;
+  height: 4px; background: var(--color-cat-yellow);
+}
+.finance-card__eyebrow { color: var(--color-heading); }
+.finance-card__title { color: var(--color-heading); font-size: var(--fs-156); line-height: 1.15; }
+.finance-card__cta { margin-top: auto; align-self: flex-start; }
+
+/* ───────── SERVICES ───────── */
+.services { background: var(--color-page); padding: var(--sp-section) 0; }
+.services__head { text-align: center; margin-bottom: var(--sp-xxl); }
+.services__eyebrow { color: var(--color-cat-yellow); display: inline-block; margin-bottom: var(--sp-sm); }
+.services__title { color: var(--color-heading); }
+.services__grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: var(--sp-md); }
+.service-tile {
+  background: var(--color-surface-dark);
+  color: var(--color-text-on-dark);
+  border-radius: var(--r-primary);
+  padding: var(--sp-lg);
+  display: flex; flex-direction: column;
+  gap: var(--sp-md);
+  min-height: 220px;
+  text-decoration: none;
+  transition: background 200ms var(--ease-out), transform 200ms var(--ease-out);
+}
+.service-tile:hover { background: var(--color-surface-dark-hover); transform: translateY(-2px); }
+.service-tile__icon { font-size: 40px; color: var(--color-cat-yellow); line-height: 1; }
+.service-tile__title { font-family: var(--font-display); font-weight: 700; font-size: 1.125rem; text-transform: uppercase; letter-spacing: 0.02em; color: var(--color-text-on-dark); margin-top: auto; }
+.services__footer { margin-top: var(--sp-xxl); text-align: center; }
+
+/* ───────── SUPPORT + PARTNERS ───────── */
+.support-partners { background: var(--color-warm-stone); padding: var(--sp-section) 0; }
+.support-partners__head { text-align: center; margin-bottom: var(--sp-xxl); }
+.support-partners__eyebrow { color: var(--color-heading); display: inline-block; margin-bottom: var(--sp-sm); }
+.support-partners__sentiment { color: var(--color-heading); max-width: 26ch; margin: 0 auto; }
+.partner-strip { display: grid; grid-template-columns: repeat(5, 1fr); gap: var(--sp-lg); align-items: center; }
+.partner-logo {
+  background: rgba(255,255,255,0.6);
+  border: 2px dashed var(--color-cat-yellow);
+  border-radius: var(--r-primary);
+  padding: var(--sp-md);
+  min-height: 96px;
+  display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
+  gap: 4px;
+}
+.partner-logo__eyebrow { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 0.65rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-heading); opacity: 0.7; }
+.partner-logo__name { font-family: var(--font-display); font-weight: 700; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-heading); }
+
+/* ───────── LOCATIONS PROOF ───────── */
+.locations { background: var(--color-page); padding: var(--sp-section) 0; }
+.locations__proof { font-size: var(--fs-125); line-height: 1.5; color: var(--color-body); text-align: center; max-width: 70ch; margin: 0 auto var(--sp-xxl); }
+.locations__proof strong { color: var(--color-heading); font-weight: 700; }
+.locations__sub-head { text-align: center; color: var(--color-heading); margin-bottom: var(--sp-xl); }
+.branch-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--sp-md) var(--sp-xl); max-width: 900px; margin: 0 auto; list-style: none; padding: 0; }
+.branch-grid li {
+  padding: var(--sp-sm) 0;
+  border-bottom: 1px solid rgba(39,39,39,0.12);
+  font-family: var(--font-display); font-weight: 700;
+  font-size: 1.05rem; letter-spacing: 0.02em; text-transform: uppercase;
+  color: var(--color-heading);
+  display: flex; align-items: center; gap: var(--sp-sm);
+}
+.branch-grid li .icon { font-size: 0.9rem; color: var(--color-cat-yellow); }
+.locations__more { text-align: center; margin-top: var(--sp-xl); font-size: 0.9rem; color: var(--color-body); }
+
+/* ───────── FOOTER ───────── */
+.site-footer { background: var(--color-surface-dark); color: var(--color-text-on-dark); padding: var(--sp-section) 0 var(--sp-xl); }
+.footer__grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: var(--sp-xxl); margin-bottom: var(--sp-xxl); }
+.footer__brand img { max-width: 220px; }
+.footer__brand p { margin-top: var(--sp-md); color: rgba(255,255,255,0.7); font-size: 0.9rem; max-width: 38ch; }
+.footer__col h2 { font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-text-on-dark); margin: 0 0 var(--sp-md); }
+.footer__col ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: var(--sp-sm); }
+.footer__col a { color: rgba(255,255,255,0.78); font-size: 0.92rem; transition: color 150ms var(--ease-out); }
+.footer__col a:hover { color: var(--color-cat-yellow); }
+.footer__address { font-size: 0.92rem; line-height: 1.55; color: rgba(255,255,255,0.78); font-style: normal; }
+.footer__phone { display: inline-flex; align-items: center; gap: var(--sp-sm); margin-top: var(--sp-md); color: var(--color-cat-yellow); font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; letter-spacing: 0.04em; }
+.footer__social { display: flex; gap: var(--sp-md); margin-top: var(--sp-sm); }
+.footer__social a { width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,0.3); border-radius: var(--r-pill); color: var(--color-text-on-dark); font-size: 1rem; }
+.footer__social a:hover { background: var(--color-cat-yellow); color: var(--color-text-on-yellow); border-color: var(--color-cat-yellow); }
+.footer__legal { padding-top: var(--sp-lg); border-top: 1px solid rgba(255,255,255,0.12); display: flex; justify-content: space-between; gap: var(--sp-md); font-size: 0.8rem; color: rgba(255,255,255,0.55); flex-wrap: wrap; }
+.footer__legal ul { display: flex; gap: var(--sp-lg); list-style: none; margin: 0; padding: 0; }
+
+@media (max-width: 1024px) {
+  :root { --sp-section: 48px; }
+  .services__grid { grid-template-columns: repeat(3, 1fr); }
+  .footer__grid { grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: var(--sp-xl); }
+  .spec-table { font-size: 0.875rem; }
+  .spec-table thead th, .spec-table tbody td { padding: var(--sp-sm) var(--sp-md); }
+}
+@media (max-width: 768px) {
+  .main-nav__list, .main-nav__phone { display: none; }
+  .burger { display: inline-flex; }
+  .main-nav.is-open .main-nav__list {
+    display: flex; position: absolute; top: 100%; left: 0; right: 0;
+    background: var(--color-surface-dark);
+    flex-direction: column; gap: 0; padding: var(--sp-md) 0;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+  .main-nav.is-open .main-nav__list a { padding: var(--sp-md) var(--sp-lg); width: 100%; }
+  .main-nav.is-open .main-nav__phone { display: inline-flex; margin: var(--sp-md) var(--sp-lg); padding: var(--sp-md) var(--sp-lg); }
+  .main-header { position: relative; }
+  .finance__grid { grid-template-columns: repeat(2, 1fr); }
+  .partner-strip { grid-template-columns: repeat(3, 1fr); }
+  .footer__grid { grid-template-columns: 1fr 1fr; }
+  .spec-table thead { display: none; }
+  .spec-table tbody, .spec-table tbody tr, .spec-table tbody td { display: block; width: 100%; }
+  .spec-table tbody tr { border: 1px solid var(--color-warm-stone); border-radius: var(--r-primary); margin-bottom: var(--sp-md); padding: var(--sp-md); }
+  .spec-table tbody td { padding: 4px 0; text-align: left !important; }
+  .spec-table tbody td:last-child { text-align: left; padding-top: var(--sp-sm); }
+  .hero-eyebrow-strip { height: auto; padding: var(--sp-md) var(--sp-lg); font-size: 0.7rem; }
+}
+@media (max-width: 640px) {
+  :root { --sp-section: 32px; }
+  .utility-bar__inner { font-size: 0.65rem; gap: var(--sp-sm); }
+  .utility-bar__right { gap: var(--sp-md); }
+  .finance__grid { grid-template-columns: 1fr; }
+  .services__grid { grid-template-columns: repeat(2, 1fr); }
+  .partner-strip { grid-template-columns: repeat(2, 1fr); }
+  .branch-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer__grid { grid-template-columns: 1fr; gap: var(--sp-xl); }
+  .footer__legal { flex-direction: column; }
+}
+
+:focus-visible { outline: 2px solid var(--color-cat-yellow); outline-offset: 2px; }
+</style>
+</head>
+<body>
+
+<header class="site-header" data-section="header" data-intent="navigate" data-layout="full-width-dark" data-nav-collapse="hamburger">
+  <div class="utility-bar" data-section="utility-bar" data-intent="meta-actions">
+    <div class="container utility-bar__inner">
+      <nav aria-label="utility"><a href="/sponsorships/">Sponsorships</a></nav>
+      <div class="utility-bar__right">
+        <a href="/about/locations/"><span class="icon icon-map-pin" aria-hidden="true"></span> 18 Branches</a>
+        <a class="utility-bar__phone" href="tel:801-436-3672"><span class="icon icon-phone" aria-hidden="true"></span> 801-436-3672</a>
+      </div>
+    </div>
+  </div>
+  <div class="main-header">
+    <div class="container main-header__inner">
+      <a class="main-header__logo" href="/" aria-label="Wheeler Machinery Co. — home">
+        <img src="../current/assets/logo.png" alt="Wheeler Machinery Co.">
+      </a>
+      <button class="burger" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+        <span class="icon icon-menu" aria-hidden="true"></span>
+      </button>
+      <nav class="main-nav" id="primary-nav" aria-label="primary">
+        <ul class="main-nav__list">
+          <li><a href="/new/">New Equipment</a></li>
+          <li><a href="/used-equipment/machinery/">Used Equipment</a></li>
+          <li><a href="/rental/">Rent Now</a></li>
+          <li><a href="/request-service/">Request Service</a></li>
+          <li><a href="/credit-application/">Credit App</a></li>
+        </ul>
+        <a class="main-nav__phone" href="tel:801-436-3672"><span class="icon icon-phone" aria-hidden="true"></span> 801-436-3672</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- ───────── HERO EYEBROW STRIP (I · spec-sheet system header) ───────── -->
+  <section class="hero-eyebrow-strip" data-section="hero-eyebrow-strip" data-intent="fleet-system-header" data-layout="thin-band">
+    <span>TODAY'S FLEET</span>
+    <span class="hero-eyebrow-strip__sep">&middot;</span>
+    <span>18 BRANCHES</span>
+    <span class="hero-eyebrow-strip__sep">&middot;</span>
+    <span>UT &middot; AZ &middot; NV &middot; WY</span>
+    <span class="hero-eyebrow-strip__sep">&middot;</span>
+    <span class="fleet-stat" data-placeholder="true" data-placeholder-type="fleet-stat" data-placeholder-source="Total in-stock machine count requires fleet-system integration.">
+      PLACEHOLDER &middot; fleet-stat: e.g. 1,200+ MACHINES IN STOCK
+    </span>
+  </section>
+
+  <!-- ───────── FILTER CHIP RAIL (I · NEW) ───────── -->
+  <nav class="chip-rail" data-section="filter-chip-rail" data-intent="catalog-filter" data-layout="horizontal-scroll" aria-label="Equipment filter">
+    <div class="container">
+      <div class="chip-rail__inner">
+        <a class="chip chip--active" href="#">
+          <span class="icon icon-new" aria-hidden="true"></span> NEW
+        </a>
+        <a class="chip" href="#">
+          <span class="icon icon-used" aria-hidden="true"></span> USED
+        </a>
+        <a class="chip" href="#">
+          <span class="icon icon-rent" aria-hidden="true"></span> RENT
+        </a>
+        <a class="chip" href="#">
+          <span class="icon icon-order" aria-hidden="true"></span> ATTACHMENTS
+        </a>
+        <a class="chip" href="#">
+          <span class="chip-symbol" aria-hidden="true">S</span> COMPACT
+        </a>
+        <a class="chip" href="#">
+          <span class="chip-symbol" aria-hidden="true">M</span> MID
+        </a>
+        <a class="chip" href="#">
+          <span class="chip-symbol" aria-hidden="true">L</span> LARGE
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ───────── SPEC TABLE (I · bet) ───────── -->
+  <section class="spec-section" data-section="spec-table" data-intent="fleet-spec-catalog" data-layout="data-table" data-items="10">
+    <div class="container">
+      <div class="spec-section__head">
+        <h1 class="display spec-section__title">FLEET CATALOG &mdash; NEW</h1>
+        <span class="spec-section__count">Showing <strong>10 of <span data-placeholder="true" data-placeholder-type="pagination-count" data-placeholder-source="Total catalog count requires fleet-system query.">PLACEHOLDER &middot; total-count: e.g. 470</span></strong> machines</span>
+      </div>
+      <table class="spec-table" aria-label="Wheeler fleet catalog">
+        <thead>
+          <tr>
+            <th scope="col">&#9650; MODEL</th>
+            <th scope="col">CATEGORY</th>
+            <th scope="col">BRANCHES STOCKING</th>
+            <th scope="col">STARTING AT</th>
+            <th scope="col">&nbsp;</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-placeholder="true" data-placeholder-type="spec-row">
+            <td><span class="spec-model"><span class="cat-tri" aria-hidden="true">&#9650;</span>CAT 259D3</span></td>
+            <td><span class="spec-category">Compact Track Loader</span></td>
+            <td><span class="placeholder-cell"><span class="placeholder-cell__tag">PLACEHOLDER · stocking-count</span><span class="placeholder-cell__shape">e.g. 14 of 18</span></span></td>
+            <td><span class="placeholder-cell"><span class="placeholder-cell__tag">PLACEHOLDER · price</span><span class="placeholder-cell__shape">e.g. $48,500</span></span></td>
+            <td><a class="spec-cta" href="/new/">BROWSE</a></td>
+          </tr>
+          <tr data-placeholder="true" data-placeholder-type="spec-row">
+            <td><span class="spec-model"><span class="cat-tri" aria-hidden="true">&#9650;</span>CAT 308</span></td>
+            <td><span class="spec-category">Mini Hydraulic Excavator</span></td>
+            <td><span class="placeholder-cell"><span class="placeholder-cell__tag">PLACEHOLDER · stocking-count</span><span class="placeholder-cell__shape">e.g. 11 of 18</span></span></td>
+            <td><span class="placeholder-cell"><span class="placeholder-cell__tag">PLACEHOLDER · price</span><span class="placeholder-cell__shape">e.g. $112,000</span></span></td>
+            <td><a class="spec-cta" href="/new/">BROWSE</a></td>
+          </tr>
+          <tr data-placeholder="true" data-placeholder-type="spec-row">
+            <td><span class="spec-model"><span class="cat-tri" aria-hidden="true">&#9650;</span>CAT 938M</span></td>
+            <td><span class="spec-category">Wheel Loader</span></td>
+            <td><span class="placeholder-cell"><span class="placeholder-cell__tag">PLACEHOLDER · stocking-count</span><span class="placeholder-cell__shape">e.g. 9 of 18</span></span></td>
+            <td><span class="placeholder-cell"><span class="placeholder-cell__tag">PLACEHOLDER · price</span><span class="placeholder-cell__shape">e.g. $245,000</span></span></td>
+            <td><a class="spec-cta" href="/new/">BROWSE</a></td>
+          </tr>
+          <tr data-placeholder="true" data-placeholder-type="spec-row">
+            <td><span class="spec-model"><span class="cat-tri" aria-hidden="true">&#9650;</span>CAT D6</span></td>
+            <td><span class="spec-category">Bulldozer</span></td>
+            <td><span class="placeholder-cell"><span class="placeholder-cell__tag">PLACEHOLDER · stocking-count</span><span class="placeholder-cell__shape">e.g. 6 of 18</span></span></td>
+            <td><span class="placeholder-cell"><span class="placeholder-cell__tag">PLACEHOLDER · price</span><span class="placeholder-cell__shape">e.g. $510,000</span></span></td>
+            <td><a class="spec-cta" href="/new/">BROWSE</a></td>
+          </tr>
+          <tr data-placeholder="true" data-placeholder-type="spec-row">
+            <td><span class="spec-model"><span class="cat-tri" aria-hidden="true">&#9650;</span>CAT 950M</span></td>
+            <td><span class="spec-category">Wheel Loader</span></td>
+            <td><span class="placeholder-cell"><span class="placeholder-cell__tag">PLACEHOLDER · stocking-count</span><span class="placeholder-cell__shape">e.g. 7 of 18</span></span></td>
+            <td><span class="placeholder-cell"><span class="placeholder-cell__tag">PLACEHOLDER · price</span><span class="placeholder-cell__shape">e.g. $295,000</span></span></td>
+            <td><a class="spec-cta" href="/new/">BROWSE</a></td>
+          </tr>
+          <tr data-placeholder="true" data-placeholder-type="spec-row">
+            <td><span class="spec-model"><span class="cat-tri" aria-hidden="true">&#9650;</span>CAT 320</span></td>
+            <td><span class="spec-category">Hydraulic Excavator</span></td>
+            <td><span class="placeholder-cell"><span class="placeholder-cell__tag">PLACEHOLDER · stocking-count</span><span class="placeholder-cell__shape">e.g. 12 of 18</span></span></td>
+            <td><span class="placeholder-cell"><span class="placeholder-cell__tag">PLACEHOLDER · price</span><span class="placeholder-cell__shape">e.g. $295,000</span></span></td>
+            <td><a class="spec-cta" href="/new/">BROWSE</a></td>
+          </tr>
+          <tr data-placeholder="true" data-placeholder-type="spec-row">
+            <td><span class="spec-model"><span class="cat-tri" aria-hidden="true">&#9650;</span>CAT 336</span></td>
+            <td><span class="spec-category">Hydraulic Excavator</span></td>
+            <td><span class="placeholder-cell"><span class="placeholder-cell__tag">PLACEHOLDER · stocking-count</span><span class="placeholder-cell__shape">e.g. 8 of 18</span></span></td>
+            <td><span class="placeholder-cell"><span class="placeholder-cell__tag">PLACEHOLDER · price</span><span class="placeholder-cell__shape">e.g. $390,000</span></span></td>
+            <td><a class="spec-cta" href="/new/">BROWSE</a></td>
+          </tr>
+          <tr data-placeholder="true" data-placeholder-type="spec-row">
+            <td><span class="spec-model"><span class="cat-tri" aria-hidden="true">&#9650;</span>CAT 305.5</span></td>
+            <td><span class="spec-category">Mini Hydraulic Excavator</span></td>
+            <td><span class="placeholder-cell"><span class="placeholder-cell__tag">PLACEHOLDER · stocking-count</span><span class="placeholder-cell__shape">e.g. 15 of 18</span></span></td>
+            <td><span class="placeholder-cell"><span class="placeholder-cell__tag">PLACEHOLDER · price</span><span class="placeholder-cell__shape">e.g. $86,000</span></span></td>
+            <td><a class="spec-cta" href="/new/">BROWSE</a></td>
+          </tr>
+          <tr data-placeholder="true" data-placeholder-type="spec-row">
+            <td><span class="spec-model"><span class="cat-tri" aria-hidden="true">&#9650;</span>CAT 277D3</span></td>
+            <td><span class="spec-category">Compact Track Loader</span></td>
+            <td><span class="placeholder-cell"><span class="placeholder-cell__tag">PLACEHOLDER · stocking-count</span><span class="placeholder-cell__shape">e.g. 13 of 18</span></span></td>
+            <td><span class="placeholder-cell"><span class="placeholder-cell__tag">PLACEHOLDER · price</span><span class="placeholder-cell__shape">e.g. $74,000</span></span></td>
+            <td><a class="spec-cta" href="/new/">BROWSE</a></td>
+          </tr>
+          <tr data-placeholder="true" data-placeholder-type="spec-row">
+            <td><span class="spec-model"><span class="cat-tri" aria-hidden="true">&#9650;</span>CAT 299D3</span></td>
+            <td><span class="spec-category">Compact Track Loader</span></td>
+            <td><span class="placeholder-cell"><span class="placeholder-cell__tag">PLACEHOLDER · stocking-count</span><span class="placeholder-cell__shape">e.g. 10 of 18</span></span></td>
+            <td><span class="placeholder-cell"><span class="placeholder-cell__tag">PLACEHOLDER · price</span><span class="placeholder-cell__shape">e.g. $92,500</span></span></td>
+            <td><a class="spec-cta" href="/new/">BROWSE</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <nav class="spec-pagination" aria-label="Catalog pagination">
+        <a href="#" class="is-active" aria-current="page">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <span aria-hidden="true">&hellip;</span>
+        <span class="placeholder-cell" data-placeholder="true" data-placeholder-type="pagination-count" data-placeholder-source="Total catalog page count requires fleet-system query.">
+          <span class="placeholder-cell__tag">PLACEHOLDER · pagination-count</span>
+          <span class="placeholder-cell__shape">e.g. 47</span>
+        </span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- ───────── FINANCE BAND (I · DEMOTED 2nd band, warm-stone) ───────── -->
+  <section class="finance" data-section="finance" data-intent="promo-offers" data-layout="grid" data-items="3" data-ia-priority="demoted">
+    <div class="container">
+      <div class="finance__head">
+        <span class="label">FINANCE</span>
+        <h2 class="headline" style="margin-top: var(--sp-sm);">FINANCING DEALS &amp; SPECIAL OFFERS</h2>
+      </div>
+      <div class="finance__grid">
+        <article class="finance-card">
+          <span class="label finance-card__eyebrow">FINANCE</span>
+          <h3 class="title finance-card__title">0% FOR UP TO 60 MONTHS + $500 TOWARD CVA</h3>
+          <a class="btn btn-primary finance-card__cta" href="/specials/">Learn More</a>
+        </article>
+        <article class="finance-card">
+          <span class="label finance-card__eyebrow">FINANCE</span>
+          <h3 class="title finance-card__title">FINANCING &amp; FUEL PAYBACK OFFERS</h3>
+          <a class="btn btn-primary finance-card__cta" href="/specials/">Learn More</a>
+        </article>
+        <article class="finance-card">
+          <span class="label finance-card__eyebrow">FINANCE</span>
+          <h3 class="title finance-card__title">CAT&reg; CARD IS NOW CAT&reg; COMMERCIAL ACCOUNT</h3>
+          <a class="btn btn-primary finance-card__cta" href="/specials/">Learn More</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── SERVICES ───────── -->
+  <section class="services" id="services" data-section="services" data-intent="service-tiles" data-layout="grid" data-items="6">
+    <div class="container">
+      <div class="services__head">
+        <span class="label services__eyebrow">WE PROUDLY SUPPORT THE ONES WHO BUILD OUR WORLD</span>
+        <h2 class="headline services__title" style="margin-top: var(--sp-sm);">YOUR HEAVY MACHINERY EXPERTS</h2>
+      </div>
+      <div class="services__grid">
+        <a class="service-tile" href="/service/"><span class="service-tile__icon icon icon-service" aria-hidden="true"></span><span class="service-tile__title">Field Service</span></a>
+        <a class="service-tile" href="/service/"><span class="service-tile__icon icon icon-service" aria-hidden="true"></span><span class="service-tile__title">Shop Service</span></a>
+        <a class="service-tile" href="https://parts.cat.com/"><span class="service-tile__icon icon icon-order" aria-hidden="true"></span><span class="service-tile__title">Parts.Cat.com</span></a>
+        <a class="service-tile" href="/customer-value-agreements/"><span class="service-tile__icon icon icon-new" aria-hidden="true"></span><span class="service-tile__title">Maintenance Service</span></a>
+        <a class="service-tile" href="/request-service/"><span class="service-tile__icon icon icon-phone" aria-hidden="true"></span><span class="service-tile__title">Request Service</span></a>
+        <a class="service-tile" href="/service/"><span class="service-tile__icon icon icon-used" aria-hidden="true"></span><span class="service-tile__title">Rebuilds</span></a>
+      </div>
+      <div class="services__footer">
+        <a class="btn btn-secondary" href="/service/">Browse More Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── SUPPORT + PARTNERS ───────── -->
+  <section class="support-partners" data-section="support-partners" data-intent="brand-proof" data-layout="stack" data-items="5">
+    <div class="container">
+      <div class="support-partners__head">
+        <span class="label support-partners__eyebrow">OUR PARTNERS</span>
+        <h2 class="headline support-partners__sentiment" style="margin-top: var(--sp-sm);">WE PROUDLY SUPPORT THE ONES WHO BUILD OUR WORLD</h2>
+      </div>
+      <div class="partner-strip">
+        <span class="partner-logo" data-placeholder="true" data-placeholder-type="brand-logo" data-placeholder-source="Partner name captured (Campbell Companies); image asset not in assets/media/">
+          <span class="partner-logo__eyebrow">PLACEHOLDER · brand-logo</span>
+          <span class="partner-logo__name">Campbell Companies</span>
+        </span>
+        <span class="partner-logo" data-placeholder="true" data-placeholder-type="brand-logo" data-placeholder-source="Partner name captured; image asset not matched">
+          <span class="partner-logo__eyebrow">PLACEHOLDER · brand-logo</span>
+          <span class="partner-logo__name">JLG</span>
+        </span>
+        <span class="partner-logo" data-placeholder="true" data-placeholder-type="brand-logo" data-placeholder-source="Partner name captured; image asset not matched">
+          <span class="partner-logo__eyebrow">PLACEHOLDER · brand-logo</span>
+          <span class="partner-logo__name">Monson</span>
+        </span>
+        <span class="partner-logo" data-placeholder="true" data-placeholder-type="brand-logo" data-placeholder-source="Partner name captured; image asset not matched">
+          <span class="partner-logo__eyebrow">PLACEHOLDER · brand-logo</span>
+          <span class="partner-logo__name">Gardner</span>
+        </span>
+        <span class="partner-logo" data-placeholder="true" data-placeholder-type="brand-logo" data-placeholder-source="Partner name captured; image asset not matched">
+          <span class="partner-logo__eyebrow">PLACEHOLDER · brand-logo</span>
+          <span class="partner-logo__name">SFS</span>
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── LOCATIONS PROOF ───────── -->
+  <section class="locations" data-section="locations-proof" data-intent="locations-stats" data-layout="stack" data-items="15">
+    <div class="container">
+      <p class="locations__proof"><strong>18 branches</strong> across Utah, Arizona, Nevada &amp; Wyoming &mdash; <strong>same-day field service</strong> and <strong>24/7 phone support</strong> since 1951.</p>
+      <h2 class="headline locations__sub-head">FIND YOUR NEAREST BRANCH</h2>
+      <ul class="branch-grid" aria-label="Wheeler Cat branch locations">
+        <li><span class="icon icon-map-pin" aria-hidden="true"></span>Salt Lake City (HQ)</li>
+        <li><span class="icon icon-map-pin" aria-hidden="true"></span>Lindon</li>
+        <li><span class="icon icon-map-pin" aria-hidden="true"></span>Sandy</li>
+        <li><span class="icon icon-map-pin" aria-hidden="true"></span>Cedar City, UT</li>
+        <li><span class="icon icon-map-pin" aria-hidden="true"></span>Ely</li>
+        <li><span class="icon icon-map-pin" aria-hidden="true"></span>Hurricane</li>
+        <li><span class="icon icon-map-pin" aria-hidden="true"></span>Kaysville</li>
+        <li><span class="icon icon-map-pin" aria-hidden="true"></span>Logan</li>
+        <li><span class="icon icon-map-pin" aria-hidden="true"></span>Moab</li>
+        <li><span class="icon icon-map-pin" aria-hidden="true"></span>Ogden</li>
+        <li><span class="icon icon-map-pin" aria-hidden="true"></span>Park City</li>
+        <li><span class="icon icon-map-pin" aria-hidden="true"></span>Salina</li>
+        <li><span class="icon icon-map-pin" aria-hidden="true"></span>Tooele</li>
+        <li><span class="icon icon-map-pin" aria-hidden="true"></span>Vernal</li>
+        <li><span class="icon icon-map-pin" aria-hidden="true"></span>West Valley</li>
+      </ul>
+      <p class="locations__more">Plus 3 additional locations &middot; <a href="/about/locations/" style="color: var(--color-heading); text-decoration: underline;">View all 18 branches</a></p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer" data-section="footer" data-intent="navigate" data-layout="mega">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <img src="../current/assets/logo.png" alt="Wheeler Machinery Co.">
+        <p>Construction Equipment, Tool &amp; Trailer Rental &amp; Sales across 18 locations in Utah and parts of Arizona, Nevada &amp; Wyoming.</p>
+      </div>
+      <div class="footer__col">
+        <h2>QUICK LINKS</h2>
+        <ul>
+          <li><a href="/new/">Sales</a></li>
+          <li><a href="/rental/">Rentals</a></li>
+          <li><a href="/parts/">Cat Parts</a></li>
+          <li><a href="/service/">Service</a></li>
+          <li><a href="/about/locations/">Locations</a></li>
+          <li><a href="/contact-us/">Contact</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/sponsorships/">Sponsorship</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h2>CONTACT US</h2>
+        <address class="footer__address">
+          4901 West 2100 South,<br>
+          Salt Lake City,<br>
+          UT 84120
+        </address>
+        <a class="footer__phone" href="tel:801-436-3672"><span class="icon icon-phone" aria-hidden="true"></span> 801-436-3672</a>
+      </div>
+      <div class="footer__col">
+        <h2>CONNECT WITH US</h2>
+        <div class="footer__social">
+          <a href="#" aria-label="Facebook"><span class="icon icon-facebook" aria-hidden="true"></span></a>
+          <a href="#" aria-label="Instagram"><span class="icon icon-instagram" aria-hidden="true"></span></a>
+          <a href="#" aria-label="LinkedIn"><span class="icon icon-linkedin" aria-hidden="true"></span></a>
+          <a href="#" aria-label="YouTube"><span class="icon icon-youtube" aria-hidden="true"></span></a>
+          <a href="#" aria-label="Twitter"><span class="icon icon-twitter" aria-hidden="true"></span></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__legal">
+      <span>Copyright &copy; 2026. All Rights Reserved. A Campbell Company</span>
+      <ul>
+        <li><a href="/sitemap/">Sitemap</a></li>
+        <li><a href="/legal/">Legal</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var burger = document.querySelector('.burger');
+    var nav = document.getElementById('primary-nav');
+    if (!burger || !nav) return;
+    burger.addEventListener('click', function () {
+      var open = nav.classList.toggle('is-open');
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && nav.classList.contains('is-open')) {
+        nav.classList.remove('is-open');
+        burger.setAttribute('aria-expanded', 'false');
+        burger.focus();
+      }
+    });
+  })();
+</script>
+
+</body>
+</html>

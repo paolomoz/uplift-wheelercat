@@ -1,0 +1,778 @@
+{
+  "_provenance": {
+    "writtenBy": "stardust:extract",
+    "writtenAt": "2026-05-28T11:43:34.147Z",
+    "readArtifacts": [
+      "stardust/current/pages/about.json",
+      "stardust/current/pages/about__financing.json",
+      "stardust/current/pages/about__history.json",
+      "stardust/current/pages/about__locations.json",
+      "stardust/current/pages/careers.json",
+      "stardust/current/pages/cat-certified-used.json",
+      "stardust/current/pages/contact-us.json",
+      "stardust/current/pages/credit-application.json",
+      "stardust/current/pages/customer-value-agreements.json",
+      "stardust/current/pages/home.json",
+      "stardust/current/pages/industries.json",
+      "stardust/current/pages/industries__heavy-construction.json",
+      "stardust/current/pages/machine-quote-request.json",
+      "stardust/current/pages/new.json",
+      "stardust/current/pages/new__machines.json",
+      "stardust/current/pages/offers.json",
+      "stardust/current/pages/parts.json",
+      "stardust/current/pages/parts__shop-by-category.json",
+      "stardust/current/pages/rental.json",
+      "stardust/current/pages/rental__excavators.json",
+      "stardust/current/pages/request-service.json",
+      "stardust/current/pages/service.json",
+      "stardust/current/pages/service__field-service.json",
+      "stardust/current/pages/specials.json",
+      "stardust/current/pages/sponsorships.json",
+      "stardust/current/pages/used-equipment.json"
+    ],
+    "synthesizedInputs": [],
+    "stardustVersion": "0.10.0",
+    "notes": "Cross-page run: 26 pages aggregated. Home-only fields preserved from --single run."
+  },
+  "site": {
+    "name": "Wheeler Machinery Co. (Wheeler Cat)",
+    "tagline": "Wheeler Cat offers Construction Equipment, Tool & Trailer Rental & Sales across 18 locations in Utah and parts of Arizona, Nevada & Wyoming.",
+    "originUrl": "https://wheelercat.com"
+  },
+  "logo": {
+    "source": "img",
+    "sourceSelector": "header#page-header > div.c-header-top.container:nth-of-type(1) > div.container.c-header-top__cont:nth-of-type(1) > div.c-header-top__site-logo-container:nth-of-type(2) > a.c-header-top__site-logo > img.logo",
+    "sourceUrl": "https://wheelercat.com/wp-content/uploads/2023/06/Wheeler-Logo-border-e1685733632890.png",
+    "localPath": "stardust/current/assets/logo.png",
+    "format": "png",
+    "intrinsicWidth": 268,
+    "intrinsicHeight": 67,
+    "synthesized": false,
+    "synthesizedBasis": null
+  },
+  "palette": [
+    {
+      "role": "text-primary",
+      "value": "#454545",
+      "occurrences": 672,
+      "sourceSelectors": [
+        "body > span:nth-child(1)",
+        "body > a:nth-child(3)",
+        "body > noscript:nth-child(7)"
+      ],
+      "sources": [
+        "about",
+        "about__financing",
+        "about__history"
+      ],
+      "usedAs": [
+        "text"
+      ]
+    },
+    {
+      "role": "text-onPrimary",
+      "value": "#000000",
+      "occurrences": 319,
+      "sourceSelectors": [
+        "section.cta-bar.cta-bar--black > div.cta-bar__content > div.container > div.row > div.col-lg-8.col-lg-offset-2 > a.btn.btn-primary",
+        "body > access-widget-ui:nth-child(2)",
+        "body > access-widget-ui:nth-child(4)"
+      ],
+      "sources": [
+        "about",
+        "about__financing",
+        "about__history"
+      ],
+      "usedAs": [
+        "text",
+        "background"
+      ]
+    },
+    {
+      "role": "accent-1",
+      "value": "#FFFFFF",
+      "occurrences": 257,
+      "sourceSelectors": [
+        "section.cta-bar.cta-bar--black > div.cta-bar__content > div.container > div.row > div.col-lg-8.col-lg-offset-2 > h3.cta-bar__headline",
+        "footer.page-footer > div.container > div.row > div.col-lg-3.col-sm-6 > div.footer-link > h4",
+        "footer.page-footer > div.container > div.row > div.col-lg-5.col-sm-6 > div.footer-address > h4"
+      ],
+      "sources": [
+        "about",
+        "about__financing",
+        "about__history"
+      ],
+      "usedAs": [
+        "text",
+        "background"
+      ]
+    },
+    {
+      "role": "accent-2",
+      "value": "#272727",
+      "occurrences": 158,
+      "sourceSelectors": [
+        "section.full-width-image-text.section-padding > div.container > div.row > div.col-md-12 > div.full-width-image-text__content.left > h2",
+        "section.wysiwyg.section-padding > div.container > div.row > div.col-xxs-12 > div.wysiwyg-wrapper--wide > h3",
+        "body > footer:nth-child(14)"
+      ],
+      "sources": [
+        "about",
+        "about__financing",
+        "about__history"
+      ],
+      "usedAs": [
+        "text",
+        "background"
+      ]
+    },
+    {
+      "role": "primary",
+      "value": "#FFCC00",
+      "occurrences": 74,
+      "sourceSelectors": [
+        "body.wp-singular.page-template-default > section.masthead.masthead--innerpage > div.masthead__content.masthead--innerpage-details > div.container > h1",
+        "section.cta-bar.cta-bar--black > div.cta-bar__content > div.container > div.row > div.col-lg-8.col-lg-offset-2 > a.btn.btn-primary",
+        "div.container > div.row > div.col-xxs-12 > div.wysiwyg-wrapper > p > a.btn.btn-primary"
+      ],
+      "sources": [
+        "about",
+        "about__financing",
+        "about__history"
+      ],
+      "usedAs": [
+        "text",
+        "background"
+      ]
+    },
+    {
+      "role": "accent-3",
+      "value": "rgba(20,20,20,0.9)",
+      "occurrences": 25,
+      "sourceSelectors": [
+        "body > section:nth-child(12)"
+      ],
+      "sources": [
+        "about",
+        "about__financing",
+        "about__history"
+      ],
+      "usedAs": [
+        "background"
+      ]
+    },
+    {
+      "role": "accent-4",
+      "value": "#FCB900",
+      "occurrences": 5,
+      "sourceSelectors": [
+        "div.container > div.row > div.col-xxs-12 > div.wp-block-buttons.is-content-justification-center > div.wp-block-button.has-custom-width > a.wp-block-button__link.has-black-color",
+        "div.container > div.row > div.col-xxs-12 > div.wp-block-buttons.is-layout-flex > div.wp-block-button > a.wp-block-button__link.has-luminous-vivid-amber-color",
+        "div.container > div.row > div.col-xxs-12 > div.wp-block-buttons.is-content-justification-center > div.wp-block-button.is-style-fill > a.wp-block-button__link.has-luminous-vivid-amber-color"
+      ],
+      "sources": [
+        "offers",
+        "request-service",
+        "service"
+      ],
+      "usedAs": [
+        "background",
+        "text"
+      ]
+    },
+    {
+      "role": "accent-5",
+      "value": "#585858",
+      "occurrences": 4,
+      "sourceSelectors": [
+        "body.home.wp-singular > article.page-content > div:nth-of-type(2) > section.logo-carousel.logo-carousel-spacing:nth-of-type(8) > div.container > div.row > div.col-xxs-12 > div.logo-carousel__wrapper > div.js-logo-carousel.fx-slider > button.slick-prev.slick-arrow:nth-of-type(1)",
+        "body.home.wp-singular > article.page-content > div:nth-of-type(2) > section.logo-carousel.logo-carousel-spacing:nth-of-type(8) > div.container > div.row > div.col-xxs-12 > div.logo-carousel__wrapper > div.js-logo-carousel.fx-slider > button.slick-next.slick-arrow:nth-of-type(2)",
+        "article.page-content > div.bialty-container > section.image-buttons.bg-white > div.image-wrapper > div.js-image-button.fx-slider > button.slick-prev.slick-arrow"
+      ],
+      "sources": [
+        "home",
+        "parts"
+      ],
+      "usedAs": [
+        "text"
+      ]
+    }
+  ],
+  "type": {
+    "headingFamily": {
+      "name": "Roboto Condensed",
+      "stack": "\"Roboto Condensed\", sans-serif",
+      "weights": [
+        400,
+        700
+      ],
+      "sizes": [
+        "20px",
+        "24px",
+        "40px",
+        "30px",
+        "60px",
+        "50px"
+      ],
+      "lineHeights": [
+        1.1,
+        1.15,
+        1.2
+      ],
+      "letterSpacing": [
+        "normal"
+      ],
+      "sourceSelectors": [
+        "h1",
+        "h2",
+        "h3",
+        "h4"
+      ]
+    },
+    "bodyFamily": {
+      "name": "Roboto",
+      "stack": "Roboto, sans-serif",
+      "weights": [
+        300,
+        400,
+        700
+      ],
+      "sizes": [
+        "16px",
+        "14px",
+        "12px"
+      ],
+      "lineHeights": [
+        1.5,
+        1.4
+      ],
+      "letterSpacing": [
+        "normal"
+      ],
+      "sourceSelectors": [
+        "p",
+        "li",
+        "body"
+      ]
+    },
+    "monoFamily": null,
+    "scaleRatio": null,
+    "scaleAudit": {
+      "kind": "ad-hoc",
+      "ratios": [
+        1.05,
+        2
+      ],
+      "matchedScale": null
+    },
+    "loadStrategy": "swap",
+    "files": [
+      {
+        "url": "https://wheelercat.com/wp-content/cache/fonts/1/google-fonts/fonts/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2",
+        "family": "Roboto",
+        "weight": null,
+        "style": null,
+        "unicodeRange": null,
+        "localPath": "stardust/current/assets/fonts/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2",
+        "sourceCssRule": null,
+        "licensingFlag": "open"
+      },
+      {
+        "url": "https://wheelercat.com/wp-content/themes/wheelermachinery/assets/fonts/icomoon.ttf?6ob4b0",
+        "family": "icomoon",
+        "weight": null,
+        "style": null,
+        "unicodeRange": null,
+        "localPath": "stardust/current/assets/fonts/icomoon.ttf",
+        "sourceCssRule": null,
+        "licensingFlag": "private"
+      },
+      {
+        "url": "https://wheelercat.com/wp-content/cache/fonts/1/google-fonts/fonts/s/robotocondensed/v31/ieVl2ZhZI2eCN5jzbjEETS9weq8-19K7DQ.woff2",
+        "family": "Roboto Condensed",
+        "weight": null,
+        "style": null,
+        "unicodeRange": null,
+        "localPath": "stardust/current/assets/fonts/ieVl2ZhZI2eCN5jzbjEETS9weq8-19K7DQ.woff2",
+        "sourceCssRule": null,
+        "licensingFlag": "open"
+      },
+      {
+        "url": "https://wheelercat.com/wp-content/cache/fonts/1/google-fonts/fonts/s/oswald/v57/TK3IWkUHHAIjg75cFRf3bXL8LICs1_Fv40pKlN4NNSeSASz7FmlWHYg.woff2",
+        "family": "Oswald",
+        "weight": null,
+        "style": null,
+        "unicodeRange": null,
+        "localPath": "stardust/current/assets/fonts/TK3IWkUHHAIjg75cFRf3bXL8LICs1_Fv40pKlN4NNSeSASz7FmlWHYg.woff2",
+        "sourceCssRule": null,
+        "licensingFlag": "open"
+      },
+      {
+        "url": "https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBHMdazQ.woff2",
+        "family": "Roboto",
+        "weight": null,
+        "style": null,
+        "unicodeRange": null,
+        "localPath": "stardust/current/assets/fonts/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBHMdazQ.woff2",
+        "sourceCssRule": null,
+        "licensingFlag": "open"
+      }
+    ]
+  },
+  "spacing": {
+    "baseUnit": 8,
+    "scale": [
+      4,
+      8,
+      12,
+      16,
+      20,
+      24,
+      32,
+      48,
+      64
+    ],
+    "sectionPadding": "64px",
+    "containerMaxWidth": "1400px",
+    "gridGap": "24px"
+  },
+  "motifs": {
+    "borderRadius": {
+      "primary": "5px",
+      "secondary": "50%",
+      "pill": "50%",
+      "primarySources": [],
+      "occurrences": {
+        "5px": 103,
+        "50%": 8,
+        "3px": 6,
+        "9999px": 5,
+        "4px": 2,
+        "2px": 1
+      }
+    },
+    "shadows": [
+      {
+        "value": "rgba(0, 0, 0, 0.1) 0px 3px 6px 0px",
+        "uses": "cards"
+      },
+      {
+        "value": "rgba(0, 0, 0, 0.3) 0px 1px 4px -1px",
+        "uses": "overlay/lightbox"
+      },
+      {
+        "value": "rgba(0, 0, 0, 0.8) 0px 6px 16px 0px",
+        "uses": "overlay/lightbox"
+      }
+    ],
+    "gradients": [],
+    "patterns": [
+      {
+        "name": "hero-with-cta-strip",
+        "evidence": "full-bleed hero image with overlaid yellow CTA above the fold"
+      },
+      {
+        "name": "icon-tile-row",
+        "evidence": "service tiles use icomoon icons in a 6-up row under \"YOUR HEAVY MACHINERY EXPERTS\""
+      },
+      {
+        "name": "image-with-overlay-headline",
+        "evidence": "multiple sections combine a photo + black overlay + capital-Roboto-Condensed headline + yellow button"
+      },
+      {
+        "name": "stat-row",
+        "evidence": "\"18 / 75 / 24\" stats row under DEPENDABLE AND RELIABLE"
+      },
+      {
+        "name": "partner-logo-strip",
+        "evidence": "monochrome partner logos in a horizontal strip near the footer"
+      },
+      {
+        "name": "dark-utility-header",
+        "evidence": "thin dark utility bar with top-of-site nav links above the main header"
+      }
+    ]
+  },
+  "componentStyle": {
+    "buttons": {
+      "primary": {
+        "background": "#FFCC00",
+        "color": "#000000",
+        "borderRadius": "5px",
+        "padding": "12px 24px",
+        "fontWeight": 700,
+        "shadow": null,
+        "hoverDelta": "unknown"
+      },
+      "secondary": {
+        "background": "#FFFFFF",
+        "color": "#272727",
+        "borderRadius": "5px",
+        "padding": "8px 16px",
+        "fontWeight": 700,
+        "shadow": null,
+        "hoverDelta": "unknown"
+      },
+      "ghost": null
+    },
+    "dualCTAPattern": "primary-yellow-with-underline-secondary",
+    "cards": {
+      "background": "#FFFFFF",
+      "borderRadius": "5px",
+      "padding": "24px",
+      "shadow": "rgba(0,0,0,0.1) 0px 3px 6px 0px",
+      "border": "1px solid #EBEBEB"
+    },
+    "inputs": {
+      "borderRadius": "5px",
+      "padding": "10px 12px",
+      "border": "1px solid #B5B5B5",
+      "focusRing": null
+    }
+  },
+  "systemComponents": [
+    {
+      "name": "site-header",
+      "kind": "header",
+      "occurrences": 23,
+      "headingSequence": [],
+      "ctaLabels": [],
+      "domFingerprintHash": "sha256:aGVhZGVyOjo=",
+      "exampleSlug": "about",
+      "exampleSelector": "header",
+      "examplePages": [
+        "about",
+        "about__financing",
+        "about__history",
+        "about__locations",
+        "careers",
+        "cat-certified-used",
+        "contact-us",
+        "credit-application"
+      ]
+    },
+    {
+      "name": "nav-cross-page",
+      "kind": "nav-secondary",
+      "occurrences": 26,
+      "headingSequence": [],
+      "ctaLabels": [],
+      "domFingerprintHash": "sha256:bmF2Ojo=",
+      "exampleSlug": "about",
+      "exampleSelector": "nav",
+      "examplePages": [
+        "about",
+        "about__financing",
+        "about__history",
+        "about__locations",
+        "careers",
+        "cat-certified-used",
+        "contact-us",
+        "credit-application"
+      ]
+    },
+    {
+      "name": "site-footer",
+      "kind": "footer",
+      "occurrences": 22,
+      "headingSequence": [
+        "QUICK LINKS",
+        "CONTACT US",
+        "CONNECT WITH US"
+      ],
+      "ctaLabels": [],
+      "domFingerprintHash": "sha256:Zm9vdGVyOjpRVUlD",
+      "exampleSlug": "about",
+      "exampleSelector": "footer",
+      "examplePages": [
+        "about",
+        "about__financing",
+        "about__history",
+        "careers",
+        "cat-certified-used",
+        "credit-application",
+        "customer-value-agreements",
+        "industries"
+      ]
+    }
+  ],
+  "iconFont": {
+    "family": "icomoon",
+    "localPath": "stardust/current/assets/fonts/icomoon.ttf",
+    "sourceCss": "@font-face { font-family: \"icomoon\"; src: url(\"/wp-content/themes/wheelermachinery/assets/fonts/icomoon.ttf\") format(\"truetype\"); }",
+    "glyphCount": 14,
+    "glyphs": [
+      {
+        "class": "icon-menu",
+        "codepoint": "",
+        "name": "menu"
+      },
+      {
+        "class": "icon-map-pin",
+        "codepoint": "",
+        "name": "map-pin"
+      },
+      {
+        "class": "icon-new",
+        "codepoint": "",
+        "name": "new"
+      },
+      {
+        "class": "icon-used",
+        "codepoint": "",
+        "name": "used"
+      },
+      {
+        "class": "icon-rent",
+        "codepoint": "",
+        "name": "rent"
+      },
+      {
+        "class": "icon-order",
+        "codepoint": "",
+        "name": "order"
+      },
+      {
+        "class": "icon-service",
+        "codepoint": "",
+        "name": "service"
+      },
+      {
+        "class": "icon-phone",
+        "codepoint": "",
+        "name": "phone"
+      },
+      {
+        "class": "icon-facebook",
+        "codepoint": "",
+        "name": "facebook"
+      },
+      {
+        "class": "icon-instagram",
+        "codepoint": "",
+        "name": "instagram"
+      },
+      {
+        "class": "icon-twitter",
+        "codepoint": "url(data:image/svg+xml,%3Csvg id=Capa_1 height=20 width=20 enable-background=new 0 0 1226.37 1226.37 viewBox=0 0 1226.37 1226.37 xmlns=http://www.w3.org/2000/svg%3E%3Cpath fill=%23fc0 d=m727.348 519.284 446.727-519.284h-105.86l-387.893 450.887-309.809-450.887h-357.328l468.492 681.821-468.492 544.549h105.866l409.625-476.152 327.181 476.152h357.328l-485.863-707.086zm-144.998 168.544-47.468-67.894-377.686-540.24h162.604l304.797 435.991 47.468 67.894 396.2 566.721h-162.604l-323.311-462.446z/%3E%3Cg/%3E%3Cg/%3E%3Cg/%3E%3Cg/%3E%3Cg/%3E%3Cg/%3E%3Cg/%3E%3Cg/%3E%3Cg/%3E%3Cg/%3E%3Cg/%3E%3Cg/%3E%3Cg/%3E%3Cg/%3E%3Cg/%3E%3C/svg%3E)",
+        "name": "twitter"
+      },
+      {
+        "class": "icon-linkedin",
+        "codepoint": "",
+        "name": "linkedin"
+      },
+      {
+        "class": "icon-youtube",
+        "codepoint": "",
+        "name": "youtube"
+      },
+      {
+        "class": "icon-left-arrow",
+        "codepoint": "",
+        "name": "left-arrow"
+      }
+    ]
+  },
+  "voice": {
+    "heroHeadline": "FINANCING DEALS & SPECIAL OFFERS",
+    "heroSubcopy": null,
+    "heroImage": {
+      "url": "https://wheelercat.com/wp-content/uploads/2025/05/SC_Hero.jpg",
+      "alt": "",
+      "source": "img",
+      "domPath": "body > article > div:nth-of-type(2) > section:nth-of-type(1) > a > img",
+      "localPath": "stardust/current/assets/media/SC_Hero-292cc4.jpg",
+      "rect": {
+        "x": 0,
+        "y": 158,
+        "width": 1440,
+        "height": 496.4375
+      }
+    },
+    "primaryCTALabel": "BROWSE MORE SERVICES",
+    "ctaSamples": [
+      "BROWSE MORE SERVICES",
+      "MORE ABOUT US",
+      "NEW QUOTE",
+      "SHOP USED",
+      "RENT NOW",
+      "REQUEST SERVICE",
+      "CREDIT APP"
+    ],
+    "navItems": [
+      "Sponsorships",
+      "NEW EQUIPMENT",
+      "USED EQUIPMENT",
+      "RENT NOW",
+      "REQUEST SERVICE",
+      "CREDIT APP",
+      "801-436-3672"
+    ],
+    "footerHeadings": [
+      "QUICK LINKS",
+      "CONTACT US",
+      "CONNECT WITH US"
+    ],
+    "firstParagraph": null,
+    "tone": {
+      "guess": "bold-direct",
+      "evidence": "ALL-CAPS Roboto Condensed display headlines, short imperative CTAs, blue-collar tone (\"YOUR HEAVY MACHINERY EXPERTS\", \"DEPENDABLE AND RELIABLE\", \"WE PROUDLY SUPPORT THE ONES WHO BUILD OUR WORLD\")"
+    }
+  },
+  "voiceTable": {
+    "ctaFrequency": [
+      {
+        "label": "VIEW DETAILS",
+        "total": 15,
+        "pageCount": 1,
+        "pages": [
+          "about__locations"
+        ]
+      },
+      {
+        "label": "LEARN MORE",
+        "total": 9,
+        "pageCount": 6,
+        "pages": [
+          "about__financing",
+          "customer-value-agreements",
+          "offers",
+          "parts",
+          "service"
+        ]
+      },
+      {
+        "label": "APPLY NOW",
+        "total": 4,
+        "pageCount": 3,
+        "pages": [
+          "about__financing",
+          "careers",
+          "credit-application"
+        ]
+      },
+      {
+        "label": "CONTACT US",
+        "total": 3,
+        "pageCount": 3,
+        "pages": [
+          "about",
+          "about__history",
+          "new__machines"
+        ]
+      },
+      {
+        "label": "Submit",
+        "total": 3,
+        "pageCount": 3,
+        "pages": [
+          "cat-certified-used",
+          "customer-value-agreements",
+          "sponsorships"
+        ]
+      },
+      {
+        "label": "REQUEST A QUOTE",
+        "total": 3,
+        "pageCount": 2,
+        "pages": [
+          "new",
+          "used-equipment"
+        ]
+      },
+      {
+        "label": "REQUEST SERVICE NOW",
+        "total": 3,
+        "pageCount": 1,
+        "pages": [
+          "service__field-service"
+        ]
+      },
+      {
+        "label": "Keyboard shortcuts",
+        "total": 2,
+        "pageCount": 2,
+        "pages": [
+          "about__locations",
+          "home"
+        ]
+      }
+    ],
+    "headingFrequency": [
+      {
+        "text": "QUICK LINKS",
+        "level": 4,
+        "total": 26,
+        "pageCount": 26
+      },
+      {
+        "text": "CONTACT US",
+        "level": 4,
+        "total": 26,
+        "pageCount": 26
+      },
+      {
+        "text": "CONNECT WITH US",
+        "level": 4,
+        "total": 26,
+        "pageCount": 26
+      }
+    ],
+    "toneMetrics": {
+      "headingsTotal": 409,
+      "headingsUppercasePercent": 90,
+      "distinctHeadings": 279,
+      "distinctCtaLabels": 109
+    }
+  },
+  "crossPromo": {
+    "detected": true,
+    "anchorHeading": "QUICK LINKS",
+    "cluster": [
+      {
+        "text": "QUICK LINKS",
+        "total": 26,
+        "pageCount": 26,
+        "overlap": 26
+      },
+      {
+        "text": "CONTACT US",
+        "total": 26,
+        "pageCount": 26,
+        "overlap": 26
+      },
+      {
+        "text": "CONNECT WITH US",
+        "total": 26,
+        "pageCount": 26,
+        "overlap": 26
+      }
+    ],
+    "pages": [
+      "about",
+      "about__financing",
+      "about__history",
+      "about__locations",
+      "careers",
+      "cat-certified-used",
+      "contact-us",
+      "credit-application",
+      "customer-value-agreements",
+      "home",
+      "industries",
+      "industries__heavy-construction",
+      "machine-quote-request",
+      "new",
+      "new__machines",
+      "offers",
+      "parts",
+      "parts__shop-by-category",
+      "rental",
+      "rental__excavators"
+    ],
+    "pageCount": 26,
+    "totalPages": 26
+  },
+  "register": "brand"
+}
