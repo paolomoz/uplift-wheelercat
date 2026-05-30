@@ -24,3 +24,12 @@ test-results/
 # stardust:extract. Prototypes don't reference these. Excluded to keep the
 # repo cloneable. The captured media + fonts + logo + per-page JSON stay.
 stardust/current/assets/screenshots/
+
+# Captured body-prose files + verbatim prototype variants. These contain
+# Wheeler's marketing paragraphs verbatim (legitimate working capture for
+# the client engagement) but reproduce copyrighted prose. Keep them out of
+# the public repo; they stay local for the Wheeler-facing pitch artifact.
+# The direction-authorized prototypes (proposed.html files without -verbatim
+# suffix) go in the repo as the portfolio artifact.
+stardust/current/pages/*.bodies.json
+stardust/prototypes/*-verbatim.html

@@ -277,3 +277,162 @@ See:
 ### Other variants
 
 A, B, C/C-cinematic, D, E, F, G, H, I remain as historical exploration artifacts (status: `prototyped`). They are not stale-flagged — A-rich is additive, not a re-direction. Brand owner can revisit any of them as references.
+
+---
+
+## Approved variant — listing archetype (`/new/`)
+
+**Approved at:** 2026-05-28T13:19:03Z
+**Page:** `new` (listing template archetype)
+**Approved file:** `stardust/prototypes/new-proposed.html`
+**Approved variant:** canonical (no per-page variant fork — single render against A-rich-inherited chrome)
+**Inherits chrome from:** A-rich (approved 2026-05-28T11:03:15Z)
+
+### What this approval establishes
+
+`/new/` is the **listing template archetype**. Per the migrate flow, future listing-typed pages fork this approval (Path A′ in `skills/migrate/SKILL.md`):
+- `/used-equipment/` → fork
+- `/cat-certified-used/` → fork
+- `/rental/` → fork
+- `/rental/excavators/` → fork
+- `/attachments/` → fork
+- `/trailers/` → fork
+- `/power-systems/` → fork
+- `/parts/` → fork (with /parts/shop-by-category as sub-variant)
+- `/industries/heavy-construction/` → fork
+- `/specials/` → fork
+- `/offers/` → fork
+- `/about/locations/` → fork (branch directory)
+- `/jobs/` → fork (job listings)
+
+### New components introduced (canon candidates)
+
+| Component | Used at | Fold-back | Reason |
+|---|---|---|---|
+| **Breadcrumb chrome** ("Home › Section") | section 4 of `/new/` | **Site-wide** | Every non-home page benefits from this wayfinding pattern; A-rich home is the only page that legitimately omits it |
+| **Photo-card category tile** (4-up grid, 3:4 aspect with caption overlay + smooth image scale on hover) | section 6 of `/new/` | **Listing-template only** | This pattern only makes sense for category-hub listings; product-detail pages and program pages won't need it. Sibling to A-rich's blog-card pattern (3:4 vs 2:3 aspect; different caption position) |
+| **Dark CTA bar** (full-bleed dark with yellow side rule + headline + 1-2 CTAs) | section 8 of `/new/` | **Site-wide** | Site-wide pattern matching captured `section.cta-bar.cta-bar--black` class. Used at the bottom of every page-type that drives users toward a quote/contact action |
+| **Active-state styling on 4-verb nav** (BUY shows yellow underline + darker background on `/new/`) | A-rich header chrome | **Site-wide** (extension to chrome) | This was an extension to A-rich's 4-verb pattern; should propagate to every page so the user always sees which top-level intent they're in |
+
+### Canon write-back
+
+Per `prototype.md` § Prep mode, on approval of subsequent template archetypes the canon-extraction runs in diff mode. For this approval:
+- **Net-new items added** to canon: breadcrumb, photo-card category tile, dark CTA bar, 4-verb active state
+- **Match canon byte-for-byte**: A-rich chrome (utility strip / 4-verb nav / dept row / footer / Lenis runtime + canonical script / palette / type / icomoon)
+- **Conflicts with canon**: none — `/new/` strictly extends A-rich without overriding any inherited pattern
+
+### Fold-back decision summary
+
+| Fold-back tier | Items |
+|---|---|
+| **Site-wide** | Breadcrumb · Dark CTA bar · 4-verb nav active state |
+| **Listing-template** | Photo-card category tile (4-up portrait grid) |
+| **Page-local** | None — every move on `/new/` is reusable |
+| **Don't fold** | None |
+
+### State updates
+
+- `pages[new].status`: `prototyped` → `approved`
+- `pages[new].type`: `listing` (confirmed)
+- `pages[new].approvedVariant`: `canonical`
+- `pages[new].approvedAt`: `2026-05-28T13:19:03Z`
+- `pages[new].inheritsChromeFrom`: `A-rich`
+- `direction.variants[]`: not modified (no per-page variant; this approval is canonical-against-A-rich)
+
+### Next archetype
+
+Recommended order per page-templates analysis:
+1. ~~`/new/` (listing)~~ ✓ approved
+2. ~~`/customer-value-agreements/` (program)~~ ✓ prototyped (fold-back below; pending user approval)
+3. `/request-service/` (form)
+4. `/about/` (static)
+5. Field Notes article (article — requires targeted re-extract for blog/news content)
+
+---
+
+## Approved variant — program archetype (`/customer-value-agreements/`)
+
+**Approval status:** prototyped, fold-back drafted, pending user approval
+**Rendered at:** 2026-05-29T19:43:00Z
+**Rendered by:** `impeccable:craft` (via `stardust:prototype`, first invocation of the formal Phase 2 delegation in this project)
+**Page:** `customer-value-agreements` (program template archetype)
+**Approved file:** `stardust/prototypes/customer-value-agreements-proposed.html`
+**Approved variant:** canonical (no per-page variant fork — single render against A-rich + `/new/` inherited canon)
+**Inherits chrome from:** A-rich (approved 2026-05-28T11:03:15Z)
+**Inherits components from:** `/new/` listing archetype (approved 2026-05-28T13:19:03Z)
+
+### What this approval establishes
+
+`/customer-value-agreements/` is the **program template archetype**. Per the migrate flow, future program-typed pages fork this approval (Path A′ in `skills/migrate/SKILL.md`). A program page has: a hero introducing a named program, a tier/plan picker, a deep-dive on the flagship tier, content sub-sections with image+text alternation, and a contact/lead-capture bar. Pages expected to fork:
+
+- `/service/` → fork (Wheeler's service-program overview; the four service tiers replace CVA's four maintenance tiers)
+- `/equipment-rebuilds/` → fork (rebuild program with certified vs custom rebuild tiers + the same image-text deep-dive pattern)
+- `/get-training/` → fork (training program with course tiers + image-text per course-track)
+- `/technology/` → fork (Cat Connect program — tier picker for VisionLink / Cat Inspect / Parts.cat.com)
+- `/customer-value-agreements-faq/` → fork (FAQ sub-page, lighter composition: program-chrome + accordion content)
+- `/services-commitment/` → fork (the home A-rich "Redefining Commitment" CTA target — single-tier program detail)
+
+### New components introduced (canon candidates)
+
+| Component | Used at | Fold-back | Reason |
+|---|---|---|---|
+| **Split-lockup hero** (Oswald two-line H1 with line-2 Cat-Yellow accent — descriptive phrase + named program) | section 5 of CVA | **Program-template** | Pattern fits any page where the hero has a long descriptive phrase + a named product/program/initiative. /new/'s single-line hero stays canon for listing pages; the split-lockup is the program-page hero |
+| **Plan-tier card grid with elevated flagship** (4-up with `most_popular` flag → yellow border + 6px lift + dark badge) | section 6 of CVA | **Program-template** | Reusable wherever a program has 3–4 tiers and one is meant to be the recommended choice. CVA, Cat Connect, Heavy Equipment Rental options, Used Equipment Inspection tiers all fit. Distinct from /new/'s photo-card category tile: tier cards don't carry hero photography; they emphasize differential value comparison and have a CTA-as-card-anchor |
+| **Value-prop horizontal rail** (5-up anchor cards on dark substrate; each card = icon + name + tagline + jumplink) | section 7 of CVA | **Program-template** | Pattern fits any page that wants to surface 4–6 sub-feature anchors above a deep narrative. Captured CVA page uses it for the Premium Service deep-dive; equivalent rails will fit service, rebuilds, training |
+| **Image-text alternation** (flex / flex-reverse variant pair, image + sub-eyebrow + title + body + bulleted list + CTA row) | sections 7 of CVA (× 2) | **Site-wide** | Captured WordPress site uses this primitive across CVA, service, equipment, about pages. It's a generic content block, not program-specific. Bidirectional variant (image-left default, `--reverse` for image-right) matches the captured `section.image-text.home-image-text` pattern |
+| **Numbered-commitment list** (counter-leading-zero leading numerals on warm-stone background card per item) | section 8 of CVA (TMR commitments) | **Site-wide** | Generic emphasis-list primitive for ordered benefits, steps, or named commitments. Could surface on /services-commitment/, /about/, /careers/, anywhere a short ordered claim list reads better than bullets |
+| **SERVICE active state on 4-verb nav** | inherited from /new/'s 4-verb active-state pattern, here switched to the SERVICE verb | **Site-wide** (already canon via /new/) | No new canon; this is /new/'s already-canonized "active state on the verb that matches the current page section" pattern, applied to a service-typed page |
+
+### Canon write-back
+
+Per `prototype.md` § Prep mode, canon-extraction runs in diff mode against the prior archetype (`/new/`). For this approval:
+
+- **Net-new items added to canon (program-template):** split-lockup hero, plan-tier card grid with `most_popular` flag, value-prop horizontal rail
+- **Net-new items added to canon (site-wide):** image-text alternation, numbered-commitment list
+- **Match canon byte-for-byte:** A-rich chrome (utility strip / 3-layer header / dept row / footer / Lenis runtime + canonical motion script / palette / type / icomoon) + /new/ canon (breadcrumb / dark CTA bar / 4-verb active state)
+- **Conflicts with canon:** none — CVA strictly extends A-rich + /new/ without overriding any inherited pattern. The split-lockup hero is a new sibling of /new/'s single-line hero, not a replacement
+
+### Fold-back decision summary
+
+| Fold-back tier | Items |
+|---|---|
+| **Site-wide** | Image-text alternation · Numbered-commitment list |
+| **Program-template** | Split-lockup hero · Plan-tier card grid (with flagship elevation) · Value-prop horizontal rail |
+| **Page-local** | None — every move on CVA is reusable as either site-wide primitive or program-template canon |
+| **Don't fold** | None |
+
+### Content-sourcing notes (carried into program-template canon)
+
+The captured CVA page exposed a recurring content-shape gap that program-typed pages share: **plan-tier descriptions and value-prop taglines are not present in the live page body** (they appear to be jumplink-only anchors). The prototype renders 9 PLACEHOLDER signatures (4 tier summaries + 5 value-prop taglines) and lists them in `_provenance.unsourcedContent[]`. Forked pages should expect the same gap and either:
+
+1. Source tier/value-prop copy from sales collateral and replace placeholders before deploy, OR
+2. Drop the tagline slot entirely if the brand intent is jumplink-only navigation (would change the program-template's component shape, not its visual canon)
+
+The migrate-guard will refuse production deploy until the placeholders resolve to captured-verbatim, direction-authorized, or explicit-omit.
+
+### Content adaptation: em-dash rule
+
+The captured Premium Service lead paragraph contains an em-dash (`one thing is for sure—the best way to stay ahead`). Per impeccable absolute ban "No em dashes," the prototype renders it as a colon (`one thing is for sure: the best way to stay ahead`). This is documented in the file's `voiceClassification` as the only departure from captured-verbatim. Forked pages should expect the same surgical em-dash → colon/comma/period substitution where captured prose has them; otherwise verbatim stands.
+
+### Skill-flow note (first formal craft delegation)
+
+This is the **first prototype in the project rendered through `impeccable:craft` via the Skill tool** (per user direction 2026-05-29: "use the skill for the first render of every prototype"). The home (A-rich) and `/new/` prototypes were direct-authored inheriting from chrome; CVA's render delegated to `impeccable:craft` for the first time. The craft delegation pulled the load-bearing validators back into the flow (content-sourcing scan, anti-toolbox audit, type-ratio gate, no-em-dash check). Subsequent iterations and small refinements on CVA may direct-author per the same user direction; the **first render of every new prototype** follows the same craft delegation path going forward.
+
+### State updates (on approval)
+
+- `pages[customer-value-agreements].status`: `prototyped` → `approved`
+- `pages[customer-value-agreements].type`: `program` (confirmed)
+- `pages[customer-value-agreements].approvedVariant`: `canonical`
+- `pages[customer-value-agreements].approvedAt`: `<approval timestamp>`
+- `pages[customer-value-agreements].inheritsChromeFrom`: `A-rich`
+- `pages[customer-value-agreements].inheritsComponentsFrom`: `[new]`
+- `direction.variants[]`: not modified (no per-page variant; this approval is canonical-against-A-rich + /new/)
+- `direction.archetypes[]` (new field, optional): append `{ type: "program", approvedFrom: "customer-value-agreements", approvedAt: "<ts>" }`
+
+### Next archetype
+
+1. ~~`/new/` (listing)~~ ✓ approved
+2. ~~`/customer-value-agreements/` (program)~~ ✓ prototyped (this section — pending approval)
+3. **`/request-service/` (form)** — establishes the form archetype (service request form is the largest captured form on the site; canon will cover field structure, validation, success/error states, dark-band form treatment)
+4. `/about/` (static) — establishes the static-content archetype (long-form prose + leadership team + history; lightweight chrome)
+5. Field Notes article (article — requires targeted re-extract for blog/news content)

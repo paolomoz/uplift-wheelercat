@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- stardust:provenance
+  writtenBy:         impeccable:craft (via stardust:prototype)
+  writtenAt:         2026-05-29T00:00:00Z
+  page:              customer-value-agreements
+  pageUrl:           https://wheelercat.com/customer-value-agreements/
+  pageType:          program (archetype — establishes template for /service/, /equipment-rebuilds/, /get-training/, /technology/)
+  variant:           default
+  motionRegister:    static (reveal-on-scroll only, no kinetic-display)
+  againstDirection:  stardust/direction.md (Active, Mode A brand-faithful)
+  inheritsChromeFrom: A-rich
+  inheritsComponentsFrom: [new (breadcrumb, dark-cta-bar)]
+  readArtifacts:
+    - stardust/prototypes/customer-value-agreements-shape.md
+    - stardust/current/pages/customer-value-agreements.json
+    - stardust/current/pages/customer-value-agreements.bodies.json
+    - stardust/prototypes/home-A-rich-proposed.html
+    - stardust/prototypes/new-proposed.html
+    - PRODUCT.md / DESIGN.md / DESIGN-A-rich.md / DESIGN-A-rich.json
+  newComponentsIntroduced:
+    - split-lockup hero (two-line Oswald H1 with line-2 Cat-Yellow accent)
+    - plan-tier card grid (4-up with Premium elevated; warm-stone substrate)
+    - value-prop horizontal rail (5-up anchor links inside dark substrate)
+    - image-text alternation pattern (flex / flex-reverse) with captured list bodies
+  imagesUsed:
+    hero:              ../current/assets/media/cva-banner-scaled-e1737395961880-5fc279.jpg
+    premiumDeepDive:   ../current/assets/media/CVA_1080x1080-aaf6ad.jpg
+    managedPmServices: ../current/assets/media/Cat-Parts2-35e8df.png
+    fleetTraining:     ../current/assets/media/Consultative_Service_5-e1745962081964-e7f859.jpg
+    tmrSection:        ../current/assets/media/I7A7072-2-e1744144569645-5db98f.jpg
+  voiceClassification:
+    - { section: utility-strip,   classification: captured-verbatim (site-wide chrome) }
+    - { section: header,          classification: captured-verbatim (site-wide chrome, SERVICE verb active) }
+    - { section: dept-row,        classification: captured-verbatim (site-wide chrome) }
+    - { section: breadcrumb,      classification: direction-authorized chrome (per friction #3) }
+    - { section: hero.eyebrow,    classification: direction-authorized chrome }
+    - { section: hero.h1-line1,   classification: captured-verbatim (pages.json#headings[1]) }
+    - { section: hero.h1-line2,   classification: captured-verbatim (pages.json#headings[2]) }
+    - { section: hero.supporting, classification: direction-authorized rewrite of metaDescription }
+    - { section: hero.cta,        classification: captured-verbatim (pages.json#ctas[12] Request Information) }
+    - { section: plan-picker.h2,  classification: captured-verbatim (pages.json#headings[3] "PICK A PLAN THAT FITS YOUR BUSINESS NEEDS") }
+    - { section: plan-picker.intro, classification: captured-verbatim (bodies.json#bodies[0] paragraphs) }
+    - { section: plan-picker.tier-cards, classification: captured-verbatim tier names + placeholder × 4 summaries }
+    - { section: premium-deepdive.eyebrow, classification: captured-verbatim (pages.json#headings[6] "COMMITTED TO MAINTAINING YOUR CAT® EQUIPMENT") }
+    - { section: premium-deepdive.h2, classification: captured-verbatim (pages.json#headings[5] "PREMIUM SERVICE CVA WITH OUR SERVICES COMMITMENT") }
+    - { section: premium-deepdive.lead, classification: captured-verbatim (bodies.json#bodies[3] paragraphs, em-dash → colon) }
+    - { section: premium-deepdive.value-rail, classification: captured-verbatim labels + placeholder × 5 taglines }
+    - { section: premium-deepdive.managed-pm.h3, classification: captured-verbatim (pages.json#headings[7]) }
+    - { section: premium-deepdive.managed-pm.body, classification: captured-verbatim (bodies.json#cards[2]) }
+    - { section: premium-deepdive.fleet-training.h3, classification: captured-verbatim (pages.json#headings[8]) }
+    - { section: premium-deepdive.fleet-training.body, classification: captured-verbatim (bodies.json#cards[3]) }
+    - { section: tmr.h2,          classification: captured-verbatim (pages.json#headings[16] "TOTAL MAINTENANCE AND REPAIR") }
+    - { section: tmr.body,        classification: captured-verbatim (bodies.json#cards[4]) }
+    - { section: cta-bar.h2,      classification: captured-verbatim (pages.json#headings[17]) }
+    - { section: cta-bar.ctas,    classification: captured-verbatim (pages.json#ctas[15-16]) }
+    - { section: footer,          classification: captured-verbatim (site-wide chrome) }
+  unsourcedContent:
+    - { selector: "section[data-section='plan-picker'] .tier-card__summary", type: "tier-summary", count: 4, reason: "Captured page lacks descriptive copy for the 4 plan tier summaries; rendered with PLACEHOLDER signature" }
+    - { selector: "section[data-section='premium-deepdive'] .value-prop__tagline", type: "value-prop-tagline", count: 5, reason: "Captured page anchors are jumplink labels without prose taglines; rendered with PLACEHOLDER signature" }
+  brandFaithfulInversions: [pure-white-page, pure-#272727-headings, hex-format, saturated-yellow, Oswald-display-for-h1]
+  wcagContrast:
+    - "#272727 on #FFFFFF: 14.0:1 AAA"
+    - "#454545 on #FFFFFF: 9.7:1 AAA"
+    - "#FFFFFF on #272727: 14.7:1 AAA"
+    - "#272727 on #FFCC00: 12.6:1 AAA"
+    - "#454545 on #E5E3DF: 7.4:1 AAA"
+    - "REFUSED: white on yellow (1.95:1)"
+  stardustVersion:   0.10.0
+-->
+<noscript><style>
+  [data-anim], [data-tile-anim] { opacity: 1 !important; transform: none !important; filter: none !important; }
+  .hero__inner > * { animation: none !important; opacity: 1 !important; transform: none !important; }
+</style></noscript>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cat® Customer Value Agreements (CVAs) | Wheeler Machinery Co.</title>
+<meta name="description" content="Customer Value Agreements (CVA) provide you a flexible way for hassle-free maintenance with parts shipped to your door and no surprise costs. Learn more!">
+<link rel="stylesheet" href="lenis.min.css">
+<style>
+:root {
+  --color-page: #FFFFFF;
+  --color-body: #454545;
+  --color-heading: #272727;
+  --color-cat-yellow: #FFCC00;
+  --color-cat-yellow-hover: #E6B800;
+  --color-surface-dark: #272727;
+  --color-surface-dark-hover: #1A1A1A;
+  --color-warm-stone: #E5E3DF;
+  --color-text-on-dark: #FFFFFF;
+  --color-text-on-yellow: #272727;
+  --color-overlay: rgba(18,18,18,0.55);
+
+  --fs-100: 1rem;
+  --fs-125: 1.25rem;
+  --fs-156: 1.563rem;
+  --fs-195: 1.953rem;
+  --fs-244: 2.441rem;
+  --fs-305: 3.052rem;
+  --fs-381: 3.815rem;
+  --fs-label: 0.8rem;
+
+  --sp-xs: 4px;
+  --sp-sm: 8px;
+  --sp-md: 16px;
+  --sp-lg: 24px;
+  --sp-xl: 32px;
+  --sp-xxl: 48px;
+  --sp-section: 64px;
+
+  --r-primary: 5px;
+  --r-card: 8px;
+  --r-pill: 999px;
+
+  --container-max: 1400px;
+
+  --shadow-card: rgba(0,0,0,0.18) 0px 6px 16px 0px;
+  --shadow-card-strong: rgba(0,0,0,0.5) 0px 12px 28px 0px;
+  --shadow-tier-elevated: rgba(255,204,0,0.18) 0px 18px 40px -8px, rgba(0,0,0,0.22) 0px 10px 24px -6px;
+
+  --font-display: "Roboto Condensed", "Roboto", system-ui, sans-serif;
+  --font-body: "Roboto", system-ui, sans-serif;
+  --font-icon: "icomoon";
+
+  --ease-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@font-face { font-family: "Roboto Condensed"; font-weight: 400 700; font-style: normal; font-display: swap; src: url("../current/assets/fonts/ieVl2ZhZI2eCN5jzbjEETS9weq8-19K7DQ.woff2") format("woff2"); }
+@font-face { font-family: "Roboto"; font-weight: 300 700; font-style: normal; font-display: swap; src: url("../current/assets/fonts/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2") format("woff2"); }
+@font-face { font-family: "Roboto"; font-weight: 700; font-style: normal; font-display: swap; src: url("../current/assets/fonts/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBHMdazQ.woff2") format("woff2"); }
+@font-face { font-family: "icomoon"; src: url("../current/assets/fonts/icomoon.ttf") format("truetype"); font-weight: normal; font-style: normal; font-display: block; }
+@font-face { font-family: "Oswald"; font-weight: 200 700; font-style: normal; font-display: swap; src: url("../current/assets/fonts/TK3IWkUHHAIjg75cFRf3bXL8LICs1_Fv40pKlN4NNSeSASz7FmlWHYg.woff2") format("woff2"); }
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body { margin: 0; font-family: var(--font-body); font-size: var(--fs-100); line-height: 1.5; color: var(--color-body); background: var(--color-page); -webkit-font-smoothing: antialiased; }
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; cursor: pointer; }
+
+.container { width: 100%; max-width: var(--container-max); margin: 0 auto; padding-left: var(--sp-lg); padding-right: var(--sp-lg); }
+.burger { display: none; }
+
+/* Type */
+.display, .headline, .title, .sub-title, .label {
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-heading);
+  margin: 0;
+  text-wrap: balance;
+}
+.display { font-size: clamp(2.441rem, 5vw, 4rem); line-height: 1.05; letter-spacing: 0.02em; }
+.headline { font-size: clamp(1.953rem, 3.5vw, var(--fs-305)); line-height: 1.1; letter-spacing: 0.02em; }
+.title { font-size: var(--fs-195); line-height: 1.15; letter-spacing: 0.015em; }
+.sub-title { font-size: var(--fs-156); line-height: 1.2; letter-spacing: 0.015em; }
+.label { font-size: var(--fs-label); line-height: 1.2; letter-spacing: 0.08em; }
+.body-copy { font-size: var(--fs-100); line-height: 1.6; color: var(--color-body); margin: 0; max-width: 65ch; text-wrap: pretty; }
+.lead-copy { font-size: var(--fs-125); line-height: 1.5; color: var(--color-body); margin: 0; max-width: 62ch; }
+
+/* Icons */
+.icon { font-family: var(--font-icon) !important; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; -webkit-font-smoothing: antialiased; speak: never; display: inline-block; }
+.icon-menu::before { content: "\e904"; }
+.icon-phone::before { content: "\e90b"; }
+.icon-new::before { content: "\e907"; }
+.icon-used::before { content: "\e90c"; }
+.icon-rent::before { content: "\e909"; }
+.icon-order::before { content: "\e908"; }
+.icon-service::before { content: "\e90a"; }
+.icon-facebook::before { content: "\e900"; }
+.icon-instagram::before{ content: "\e902"; }
+.icon-linkedin::before { content: "\e903"; }
+.icon-youtube::before { content: "\e90d"; }
+.icon-twitter::before { content: "\e905"; }
+
+/* Buttons */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: var(--sp-sm); font-family: var(--font-display); font-weight: 700; font-size: 0.875rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 12px 24px; border-radius: var(--r-primary); border: 1px solid transparent; transition: background 200ms var(--ease-out), color 200ms var(--ease-out), border-color 200ms var(--ease-out), transform 200ms var(--ease-out); cursor: pointer; text-decoration: none; }
+.btn-primary { background: var(--color-cat-yellow); color: var(--color-text-on-yellow); border-color: var(--color-cat-yellow); }
+.btn-primary:hover, .btn-primary:focus-visible { background: var(--color-surface-dark); color: var(--color-cat-yellow); border-color: var(--color-surface-dark); outline: none; }
+.btn-outline-dark { background: transparent; color: var(--color-heading); border-color: var(--color-heading); padding: 10px 20px; }
+.btn-outline-dark:hover, .btn-outline-dark:focus-visible { background: var(--color-surface-dark); color: var(--color-text-on-dark); outline: none; }
+.btn-outline-light { background: transparent; color: var(--color-text-on-dark); border-color: var(--color-text-on-dark); padding: 10px 20px; }
+.btn-outline-light:hover, .btn-outline-light:focus-visible { background: var(--color-cat-yellow); color: var(--color-text-on-yellow); border-color: var(--color-cat-yellow); outline: none; }
+.btn-pill-light { background: var(--color-text-on-dark); color: var(--color-text-on-yellow); border-color: var(--color-text-on-dark); border-radius: var(--r-pill); padding: 14px 28px; letter-spacing: 0.08em; }
+.btn-pill-light:hover, .btn-pill-light:focus-visible { background: var(--color-cat-yellow); color: var(--color-text-on-yellow); border-color: var(--color-cat-yellow); outline: none; }
+.btn-pill-yellow { background: var(--color-cat-yellow); color: var(--color-text-on-yellow); border-color: var(--color-cat-yellow); border-radius: var(--r-pill); padding: 14px 28px; letter-spacing: 0.08em; }
+.btn-pill-yellow:hover, .btn-pill-yellow:focus-visible { background: var(--color-cat-yellow-hover); border-color: var(--color-cat-yellow-hover); outline: none; }
+
+/* ───── UTILITY STRIP (A-rich) ───── */
+.utility-strip { background: var(--color-cat-yellow); color: var(--color-text-on-yellow); border-bottom: 1px solid rgba(39,39,39,0.15); position: relative; z-index: 51; }
+.utility-strip__inner { display: flex; justify-content: flex-end; align-items: center; padding: 8px 0; gap: var(--sp-lg); flex-wrap: wrap; }
+.utility-strip__list { display: inline-flex; gap: var(--sp-lg); list-style: none; margin: 0; padding: 0; align-items: center; }
+.utility-strip__list a, .utility-strip__more-trigger { font-family: var(--font-display); font-weight: 700; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-text-on-yellow); transition: opacity 150ms var(--ease-out); background: transparent; border: 0; padding: 0; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; }
+.utility-strip__list a:hover, .utility-strip__more-trigger:hover { opacity: 0.65; }
+.utility-strip__more { position: relative; }
+.utility-strip__more-trigger::after { content: "▾"; font-size: 0.6rem; margin-left: 2px; opacity: 0.7; }
+.utility-strip__more-menu { position: absolute; top: calc(100% + 8px); right: 0; background: var(--color-surface-dark); color: var(--color-text-on-dark); min-width: 220px; padding: var(--sp-sm) 0; border-top: 3px solid var(--color-cat-yellow); box-shadow: 0 12px 32px rgba(0,0,0,0.3); opacity: 0; pointer-events: none; transform: translateY(-6px); transition: opacity 200ms var(--ease-out), transform 200ms var(--ease-out); z-index: 60; list-style: none; margin: 0; }
+.utility-strip__more:hover .utility-strip__more-menu, .utility-strip__more:focus-within .utility-strip__more-menu { opacity: 1; pointer-events: auto; transform: translateY(0); }
+.utility-strip__more-menu a { display: block; padding: 8px var(--sp-lg); font-family: var(--font-body); font-weight: 400; font-size: 0.85rem; letter-spacing: 0.02em; text-transform: none; color: rgba(255,255,255,0.85); }
+.utility-strip__more-menu a:hover { color: var(--color-cat-yellow); background: rgba(255,204,0,0.06); }
+
+/* ───── HEADER + DEPT ROW (A-rich, SERVICE verb active) ───── */
+.site-header { position: sticky; top: 0; z-index: 50; background: var(--color-surface-dark); color: var(--color-text-on-dark); }
+.main-header { background: var(--color-surface-dark); }
+.main-header__inner { display: flex; justify-content: space-between; align-items: stretch; padding: 0; gap: var(--sp-md); }
+.main-header__logo { display: inline-flex; align-items: center; padding: 14px 0; }
+.main-header__logo img { height: 56px; width: auto; }
+.primary-verbs { display: flex; align-items: stretch; flex: 1; justify-content: center; }
+.verb { position: relative; display: inline-flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; padding: 14px var(--sp-xl); font-family: var(--font-display); font-weight: 700; font-size: 0.95rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-text-on-dark); border-left: 1px solid rgba(255,255,255,0.08); text-decoration: none; transition: background 200ms var(--ease-out), color 200ms var(--ease-out); }
+.verb:last-child { border-right: 1px solid rgba(255,255,255,0.08); }
+.verb:hover, .verb:focus-visible { background: #1a1a1a; color: var(--color-cat-yellow); outline: none; }
+.verb.is-active { background: #1a1a1a; }
+.verb.is-active::after { content: ""; position: absolute; bottom: 0; left: 12px; right: 12px; height: 3px; background: var(--color-cat-yellow); }
+.verb .icon { font-size: 18px; color: var(--color-cat-yellow); }
+.verb .verb-sub { font-size: 0.62rem; letter-spacing: 0.12em; color: rgba(255,255,255,0.55); font-weight: 400; transition: color 200ms; }
+.verb:hover .verb-sub, .verb:focus-visible .verb-sub { color: rgba(255,204,0,0.7); }
+.verb__dropdown { position: absolute; top: 100%; left: 0; background: var(--color-surface-dark); color: var(--color-text-on-dark); min-width: 260px; padding: var(--sp-md) 0; opacity: 0; pointer-events: none; transform: translateY(-8px); transition: opacity 200ms var(--ease-out), transform 200ms var(--ease-out); z-index: 40; border-top: 3px solid var(--color-cat-yellow); box-shadow: 0 16px 36px rgba(0,0,0,0.4); list-style: none; margin: 0; }
+.verb:hover .verb__dropdown, .verb:focus-within .verb__dropdown { opacity: 1; pointer-events: auto; transform: translateY(0); }
+.verb__dropdown a { display: block; padding: 10px var(--sp-lg); font-family: var(--font-body); font-weight: 400; font-size: 0.9rem; letter-spacing: 0.02em; text-transform: none; color: rgba(255,255,255,0.85); transition: color 150ms, background 150ms; }
+.verb__dropdown a:hover { color: var(--color-cat-yellow); background: rgba(255,204,0,0.05); }
+.main-nav__phone { display: inline-flex; align-items: center; gap: var(--sp-sm); background: var(--color-cat-yellow); color: var(--color-text-on-yellow); padding: 0 var(--sp-md); font-family: var(--font-display); font-weight: 700; font-size: 0.9rem; letter-spacing: 0.04em; }
+.main-nav__phone:hover { background: var(--color-cat-yellow-hover); }
+.burger { background: transparent; border: 1px solid var(--color-text-on-dark); color: var(--color-text-on-dark); width: 44px; height: 44px; border-radius: var(--r-primary); align-items: center; justify-content: center; font-size: 1.5rem; }
+.burger:focus-visible { outline: 2px solid var(--color-cat-yellow); outline-offset: 2px; }
+.mega-nav { background: #1a1a1a; border-top: 1px solid rgba(255,255,255,0.06); }
+.mega-nav__inner { display: flex; justify-content: center; flex-wrap: wrap; gap: var(--sp-lg); padding: 10px 0; }
+.mega-nav__inner a { font-family: var(--font-display); font-weight: 700; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-text-on-dark); transition: color 150ms var(--ease-out); }
+.mega-nav__inner a:hover { color: var(--color-cat-yellow); }
+
+/* ───── BREADCRUMB (inherited /new/) ───── */
+.breadcrumb { background: var(--color-page); border-bottom: 1px solid rgba(39,39,39,0.08); }
+.breadcrumb__inner { display: flex; align-items: center; gap: var(--sp-sm); padding: 12px 0; font-family: var(--font-display); font-weight: 700; font-size: 0.78rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--color-body); flex-wrap: wrap; }
+.breadcrumb__inner a { color: var(--color-body); transition: color 150ms; }
+.breadcrumb__inner a:hover { color: var(--color-heading); }
+.breadcrumb__sep { color: var(--color-cat-yellow); font-weight: 700; padding: 0 4px; }
+.breadcrumb__current { color: var(--color-heading); }
+
+/* ───── HERO (split-lockup, captured cva-banner bg + left-darker gradient) ───── */
+.hero { position: relative; min-height: 560px; display: flex; align-items: center; background-image: linear-gradient(to right, rgba(18,18,18,0.88) 0%, rgba(18,18,18,0.70) 38%, rgba(18,18,18,0.40) 72%, rgba(18,18,18,0.18) 100%), url("../current/assets/media/cva-banner-scaled-e1737395961880-5fc279.jpg"); background-size: cover; background-position: center; color: var(--color-text-on-dark); padding: calc(var(--sp-section) * 1.25) 0; overflow: hidden; }
+.hero .container { max-width: none; padding-left: clamp(var(--sp-lg), 5vw, 96px); padding-right: var(--sp-lg); }
+.hero__inner { max-width: 980px; margin-left: 0; }
+.hero__eyebrow { color: var(--color-cat-yellow); display: inline-block; margin-bottom: var(--sp-md); padding-bottom: 4px; border-bottom: 1px solid var(--color-cat-yellow); font-size: 0.85rem; letter-spacing: 0.14em; }
+.hero__headline { color: var(--color-text-on-dark); font-family: "Oswald", "Roboto Condensed", "Roboto", system-ui, sans-serif; font-weight: 700; font-size: clamp(2.2rem, 6vw, 5.6rem); line-height: 0.95; letter-spacing: 0; margin: 0 0 var(--sp-lg); text-wrap: balance; }
+.hero__headline-line { display: block; }
+.hero__headline-line--accent { color: var(--color-cat-yellow); }
+.hero__supporting { font-family: var(--font-display); font-weight: 700; font-size: clamp(0.95rem, 1.4vw, 1.18rem); line-height: 1.4; letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: var(--sp-xl); color: var(--color-text-on-dark); max-width: 56ch; }
+.hero__supporting .accent { color: var(--color-cat-yellow); }
+.hero__actions { display: inline-flex; gap: var(--sp-md); flex-wrap: wrap; max-width: 56ch; }
+
+/* Hero load-only fade-in */
+@keyframes hero-fade-in { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.hero__inner > * { opacity: 0; animation: hero-fade-in 800ms cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.hero__eyebrow    { animation-delay: 100ms; }
+.hero__headline   { animation-delay: 250ms; }
+.hero__supporting { animation-delay: 450ms; }
+.hero__actions    { animation-delay: 650ms; }
+
+/* ───── PLAN PICKER (NEW — warm stone, 4 tier cards with Premium elevated) ───── */
+.plan-picker { background: var(--color-warm-stone); padding: var(--sp-section) 0; }
+.plan-picker__head { text-align: center; margin-bottom: var(--sp-xl); max-width: 70ch; margin-left: auto; margin-right: auto; }
+.plan-picker__eyebrow { font-family: var(--font-display); font-weight: 700; font-size: var(--fs-label); letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-heading); display: inline-block; padding-bottom: 4px; border-bottom: 1px solid var(--color-cat-yellow); margin-bottom: var(--sp-md); }
+.plan-picker__title { color: var(--color-heading); margin-bottom: var(--sp-md); }
+.plan-picker__intro { color: var(--color-body); font-size: var(--fs-100); line-height: 1.6; max-width: 64ch; margin: 0 auto; }
+.plan-picker__intro p { margin: 0 0 var(--sp-sm); }
+.plan-picker__intro p:last-child { margin: 0; }
+
+.plan-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--sp-lg); margin-top: var(--sp-xxl); align-items: stretch; }
+.tier-card { position: relative; background: var(--color-page); border-radius: var(--r-card); padding: var(--sp-xl) var(--sp-lg) var(--sp-lg); display: flex; flex-direction: column; gap: var(--sp-md); text-decoration: none; color: var(--color-body); transition: transform 220ms var(--ease-out), box-shadow 220ms var(--ease-out); border: 1px solid rgba(39,39,39,0.08); }
+.tier-card:hover, .tier-card:focus-visible { transform: translateY(-3px); box-shadow: var(--shadow-card); outline: none; }
+.tier-card__label { font-family: var(--font-display); font-weight: 700; font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-heading); display: inline-block; padding: 4px 10px; background: var(--color-cat-yellow); border-radius: var(--r-pill); align-self: flex-start; }
+.tier-card__icon { color: var(--color-heading); font-size: 36px; line-height: 1; margin-top: var(--sp-sm); }
+.tier-card__name { font-family: var(--font-display); font-weight: 700; font-size: 1.25rem; line-height: 1.15; letter-spacing: 0.02em; text-transform: uppercase; color: var(--color-heading); margin: 0; text-wrap: balance; }
+.tier-card__summary { font-size: 0.92rem; line-height: 1.55; color: var(--color-body); margin: 0; flex: 1; }
+.tier-card__cta { font-family: var(--font-display); font-weight: 700; font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-heading); display: inline-flex; align-items: center; gap: 6px; margin-top: auto; padding-top: var(--sp-sm); border-top: 1px solid rgba(39,39,39,0.12); transition: gap 200ms var(--ease-out), color 200ms var(--ease-out); }
+.tier-card__cta::after { content: "›"; font-family: var(--font-body); font-weight: 700; font-size: 1.25rem; line-height: 0.7; transition: transform 200ms var(--ease-out); }
+.tier-card:hover .tier-card__cta { gap: 10px; color: var(--color-cat-yellow-hover); }
+.tier-card:hover .tier-card__cta::after { transform: translateX(2px); }
+.tier-card--flagship { background: var(--color-page); border: 2px solid var(--color-cat-yellow); box-shadow: var(--shadow-tier-elevated); transform: translateY(-6px); }
+.tier-card--flagship:hover { transform: translateY(-10px); }
+.tier-card--flagship .tier-card__label { background: var(--color-surface-dark); color: var(--color-cat-yellow); }
+.tier-card__badge { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: var(--color-surface-dark); color: var(--color-cat-yellow); font-family: var(--font-display); font-weight: 700; font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; padding: 6px 14px; border-radius: var(--r-pill); white-space: nowrap; }
+
+/* PLACEHOLDER signature */
+[data-placeholder="true"] { border: 2px dashed var(--color-cat-yellow); background: rgba(255,255,255,0.5); padding: var(--sp-sm) var(--sp-md); display: block; border-radius: var(--r-primary); }
+.placeholder-eyebrow { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 0.6rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-heading); opacity: 0.7; display: block; margin-bottom: 4px; }
+.placeholder-shape { font-family: var(--font-body); font-size: 0.88rem; color: var(--color-body); display: block; font-style: italic; line-height: 1.5; }
+
+/* ───── PREMIUM DEEP-DIVE (dark band, captured prose + 5-up value-prop rail + 2 image-text blocks) ───── */
+.premium-deepdive { background: var(--color-surface-dark); color: var(--color-text-on-dark); padding: var(--sp-section) 0; }
+.premium-deepdive__head { max-width: 880px; margin: 0 0 var(--sp-xxl); }
+.premium-deepdive__eyebrow { font-family: var(--font-display); font-weight: 700; font-size: var(--fs-label); letter-spacing: 0.18em; text-transform: uppercase; color: var(--color-cat-yellow); display: inline-block; padding-bottom: 4px; border-bottom: 1px solid var(--color-cat-yellow); margin-bottom: var(--sp-md); }
+.premium-deepdive__title { color: var(--color-text-on-dark); margin-bottom: var(--sp-lg); }
+.premium-deepdive__lead { color: rgba(255,255,255,0.85); font-size: var(--fs-125); line-height: 1.55; max-width: 64ch; }
+.premium-deepdive__lead p { margin: 0 0 var(--sp-md); }
+.premium-deepdive__lead p:last-child { margin: 0; }
+.premium-deepdive__lead em { color: var(--color-cat-yellow); font-style: normal; font-weight: 700; letter-spacing: 0.02em; }
+
+/* Value-prop rail (5-up at desktop, horizontal scroll-snap at mobile) */
+.value-rail { display: grid; grid-template-columns: repeat(5, 1fr); gap: var(--sp-md); margin: var(--sp-xxl) 0; }
+.value-prop { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,204,0,0.18); border-radius: var(--r-card); padding: var(--sp-lg); display: flex; flex-direction: column; gap: var(--sp-sm); text-decoration: none; color: var(--color-text-on-dark); transition: background 200ms var(--ease-out), border-color 200ms var(--ease-out), transform 200ms var(--ease-out); }
+.value-prop:hover, .value-prop:focus-visible { background: rgba(255,204,0,0.07); border-color: var(--color-cat-yellow); transform: translateY(-2px); outline: none; }
+.value-prop__icon { color: var(--color-cat-yellow); font-size: 22px; line-height: 1; }
+.value-prop__name { font-family: var(--font-display); font-weight: 700; font-size: 0.95rem; line-height: 1.2; letter-spacing: 0.04em; text-transform: uppercase; color: var(--color-text-on-dark); margin: 0; text-wrap: balance; }
+.value-prop__tagline { font-size: 0.82rem; line-height: 1.5; color: rgba(255,255,255,0.7); margin: 0; flex: 1; }
+.value-prop__tagline [data-placeholder="true"] { background: rgba(255,204,0,0.05); padding: 6px 8px; }
+.value-prop__tagline .placeholder-eyebrow { color: rgba(255,204,0,0.7); opacity: 1; }
+.value-prop__tagline .placeholder-shape { color: rgba(255,255,255,0.6); }
+.value-prop__more { font-family: var(--font-display); font-weight: 700; font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-cat-yellow); display: inline-flex; align-items: center; gap: 4px; margin-top: var(--sp-sm); }
+.value-prop__more::after { content: "›"; font-family: var(--font-body); font-size: 1rem; line-height: 0.7; }
+
+/* Image-text alternation inside the dark band */
+.image-text { display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-xxl); align-items: center; padding: var(--sp-xxl) 0; border-top: 1px solid rgba(255,255,255,0.08); }
+.image-text--reverse .image-text__image { order: 2; }
+.image-text--reverse .image-text__body { order: 1; }
+.image-text__image { border-radius: var(--r-card); overflow: hidden; aspect-ratio: 4 / 3; background-size: cover; background-position: center; }
+.image-text__image--managed { background-image: url("../current/assets/media/Cat-Parts2-35e8df.png"); background-color: rgba(255,255,255,0.06); background-size: contain; background-repeat: no-repeat; background-position: center; }
+.image-text__image--fleet { background-image: url("../current/assets/media/Consultative_Service_5-e1745962081964-e7f859.jpg"); }
+.image-text__sub-eyebrow { font-family: var(--font-display); font-weight: 700; font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-cat-yellow); margin: 0 0 var(--sp-sm); }
+.image-text__title { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.5rem, 2.5vw, 2rem); line-height: 1.15; letter-spacing: 0.02em; text-transform: uppercase; color: var(--color-text-on-dark); margin: 0 0 var(--sp-md); text-wrap: balance; }
+.image-text__body p { color: rgba(255,255,255,0.85); line-height: 1.65; margin: 0 0 var(--sp-md); max-width: 56ch; }
+.image-text__list { list-style: none; padding: 0; margin: 0 0 var(--sp-lg); display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-xs) var(--sp-lg); max-width: 56ch; }
+.image-text__list li { color: rgba(255,255,255,0.85); padding: 4px 0 4px 22px; position: relative; font-size: 0.95rem; line-height: 1.4; }
+.image-text__list li::before { content: ""; position: absolute; left: 0; top: 11px; width: 12px; height: 2px; background: var(--color-cat-yellow); }
+.image-text__actions { display: inline-flex; gap: var(--sp-md); flex-wrap: wrap; align-items: center; }
+.image-text__phone { display: inline-flex; align-items: center; gap: 6px; color: var(--color-cat-yellow); font-family: var(--font-display); font-weight: 700; font-size: 0.95rem; letter-spacing: 0.04em; }
+.image-text__phone .icon { font-size: 0.9rem; }
+
+/* ───── TMR (white band, captured prose with commitment list) ───── */
+.tmr { background: var(--color-page); padding: var(--sp-section) 0; }
+.tmr__inner { display: grid; grid-template-columns: 1fr 1.2fr; gap: var(--sp-xxl); align-items: center; }
+.tmr__image { border-radius: var(--r-card); overflow: hidden; aspect-ratio: 4 / 5; background-image: url("../current/assets/media/I7A7072-2-e1744144569645-5db98f.jpg"); background-size: cover; background-position: center; }
+.tmr__eyebrow { font-family: var(--font-display); font-weight: 700; font-size: var(--fs-label); letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-heading); display: inline-block; padding-bottom: 4px; border-bottom: 1px solid var(--color-cat-yellow); margin-bottom: var(--sp-md); }
+.tmr__title { color: var(--color-heading); margin-bottom: var(--sp-lg); }
+.tmr__body p { line-height: 1.65; margin: 0 0 var(--sp-md); max-width: 60ch; }
+.tmr__commitments { list-style: none; padding: 0; margin: var(--sp-lg) 0; display: grid; gap: var(--sp-md); }
+.tmr__commitments li { padding: var(--sp-md) var(--sp-lg); background: var(--color-warm-stone); border-radius: var(--r-primary); display: grid; grid-template-columns: auto 1fr; gap: var(--sp-md); align-items: start; }
+.tmr__commitments li::before { content: counter(c, decimal-leading-zero); counter-increment: c; font-family: var(--font-display); font-weight: 700; font-size: 1.3rem; color: var(--color-cat-yellow); letter-spacing: 0.02em; line-height: 1; padding-top: 4px; }
+.tmr__commitments { counter-reset: c; }
+.tmr__commitments strong { font-family: var(--font-display); font-weight: 700; font-size: 0.95rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--color-heading); display: block; margin-bottom: 2px; }
+.tmr__commitments span { font-size: 0.92rem; line-height: 1.5; color: var(--color-body); display: block; }
+.tmr__actions { display: inline-flex; gap: var(--sp-md); flex-wrap: wrap; margin-top: var(--sp-md); }
+
+/* ───── CONTACT CTA BAR (dark, yellow left side rule — /new/ canon) ───── */
+.cta-bar { background: var(--color-surface-dark); color: var(--color-text-on-dark); padding: var(--sp-xxl) 0; position: relative; overflow: hidden; }
+.cta-bar::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 6px; background: var(--color-cat-yellow); }
+.cta-bar__inner { display: flex; justify-content: space-between; align-items: center; gap: var(--sp-xl); flex-wrap: wrap; padding-left: var(--sp-md); }
+.cta-bar__title { color: var(--color-text-on-dark); font-family: var(--font-display); font-weight: 700; font-size: clamp(1.5rem, 3vw, 2.25rem); letter-spacing: 0.02em; line-height: 1.1; text-transform: uppercase; margin: 0; max-width: 28ch; text-wrap: balance; }
+.cta-bar__actions { display: inline-flex; gap: var(--sp-md); flex-wrap: wrap; align-items: center; }
+.cta-bar__phone { display: inline-flex; align-items: center; gap: var(--sp-sm); padding: 14px 24px; border-radius: var(--r-pill); border: 1px solid var(--color-cat-yellow); color: var(--color-cat-yellow); font-family: var(--font-display); font-weight: 700; font-size: 0.95rem; letter-spacing: 0.08em; text-transform: uppercase; transition: background 200ms var(--ease-out), color 200ms var(--ease-out); }
+.cta-bar__phone:hover { background: var(--color-cat-yellow); color: var(--color-text-on-yellow); }
+
+/* ───── FOOTER (A-rich) ───── */
+.site-footer { background: var(--color-surface-dark); color: var(--color-text-on-dark); padding: var(--sp-section) 0 var(--sp-xl); }
+.footer__grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: var(--sp-xxl); margin-bottom: var(--sp-xxl); }
+.footer__brand img { max-width: 220px; }
+.footer__brand p { margin-top: var(--sp-md); color: rgba(255,255,255,0.7); font-size: 0.9rem; max-width: 38ch; }
+.footer__col h2 { font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-text-on-dark); margin: 0 0 var(--sp-md); }
+.footer__col ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: var(--sp-sm); }
+.footer__col a { color: rgba(255,255,255,0.78); font-size: 0.92rem; transition: color 150ms var(--ease-out); }
+.footer__col a:hover { color: var(--color-cat-yellow); }
+.footer__address { font-size: 0.92rem; line-height: 1.55; color: rgba(255,255,255,0.78); font-style: normal; }
+.footer__phone { display: inline-flex; align-items: center; gap: var(--sp-sm); margin-top: var(--sp-md); color: var(--color-cat-yellow); font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; letter-spacing: 0.04em; }
+.footer__social { display: flex; gap: var(--sp-md); margin-top: var(--sp-sm); }
+.footer__social a { width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,0.3); border-radius: var(--r-pill); color: var(--color-text-on-dark); font-size: 1rem; }
+.footer__social a:hover { background: var(--color-cat-yellow); color: var(--color-text-on-yellow); border-color: var(--color-cat-yellow); }
+.footer__legal { padding-top: var(--sp-lg); border-top: 1px solid rgba(255,255,255,0.12); display: flex; justify-content: space-between; gap: var(--sp-md); font-size: 0.8rem; color: rgba(255,255,255,0.55); flex-wrap: wrap; }
+.footer__legal ul { display: flex; gap: var(--sp-lg); list-style: none; margin: 0; padding: 0; }
+
+/* ───── RESPONSIVE ───── */
+@media (max-width: 1100px) and (min-width: 769px) {
+  .verb { padding: 14px var(--sp-md); font-size: 0.85rem; }
+  .verb .verb-sub { font-size: 0.55rem; }
+  .main-nav__phone { padding: 0 12px; font-size: 0.8rem; }
+  .plan-grid { gap: var(--sp-md); }
+  .tier-card { padding: var(--sp-lg) var(--sp-md) var(--sp-md); }
+}
+@media (max-width: 1024px) {
+  :root { --sp-section: 48px; }
+  .plan-grid { grid-template-columns: repeat(2, 1fr); }
+  .value-rail { grid-template-columns: repeat(2, 1fr); }
+  .tmr__inner { grid-template-columns: 1fr; }
+  .tmr__image { aspect-ratio: 16 / 9; max-height: 320px; }
+  .footer__grid { grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: var(--sp-xl); }
+}
+@media (max-width: 768px) {
+  .primary-verbs, .main-nav__phone { display: none; }
+  .burger { display: inline-flex; }
+  .main-nav.is-open.primary-verbs { display: flex; position: absolute; top: 100%; left: 0; right: 0; background: var(--color-surface-dark); flex-direction: column; gap: 0; padding: var(--sp-md) 0; border-top: 1px solid rgba(255,255,255,0.1); z-index: 60; }
+  .main-nav.is-open.primary-verbs .verb { flex-direction: row; justify-content: flex-start; padding: var(--sp-md) var(--sp-lg); width: 100%; font-size: 1rem; border-left: 0; gap: var(--sp-md); }
+  .main-nav.is-open.primary-verbs .verb .verb-sub { margin-left: auto; font-size: 0.65rem; }
+  .main-nav.is-open.primary-verbs .verb__dropdown { position: static; box-shadow: none; border-top: 0; background: rgba(0,0,0,0.3); transform: none; opacity: 1; pointer-events: auto; padding-left: var(--sp-md); display: none; }
+  .main-nav.is-open.primary-verbs .verb:hover .verb__dropdown, .main-nav.is-open.primary-verbs .verb:focus-within .verb__dropdown { display: block; }
+  .main-header { position: relative; }
+  .main-header__inner { padding: 0; align-items: center; }
+  .utility-strip__list { gap: var(--sp-md); font-size: 0.65rem; justify-content: center; }
+  .utility-strip__inner { justify-content: center; }
+  .mega-nav__inner { gap: var(--sp-md); padding: 8px var(--sp-md); font-size: 0.7rem; }
+  .image-text { grid-template-columns: 1fr; gap: var(--sp-lg); padding: var(--sp-xl) 0; }
+  .image-text--reverse .image-text__image { order: 0; }
+  .image-text--reverse .image-text__body { order: 0; }
+  .image-text__list { grid-template-columns: 1fr; }
+  .footer__grid { grid-template-columns: 1fr 1fr; }
+  .cta-bar__inner { flex-direction: column; align-items: flex-start; }
+}
+@media (max-width: 640px) {
+  :root { --sp-section: 32px; }
+  .hero { min-height: 480px; padding: var(--sp-xl) 0; }
+  .plan-grid { grid-template-columns: 1fr; }
+  .value-rail { grid-template-columns: 1fr; }
+  .footer__grid { grid-template-columns: 1fr; gap: var(--sp-xl); }
+  .footer__legal { flex-direction: column; }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  [data-anim], [data-tile-anim] { opacity: 1 !important; transform: none !important; filter: none !important; }
+  .hero__inner > * { animation: none !important; opacity: 1 !important; transform: none !important; }
+  .tier-card, .value-prop { transition: none !important; }
+}
+
+:focus-visible { outline: 2px solid var(--color-cat-yellow); outline-offset: 2px; }
+</style>
+</head>
+<body>
+
+<a href="#main" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;background:var(--color-cat-yellow);color:var(--color-text-on-yellow);padding:8px 16px;z-index:100;" onfocus="this.style.left='8px';this.style.top='8px';this.style.width='auto';this.style.height='auto';" onblur="this.style.left='-9999px';">Skip to main content</a>
+
+<!-- UTILITY STRIP (A-rich) -->
+<div class="utility-strip" data-section="utility-strip" data-intent="secondary-nav" data-layout="full-bleed">
+  <div class="container utility-strip__inner">
+    <ul class="utility-strip__list">
+      <li><a href="/login/">Customer Login</a></li>
+      <li><a href="/sponsorships/">Sponsorships</a></li>
+      <li class="utility-strip__more">
+        <button type="button" class="utility-strip__more-trigger" aria-haspopup="true" aria-expanded="false">More</button>
+        <ul class="utility-strip__more-menu" role="menu">
+          <li><a href="/online-payments/" role="menuitem">Online Payments</a></li>
+          <li><a href="/rental-portal/" role="menuitem">Rental Portal</a></li>
+          <li><a href="https://parts.cat.com/" role="menuitem">Parts.Cat.com</a></li>
+          <li><a href="/sis2/" role="menuitem">SIS 2.0</a></li>
+          <li><a href="/visionlink/" role="menuitem">Vision Link</a></li>
+          <li><a href="/employee-login/" role="menuitem">Employee Login</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<header class="site-header" id="nav" data-section="header" data-intent="navigate" data-layout="full-width-dark" data-nav-collapse="hamburger">
+  <div class="main-header">
+    <div class="container main-header__inner">
+      <a class="main-header__logo" href="/" aria-label="Wheeler Machinery Co. — home">
+        <img src="../current/assets/logo.png" alt="Wheeler Machinery Co.">
+      </a>
+      <button class="burger" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="icon icon-menu" aria-hidden="true"></span>
+      </button>
+      <nav class="main-nav primary-verbs" id="primary-nav" aria-label="primary intents">
+        <a class="verb" href="/new/" tabindex="0">
+          <span class="icon icon-new" aria-hidden="true"></span>
+          Buy
+          <span class="verb-sub">New &amp; Used</span>
+          <ul class="verb__dropdown" role="menu">
+            <li><a href="/new/" role="menuitem">New Equipment</a></li>
+            <li><a href="/used-equipment/machinery/" role="menuitem">Used Equipment</a></li>
+            <li><a href="/quotes/" role="menuitem">Request a Quote</a></li>
+            <li><a href="/credit-application/" role="menuitem">Credit Application</a></li>
+            <li><a href="/power-systems/" role="menuitem">Power Systems</a></li>
+          </ul>
+        </a>
+        <a class="verb" href="/rental/" tabindex="0">
+          <span class="icon icon-rent" aria-hidden="true"></span>
+          Rent
+          <span class="verb-sub">Equipment, Tools, Trailers</span>
+          <ul class="verb__dropdown" role="menu">
+            <li><a href="/rental/" role="menuitem">Compact Equipment Rentals</a></li>
+            <li><a href="/rental/tools/" role="menuitem">Tool Rentals</a></li>
+            <li><a href="/trailers/" role="menuitem">Trailer Rentals</a></li>
+            <li><a href="/attachments/" role="menuitem">Attachments</a></li>
+            <li><a href="/rental-portal/" role="menuitem">Rental Portal</a></li>
+          </ul>
+        </a>
+        <a class="verb is-active" href="/service/" tabindex="0" aria-current="page">
+          <span class="icon icon-service" aria-hidden="true"></span>
+          Service
+          <span class="verb-sub">Field, Shop, Maintenance</span>
+          <ul class="verb__dropdown" role="menu">
+            <li><a href="/request-service/" role="menuitem">Request Service Online</a></li>
+            <li><a href="/service/field/" role="menuitem">Field Service</a></li>
+            <li><a href="/service/shop/" role="menuitem">Shop Service</a></li>
+            <li><a href="/customer-value-agreements/" role="menuitem">Maintenance (CVAs)</a></li>
+            <li><a href="/equipment-rebuilds/" role="menuitem">Equipment Rebuilds</a></li>
+            <li><a href="/get-training/" role="menuitem">Get Training</a></li>
+          </ul>
+        </a>
+        <a class="verb" href="/parts/" tabindex="0">
+          <span class="icon icon-order" aria-hidden="true"></span>
+          Parts
+          <span class="verb-sub">Order &amp; Track</span>
+          <ul class="verb__dropdown" role="menu">
+            <li><a href="https://parts.cat.com/" role="menuitem">Order Parts (Parts.Cat.com)</a></li>
+            <li><a href="/parts/lookup/" role="menuitem">Parts Lookup</a></li>
+            <li><a href="/parts/track-order/" role="menuitem">Track Your Order</a></li>
+            <li><a href="/online-payments/" role="menuitem">Online Payments</a></li>
+          </ul>
+        </a>
+      </nav>
+      <a class="main-nav__phone" href="tel:801-436-3672"><span class="icon icon-phone" aria-hidden="true"></span> 801-436-3672</a>
+    </div>
+  </div>
+  <div class="mega-nav" data-section="mega-nav" data-intent="department-nav" data-layout="full-bleed">
+    <div class="container mega-nav__inner">
+      <a href="/quotes/">Quotes</a>
+      <a href="/specials/">Offers</a>
+      <a href="/attachments/">Attachments</a>
+      <a href="/trailers/">Trailers</a>
+      <a href="/power-systems/">Power Systems</a>
+      <a href="/parts/">Parts</a>
+      <a href="/service/">Service</a>
+      <a href="/technology/">Technology</a>
+      <a href="/support/">Support</a>
+      <a href="/jobs/">Jobs</a>
+    </div>
+  </div>
+</header>
+
+<!-- BREADCRUMB (/new/ canon) -->
+<nav class="breadcrumb" data-section="breadcrumb" data-intent="wayfinding" data-layout="inline" aria-label="Breadcrumb">
+  <div class="container breadcrumb__inner">
+    <a href="/">Home</a>
+    <span class="breadcrumb__sep" aria-hidden="true">›</span>
+    <a href="/service/">Service</a>
+    <span class="breadcrumb__sep" aria-hidden="true">›</span>
+    <span class="breadcrumb__current" aria-current="page">Customer Value Agreements</span>
+  </div>
+</nav>
+
+<main id="main">
+
+  <!-- HERO — split-lockup: Oswald two-line H1 with line-2 Cat Yellow accent -->
+  <section class="hero" data-section="hero" data-intent="page-anchor" data-layout="full-bleed" data-media="image">
+    <div class="container hero__inner">
+      <span class="label hero__eyebrow">Wheeler · Cat® Customer Value Agreements</span>
+      <h1 class="hero__headline">
+        <span class="hero__headline-line">MAXIMIZE EQUIPMENT PERFORMANCE WITH A</span>
+        <span class="hero__headline-line hero__headline-line--accent">CAT® CUSTOMER VALUE AGREEMENT</span>
+      </h1>
+      <p class="hero__supporting">
+        <span class="accent">HASSLE-FREE MAINTENANCE,</span> PARTS DELIVERED TO YOUR DOOR, <span class="accent">NO SURPRISE COSTS.</span> EXTEND EQUIPMENT LIFE AND PROTECT YOUR INVESTMENT.
+      </p>
+      <div class="hero__actions">
+        <a class="btn btn-pill-light" href="#Form">Request Information</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLAN PICKER — 4-up tier cards, Premium elevated, warm stone -->
+  <section class="plan-picker" data-section="plan-picker" data-intent="tier-selection" data-layout="grid" data-items="4">
+    <div class="container">
+      <div class="plan-picker__head">
+        <span class="plan-picker__eyebrow">Pick Your Plan</span>
+        <h2 class="headline plan-picker__title">Pick a Plan That Fits Your Business Needs</h2>
+        <div class="plan-picker__intro">
+          <p>A Customer Value Agreement is an easy ownership plan that streamlines your fleet maintenance in order to extend equipment life and maximize your investment. Keeping your equipment in excellent condition means higher production and lower costs.</p>
+          <p>Wheeler Machinery Co. offers multiple customizable Customer Value Agreements to meet different budgets and maintenance needs. Explore some of the main benefits of our different CVAs below.</p>
+        </div>
+      </div>
+      <div class="plan-grid">
+        <a class="tier-card" href="#PartsSupport" data-anim>
+          <span class="tier-card__label">Entry</span>
+          <span class="tier-card__icon icon icon-order" aria-hidden="true"></span>
+          <h3 class="tier-card__name">Parts Support CVA</h3>
+          <p class="tier-card__summary">
+            <span data-placeholder="true" data-placeholder-type="tier-summary" data-placeholder-source="Captured page lacks descriptive copy for tier summaries; replace with 2-line summary from sales collateral.">
+              <span class="placeholder-eyebrow">PLACEHOLDER · tier-summary</span>
+              <span class="placeholder-shape">e.g. Genuine Cat parts on a planned delivery cadence, sized to your machine's PM schedule.</span>
+            </span>
+          </p>
+          <span class="tier-card__cta">Learn More</span>
+        </a>
+        <a class="tier-card tier-card--flagship" href="#PremiumService" data-anim>
+          <span class="tier-card__badge">Most Popular</span>
+          <span class="tier-card__label">Flagship</span>
+          <span class="tier-card__icon icon icon-service" aria-hidden="true"></span>
+          <h3 class="tier-card__name">Premium Service CVA</h3>
+          <p class="tier-card__summary">
+            <span data-placeholder="true" data-placeholder-type="tier-summary" data-placeholder-source="Captured page lacks descriptive copy for tier summaries; replace with 2-line summary from sales collateral.">
+              <span class="placeholder-eyebrow">PLACEHOLDER · tier-summary</span>
+              <span class="placeholder-shape">e.g. Wheeler manages your PMs end to end, with genuine Cat parts and after-hours service included.</span>
+            </span>
+          </p>
+          <span class="tier-card__cta">Learn More</span>
+        </a>
+        <a class="tier-card" href="#TMR" data-anim>
+          <span class="tier-card__label">Total</span>
+          <span class="tier-card__icon icon icon-new" aria-hidden="true"></span>
+          <h3 class="tier-card__name">Total Maintenance &amp; Repair</h3>
+          <p class="tier-card__summary">
+            <span data-placeholder="true" data-placeholder-type="tier-summary" data-placeholder-source="Captured page lacks descriptive copy for tier summaries; replace with 2-line summary from sales collateral.">
+              <span class="placeholder-eyebrow">PLACEHOLDER · tier-summary</span>
+              <span class="placeholder-shape">e.g. Wheeler owns the maintenance and repair surface; you budget by SMU hour.</span>
+            </span>
+          </p>
+          <span class="tier-card__cta">Learn More</span>
+        </a>
+        <a class="tier-card" href="#ManagedService" data-anim>
+          <span class="tier-card__label">Concierge</span>
+          <span class="tier-card__icon icon icon-used" aria-hidden="true"></span>
+          <h3 class="tier-card__name">Managed Service</h3>
+          <p class="tier-card__summary">
+            <span data-placeholder="true" data-placeholder-type="tier-summary" data-placeholder-source="Captured page lacks descriptive copy for tier summaries; replace with 2-line summary from sales collateral.">
+              <span class="placeholder-eyebrow">PLACEHOLDER · tier-summary</span>
+              <span class="placeholder-shape">e.g. A dedicated Wheeler equipment manager monitors machine health, you focus on production.</span>
+            </span>
+          </p>
+          <span class="tier-card__cta">Learn More</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PREMIUM DEEP-DIVE (dark, captured prose + 5-up value rail + 2 image-text blocks) -->
+  <section class="premium-deepdive" id="PremiumService" data-section="premium-deepdive" data-intent="flagship-detail" data-layout="full-bleed-dark">
+    <div class="container">
+      <div class="premium-deepdive__head">
+        <span class="premium-deepdive__eyebrow">Committed to Maintaining Your Cat® Equipment</span>
+        <h2 class="headline premium-deepdive__title">Premium Service CVA with Our Services Commitment</h2>
+        <div class="premium-deepdive__lead">
+          <p>When it comes to running a successful operation, one thing is for sure: the best way to stay ahead is to plan ahead. With a Premium Service Customer Value Agreement, your PM services are managed by the experts. A technician with genuine Cat parts will be there when it's convenient for you to get your equipment ready when you need it.</p>
+          <p><em>That's our Services Commitment.</em></p>
+        </div>
+      </div>
+
+      <!-- Value-prop rail -->
+      <div class="value-rail" role="list">
+        <a class="value-prop" href="#Parts" role="listitem" data-anim>
+          <span class="value-prop__icon icon icon-order" aria-hidden="true"></span>
+          <h3 class="value-prop__name">Parts Availability</h3>
+          <p class="value-prop__tagline">
+            <span data-placeholder="true" data-placeholder-type="value-prop-tagline">
+              <span class="placeholder-eyebrow">PLACEHOLDER</span>
+              <span class="placeholder-shape">e.g. Genuine Cat parts staged for your fleet, ready when the PM is due.</span>
+            </span>
+          </p>
+          <span class="value-prop__more">Learn more</span>
+        </a>
+        <a class="value-prop" href="#UptimeGuarantee" role="listitem" data-anim>
+          <span class="value-prop__icon icon icon-service" aria-hidden="true"></span>
+          <h3 class="value-prop__name">Repair-Time Commitment</h3>
+          <p class="value-prop__tagline">
+            <span data-placeholder="true" data-placeholder-type="value-prop-tagline">
+              <span class="placeholder-eyebrow">PLACEHOLDER</span>
+              <span class="placeholder-shape">e.g. A documented turn-time on covered repairs so the schedule holds.</span>
+            </span>
+          </p>
+          <span class="value-prop__more">Learn more</span>
+        </a>
+        <a class="value-prop" href="#RebuildBenefits" role="listitem" data-anim>
+          <span class="value-prop__icon icon icon-used" aria-hidden="true"></span>
+          <h3 class="value-prop__name">Rebuild Benefits</h3>
+          <p class="value-prop__tagline">
+            <span data-placeholder="true" data-placeholder-type="value-prop-tagline">
+              <span class="placeholder-eyebrow">PLACEHOLDER</span>
+              <span class="placeholder-shape">e.g. Pricing protection and priority slot on Cat-certified rebuilds.</span>
+            </span>
+          </p>
+          <span class="value-prop__more">Learn more</span>
+        </a>
+        <a class="value-prop" href="#FleetTraining" role="listitem" data-anim>
+          <span class="value-prop__icon icon icon-new" aria-hidden="true"></span>
+          <h3 class="value-prop__name">Digital Training</h3>
+          <p class="value-prop__tagline">
+            <span data-placeholder="true" data-placeholder-type="value-prop-tagline">
+              <span class="placeholder-eyebrow">PLACEHOLDER</span>
+              <span class="placeholder-shape">e.g. Operator and shop-foreman training on Cat's digital fleet tools.</span>
+            </span>
+          </p>
+          <span class="value-prop__more">Learn more</span>
+        </a>
+        <a class="value-prop" href="#Terms" role="listitem" data-anim>
+          <span class="value-prop__icon icon icon-rent" aria-hidden="true"></span>
+          <h3 class="value-prop__name">Terms &amp; Conditions</h3>
+          <p class="value-prop__tagline">
+            <span data-placeholder="true" data-placeholder-type="value-prop-tagline">
+              <span class="placeholder-eyebrow">PLACEHOLDER</span>
+              <span class="placeholder-shape">e.g. The contract surface: coverage, exclusions, renewals, transfer rules.</span>
+            </span>
+          </p>
+          <span class="value-prop__more">Learn more</span>
+        </a>
+      </div>
+
+      <!-- Image-text alternation: Managed PM Services -->
+      <div class="image-text" id="ManagedService" data-anim>
+        <div class="image-text__image image-text__image--managed" role="img" aria-label="Genuine Cat parts ready for scheduled PM services"></div>
+        <div class="image-text__body">
+          <p class="image-text__sub-eyebrow">Premium Service CVA</p>
+          <h3 class="image-text__title">Managed PM Services</h3>
+          <p>With a Premium Service CVA the experts at Wheeler manage and monitor your equipment's health while you focus on getting the work done. You'll receive:</p>
+          <ul class="image-text__list">
+            <li>Tracked and scheduled PM services</li>
+            <li>Equipment inspections with each service</li>
+            <li>Equipment health monitoring</li>
+            <li>VisionLink™ subscription</li>
+            <li>Convenient after-hours service</li>
+            <li>Discount on maintenance parts</li>
+          </ul>
+          <div class="image-text__actions">
+            <a class="btn btn-pill-yellow" href="#Form">Request More Information</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Image-text alternation: Fleet Management Training -->
+      <div class="image-text image-text--reverse" id="FleetTraining" data-anim>
+        <div class="image-text__image image-text__image--fleet" role="img" aria-label="Wheeler consultative service team reviewing digital fleet tools"></div>
+        <div class="image-text__body">
+          <p class="image-text__sub-eyebrow">Premium Service CVA</p>
+          <h3 class="image-text__title">Fleet Management Training</h3>
+          <p>Get the most from your equipment while reducing unnecessary costs with the digital fleet management suite from Cat. With these digital tools, you'll be able to monitor your equipment's health, purchase parts, find fault code information, streamline equipment inspections, and more, all from the palm of your hand. Get expert help with:</p>
+          <ul class="image-text__list">
+            <li>Cat® Central</li>
+            <li>VisionLink™</li>
+            <li>Parts.cat.com</li>
+            <li>Cat Inspect</li>
+          </ul>
+          <div class="image-text__actions">
+            <a class="btn btn-pill-yellow" href="/digital-toolset-training/">Learn More</a>
+            <a class="image-text__phone" href="tel:8019781635"><span class="icon icon-phone" aria-hidden="true"></span> Call Now (801) 978-1635</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TMR (white band, captured prose + commitment list) -->
+  <section class="tmr" id="TMR" data-section="tmr" data-intent="heavy-tier-detail" data-layout="two-col">
+    <div class="container">
+      <div class="tmr__inner">
+        <div class="tmr__image" role="img" aria-label="Wheeler heavy equipment maintained under a Total Maintenance and Repair agreement"></div>
+        <div class="tmr__body">
+          <span class="tmr__eyebrow">Heaviest Tier</span>
+          <h2 class="headline tmr__title">Total Maintenance and Repair</h2>
+          <p>Are you ready to take your equipment maintenance to the next level? Let the experts manage all your equipment maintenance, repairs, and life-cycle planning and get the peace of mind that your machines are operating at their full potential. You'll receive all the benefits of a Premium Service CVA and more.</p>
+          <p>This partnership for machine uptime and performance includes:</p>
+          <ul class="tmr__commitments">
+            <li><div><strong>Dedicated Wheeler equipment manager</strong><span>A single point of accountability for your fleet's maintenance program.</span></div></li>
+            <li><div><strong>Worry-free ownership</strong><span>Focus on your projects while we maintain and repair your machine. No invoices for repairs or maintenance.</span></div></li>
+            <li><div><strong>Known costs</strong><span>Budget for machine costs by the hour. Take the variability of failures and repairs off the table.</span></div></li>
+            <li><div><strong>Contract pricing by SMU hour</strong><span>Only pay for each operational hour. All other costs are covered by Wheeler Machinery, subject to exclusions.</span></div></li>
+          </ul>
+          <div class="tmr__actions">
+            <a class="btn btn-primary" href="/service/rebuild/">Learn More About Rebuilds</a>
+            <a class="btn btn-outline-dark" href="/customer-value-agreements-faq/">Visit FAQ Page</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT CTA BAR (/new/ canon — dark with yellow left side rule) -->
+  <section class="cta-bar" id="Form" data-section="cta-bar" data-intent="lead-capture" data-layout="split">
+    <div class="container cta-bar__inner">
+      <h2 class="cta-bar__title">Contact Us to Learn More or Get a Quote</h2>
+      <div class="cta-bar__actions">
+        <a class="btn btn-pill-light" href="/machine-quote-request/">Request Information</a>
+        <a class="cta-bar__phone" href="tel:8019781635"><span class="icon icon-phone" aria-hidden="true"></span> Call Now: 801-978-1635</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer" data-section="footer" data-intent="navigate" data-layout="mega">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <img src="../current/assets/logo.png" alt="Wheeler Machinery Co.">
+        <p>Wheeler Cat offers Construction Equipment, Tool &amp; Trailer Rental &amp; Sales across 18 locations in Utah and parts of Arizona, Nevada &amp; Wyoming.</p>
+      </div>
+      <div class="footer__col">
+        <h2>Quick Links</h2>
+        <ul>
+          <li><a href="/new/">Sales</a></li>
+          <li><a href="/rental/">Rentals</a></li>
+          <li><a href="/parts/">Cat Parts</a></li>
+          <li><a href="/service/">Service</a></li>
+          <li><a href="/about/locations/">Locations</a></li>
+          <li><a href="/contact-us/">Contact</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/sponsorships/">Sponsorship</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h2>Contact Us</h2>
+        <address class="footer__address">
+          4901 West 2100 South,<br>
+          Salt Lake City,<br>
+          UT 84120
+        </address>
+        <a class="footer__phone" href="tel:801-436-3672"><span class="icon icon-phone" aria-hidden="true"></span> 801-436-3672</a>
+      </div>
+      <div class="footer__col">
+        <h2>Connect With Us</h2>
+        <div class="footer__social">
+          <a href="#" aria-label="Facebook"><span class="icon icon-facebook" aria-hidden="true"></span></a>
+          <a href="#" aria-label="Instagram"><span class="icon icon-instagram" aria-hidden="true"></span></a>
+          <a href="#" aria-label="LinkedIn"><span class="icon icon-linkedin" aria-hidden="true"></span></a>
+          <a href="#" aria-label="YouTube"><span class="icon icon-youtube" aria-hidden="true"></span></a>
+          <a href="#" aria-label="Twitter"><span class="icon icon-twitter" aria-hidden="true"></span></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__legal">
+      <span>Copyright © 2026. All Rights Reserved. A Campbell Company</span>
+      <ul>
+        <li><a href="/sitemap/">Sitemap</a></li>
+        <li><a href="/legal/">Legal</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Hamburger nav
+  (function () {
+    var burger = document.querySelector('.burger');
+    var nav = document.getElementById('primary-nav');
+    if (!burger || !nav) return;
+    burger.addEventListener('click', function () {
+      var open = nav.classList.toggle('is-open');
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && nav.classList.contains('is-open')) {
+        nav.classList.remove('is-open');
+        burger.setAttribute('aria-expanded', 'false');
+        burger.focus();
+      }
+    });
+  })();
+
+  // Utility-strip "More ▾" aria-expanded sync
+  (function () {
+    var more = document.querySelector('.utility-strip__more');
+    var trigger = more && more.querySelector('.utility-strip__more-trigger');
+    if (!more || !trigger) return;
+    var setExpanded = function (open) { trigger.setAttribute('aria-expanded', open ? 'true' : 'false'); };
+    more.addEventListener('mouseenter', function () { setExpanded(true); });
+    more.addEventListener('mouseleave', function () { setExpanded(false); });
+    more.addEventListener('focusin',  function () { setExpanded(true); });
+    more.addEventListener('focusout', function (e) { if (!more.contains(e.relatedTarget)) setExpanded(false); });
+  })();
+</script>
+
+<script src="lenis.min.js"></script>
+<script>
+/* Canonical motion runtime — inherited from A-rich (scroll-reveal only, no kinetic display) */
+(function () {
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const lenis = new Lenis({ lerp: 0.1, smoothWheel: !prefersReducedMotion });
+  window.__lenis = lenis;
+  (function raf(t) { lenis.raf(t); requestAnimationFrame(raf); })(performance.now());
+
+  const nav = document.getElementById('nav');
+  if (nav) lenis.on('scroll', ({ scroll }) => { nav.classList.toggle('scrolled', scroll > 40); });
+
+  const clamp = (v, lo, hi) => v < lo ? lo : v > hi ? hi : v;
+  const easeOut3 = t => 1 - Math.pow(1 - t, 3);
+  const getDocTop = el => el.getBoundingClientRect().top + (window.__lenis ? window.__lenis.scroll : window.scrollY);
+
+  const animConfig = { cards: { trigger: 0.85, range: 0.32, slide: 40, stagger: 0.12 } };
+  const animList = [];
+
+  function measure() {
+    animList.forEach(({ el }) => { el.style.opacity = el.style.transform = el.style.willChange = ''; });
+    animList.length = 0;
+    document.querySelectorAll('[data-anim], [data-tile-anim]').forEach((el) => {
+      const parent = el.closest('section');
+      let stagger = 0;
+      if (parent) {
+        const peers = parent.querySelectorAll('[data-anim], [data-tile-anim]');
+        const idx = Array.prototype.indexOf.call(peers, el);
+        stagger = (idx % 8) * animConfig.cards.stagger;
+      }
+      el.style.opacity = '0';
+      el.style.transform = `translateY(${animConfig.cards.slide}px)`;
+      el.style.willChange = 'opacity, transform';
+      animList.push({ el, triggerTop: getDocTop(el), staggerDelay: stagger });
+    });
+  }
+
+  (function tick() {
+    if (prefersReducedMotion) { requestAnimationFrame(tick); return; }
+    const sY = window.__lenis ? window.__lenis.scroll : window.scrollY;
+    const vh = window.innerHeight;
+    for (let i = 0; i < animList.length; i++) {
+      const item = animList[i];
+      const { trigger, range, slide } = animConfig.cards;
+      const raw = (sY + vh * trigger - item.triggerTop) / (vh * range);
+      const p = easeOut3(clamp(raw - item.staggerDelay, 0, 1));
+      item.el.style.opacity = String(p);
+      item.el.style.transform = `translateY(${(1 - p) * slide}px)`;
+    }
+    requestAnimationFrame(tick);
+  })();
+
+  measure();
+  window.addEventListener('load',   () => requestAnimationFrame(measure), { once: true });
+  window.addEventListener('resize', measure, { passive: true });
+
+  if (prefersReducedMotion) {
+    document.querySelectorAll('[data-anim], [data-tile-anim]').forEach((el) => {
+      el.style.opacity = '1'; el.style.transform = 'none'; el.style.filter = 'none';
+    });
+  }
+})();
+</script>
+
+</body>
+</html>

@@ -1,7 +1,7 @@
 {
   "_provenance": {
-    "writtenBy": "stardust:extract (--cap 25, multi-page run)",
-    "writtenAt": "2026-05-28T11:46:38.254063Z",
+    "writtenBy": "stardust:prototype (approval \u2014 /new/ listing archetype)",
+    "writtenAt": "2026-05-28T13:19:03Z",
     "stardustVersion": "0.10.0"
   },
   "site": {
@@ -391,23 +391,38 @@
       "slug": "new",
       "url": "https://wheelercat.com/new/",
       "title": "New Heavy Equipment for Sale in Utah | Wheeler Machinery Co.",
-      "type": null,
-      "status": "extracted",
+      "type": "listing",
+      "status": "approved",
       "history": [
         {
           "status": "extracted",
           "at": "2026-05-28T11:46:38.254063Z"
+        },
+        {
+          "status": "prototyped (canonical, inherits A-rich chrome)",
+          "at": "2026-05-28T12:30:00Z"
+        },
+        {
+          "status": "approved (canonical, listing archetype)",
+          "at": "2026-05-28T13:19:03Z"
         }
       ],
       "stale": false,
       "staleReason": null,
       "currentStatePath": "stardust/current/pages/new.json",
-      "prototypePath": null,
-      "variants": {},
-      "shapeBriefs": {},
+      "prototypePath": "stardust/prototypes/new-proposed.html",
+      "variants": {
+        "canonical": "stardust/prototypes/new-proposed.html"
+      },
+      "shapeBriefs": {
+        "canonical": "stardust/prototypes/new-shape.md"
+      },
       "migratedPath": null,
       "directedAt": null,
-      "prototypedAt": null
+      "prototypedAt": "2026-05-28T12:30:00Z",
+      "inheritsChromeFrom": "A-rich",
+      "approvedVariant": "canonical",
+      "approvedAt": "2026-05-28T13:19:03Z"
     },
     {
       "slug": "used-equipment",
@@ -501,23 +516,34 @@
       "slug": "service",
       "url": "https://wheelercat.com/service/",
       "title": "Heavy Equipment Service & Repair in Utah | Wheeler Machinery",
-      "type": null,
-      "status": "extracted",
+      "type": "program",
+      "status": "prototyped",
       "history": [
         {
           "status": "extracted",
           "at": "2026-05-28T11:46:38.254063Z"
+        },
+        {
+          "status": "prototyped",
+          "at": "2026-05-30T11:27:00Z",
+          "renderedVia": "impeccable:craft (via stardust:prototype) — canon-propagation test 1",
+          "forkOf": "customer-value-agreements",
+          "forkAdaptationsDocumented": "stardust/prototypes/service-shape.md § Propagation findings",
+          "newCanonCandidates": ["section-with-photo-card-grid", "PLACEHOLDER image card", "yellow-text-on-black pill CTA (.btn-pill-dark)"],
+          "cvaCanonRescopeProposed": ["plan-tier card grid: program-template → tiered-program-template", "value-prop horizontal rail: program-template → tiered-program-template"]
         }
       ],
       "stale": false,
       "staleReason": null,
       "currentStatePath": "stardust/current/pages/service.json",
-      "prototypePath": null,
+      "bodiesPath": "stardust/current/pages/service.bodies.json",
+      "prototypePath": "stardust/prototypes/service-proposed.html",
+      "shapeBriefPath": "stardust/prototypes/service-shape.md",
       "variants": {},
       "shapeBriefs": {},
       "migratedPath": null,
       "directedAt": null,
-      "prototypedAt": null
+      "prototypedAt": "2026-05-30T11:27:00Z"
     },
     {
       "slug": "service__field-service",
@@ -545,23 +571,32 @@
       "slug": "customer-value-agreements",
       "url": "https://wheelercat.com/customer-value-agreements/",
       "title": "Cat\u00ae Customer Value Agreements (CVAs) | Wheeler Machinery Co.",
-      "type": null,
-      "status": "extracted",
+      "type": "program",
+      "status": "prototyped",
       "history": [
         {
           "status": "extracted",
           "at": "2026-05-28T11:46:38.254063Z"
+        },
+        {
+          "status": "prototyped",
+          "at": "2026-05-29T19:43:00Z",
+          "renderedVia": "impeccable:craft (via stardust:prototype)",
+          "archetype": true,
+          "archetypeOf": "program (template for /service/, /equipment-rebuilds/, /get-training/, /technology/)"
         }
       ],
       "stale": false,
       "staleReason": null,
       "currentStatePath": "stardust/current/pages/customer-value-agreements.json",
-      "prototypePath": null,
+      "bodiesPath": "stardust/current/pages/customer-value-agreements.bodies.json",
+      "prototypePath": "stardust/prototypes/customer-value-agreements-proposed.html",
+      "shapeBriefPath": "stardust/prototypes/customer-value-agreements-shape.md",
       "variants": {},
       "shapeBriefs": {},
       "migratedPath": null,
       "directedAt": null,
-      "prototypedAt": null
+      "prototypedAt": "2026-05-29T19:43:00Z"
     },
     {
       "slug": "parts",

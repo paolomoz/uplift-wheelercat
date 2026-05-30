@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- stardust:provenance
+  writtenBy:         stardust:prototype (page: new, listing template inheriting A-rich chrome)
+  writtenAt:         2026-05-28T12:30:00Z
+  page:              new
+  pageUrl:           https://wheelercat.com/new/
+  pageType:          listing (category-hub variant)
+  againstDirection:  stardust/direction.md (Active — inherits A-rich approved chrome)
+  consumedBy:        impeccable:craft (delegation deferred to direct render per session pragmatics; chrome inheritance from A-rich is canonical)
+  readArtifacts:
+    - stardust/prototypes/new-shape.md (page-shape brief)
+    - stardust/prototypes/home-A-rich-proposed.html (chrome source of truth)
+    - stardust/current/pages/new.json
+    - DESIGN-A-rich.md / DESIGN-A-rich.json
+    - DESIGN.md / DESIGN.json
+  inheritsChromeFrom: A-rich
+  newComponentsIntroduced:
+    - breadcrumb (Home › New Equipment)
+    - photo-card category tile (4-up grid, 3:4 portrait with caption overlay)
+    - dark CTA bar (full-bleed dark band with headline + primary CTA)
+  imagesUsed:
+    hero: ../current/assets/media/equipment_hero-af3749.webp
+    categoryCards:
+      - CAT EQUIPMENT: machines-3673b0.webp
+      - POWER SOLUTIONS: 203A6113-1-3465aa.webp
+      - TECHNOLOGY: tech_thumb_card-d4c948.webp
+      - GENERAL CONSTRUCTION TOOLS: construction-1b60b5.webp
+  voiceClassification:
+    - { section: utility-strip,    classification: captured-verbatim }
+    - { section: header,           classification: captured-verbatim }
+    - { section: dept-row,         classification: captured-verbatim }
+    - { section: breadcrumb,       classification: direction-authorized chrome (per friction #3) }
+    - { section: hero.eyebrow,     classification: direction-authorized (matches A-rich eyebrow pattern) }
+    - { section: hero.h1,          classification: captured-verbatim (pages/new.json#headings[0]) }
+    - { section: hero.supporting,  classification: direction-authorized rewrite of metaDescription }
+    - { section: hero.cta,         classification: captured-verbatim (pages/new.json#ctas[2]) }
+    - { section: category-hub.eyebrow,  classification: direction-authorized chrome }
+    - { section: category-hub.h2,  classification: captured-verbatim (pages/new.json#headings[1]) }
+    - { section: category-hub.cards, classification: captured-verbatim (4 H4 labels promoted to H3 for hierarchy) }
+    - { section: why-cat.h2,       classification: captured-verbatim (pages/new.json#headings[7]) }
+    - { section: why-cat.body,     classification: placeholder (captured body innerText not in extraction) }
+    - { section: why-cat.ctas,     classification: captured-verbatim (pages/new.json#ctas[0-2]) }
+    - { section: cta-bar.h2,       classification: captured-verbatim (pages/new.json#headings[8] promoted h3→h2) }
+    - { section: footer,           classification: captured-verbatim }
+  unsourcedContent:
+    - { selector: "section[data-section='why-cat'] .why-cat__copy", type: "section-copy", count: 1, reason: "Captured page body innerText for the rationale paragraphs not in extraction; rendered with PLACEHOLDER signature" }
+  wcagContrast:
+    - "#272727 on #FFFFFF: 14.0:1 AAA"
+    - "#454545 on #FFFFFF: 9.7:1 AAA"
+    - "#FFFFFF on #272727: 14.7:1 AAA"
+    - "#272727 on #FFCC00: 12.6:1 AAA"
+    - "#FFFFFF on darkened-overlay-on-photo: ~12:1 AAA"
+    - "#454545 on #E5E3DF: 7.4:1 AAA"
+    - "REFUSED: white on yellow (1.95:1)"
+  brandFaithfulInversions: [pure-white-page, pure-#272727-headings, hex-format, saturated-yellow, Oswald-display-for-h1]
+  stardustVersion:   0.10.0
+-->
+<noscript><style>
+  [data-anim], [data-tile-anim] { opacity: 1 !important; transform: none !important; filter: none !important; }
+  .hero__inner > * { animation: none !important; opacity: 1 !important; transform: none !important; }
+</style></noscript>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>New Heavy Equipment for Sale in Utah | Wheeler Machinery Co.</title>
+<meta name="description" content="Explore Wheeler Machinery Co.'s selection of new Cat heavy equipment for sale across 18 branches in Utah, Arizona, Nevada, and Wyoming.">
+<link rel="stylesheet" href="lenis.min.css">
+<style>
+:root {
+  --color-page: #FFFFFF;
+  --color-body: #454545;
+  --color-heading: #272727;
+  --color-cat-yellow: #FFCC00;
+  --color-cat-yellow-hover: #E6B800;
+  --color-surface-dark: #272727;
+  --color-surface-dark-hover: #1A1A1A;
+  --color-warm-stone: #E5E3DF;
+  --color-text-on-dark: #FFFFFF;
+  --color-text-on-yellow: #272727;
+  --color-overlay: rgba(18,18,18,0.55);
+
+  --fs-100: 1rem;
+  --fs-125: 1.25rem;
+  --fs-156: 1.563rem;
+  --fs-195: 1.953rem;
+  --fs-244: 2.441rem;
+  --fs-305: 3.052rem;
+  --fs-label: 0.8rem;
+
+  --sp-xs: 4px;
+  --sp-sm: 8px;
+  --sp-md: 16px;
+  --sp-lg: 24px;
+  --sp-xl: 32px;
+  --sp-xxl: 48px;
+  --sp-section: 64px;
+
+  --r-primary: 5px;
+  --r-card: 8px;
+  --r-pill: 999px;
+
+  --container-max: 1400px;
+
+  --shadow-card: rgba(0,0,0,0.18) 0px 6px 16px 0px;
+  --shadow-card-strong: rgba(0,0,0,0.5) 0px 12px 28px 0px;
+
+  --font-display: "Roboto Condensed", "Roboto", system-ui, sans-serif;
+  --font-body: "Roboto", system-ui, sans-serif;
+  --font-icon: "icomoon";
+
+  --ease-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@font-face { font-family: "Roboto Condensed"; font-weight: 400 700; font-style: normal; font-display: swap; src: url("../current/assets/fonts/ieVl2ZhZI2eCN5jzbjEETS9weq8-19K7DQ.woff2") format("woff2"); }
+@font-face { font-family: "Roboto"; font-weight: 300 700; font-style: normal; font-display: swap; src: url("../current/assets/fonts/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2") format("woff2"); }
+@font-face { font-family: "Roboto"; font-weight: 700; font-style: normal; font-display: swap; src: url("../current/assets/fonts/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBHMdazQ.woff2") format("woff2"); }
+@font-face { font-family: "icomoon"; src: url("../current/assets/fonts/icomoon.ttf") format("truetype"); font-weight: normal; font-style: normal; font-display: block; }
+@font-face { font-family: "Oswald"; font-weight: 200 700; font-style: normal; font-display: swap; src: url("../current/assets/fonts/TK3IWkUHHAIjg75cFRf3bXL8LICs1_Fv40pKlN4NNSeSASz7FmlWHYg.woff2") format("woff2"); }
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; font-family: var(--font-body); font-size: var(--fs-100); line-height: 1.5; color: var(--color-body); background: var(--color-page); -webkit-font-smoothing: antialiased; }
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; cursor: pointer; }
+
+.container { width: 100%; max-width: var(--container-max); margin: 0 auto; padding-left: var(--sp-lg); padding-right: var(--sp-lg); }
+.burger { display: none; }
+
+/* Type */
+.display, .headline, .title, .sub-title, .label {
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-heading);
+  margin: 0;
+  text-wrap: balance;
+}
+.display { font-size: clamp(2.441rem, 5vw, 4rem); line-height: 1.05; letter-spacing: 0.02em; }
+.headline { font-size: clamp(1.953rem, 3.5vw, var(--fs-305)); line-height: 1.1; letter-spacing: 0.02em; }
+.title { font-size: var(--fs-195); line-height: 1.15; letter-spacing: 0.015em; }
+.sub-title { font-size: var(--fs-156); line-height: 1.2; letter-spacing: 0.015em; }
+.label { font-size: var(--fs-label); line-height: 1.2; letter-spacing: 0.08em; }
+.body-copy { font-size: var(--fs-100); line-height: 1.55; color: var(--color-body); margin: 0; max-width: 65ch; text-wrap: pretty; }
+.lead-copy { font-size: var(--fs-125); line-height: 1.45; color: var(--color-body); margin: 0; max-width: 60ch; }
+
+/* Icons */
+.icon { font-family: var(--font-icon) !important; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; -webkit-font-smoothing: antialiased; speak: never; display: inline-block; }
+.icon-menu::before { content: "\e904"; }
+.icon-phone::before { content: "\e90b"; }
+.icon-new::before { content: "\e907"; }
+.icon-used::before { content: "\e90c"; }
+.icon-rent::before { content: "\e909"; }
+.icon-order::before { content: "\e908"; }
+.icon-service::before { content: "\e90a"; }
+.icon-facebook::before { content: "\e900"; }
+.icon-instagram::before{ content: "\e902"; }
+.icon-linkedin::before { content: "\e903"; }
+.icon-youtube::before { content: "\e90d"; }
+.icon-twitter::before { content: "\e905"; }
+
+/* Buttons */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: var(--sp-sm); font-family: var(--font-display); font-weight: 700; font-size: 0.875rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 12px 24px; border-radius: var(--r-primary); border: 1px solid transparent; transition: background 200ms var(--ease-out), color 200ms var(--ease-out), border-color 200ms var(--ease-out); cursor: pointer; text-decoration: none; }
+.btn-primary { background: var(--color-cat-yellow); color: var(--color-text-on-yellow); border-color: var(--color-cat-yellow); }
+.btn-primary:hover, .btn-primary:focus-visible { background: var(--color-surface-dark); color: var(--color-cat-yellow); border-color: var(--color-surface-dark); outline: none; }
+.btn-outline-dark { background: transparent; color: var(--color-heading); border-color: var(--color-heading); padding: 10px 20px; }
+.btn-outline-dark:hover, .btn-outline-dark:focus-visible { background: var(--color-surface-dark); color: var(--color-text-on-dark); outline: none; }
+.btn-pill-light { background: var(--color-text-on-dark); color: var(--color-text-on-yellow); border-color: var(--color-text-on-dark); border-radius: var(--r-pill); padding: 14px 28px; letter-spacing: 0.08em; }
+.btn-pill-light:hover, .btn-pill-light:focus-visible { background: var(--color-cat-yellow); color: var(--color-text-on-yellow); border-color: var(--color-cat-yellow); outline: none; }
+
+/* ───── A-RICH UTILITY STRIP (yellow, 2 + More dropdown) ───── */
+.utility-strip { background: var(--color-cat-yellow); color: var(--color-text-on-yellow); border-bottom: 1px solid rgba(39,39,39,0.15); position: relative; z-index: 51; }
+.utility-strip__inner { display: flex; justify-content: flex-end; align-items: center; padding: 8px 0; gap: var(--sp-lg); flex-wrap: wrap; }
+.utility-strip__list { display: inline-flex; gap: var(--sp-lg); list-style: none; margin: 0; padding: 0; align-items: center; }
+.utility-strip__list a, .utility-strip__more-trigger { font-family: var(--font-display); font-weight: 700; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-text-on-yellow); transition: opacity 150ms var(--ease-out); background: transparent; border: 0; padding: 0; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; }
+.utility-strip__list a:hover, .utility-strip__more-trigger:hover { opacity: 0.65; }
+.utility-strip__more { position: relative; }
+.utility-strip__more-trigger::after { content: "▾"; font-size: 0.6rem; margin-left: 2px; opacity: 0.7; }
+.utility-strip__more-menu { position: absolute; top: calc(100% + 8px); right: 0; background: var(--color-surface-dark); color: var(--color-text-on-dark); min-width: 220px; padding: var(--sp-sm) 0; border-top: 3px solid var(--color-cat-yellow); box-shadow: 0 12px 32px rgba(0,0,0,0.3); opacity: 0; pointer-events: none; transform: translateY(-6px); transition: opacity 200ms var(--ease-out), transform 200ms var(--ease-out); z-index: 60; list-style: none; margin: 0; }
+.utility-strip__more:hover .utility-strip__more-menu, .utility-strip__more:focus-within .utility-strip__more-menu { opacity: 1; pointer-events: auto; transform: translateY(0); }
+.utility-strip__more-menu a { display: block; padding: 8px var(--sp-lg); font-family: var(--font-body); font-weight: 400; font-size: 0.85rem; letter-spacing: 0.02em; text-transform: none; color: rgba(255,255,255,0.85); }
+.utility-strip__more-menu a:hover { color: var(--color-cat-yellow); background: rgba(255,204,0,0.06); }
+
+/* ───── A-RICH HEADER (logo + 4-verb nav + phone) ───── */
+.site-header { position: sticky; top: 0; z-index: 50; background: var(--color-surface-dark); color: var(--color-text-on-dark); }
+.main-header { background: var(--color-surface-dark); }
+.main-header__inner { display: flex; justify-content: space-between; align-items: stretch; padding: 0; gap: var(--sp-md); }
+.main-header__logo { display: inline-flex; align-items: center; padding: 14px 0; }
+.main-header__logo img { height: 56px; width: auto; }
+.primary-verbs { display: flex; align-items: stretch; flex: 1; justify-content: center; }
+.verb { position: relative; display: inline-flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; padding: 14px var(--sp-xl); font-family: var(--font-display); font-weight: 700; font-size: 0.95rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-text-on-dark); border-left: 1px solid rgba(255,255,255,0.08); text-decoration: none; transition: background 200ms var(--ease-out), color 200ms var(--ease-out); }
+.verb:last-child { border-right: 1px solid rgba(255,255,255,0.08); }
+.verb:hover, .verb:focus-visible { background: #1a1a1a; color: var(--color-cat-yellow); outline: none; }
+.verb.is-active { background: #1a1a1a; }
+.verb.is-active::after { content: ""; position: absolute; bottom: 0; left: 12px; right: 12px; height: 3px; background: var(--color-cat-yellow); }
+.verb .icon { font-size: 18px; color: var(--color-cat-yellow); }
+.verb .verb-sub { font-size: 0.62rem; letter-spacing: 0.12em; color: rgba(255,255,255,0.55); font-weight: 400; transition: color 200ms; }
+.verb:hover .verb-sub, .verb:focus-visible .verb-sub { color: rgba(255,204,0,0.7); }
+.verb__dropdown { position: absolute; top: 100%; left: 0; background: var(--color-surface-dark); color: var(--color-text-on-dark); min-width: 260px; padding: var(--sp-md) 0; opacity: 0; pointer-events: none; transform: translateY(-8px); transition: opacity 200ms var(--ease-out), transform 200ms var(--ease-out); z-index: 40; border-top: 3px solid var(--color-cat-yellow); box-shadow: 0 16px 36px rgba(0,0,0,0.4); list-style: none; margin: 0; }
+.verb:hover .verb__dropdown, .verb:focus-within .verb__dropdown { opacity: 1; pointer-events: auto; transform: translateY(0); }
+.verb__dropdown a { display: block; padding: 10px var(--sp-lg); font-family: var(--font-body); font-weight: 400; font-size: 0.9rem; letter-spacing: 0.02em; text-transform: none; color: rgba(255,255,255,0.85); transition: color 150ms, background 150ms; }
+.verb__dropdown a:hover { color: var(--color-cat-yellow); background: rgba(255,204,0,0.05); }
+.main-nav__phone { display: inline-flex; align-items: center; gap: var(--sp-sm); background: var(--color-cat-yellow); color: var(--color-text-on-yellow); padding: 0 var(--sp-md); font-family: var(--font-display); font-weight: 700; font-size: 0.9rem; letter-spacing: 0.04em; }
+.main-nav__phone:hover { background: var(--color-cat-yellow-hover); }
+.burger { background: transparent; border: 1px solid var(--color-text-on-dark); color: var(--color-text-on-dark); width: 44px; height: 44px; border-radius: var(--r-primary); align-items: center; justify-content: center; font-size: 1.5rem; }
+.burger:focus-visible { outline: 2px solid var(--color-cat-yellow); outline-offset: 2px; }
+
+/* Dept row */
+.mega-nav { background: #1a1a1a; border-top: 1px solid rgba(255,255,255,0.06); }
+.mega-nav__inner { display: flex; justify-content: center; flex-wrap: wrap; gap: var(--sp-lg); padding: 10px 0; }
+.mega-nav__inner a { font-family: var(--font-display); font-weight: 700; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-text-on-dark); transition: color 150ms var(--ease-out); }
+.mega-nav__inner a:hover { color: var(--color-cat-yellow); }
+
+/* ───── BREADCRUMB (NEW component) ───── */
+.breadcrumb { background: var(--color-page); border-bottom: 1px solid rgba(39,39,39,0.08); }
+.breadcrumb__inner { display: flex; align-items: center; gap: var(--sp-sm); padding: 12px 0; font-family: var(--font-display); font-weight: 700; font-size: 0.78rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--color-body); }
+.breadcrumb__inner a { color: var(--color-body); transition: color 150ms; }
+.breadcrumb__inner a:hover { color: var(--color-heading); }
+.breadcrumb__sep { color: var(--color-cat-yellow); font-weight: 700; padding: 0 4px; }
+.breadcrumb__current { color: var(--color-heading); }
+
+/* ───── HERO (matches A-rich gradient pattern) ───── */
+.hero { position: relative; min-height: 480px; display: flex; align-items: center; background-image: linear-gradient(to right, rgba(18,18,18,0.85) 0%, rgba(18,18,18,0.65) 40%, rgba(18,18,18,0.30) 75%, rgba(18,18,18,0.10) 100%), url("../current/assets/media/equipment_hero-af3749.webp"); background-size: cover; background-position: center; color: var(--color-text-on-dark); padding: var(--sp-section) 0; overflow: hidden; }
+.hero .container { max-width: none; padding-left: clamp(var(--sp-lg), 5vw, 96px); padding-right: var(--sp-lg); }
+.hero__inner { max-width: 580px; margin-left: 0; }
+.hero__eyebrow { color: var(--color-cat-yellow); display: inline-block; margin-bottom: var(--sp-md); padding-bottom: 4px; border-bottom: 1px solid var(--color-cat-yellow); font-size: 0.9rem; letter-spacing: 0.12em; }
+.hero__headline { color: var(--color-text-on-dark); font-family: "Oswald", "Roboto Condensed", "Roboto", system-ui, sans-serif; font-weight: 700; font-size: clamp(2.4rem, 7.2vw, 7rem); line-height: 0.9; letter-spacing: 0; margin: 0 0 var(--sp-lg); }
+.hero__supporting { font-family: var(--font-display); font-weight: 700; font-size: clamp(0.95rem, 1.4vw, 1.25rem); line-height: 1.35; letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: var(--sp-xl); color: var(--color-text-on-dark); max-width: 56ch; }
+.hero__supporting .accent { color: var(--color-cat-yellow); }
+.hero__actions { display: inline-flex; gap: var(--sp-md); flex-wrap: wrap; max-width: 56ch; }
+
+/* Hero load-only fade-in */
+@keyframes hero-fade-in { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.hero__inner > * { opacity: 0; animation: hero-fade-in 800ms cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.hero__eyebrow    { animation-delay: 100ms; }
+.hero__headline   { animation-delay: 250ms; }
+.hero__supporting { animation-delay: 450ms; }
+.hero__actions    { animation-delay: 650ms; }
+
+/* ───── CATEGORY HUB (NEW component — 4-up photo cards) ───── */
+.category-hub { background: var(--color-page); padding: var(--sp-section) 0; }
+.category-hub__head { text-align: center; margin-bottom: var(--sp-xxl); }
+.category-hub__eyebrow { font-family: var(--font-display); font-weight: 700; font-size: var(--fs-label); letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-body); display: inline-block; padding-bottom: 4px; border-bottom: 1px solid var(--color-cat-yellow); margin-bottom: var(--sp-md); }
+.category-hub__title { color: var(--color-heading); }
+.category-hub__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--sp-lg); }
+.category-card { position: relative; aspect-ratio: 3 / 4; border-radius: var(--r-card); overflow: hidden; color: var(--color-text-on-dark); display: flex; align-items: flex-end; text-decoration: none; isolation: isolate; }
+.category-card:focus-visible { outline: 2px solid var(--color-cat-yellow); outline-offset: 4px; }
+.category-card__bg { position: absolute; inset: 0; background-size: cover; background-position: center; transition: transform 900ms cubic-bezier(0.16, 1, 0.3, 1); will-change: transform; z-index: 0; }
+.category-card:hover .category-card__bg, .category-card:focus-visible .category-card__bg { transform: scale(1.06); }
+.category-card::before { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(18,18,18,0.92) 0%, rgba(18,18,18,0.65) 35%, rgba(18,18,18,0.20) 60%, rgba(18,18,18,0.05) 100%); z-index: 1; }
+.category-card__inner { position: relative; z-index: 2; padding: var(--sp-xl) var(--sp-lg); width: 100%; }
+.category-card__title { font-family: var(--font-display); font-weight: 700; font-size: 1.375rem; line-height: 1.1; letter-spacing: 0.02em; text-transform: uppercase; color: var(--color-text-on-dark); margin: 0 0 var(--sp-md); text-wrap: balance; }
+.category-card__more { font-family: var(--font-display); font-weight: 700; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-cat-yellow); display: inline-flex; align-items: center; gap: 6px; transition: gap 200ms var(--ease-out); }
+.category-card__more::after { content: "›"; font-family: var(--font-body); font-weight: 700; font-size: 1.25rem; line-height: 0.7; transition: transform 200ms var(--ease-out); }
+.category-card:hover .category-card__more { gap: 10px; }
+.category-card:hover .category-card__more::after { transform: translateX(2px); }
+
+.category-card--cat .category-card__bg { background-image: url("../current/assets/media/machines-3673b0.webp"); }
+.category-card--power .category-card__bg { background-image: url("../current/assets/media/203A6113-1-3465aa.webp"); }
+.category-card--tech .category-card__bg { background-image: url("../current/assets/media/tech_thumb_card-d4c948.webp"); }
+.category-card--tools .category-card__bg { background-image: url("../current/assets/media/construction-1b60b5.webp"); }
+
+/* ───── WHY-CAT RATIONALE (warm-stone band, 2-col) ───── */
+.why-cat { background: var(--color-warm-stone); padding: var(--sp-section) 0; }
+.why-cat__head { text-align: left; margin-bottom: var(--sp-xl); max-width: var(--container-max); }
+.why-cat__eyebrow { font-family: var(--font-display); font-weight: 700; font-size: var(--fs-label); letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-heading); display: inline-block; padding-bottom: 4px; border-bottom: 1px solid var(--color-cat-yellow); margin-bottom: var(--sp-md); }
+.why-cat__title { color: var(--color-heading); margin-bottom: 0; max-width: 18ch; }
+.why-cat__grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: var(--sp-xxl); align-items: start; }
+.why-cat__copy { font-size: var(--fs-100); line-height: 1.65; color: var(--color-body); max-width: 56ch; }
+.why-cat__copy p { margin: 0 0 var(--sp-md); }
+.why-cat__actions { display: flex; flex-direction: column; gap: var(--sp-md); align-items: flex-start; }
+.why-cat__actions .btn { width: 100%; max-width: 320px; justify-content: space-between; padding-right: var(--sp-lg); padding-left: var(--sp-lg); }
+.why-cat__actions .btn::after { content: "→"; font-family: var(--font-body); font-size: 1.1rem; line-height: 0; opacity: 0.7; }
+
+/* PLACEHOLDER signature (for why-cat body) */
+[data-placeholder="true"] { border: 2px dashed var(--color-cat-yellow); background: rgba(255,255,255,0.6); padding: var(--sp-md); display: block; }
+.placeholder-eyebrow { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 0.65rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-heading); opacity: 0.7; display: block; margin-bottom: 6px; }
+.placeholder-shape { font-family: var(--font-body); font-size: 0.92rem; color: var(--color-body); display: block; font-style: italic; line-height: 1.5; }
+
+/* ───── DARK CTA BAR (matches captured cta-bar--black) ───── */
+.cta-bar { background: var(--color-surface-dark); color: var(--color-text-on-dark); padding: var(--sp-xxl) 0; position: relative; overflow: hidden; }
+.cta-bar::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 6px; background: var(--color-cat-yellow); }
+.cta-bar__inner { display: flex; justify-content: space-between; align-items: center; gap: var(--sp-xl); flex-wrap: wrap; }
+.cta-bar__title { color: var(--color-text-on-dark); font-family: var(--font-display); font-weight: 700; font-size: clamp(1.5rem, 3vw, 2.25rem); letter-spacing: 0.02em; line-height: 1.1; text-transform: uppercase; margin: 0; max-width: 28ch; text-wrap: balance; }
+.cta-bar__actions { display: inline-flex; gap: var(--sp-md); flex-wrap: wrap; align-items: center; }
+.cta-bar .btn-pill-light { padding: 14px 32px; font-size: 0.95rem; }
+
+/* ───── FOOTER (A-rich) ───── */
+.site-footer { background: var(--color-surface-dark); color: var(--color-text-on-dark); padding: var(--sp-section) 0 var(--sp-xl); }
+.footer__grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: var(--sp-xxl); margin-bottom: var(--sp-xxl); }
+.footer__brand img { max-width: 220px; }
+.footer__brand p { margin-top: var(--sp-md); color: rgba(255,255,255,0.7); font-size: 0.9rem; max-width: 38ch; }
+.footer__col h2 { font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-text-on-dark); margin: 0 0 var(--sp-md); }
+.footer__col ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: var(--sp-sm); }
+.footer__col a { color: rgba(255,255,255,0.78); font-size: 0.92rem; transition: color 150ms var(--ease-out); }
+.footer__col a:hover { color: var(--color-cat-yellow); }
+.footer__address { font-size: 0.92rem; line-height: 1.55; color: rgba(255,255,255,0.78); font-style: normal; }
+.footer__phone { display: inline-flex; align-items: center; gap: var(--sp-sm); margin-top: var(--sp-md); color: var(--color-cat-yellow); font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; letter-spacing: 0.04em; }
+.footer__social { display: flex; gap: var(--sp-md); margin-top: var(--sp-sm); }
+.footer__social a { width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,0.3); border-radius: var(--r-pill); color: var(--color-text-on-dark); font-size: 1rem; }
+.footer__social a:hover { background: var(--color-cat-yellow); color: var(--color-text-on-yellow); border-color: var(--color-cat-yellow); }
+.footer__legal { padding-top: var(--sp-lg); border-top: 1px solid rgba(255,255,255,0.12); display: flex; justify-content: space-between; gap: var(--sp-md); font-size: 0.8rem; color: rgba(255,255,255,0.55); flex-wrap: wrap; }
+.footer__legal ul { display: flex; gap: var(--sp-lg); list-style: none; margin: 0; padding: 0; }
+
+/* ───── RESPONSIVE ───── */
+@media (max-width: 1100px) and (min-width: 769px) {
+  .verb { padding: 14px var(--sp-md); font-size: 0.85rem; }
+  .verb .verb-sub { font-size: 0.55rem; }
+  .main-nav__phone { padding: 0 12px; font-size: 0.8rem; }
+}
+@media (max-width: 1024px) {
+  :root { --sp-section: 48px; }
+  .category-hub__grid { grid-template-columns: repeat(2, 1fr); }
+  .why-cat__grid { grid-template-columns: 1fr; gap: var(--sp-xl); }
+  .footer__grid { grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: var(--sp-xl); }
+}
+@media (max-width: 768px) {
+  .primary-verbs, .main-nav__phone { display: none; }
+  .burger { display: inline-flex; }
+  .main-nav.is-open.primary-verbs { display: flex; position: absolute; top: 100%; left: 0; right: 0; background: var(--color-surface-dark); flex-direction: column; gap: 0; padding: var(--sp-md) 0; border-top: 1px solid rgba(255,255,255,0.1); z-index: 60; }
+  .main-nav.is-open.primary-verbs .verb { flex-direction: row; justify-content: flex-start; padding: var(--sp-md) var(--sp-lg); width: 100%; font-size: 1rem; border-left: 0; gap: var(--sp-md); }
+  .main-nav.is-open.primary-verbs .verb .verb-sub { margin-left: auto; font-size: 0.65rem; }
+  .main-nav.is-open.primary-verbs .verb__dropdown { position: static; box-shadow: none; border-top: 0; background: rgba(0,0,0,0.3); transform: none; opacity: 1; pointer-events: auto; padding-left: var(--sp-md); display: none; }
+  .main-nav.is-open.primary-verbs .verb:hover .verb__dropdown, .main-nav.is-open.primary-verbs .verb:focus-within .verb__dropdown { display: block; }
+  .main-header { position: relative; }
+  .main-header__inner { padding: 0; align-items: center; }
+  .utility-strip__list { gap: var(--sp-md); font-size: 0.65rem; justify-content: center; }
+  .utility-strip__inner { justify-content: center; }
+  .mega-nav__inner { gap: var(--sp-md); padding: 8px var(--sp-md); font-size: 0.7rem; }
+  .footer__grid { grid-template-columns: 1fr 1fr; }
+  .cta-bar__inner { flex-direction: column; align-items: flex-start; }
+}
+@media (max-width: 640px) {
+  :root { --sp-section: 32px; }
+  .hero { min-height: 420px; padding: var(--sp-xl) 0; }
+  .category-hub__grid { grid-template-columns: 1fr; gap: var(--sp-md); }
+  .category-card { aspect-ratio: 16 / 10; }
+  .footer__grid { grid-template-columns: 1fr; gap: var(--sp-xl); }
+  .footer__legal { flex-direction: column; }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  [data-anim], [data-tile-anim] { opacity: 1 !important; transform: none !important; filter: none !important; }
+  .category-card__bg { transition: none !important; }
+  .hero__inner > * { animation: none !important; opacity: 1 !important; transform: none !important; }
+}
+
+:focus-visible { outline: 2px solid var(--color-cat-yellow); outline-offset: 2px; }
+</style>
+</head>
+<body>
+
+<a href="#main" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;background:var(--color-cat-yellow);color:var(--color-text-on-yellow);padding:8px 16px;z-index:100;" onfocus="this.style.left='8px';this.style.top='8px';this.style.width='auto';this.style.height='auto';" onblur="this.style.left='-9999px';">Skip to main content</a>
+
+<!-- UTILITY STRIP (A-rich) -->
+<div class="utility-strip" data-section="utility-strip" data-intent="secondary-nav" data-layout="full-bleed">
+  <div class="container utility-strip__inner">
+    <ul class="utility-strip__list">
+      <li><a href="/login/">Customer Login</a></li>
+      <li><a href="/sponsorships/">Sponsorships</a></li>
+      <li class="utility-strip__more">
+        <button type="button" class="utility-strip__more-trigger" aria-haspopup="true" aria-expanded="false">More</button>
+        <ul class="utility-strip__more-menu" role="menu">
+          <li><a href="/online-payments/" role="menuitem">Online Payments</a></li>
+          <li><a href="/rental-portal/" role="menuitem">Rental Portal</a></li>
+          <li><a href="https://parts.cat.com/" role="menuitem">Parts.Cat.com</a></li>
+          <li><a href="/sis2/" role="menuitem">SIS 2.0</a></li>
+          <li><a href="/visionlink/" role="menuitem">Vision Link</a></li>
+          <li><a href="/employee-login/" role="menuitem">Employee Login</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<header class="site-header" id="nav" data-section="header" data-intent="navigate" data-layout="full-width-dark" data-nav-collapse="hamburger">
+  <div class="main-header">
+    <div class="container main-header__inner">
+      <a class="main-header__logo" href="/" aria-label="Wheeler Machinery Co. — home">
+        <img src="../current/assets/logo.png" alt="Wheeler Machinery Co.">
+      </a>
+      <button class="burger" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="icon icon-menu" aria-hidden="true"></span>
+      </button>
+      <nav class="main-nav primary-verbs" id="primary-nav" aria-label="primary intents">
+        <a class="verb is-active" href="/new/" tabindex="0" aria-current="page">
+          <span class="icon icon-new" aria-hidden="true"></span>
+          Buy
+          <span class="verb-sub">New &amp; Used</span>
+          <ul class="verb__dropdown" role="menu">
+            <li><a href="/new/" role="menuitem">New Equipment</a></li>
+            <li><a href="/used-equipment/machinery/" role="menuitem">Used Equipment</a></li>
+            <li><a href="/quotes/" role="menuitem">Request a Quote</a></li>
+            <li><a href="/credit-application/" role="menuitem">Credit Application</a></li>
+            <li><a href="/power-systems/" role="menuitem">Power Systems</a></li>
+          </ul>
+        </a>
+        <a class="verb" href="/rental/" tabindex="0">
+          <span class="icon icon-rent" aria-hidden="true"></span>
+          Rent
+          <span class="verb-sub">Equipment, Tools, Trailers</span>
+          <ul class="verb__dropdown" role="menu">
+            <li><a href="/rental/" role="menuitem">Compact Equipment Rentals</a></li>
+            <li><a href="/rental/tools/" role="menuitem">Tool Rentals</a></li>
+            <li><a href="/trailers/" role="menuitem">Trailer Rentals</a></li>
+            <li><a href="/attachments/" role="menuitem">Attachments</a></li>
+            <li><a href="/rental-portal/" role="menuitem">Rental Portal</a></li>
+          </ul>
+        </a>
+        <a class="verb" href="/service/" tabindex="0">
+          <span class="icon icon-service" aria-hidden="true"></span>
+          Service
+          <span class="verb-sub">Field, Shop, Maintenance</span>
+          <ul class="verb__dropdown" role="menu">
+            <li><a href="/request-service/" role="menuitem">Request Service Online</a></li>
+            <li><a href="/service/field/" role="menuitem">Field Service</a></li>
+            <li><a href="/service/shop/" role="menuitem">Shop Service</a></li>
+            <li><a href="/customer-value-agreements/" role="menuitem">Maintenance (CVAs)</a></li>
+            <li><a href="/equipment-rebuilds/" role="menuitem">Equipment Rebuilds</a></li>
+            <li><a href="/get-training/" role="menuitem">Get Training</a></li>
+          </ul>
+        </a>
+        <a class="verb" href="/parts/" tabindex="0">
+          <span class="icon icon-order" aria-hidden="true"></span>
+          Parts
+          <span class="verb-sub">Order &amp; Track</span>
+          <ul class="verb__dropdown" role="menu">
+            <li><a href="https://parts.cat.com/" role="menuitem">Order Parts (Parts.Cat.com)</a></li>
+            <li><a href="/parts/lookup/" role="menuitem">Parts Lookup</a></li>
+            <li><a href="/parts/track-order/" role="menuitem">Track Your Order</a></li>
+            <li><a href="/online-payments/" role="menuitem">Online Payments</a></li>
+          </ul>
+        </a>
+      </nav>
+      <a class="main-nav__phone" href="tel:801-436-3672"><span class="icon icon-phone" aria-hidden="true"></span> 801-436-3672</a>
+    </div>
+  </div>
+  <div class="mega-nav" data-section="mega-nav" data-intent="department-nav" data-layout="full-bleed">
+    <div class="container mega-nav__inner">
+      <a href="/quotes/">Quotes</a>
+      <a href="/specials/">Offers</a>
+      <a href="/attachments/">Attachments</a>
+      <a href="/trailers/">Trailers</a>
+      <a href="/power-systems/">Power Systems</a>
+      <a href="/parts/">Parts</a>
+      <a href="/service/">Service</a>
+      <a href="/technology/">Technology</a>
+      <a href="/support/">Support</a>
+      <a href="/jobs/">Jobs</a>
+    </div>
+  </div>
+</header>
+
+<!-- BREADCRUMB (NEW component) -->
+<nav class="breadcrumb" data-section="breadcrumb" data-intent="wayfinding" data-layout="inline" aria-label="Breadcrumb">
+  <div class="container breadcrumb__inner">
+    <a href="/">Home</a>
+    <span class="breadcrumb__sep" aria-hidden="true">›</span>
+    <span class="breadcrumb__current" aria-current="page">New Equipment</span>
+  </div>
+</nav>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero" data-section="hero" data-intent="page-anchor" data-layout="full-bleed" data-media="image">
+    <div class="container hero__inner">
+      <span class="label hero__eyebrow">Wheeler · New Cat® Equipment</span>
+      <h1 class="hero__headline">NEW EQUIPMENT</h1>
+      <p class="hero__supporting">
+        <span class="accent">CAT® HEAVY MACHINERY, POWER SOLUTIONS,</span> AND FIELD TECHNOLOGY BUILT TO SPEC FOR UTAH JOB SITES. STOCKED ACROSS <span class="accent">18 WHEELER BRANCHES.</span>
+      </p>
+      <div class="hero__actions">
+        <a class="btn btn-pill-light" href="/machine-quote-request/">Request a Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORY HUB (NEW component — 4-up photo cards) -->
+  <section class="category-hub" data-section="category-hub" data-intent="category-routing" data-layout="grid" data-items="4">
+    <div class="container">
+      <div class="category-hub__head">
+        <span class="category-hub__eyebrow">Shop by Category</span>
+        <h2 class="headline category-hub__title">New Heavy Equipment for Sale</h2>
+      </div>
+      <div class="category-hub__grid">
+        <a class="category-card category-card--cat" href="/new/machines/" data-anim>
+          <div class="category-card__bg" aria-hidden="true"></div>
+          <div class="category-card__inner">
+            <h3 class="category-card__title">Cat® Equipment</h3>
+            <span class="category-card__more">Browse Category</span>
+          </div>
+        </a>
+        <a class="category-card category-card--power" href="/power-systems/" data-anim>
+          <div class="category-card__bg" aria-hidden="true"></div>
+          <div class="category-card__inner">
+            <h3 class="category-card__title">Power Solutions</h3>
+            <span class="category-card__more">Browse Category</span>
+          </div>
+        </a>
+        <a class="category-card category-card--tech" href="/technology/" data-anim>
+          <div class="category-card__bg" aria-hidden="true"></div>
+          <div class="category-card__inner">
+            <h3 class="category-card__title">Technology</h3>
+            <span class="category-card__more">Browse Category</span>
+          </div>
+        </a>
+        <a class="category-card category-card--tools" href="/new/general-construction-tools/" data-anim>
+          <div class="category-card__bg" aria-hidden="true"></div>
+          <div class="category-card__inner">
+            <h3 class="category-card__title">General Construction Tools</h3>
+            <span class="category-card__more">Browse Category</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY-CAT RATIONALE (warm-stone band, 2-col) -->
+  <section class="why-cat" data-section="why-cat" data-intent="brand-rationale" data-layout="two-col" data-items="3">
+    <div class="container">
+      <div class="why-cat__head">
+        <span class="why-cat__eyebrow">Why Cat?</span>
+        <h2 class="headline why-cat__title">Why Buy Cat® Equipment?</h2>
+      </div>
+      <div class="why-cat__grid">
+        <div class="why-cat__copy" data-anim>
+          <span data-placeholder="true" data-placeholder-type="section-copy" data-placeholder-source="Captured page body innerText for the rationale paragraphs was not in the extraction; rendering with PLACEHOLDER signature pending verbatim capture or direction-authorized rewrite.">
+            <span class="placeholder-eyebrow">PLACEHOLDER · section-copy</span>
+            <span class="placeholder-shape">e.g. Cat® equipment is built for the conditions that define Utah construction. Wheeler's 18 branches stock the full Cat line — compact track loaders, excavators, dozers, motor graders, power systems — backed by factory-trained technicians and same-day field service. Whether you're spec'ing a single skid steer or fleet financing for a multi-year build, Wheeler is the dealer of record across Utah, Arizona, Nevada, and Wyoming.</span>
+          </span>
+        </div>
+        <div class="why-cat__actions" data-anim>
+          <a class="btn btn-outline-dark" href="/about/financing/">Financing Options</a>
+          <a class="btn btn-outline-dark" href="https://www.cat.com/en_US/support/financing-protection/resources/tools-calculators.html">Payment Calculator</a>
+          <a class="btn btn-outline-dark" href="/machine-quote-request/">Request a Quote</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DARK CTA BAR (matches captured cta-bar--black) -->
+  <section class="cta-bar" data-section="cta-bar" data-intent="lead-capture" data-layout="split">
+    <div class="container cta-bar__inner">
+      <h2 class="cta-bar__title">Get More Information from Wheeler Machinery Co.</h2>
+      <div class="cta-bar__actions">
+        <a class="btn btn-pill-light" href="/machine-quote-request/">Request a Quote</a>
+        <a class="btn btn-pill-light" href="tel:801-436-3672" style="background: transparent; color: var(--color-cat-yellow); border-color: var(--color-cat-yellow);"><span class="icon icon-phone" aria-hidden="true"></span> 801-436-3672</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer" data-section="footer" data-intent="navigate" data-layout="mega">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <img src="../current/assets/logo.png" alt="Wheeler Machinery Co.">
+        <p>Wheeler Cat offers Construction Equipment, Tool &amp; Trailer Rental &amp; Sales across 18 locations in Utah and parts of Arizona, Nevada &amp; Wyoming.</p>
+      </div>
+      <div class="footer__col">
+        <h2>Quick Links</h2>
+        <ul>
+          <li><a href="/new/">Sales</a></li>
+          <li><a href="/rental/">Rentals</a></li>
+          <li><a href="/parts/">Cat Parts</a></li>
+          <li><a href="/service/">Service</a></li>
+          <li><a href="/about/locations/">Locations</a></li>
+          <li><a href="/contact-us/">Contact</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/sponsorships/">Sponsorship</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h2>Contact Us</h2>
+        <address class="footer__address">
+          4901 West 2100 South,<br>
+          Salt Lake City,<br>
+          UT 84120
+        </address>
+        <a class="footer__phone" href="tel:801-436-3672"><span class="icon icon-phone" aria-hidden="true"></span> 801-436-3672</a>
+      </div>
+      <div class="footer__col">
+        <h2>Connect With Us</h2>
+        <div class="footer__social">
+          <a href="#" aria-label="Facebook"><span class="icon icon-facebook" aria-hidden="true"></span></a>
+          <a href="#" aria-label="Instagram"><span class="icon icon-instagram" aria-hidden="true"></span></a>
+          <a href="#" aria-label="LinkedIn"><span class="icon icon-linkedin" aria-hidden="true"></span></a>
+          <a href="#" aria-label="YouTube"><span class="icon icon-youtube" aria-hidden="true"></span></a>
+          <a href="#" aria-label="Twitter"><span class="icon icon-twitter" aria-hidden="true"></span></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__legal">
+      <span>Copyright © 2026. All Rights Reserved. A Campbell Company</span>
+      <ul>
+        <li><a href="/sitemap/">Sitemap</a></li>
+        <li><a href="/legal/">Legal</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Hamburger nav
+  (function () {
+    var burger = document.querySelector('.burger');
+    var nav = document.getElementById('primary-nav');
+    if (!burger || !nav) return;
+    burger.addEventListener('click', function () {
+      var open = nav.classList.toggle('is-open');
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && nav.classList.contains('is-open')) {
+        nav.classList.remove('is-open');
+        burger.setAttribute('aria-expanded', 'false');
+        burger.focus();
+      }
+    });
+  })();
+
+  // Utility-strip "More ▾" aria-expanded sync
+  (function () {
+    var more = document.querySelector('.utility-strip__more');
+    var trigger = more && more.querySelector('.utility-strip__more-trigger');
+    if (!more || !trigger) return;
+    var setExpanded = function (open) { trigger.setAttribute('aria-expanded', open ? 'true' : 'false'); };
+    more.addEventListener('mouseenter', function () { setExpanded(true); });
+    more.addEventListener('mouseleave', function () { setExpanded(false); });
+    more.addEventListener('focusin',  function () { setExpanded(true); });
+    more.addEventListener('focusout', function (e) { if (!more.contains(e.relatedTarget)) setExpanded(false); });
+  })();
+</script>
+
+<script src="lenis.min.js"></script>
+<script>
+/* Canonical motion runtime — inherited from A-rich (kinetic-display tuning, scroll-reveal only) */
+(function () {
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const lenis = new Lenis({ lerp: 0.1, smoothWheel: !prefersReducedMotion });
+  window.__lenis = lenis;
+  (function raf(t) { lenis.raf(t); requestAnimationFrame(raf); })(performance.now());
+
+  const nav = document.getElementById('nav');
+  if (nav) lenis.on('scroll', ({ scroll }) => { nav.classList.toggle('scrolled', scroll > 40); });
+
+  const clamp = (v, lo, hi) => v < lo ? lo : v > hi ? hi : v;
+  const easeOut3 = t => 1 - Math.pow(1 - t, 3);
+  const getDocTop = el => el.getBoundingClientRect().top + (window.__lenis ? window.__lenis.scroll : window.scrollY);
+
+  const animConfig = { cards: { trigger: 0.85, range: 0.32, slide: 48, stagger: 0.16 } };
+  const animList = [];
+
+  function measure() {
+    animList.forEach(({ el }) => { el.style.opacity = el.style.transform = el.style.willChange = ''; });
+    animList.length = 0;
+    document.querySelectorAll('[data-anim], [data-tile-anim]').forEach((el) => {
+      const parent = el.closest('section');
+      let stagger = 0;
+      if (parent) {
+        const peers = parent.querySelectorAll('[data-anim], [data-tile-anim]');
+        const idx = Array.prototype.indexOf.call(peers, el);
+        stagger = (idx % 8) * animConfig.cards.stagger;
+      }
+      el.style.opacity = '0';
+      el.style.transform = el.hasAttribute('data-tile-anim')
+        ? `translateY(28px) rotateX(8deg)`
+        : `translateY(${animConfig.cards.slide}px)`;
+      el.style.willChange = 'opacity, transform';
+      animList.push({ el, triggerTop: getDocTop(el), staggerDelay: stagger });
+    });
+  }
+
+  (function tick() {
+    if (prefersReducedMotion) { requestAnimationFrame(tick); return; }
+    const sY = window.__lenis ? window.__lenis.scroll : window.scrollY;
+    const vh = window.innerHeight;
+    for (let i = 0; i < animList.length; i++) {
+      const item = animList[i];
+      const { trigger, range, slide } = animConfig.cards;
+      const raw = (sY + vh * trigger - item.triggerTop) / (vh * range);
+      const p = easeOut3(clamp(raw - item.staggerDelay, 0, 1));
+      item.el.style.opacity = String(p);
+      if (item.el.hasAttribute('data-tile-anim')) {
+        item.el.style.transform = `translateY(${(1 - p) * 28}px) rotateX(${(1 - p) * 8}deg)`;
+      } else {
+        item.el.style.transform = `translateY(${(1 - p) * slide}px)`;
+      }
+    }
+    requestAnimationFrame(tick);
+  })();
+
+  measure();
+  window.addEventListener('load',   () => requestAnimationFrame(measure), { once: true });
+  window.addEventListener('resize', measure, { passive: true });
+
+  if (prefersReducedMotion) {
+    document.querySelectorAll('[data-anim], [data-tile-anim]').forEach((el) => {
+      el.style.opacity = '1'; el.style.transform = 'none'; el.style.filter = 'none';
+    });
+  }
+})();
+</script>
+
+</body>
+</html>
