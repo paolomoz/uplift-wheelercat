@@ -354,7 +354,7 @@ All 10 patterns implemented and verified on the CVA test page. To be codified in
 
 ---
 
-## 11. `stardust:aem-import` skill (planned)
+## 11. `stardust:aem-import` skill (built — 2026-05-30)
 
 Successor to the proposed `stardust:to-eds-blocks`. Takes a stardust prototype (HTML + provenance) and produces:
 
@@ -368,6 +368,39 @@ Successor to the proposed `stardust:to-eds-blocks`. Takes a stardust prototype (
 Bakes in items 10a–10j as conventions. Reference implementation: the wheelercat-cva-blocks theme + the customer-value-agreements-blocks-test page in `/Users/paolo/stardust/uplift-wheelercat-eds/`.
 
 **Goal:** compress the manual 1+ hour CVA work into ~10 min of automated generation + ~15 min of visual verification iteration.
+
+**Built.** Lives in the stardust plugin source at
+`/Users/paolo/stardust/redesign-adobecom-plugin-source/plugins/stardust/skills/aem-import/`.
+Structure:
+- `SKILL.md` (main spec — 448 lines)
+- `reference/conventions.md` (§1–§6: DA pipeline transforms, EDS
+  decorate-function guards, authoring shape conventions, per-block
+  CSS patterns, image+asset pipeline, section substrate transitions)
+- `reference/engine-patch.md` (the one-time scripts.js +
+  header.js + footer.js modifications)
+- `reference/blocks-mode.md` (default mode, ~95% pixel parity, full
+  authorability)
+- `reference/overlay-mode.md` (page-level overlay alternative,
+  ~100% pixel parity, slot-shaped authoring)
+- `reference/verification.md` (Playwright harness + the file:// vs
+  http:// limitation we hit)
+- `reference/known-diffs.md` (acceptable diffs that warn-not-fail)
+- `reference/wheelercat-reference-implementation.md` (pointer to
+  the live reference at `github.com/paolomoz/uplift-wheelercat-eds`)
+
+Master `skills/stardust/SKILL.md` updated to include `aem-import` in
+the sub-command routing list.
+
+What's NOT in the skill yet:
+- An executable harness (the SKILL.md describes the procedure but
+  there's no shell-script or Node executable that runs it
+  end-to-end). The skill is currently procedural guidance; the agent
+  follows the phases manually.
+- Stardust integration tests against multiple brands to confirm the
+  ~95% pixel parity ceiling holds beyond Wheeler.
+- Item 11.5: a `stardust:aem-import --verify-only` mode that re-runs
+  Phase 6 without regenerating artifacts. Documented in SKILL.md but
+  not implemented.
 
 ---
 
