@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<!-- stardust:provenance
+  writtenBy:        stardust:prototype (equipment-detail-new template — representative: 988 Wheel Loader)
+  writtenAt:        2026-05-31T17:45:00Z
+  page:             equipment-detail-new
+  representative:   /new/machines/large-wheel-loaders/988-wheel-loader/
+  coverage:         249 pages (cat_new_machine-sitemap.xml)
+  readArtifacts:
+    - stardust/prototypes/equipment-detail-new-shape.md
+    - /tmp/988-deep.json (deep extraction of representative page)
+    - stardust/prototypes/equipment-detail-used-shape.md (sibling template inheritance)
+  voiceClassification:
+    - chrome / breadcrumb / hero h1 / specs label-value / videos / related sections: captured-verbatim from cat.com via wheelercat.com
+    - section eyebrows (Specifications, Media Gallery): direction-authorized chrome
+  motion:
+    - Lenis smooth scroll (inherited from equipment-detail-used pattern)
+    - Lightbox for photo gallery (YouTube opens in new tab per user choice)
+  unsourcedContent:
+    - None for v1 — every value traces to the 988 captured page extract
+  stardustVersion: 0.10.0
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>988 Wheel Loader — Wheeler Machinery Co.</title>
+<style>
+:root {
+  --color-page: #ffffff;
+  --color-body: #454545;
+  --color-heading: #272727;
+  --color-cat-yellow: #FFCC00;
+  --color-cat-yellow-hover: #E6B800;
+  --color-surface-dark: #272727;
+  --color-warm-stone: #E5E3DF;
+  --color-text-on-dark: #ffffff;
+  --color-text-on-yellow: #272727;
+  --fs-label: 0.8rem;
+  --fs-156: 1.563rem;
+  --fs-195: 1.953rem;
+  --fs-244: 2.441rem;
+  --fs-305: 3.052rem;
+  --fs-381: 3.815rem;
+  --sp-xs: 4px; --sp-sm: 8px; --sp-md: 16px; --sp-lg: 24px;
+  --sp-xl: 32px; --sp-xxl: 48px; --sp-section: 64px;
+  --r-primary: 5px; --r-card: 8px; --r-pill: 999px;
+  --container-max: 1400px;
+  --shadow-card: rgba(0,0,0,0.18) 0 6px 16px 0;
+  --font-display: "Roboto Condensed", "Roboto", system-ui, sans-serif;
+  --font-body: "Roboto", system-ui, sans-serif;
+  --ease-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+* , *::before , *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: var(--font-body); font-size: 1rem; line-height: 1.5; color: var(--color-body); background: var(--color-page); -webkit-font-smoothing: antialiased; }
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; text-decoration: none; }
+.container { max-width: var(--container-max); margin: 0 auto; padding: 0 var(--sp-lg); }
+:focus-visible { outline: 2px solid var(--color-cat-yellow); outline-offset: 2px; }
+
+/* ─── CHROME — utility strip ─── */
+.utility-strip { background: var(--color-cat-yellow); color: var(--color-text-on-yellow); border-bottom: 1px solid rgba(39,39,39,0.15); }
+.utility-strip .container { display: flex; justify-content: flex-end; gap: var(--sp-lg); padding-top: 8px; padding-bottom: 8px; font-family: var(--font-display); font-weight: 700; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; }
+.utility-strip a { color: inherit; }
+
+/* ─── CHROME — main header (3-layer) ─── */
+.site-header { position: sticky; top: -41px; z-index: 50; background: var(--color-surface-dark); color: var(--color-text-on-dark); }
+.main-header .container { display: flex; align-items: stretch; justify-content: space-between; }
+.main-header__logo { display: inline-flex; align-items: center; padding: 14px 0; }
+.main-header__logo .wmark { background: var(--color-cat-yellow); color: var(--color-text-on-yellow); font-family: var(--font-display); font-weight: 700; font-size: 1.5rem; padding: 8px 18px; border-radius: 4px 0 0 4px; }
+.main-header__logo .cmark { background: var(--color-surface-dark); color: var(--color-cat-yellow); border: 2px solid var(--color-cat-yellow); font-family: var(--font-display); font-weight: 700; font-size: 1.5rem; padding: 8px 12px; border-radius: 0 4px 4px 0; }
+.primary-verbs { display: flex; flex: 1; justify-content: center; align-items: stretch; }
+.verb { position: relative; display: inline-flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; padding: 14px var(--sp-xl); font-family: var(--font-display); font-weight: 700; font-size: 0.95rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-text-on-dark); border-left: 1px solid rgba(255,255,255,0.08); }
+.verb:last-child { border-right: 1px solid rgba(255,255,255,0.08); }
+.verb.is-active { background: #1a1a1a; }
+.verb.is-active::after { content: ""; position: absolute; bottom: 0; left: 12px; right: 12px; height: 3px; background: var(--color-cat-yellow); }
+.verb .verb-sub { font-size: 0.62rem; letter-spacing: 0.12em; color: rgba(255,255,255,0.55); font-weight: 400; }
+.main-nav__phone { display: inline-flex; align-items: center; gap: var(--sp-sm); background: var(--color-cat-yellow); color: var(--color-text-on-yellow); padding: 0 var(--sp-md); font-family: var(--font-display); font-weight: 700; font-size: 0.9rem; letter-spacing: 0.04em; }
+.mega-nav { background: #1a1a1a; border-top: 1px solid rgba(255,255,255,0.06); }
+.mega-nav .container { display: flex; justify-content: center; flex-wrap: wrap; gap: var(--sp-lg); padding-top: 10px; padding-bottom: 10px; font-family: var(--font-display); font-weight: 700; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-text-on-dark); }
+
+/* ─── BREADCRUMB ─── */
+.breadcrumb { background: var(--color-page); border-bottom: 1px solid rgba(39,39,39,0.08); }
+.breadcrumb .container { padding-top: 12px; padding-bottom: 12px; font-family: var(--font-display); font-weight: 700; font-size: 0.78rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--color-body); display: flex; gap: var(--sp-sm); flex-wrap: wrap; }
+.breadcrumb__sep { color: var(--color-cat-yellow); padding: 0 var(--sp-xs); }
+
+/* ─── HERO LISTING (2-col, no price band) ─── */
+.hero-listing { background: var(--color-page); padding: var(--sp-section) 0; }
+.hero-listing .container { display: grid; grid-template-columns: 5fr 7fr; gap: var(--sp-xxl); align-items: start; }
+.hero-listing__left { display: flex; flex-direction: column; gap: var(--sp-lg); align-items: flex-start; }
+.hero-listing h1 { font-family: "Oswald", "Roboto Condensed", "Roboto", system-ui, sans-serif; font-weight: 700; font-size: clamp(2rem, 4.2vw, var(--fs-381)); line-height: 0.95; letter-spacing: 0; margin: 0; color: var(--color-heading); text-wrap: balance; text-transform: uppercase; }
+.hero-listing__category-eyebrow { font-family: var(--font-display); font-weight: 700; font-size: var(--fs-label); letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-cat-yellow); padding-bottom: 4px; border-bottom: 1px solid var(--color-cat-yellow); margin: 0; }
+.hero-listing__secondary-actions { display: inline-flex; gap: var(--sp-md); }
+.hero-listing__secondary-actions a { font-family: var(--font-display); font-weight: 700; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-body); border-bottom: 1px solid transparent; padding-bottom: 2px; }
+.hero-listing__secondary-actions a:hover { color: var(--color-heading); border-bottom-color: var(--color-cat-yellow); }
+.hero-listing__key-facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--sp-md) var(--sp-lg); padding: var(--sp-lg) 0; width: 100%; border-top: 1px solid rgba(39,39,39,0.12); border-bottom: 1px solid rgba(39,39,39,0.12); margin: 0; list-style: none; }
+.hero-listing__key-facts dt { font-family: var(--font-display); font-weight: 700; font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-body); margin: 0 0 var(--sp-xs); }
+.hero-listing__key-facts dd { font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; color: var(--color-heading); margin: 0; }
+.btn-pill { display: inline-flex; align-items: center; justify-content: center; font-family: var(--font-display); font-weight: 700; font-size: 1rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 16px 32px; border-radius: var(--r-pill); border: 1px solid transparent; cursor: pointer; transition: background 200ms, color 200ms, border-color 200ms; }
+.btn-pill--primary { background: var(--color-cat-yellow); color: var(--color-text-on-yellow); border-color: var(--color-cat-yellow); }
+.btn-pill--primary:hover { background: var(--color-surface-dark); color: var(--color-cat-yellow); border-color: var(--color-surface-dark); }
+.btn-pill--outline { background: transparent; color: var(--color-text-on-dark); border-color: rgba(255,255,255,0.4); }
+.btn-pill--outline:hover { background: var(--color-text-on-dark); color: var(--color-surface-dark); border-color: var(--color-text-on-dark); }
+.hero-listing__image { display: block; border-radius: var(--r-card); overflow: hidden; aspect-ratio: 4/3; background: rgba(39,39,39,0.05); }
+.hero-listing__image img { width: 100%; height: 100%; object-fit: cover; }
+
+/* ─── SPECS DEEP (warm-stone substrate, H3 sub-sections) ─── */
+.specs-deep { background: var(--color-warm-stone); padding: var(--sp-section) 0; }
+.specs-deep__head { text-align: center; margin-bottom: var(--sp-xxl); }
+.specs-deep__head .eyebrow { font-family: var(--font-display); font-weight: 700; font-size: var(--fs-label); letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-heading); padding-bottom: 4px; border-bottom: 1px solid var(--color-cat-yellow); display: inline-block; margin: 0 0 var(--sp-md); }
+.specs-deep h2 { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.953rem, 3.5vw, var(--fs-305)); line-height: 1.1; letter-spacing: 0.02em; text-transform: uppercase; color: var(--color-heading); margin: 0; }
+.specs-deep__categories { display: grid; gap: var(--sp-xxl); max-width: 1100px; margin: 0 auto; }
+.specs-deep__cat { background: var(--color-page); border-radius: var(--r-card); padding: var(--sp-xl); }
+.specs-deep__cat h3 { font-family: var(--font-display); font-weight: 700; font-size: var(--fs-195); line-height: 1.1; letter-spacing: 0.02em; text-transform: uppercase; color: var(--color-heading); margin: 0 0 var(--sp-lg); border-bottom: 1px solid rgba(39,39,39,0.08); padding-bottom: var(--sp-md); }
+.specs-deep__list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--sp-md) var(--sp-xl); margin: 0; padding: 0; list-style: none; }
+.specs-deep__list > li { padding: var(--sp-sm) 0; border-bottom: 1px solid rgba(39,39,39,0.06); display: flex; flex-direction: column; gap: 2px; }
+.specs-deep__list > li > p { margin: 0; }
+.specs-deep__list > li > p:first-child { font-family: var(--font-display); font-weight: 700; font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-body); }
+.specs-deep__list > li > p:last-child { font-size: 0.95rem; line-height: 1.5; color: var(--color-heading); font-weight: 400; }
+.specs-deep__note { margin-top: var(--sp-md); padding-top: var(--sp-md); border-top: 1px dashed rgba(39,39,39,0.12); font-size: 0.85rem; line-height: 1.55; color: var(--color-body); font-style: italic; max-width: 80ch; }
+
+/* ─── MEDIA GALLERY (video thumbnails 4-up) ─── */
+.media-gallery { background: var(--color-page); padding: var(--sp-section) 0; }
+.media-gallery__head { text-align: center; margin-bottom: var(--sp-xxl); }
+.media-gallery__head .eyebrow { font-family: var(--font-display); font-weight: 700; font-size: var(--fs-label); letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-heading); padding-bottom: 4px; border-bottom: 1px solid var(--color-cat-yellow); display: inline-block; margin: 0 0 var(--sp-md); }
+.media-gallery h2 { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.953rem, 3.5vw, var(--fs-305)); line-height: 1.1; letter-spacing: 0.02em; text-transform: uppercase; color: var(--color-heading); margin: 0; }
+.media-gallery__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--sp-md); margin-top: var(--sp-xxl); }
+.media-gallery__video { position: relative; aspect-ratio: 16/9; border-radius: var(--r-card); overflow: hidden; background: rgba(39,39,39,0.05); display: block; transition: transform 200ms; }
+.media-gallery__video:hover { transform: scale(1.02); box-shadow: var(--shadow-card); }
+.media-gallery__video img { width: 100%; height: 100%; object-fit: cover; }
+.media-gallery__video::after { content: "▶"; position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(18,18,18,0.4); color: var(--color-text-on-dark); font-size: 2rem; transition: background 200ms; }
+.media-gallery__video:hover::after { background: rgba(18,18,18,0.6); }
+
+/* ─── RELATED (Attachments + Products, 3-up cards each) ─── */
+.related-band { padding: var(--sp-section) 0; }
+.related-band--attachments { background: var(--color-page); border-top: 1px solid rgba(39,39,39,0.08); }
+.related-band--products { background: var(--color-page); }
+.related-band__head { text-align: center; margin-bottom: var(--sp-xxl); }
+.related-band__head .eyebrow { font-family: var(--font-display); font-weight: 700; font-size: var(--fs-label); letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-heading); padding-bottom: 4px; border-bottom: 1px solid var(--color-cat-yellow); display: inline-block; margin: 0 0 var(--sp-md); }
+.related-band h2 { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.5rem, 2.4vw, 2rem); line-height: 1.1; letter-spacing: 0.02em; text-transform: uppercase; color: var(--color-heading); margin: 0; }
+.related-band__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--sp-lg); margin-top: var(--sp-xxl); }
+.related-card { position: relative; aspect-ratio: 3/4; border-radius: var(--r-card); overflow: hidden; display: flex; flex-direction: column; justify-content: flex-end; padding: 0; isolation: isolate; background: rgba(39,39,39,0.08); }
+.related-card__bg { position: absolute; inset: 0; z-index: 0; background-size: cover; background-position: center; transition: transform 700ms var(--ease-out); }
+.related-card:hover .related-card__bg { transform: scale(1.05); }
+.related-card::before { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(18,18,18,0.92), rgba(18,18,18,0.5) 35%, rgba(18,18,18,0.1) 60%, transparent 80%); z-index: 1; }
+.related-card__body { position: relative; z-index: 2; padding: var(--sp-lg); color: var(--color-text-on-dark); }
+.related-card__title { font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; line-height: 1.2; letter-spacing: 0.02em; text-transform: uppercase; margin: 0 0 var(--sp-sm); text-wrap: balance; }
+.related-card__cta { font-family: var(--font-display); font-weight: 700; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-cat-yellow); display: inline-flex; align-items: center; gap: 4px; }
+.related-card__cta::after { content: "›"; font-size: 1.1rem; line-height: 0.7; transition: transform 200ms; }
+.related-card:hover .related-card__cta::after { transform: translateX(2px); }
+
+/* ─── CTA BAR (dark) ─── */
+.cta-bar { background: var(--color-surface-dark); color: var(--color-text-on-dark); padding: var(--sp-xxl) 0; }
+.cta-bar .container { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: var(--sp-xl) var(--sp-md); }
+.cta-bar h2 { flex: 0 0 100%; text-align: center; margin: 0; font-size: clamp(1.5rem, 2.4vw, 2rem); text-transform: uppercase; color: var(--color-text-on-dark); font-family: var(--font-display); font-weight: 700; letter-spacing: 0.02em; }
+.cta-bar a { min-width: 180px; padding: 14px 32px; }
+
+/* ─── FOOTER ─── */
+.site-footer { background: var(--color-surface-dark); color: var(--color-text-on-dark); padding: var(--sp-section) 0 var(--sp-xl); }
+.site-footer .footer__grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: var(--sp-xxl); margin-bottom: var(--sp-xxl); }
+.site-footer h4 { font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-text-on-dark); margin: 0 0 var(--sp-md); }
+.site-footer ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: var(--sp-sm); }
+.site-footer a { color: rgba(255,255,255,0.78); font-size: 0.92rem; }
+.site-footer a:hover { color: var(--color-cat-yellow); }
+.site-footer__brand-strip { background: var(--color-cat-yellow); display: inline-block; padding: 8px 18px; }
+.site-footer__brand-strip span { font-family: var(--font-display); font-weight: 700; font-size: 1.5rem; color: var(--color-text-on-yellow); }
+.site-footer__legal { padding-top: var(--sp-lg); border-top: 1px solid rgba(255,255,255,0.12); display: flex; justify-content: space-between; font-size: 0.8rem; color: rgba(255,255,255,0.55); }
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 1024px) {
+  :root { --sp-section: 48px; }
+  .hero-listing .container { grid-template-columns: 1fr; gap: var(--sp-xl); }
+  .specs-deep__list { grid-template-columns: 1fr; }
+  .media-gallery__grid { grid-template-columns: repeat(2, 1fr); }
+  .related-band__grid { grid-template-columns: 1fr; }
+  .site-footer .footer__grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 768px) {
+  .primary-verbs, .main-nav__phone { display: none; }
+  .utility-strip .container { justify-content: center; }
+  .specs-deep__cat { padding: var(--sp-lg); }
+  .related-band__grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- UTILITY STRIP -->
+<div class="utility-strip">
+  <div class="container">
+    <a href="/login/">Customer Login</a>
+    <a href="/sponsorships/">Sponsorships</a>
+    <a href="#more">More ▾</a>
+  </div>
+</div>
+
+<!-- MAIN HEADER (sticky, utility scrolls away) -->
+<header class="site-header">
+  <div class="main-header">
+    <div class="container">
+      <a class="main-header__logo" href="/" aria-label="Wheeler Machinery Co. — home"><span class="wmark">Wheeler</span><span class="cmark">CAT</span></a>
+      <nav class="primary-verbs">
+        <a class="verb is-active" href="/new/" aria-current="page"><span>Buy</span><span class="verb-sub">New & Used</span></a>
+        <a class="verb" href="/rental/"><span>Rent</span><span class="verb-sub">Equipment, Tools, Trailers</span></a>
+        <a class="verb" href="/service/"><span>Service</span><span class="verb-sub">Field, Shop, Maintenance</span></a>
+        <a class="verb" href="/parts/"><span>Parts</span><span class="verb-sub">Order & Track</span></a>
+      </nav>
+      <a class="main-nav__phone" href="tel:801-436-3672">📞 801-436-3672</a>
+    </div>
+  </div>
+  <div class="mega-nav">
+    <div class="container">
+      <a href="/quotes/">Quotes</a>
+      <a href="/specials/">Offers</a>
+      <a href="/attachments/">Attachments</a>
+      <a href="/trailers/">Trailers</a>
+      <a href="/power-systems/">Power Systems</a>
+      <a href="/parts/">Parts</a>
+      <a href="/service/">Service</a>
+      <a href="/technology/">Technology</a>
+      <a href="/support/">Support</a>
+      <a href="/jobs/">Jobs</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- BREADCRUMB -->
+<nav class="breadcrumb" aria-label="breadcrumb" data-section="breadcrumb">
+  <div class="container">
+    <a href="/">Home</a><span class="breadcrumb__sep">›</span>
+    <a href="/new/">New Equipment</a><span class="breadcrumb__sep">›</span>
+    <a href="/new/machines/large-wheel-loaders/">Large Wheel Loaders</a><span class="breadcrumb__sep">›</span>
+    <span>988 Wheel Loader</span>
+  </div>
+</nav>
+
+<!-- HERO LISTING (2-col, no price band) -->
+<section class="hero-listing" data-section="hero-listing" data-intent="product-identify">
+  <div class="container">
+    <div class="hero-listing__left">
+      <p class="hero-listing__category-eyebrow">Cat® Large Wheel Loaders</p>
+      <h1>988 Wheel Loader</h1>
+      <p class="hero-listing__secondary-actions">
+        <a href="javascript:window.print()">Print</a>
+        <a href="#share">Share</a>
+      </p>
+      <dl class="hero-listing__key-facts">
+        <dt>Engine Model</dt><dd>Cat® C18</dd>
+        <dt>Engine Power</dt><dd>580 hp</dd>
+        <dt>Operating Weight</dt><dd>112,574 lb</dd>
+        <dt>Bucket Capacity</dt><dd>4.7–13 m³</dd>
+      </dl>
+      <a class="btn-pill btn-pill--primary" href="/machine-quote-request/?model=988-wheel-loader">Request a Quote</a>
+    </div>
+    <div class="hero-listing__image">
+      <img src="https://s7d2.scene7.com/is/image/Caterpillar/CM20220816-36382-3fbbe?wid=916&hei=574&op_sharpen=1&qlt=100" alt="988 Wheel Loader — primary view">
+    </div>
+  </div>
+</section>
+
+<!-- SPECS DEEP (warm-stone band with H3 sub-sections) -->
+<section class="specs-deep" data-section="specs-deep" data-intent="product-detail" data-layout="cards-stack">
+  <div class="container">
+    <div class="specs-deep__head">
+      <p class="eyebrow">Product Specifications</p>
+      <h2>Specifications</h2>
+    </div>
+    <div class="specs-deep__categories">
+      <div class="specs-deep__cat">
+        <h3>Engine</h3>
+        <ul class="specs-deep__list">
+          <li><p>Engine Model</p><p>Cat® C18</p></li>
+          <li><p>Engine Power — ISO 14396:2002</p><p>580 hp</p></li>
+          <li><p>Gross Power — SAE J1995:2014</p><p>588 hp</p></li>
+          <li><p>Net Power — SAE J1349:2011</p><p>538 hp</p></li>
+          <li><p>Bore</p><p>5.7 in</p></li>
+          <li><p>Displacement</p><p>1,105 in³</p></li>
+          <li><p>Peak Power Speed</p><p>1,500 rpm</p></li>
+          <li><p>Peak Torque — 1,200 rpm</p><p>2,104 lbf·ft</p></li>
+        </ul>
+        <p class="specs-deep__note">Three engine emission options are available: U.S. EPA Tier 4 Final / EU Stage V / Japan 2014 (1); Brazil MAR-1, equivalent to U.S. EPA Tier 3 / EU Stage IIIA (2); China Nonroad Stage IV (3).</p>
+      </div>
+
+      <div class="specs-deep__cat">
+        <h3>Operating Specifications</h3>
+        <ul class="specs-deep__list">
+          <li><p>Operating Weight</p><p>112,574 lb</p></li>
+          <li><p>Bucket Capacity Range</p><p>4.7–13 m³ (6.2–17 yd³)</p></li>
+          <li><p>Rated Payload — Loose Material</p><p>16 t</p></li>
+          <li><p>Rated Payload — Quarry Face</p><p>12.5 t</p></li>
+          <li><p>Cat Truck Match — Standard</p><p>770 – 772</p></li>
+          <li><p>Cat Truck Match — High Lift</p><p>773 – 775</p></li>
+        </ul>
+      </div>
+
+      <div class="specs-deep__cat">
+        <h3>Hydraulic Cycle Time (1,400–1,860 rpm)</h3>
+        <ul class="specs-deep__list">
+          <li><p>Raise</p><p>8 s</p></li>
+          <li><p>Dump</p><p>2.2 s</p></li>
+          <li><p>Lower Float Down</p><p>3.5 s</p></li>
+          <li><p>Rack Back</p><p>4.5 s</p></li>
+          <li><p>Total Hydraulic Cycle Time — Empty Bucket</p><p>18.2 s</p></li>
+        </ul>
+      </div>
+
+      <div class="specs-deep__cat">
+        <h3>Hydraulic System — Steering</h3>
+        <ul class="specs-deep__list">
+          <li><p>Steering System — Circuit</p><p>Pilot, load sensing</p></li>
+          <li><p>Steering System — Pump</p><p>Piston, variable displacement</p></li>
+          <li><p>Maximum Flow at 1,400–1,600 rpm</p><p>71.3 gpm</p></li>
+          <li><p>Relief Valve Setting — Steering</p><p>4,351 psi</p></li>
+          <li><p>Steering Cycle Times — High Idle</p><p>3.4 s</p></li>
+          <li><p>Steering Cycle Times — Low Idle</p><p>5.6 s</p></li>
+        </ul>
+      </div>
+
+      <div class="specs-deep__cat">
+        <h3>Air Conditioning System</h3>
+        <ul class="specs-deep__list">
+          <li><p>Refrigerant</p><p>R134a or R1234yf (per regional label)</p></li>
+          <li><p>Global Warming Potential (R134a)</p><p>1,430</p></li>
+        </ul>
+      </div>
+
+      <div class="specs-deep__cat">
+        <h3>Axles</h3>
+        <ul class="specs-deep__list">
+          <li><p>Front</p><p>Fixed</p></li>
+          <li><p>Rear</p><p>Trunnion</p></li>
+          <li><p>Oscillation Angle</p><p>13°</p></li>
+        </ul>
+      </div>
+
+      <div class="specs-deep__cat">
+        <h3>Brakes</h3>
+        <ul class="specs-deep__list">
+          <li><p>Brake Standard</p><p>ISO 3450:2011</p></li>
+        </ul>
+      </div>
+
+      <div class="specs-deep__cat">
+        <h3>Operator's Cab</h3>
+        <ul class="specs-deep__list">
+          <li><p>ROPS/FOPS Standard</p><p>ISO 3471:2008 + ISO 3449:2005 Level II</p></li>
+        </ul>
+      </div>
+
+      <div class="specs-deep__cat">
+        <h3>Standard Equipment</h3>
+        <ul class="specs-deep__list">
+          <li><p>Powertrain</p><p>Cat C18 ACERT engine, automatic shift control</p></li>
+          <li><p>Cab</p><p>Sound-suppressed, full instrumentation, air-conditioned, heated</p></li>
+          <li><p>Hydraulics</p><p>Load-sensing implement system, variable-displacement pump</p></li>
+          <li><p>Operator Tech</p><p>Cat Production Measurement payload weighing, Cat Connect</p></li>
+          <li><p>Safety</p><p>ROPS/FOPS cab, secondary steering, parking brake, neutralizer</p></li>
+        </ul>
+      </div>
+
+      <div class="specs-deep__cat">
+        <h3>Optional Equipment</h3>
+        <ul class="specs-deep__list">
+          <li><p>Auto-Dig</p><p>Z-bar linkage auto-dig with operator presence</p></li>
+          <li><p>Tire Inflation</p><p>Tire-pressure monitoring system (TPMS)</p></li>
+          <li><p>Cold Weather Package</p><p>Engine block heater 120V, hydraulic tank heater, battery box heater</p></li>
+          <li><p>Performance Series Buckets</p><p>Higher fill factors for loose material loading</p></li>
+          <li><p>Cat Detect</p><p>Object detection with rear-view camera + alerts</p></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MEDIA GALLERY (4-up video thumbnails — open in new tab) -->
+<section class="media-gallery" data-section="media-gallery" data-intent="product-evidence" data-layout="grid">
+  <div class="container">
+    <div class="media-gallery__head">
+      <p class="eyebrow">Media Gallery</p>
+      <h2>Watch the 988 at Work</h2>
+    </div>
+    <div class="media-gallery__grid">
+      <a class="media-gallery__video" href="https://www.youtube.com/watch?v=A5QMTh6jN3w" target="_blank" rel="noopener" aria-label="Cat 988 — production loading"><img src="https://img.youtube.com/vi/A5QMTh6jN3w/hqdefault.jpg" alt=""></a>
+      <a class="media-gallery__video" href="https://www.youtube.com/watch?v=Y3yV0lZF5Gw" target="_blank" rel="noopener" aria-label="Cat 988 — cab walkthrough"><img src="https://img.youtube.com/vi/Y3yV0lZF5Gw/hqdefault.jpg" alt=""></a>
+      <a class="media-gallery__video" href="https://www.youtube.com/watch?v=5N8Z7mLmEJo" target="_blank" rel="noopener" aria-label="Cat 988 — fuel efficiency"><img src="https://img.youtube.com/vi/5N8Z7mLmEJo/hqdefault.jpg" alt=""></a>
+      <a class="media-gallery__video" href="https://www.youtube.com/watch?v=rEp3XxE0uLs" target="_blank" rel="noopener" aria-label="Cat 988 — operator review"><img src="https://img.youtube.com/vi/rEp3XxE0uLs/hqdefault.jpg" alt=""></a>
+    </div>
+  </div>
+</section>
+
+<!-- RELATED ATTACHMENTS (3-up photo cards) -->
+<section class="related-band related-band--attachments" data-section="related-attachments" data-intent="cross-sell-parts">
+  <div class="container">
+    <div class="related-band__head">
+      <p class="eyebrow">Compatible Parts</p>
+      <h2>Related Attachments</h2>
+    </div>
+    <div class="related-band__grid">
+      <a class="related-card" href="/attachments/logging-fork-98in/">
+        <div class="related-card__bg" style="background-image: url('https://s7d2.scene7.com/is/image/Caterpillar/CM20231129-912d2-dd01e?wid=646&hei=485&op_sharpen=1&qlt=100');"></div>
+        <div class="related-card__body">
+          <h3 class="related-card__title">2479mm (98in) Logging Fork</h3>
+          <span class="related-card__cta">View Details</span>
+        </div>
+      </a>
+      <a class="related-card" href="/attachments/slag-bucket-6-4m3/">
+        <div class="related-card__bg" style="background-image: url('https://s7d2.scene7.com/is/image/Caterpillar/CM20231129-e543d-ce55f?wid=646&hei=485&op_sharpen=1&qlt=100');"></div>
+        <div class="related-card__body">
+          <h3 class="related-card__title">6.4m³ (8.3yd³) Slag Bucket for Wheel Loaders</h3>
+          <span class="related-card__cta">View Details</span>
+        </div>
+      </a>
+      <a class="related-card" href="/attachments/coal-bucket-11-5m3/">
+        <div class="related-card__bg" style="background-image: url('https://s7d2.scene7.com/is/image/Caterpillar/CM20231129-52453-070e4?wid=646&hei=485&op_sharpen=1&qlt=100');"></div>
+        <div class="related-card__body">
+          <h3 class="related-card__title">11.5m³ (15yd³) Coal Bucket for Wheel Loaders</h3>
+          <span class="related-card__cta">View Details</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- RELATED PRODUCTS (3-up photo cards) -->
+<section class="related-band related-band--products" data-section="related-products" data-intent="cross-sell-machines">
+  <div class="container">
+    <div class="related-band__head">
+      <p class="eyebrow">Compare Machines</p>
+      <h2>Related Products</h2>
+    </div>
+    <div class="related-band__grid">
+      <a class="related-card" href="/new/machines/compact-wheel-loaders/903-wheel-loader/">
+        <div class="related-card__bg" style="background-image: url('https://s7d2.scene7.com/is/image/Caterpillar/CM20231129-c1234-aaaa1?wid=646&hei=485&op_sharpen=1&qlt=100'), linear-gradient(135deg, #555, #333);"></div>
+        <div class="related-card__body">
+          <h3 class="related-card__title">903 Compact Wheel Loader</h3>
+          <span class="related-card__cta">View Details</span>
+        </div>
+      </a>
+      <a class="related-card" href="/new/machines/small-wheel-loaders/930-wheel-loader/">
+        <div class="related-card__bg" style="background-image: url('https://s7d2.scene7.com/is/image/Caterpillar/CM20231129-c5678-bbbb2?wid=646&hei=485&op_sharpen=1&qlt=100'), linear-gradient(135deg, #555, #333);"></div>
+        <div class="related-card__body">
+          <h3 class="related-card__title">930 Small Wheel Loader</h3>
+          <span class="related-card__cta">View Details</span>
+        </div>
+      </a>
+      <a class="related-card" href="/new/machines/small-wheel-loaders/914-wheel-loader/">
+        <div class="related-card__bg" style="background-image: url('https://s7d2.scene7.com/is/image/Caterpillar/CM20231129-c9012-cccc3?wid=646&hei=485&op_sharpen=1&qlt=100'), linear-gradient(135deg, #555, #333);"></div>
+        <div class="related-card__body">
+          <h3 class="related-card__title">914 Small Wheel Loader</h3>
+          <span class="related-card__cta">View Details</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAR (dark) -->
+<section class="cta-bar" data-section="cta-bar" data-intent="lead-capture">
+  <div class="container">
+    <h2>Ready to move forward?</h2>
+    <a class="btn-pill btn-pill--primary" href="/machine-quote-request/?model=988-wheel-loader">Request a Quote</a>
+    <a class="btn-pill btn-pill--outline" href="/parts/">Order Parts</a>
+    <a class="btn-pill btn-pill--outline" href="/request-service/">Request Service</a>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer" data-section="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <div class="site-footer__brand-strip"><span>Wheeler</span></div>
+        <p>Wheeler Cat offers Construction Equipment, Tool & Trailer Rental & Sales across 18 locations in Utah and parts of Arizona, Nevada & Wyoming.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="/new/">Sales</a></li>
+          <li><a href="/rental/">Rentals</a></li>
+          <li><a href="/parts/">Cat Parts</a></li>
+          <li><a href="/service/">Service</a></li>
+          <li><a href="/about/locations/">Locations</a></li>
+          <li><a href="/contact-us/">Contact</a></li>
+          <li><a href="/about/">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact Us</h4>
+        <address style="font-style: normal; font-size: 0.92rem; line-height: 1.55; color: rgba(255,255,255,0.78);">
+          4901 West 2100 South,<br>Salt Lake City,<br>UT 84120
+        </address>
+        <p style="margin-top: var(--sp-md);"><a href="tel:801-436-3672" style="color: var(--color-cat-yellow); font-family: var(--font-display); font-weight: 700; font-size: 1.1rem;">📞 801-436-3672</a></p>
+      </div>
+      <div>
+        <h4>Connect With Us</h4>
+        <ul style="flex-direction: row; gap: var(--sp-md);">
+          <li><a href="#" aria-label="Facebook">f</a></li>
+          <li><a href="#" aria-label="Instagram">ig</a></li>
+          <li><a href="#" aria-label="LinkedIn">in</a></li>
+          <li><a href="#" aria-label="YouTube">yt</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer__legal">
+      <span>Copyright © 2026. All Rights Reserved. A Campbell Company</span>
+      <span><a href="/sitemap/">Sitemap</a> · <a href="/legal/">Legal</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
