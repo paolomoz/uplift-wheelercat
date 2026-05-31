@@ -109,9 +109,96 @@ a { color: inherit; text-decoration: none; }
 .specs-deep__head { text-align: center; margin-bottom: var(--sp-xxl); }
 .specs-deep__head .eyebrow { font-family: var(--font-display); font-weight: 700; font-size: var(--fs-label); letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-heading); padding-bottom: 4px; border-bottom: 1px solid var(--color-cat-yellow); display: inline-block; margin: 0 0 var(--sp-md); }
 .specs-deep h2 { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.953rem, 3.5vw, var(--fs-305)); line-height: 1.1; letter-spacing: 0.02em; text-transform: uppercase; color: var(--color-heading); margin: 0; }
-.specs-deep__categories { display: grid; gap: var(--sp-xxl); max-width: 1100px; margin: 0 auto; }
-.specs-deep__cat { background: var(--color-page); border-radius: var(--r-card); padding: var(--sp-xl); }
-.specs-deep__cat h3 { font-family: var(--font-display); font-weight: 700; font-size: var(--fs-195); line-height: 1.1; letter-spacing: 0.02em; text-transform: uppercase; color: var(--color-heading); margin: 0 0 var(--sp-lg); border-bottom: 1px solid rgba(39,39,39,0.08); padding-bottom: var(--sp-md); }
+/* At-a-glance hero stat strip — monumental numbers above the accordions */
+.specs-deep__at-a-glance {
+  background: var(--color-surface-dark);
+  color: var(--color-text-on-dark);
+  border-radius: var(--r-card);
+  padding: var(--sp-xxl) var(--sp-xl);
+  margin: 0 auto var(--sp-xxl);
+  max-width: 1100px;
+}
+.specs-deep__at-a-glance ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--sp-lg);
+  margin: 0; padding: 0; list-style: none;
+}
+.specs-deep__at-a-glance li {
+  display: flex; flex-direction: column; align-items: flex-start;
+  border-left: 3px solid var(--color-cat-yellow);
+  padding-left: var(--sp-lg);
+}
+.specs-deep__at-a-glance .stat-value {
+  font-family: "Oswald", "Roboto Condensed", "Roboto", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 3.6vw, 3.4rem);
+  line-height: 0.95;
+  letter-spacing: 0;
+  color: var(--color-text-on-dark);
+  margin: 0 0 var(--sp-sm);
+}
+.specs-deep__at-a-glance .stat-value .unit {
+  font-size: 0.5em; color: var(--color-cat-yellow); margin-left: 0.2em; letter-spacing: 0.04em;
+}
+.specs-deep__at-a-glance .stat-label {
+  font-family: var(--font-display); font-weight: 700;
+  font-size: 0.7rem; letter-spacing: 0.18em;
+  text-transform: uppercase; color: rgba(255,255,255,0.65);
+  margin: 0;
+}
+
+/* Accordion category list */
+.specs-deep__categories { display: flex; flex-direction: column; gap: 0; max-width: 1100px; margin: 0 auto; border-top: 1px solid rgba(39,39,39,0.12); }
+.specs-deep__cat {
+  background: var(--color-page);
+  border-bottom: 1px solid rgba(39,39,39,0.12);
+  padding: 0;
+}
+.specs-deep__cat-header {
+  display: flex; align-items: center; justify-content: space-between;
+  width: 100%;
+  padding: var(--sp-lg) var(--sp-xl);
+  background: transparent; border: none; cursor: pointer; text-align: left;
+  transition: background 150ms var(--ease-out);
+  list-style: none;  /* suppress default <summary> triangle marker */
+}
+.specs-deep__cat-header::-webkit-details-marker { display: none; }
+.specs-deep__cat-header::marker { content: ''; }
+.specs-deep__cat-header:hover { background: rgba(255,204,0,0.05); }
+.specs-deep__cat-header h3 {
+  font-family: var(--font-display); font-weight: 700;
+  font-size: var(--fs-156); line-height: 1.1; letter-spacing: 0.02em;
+  text-transform: uppercase; color: var(--color-heading); margin: 0;
+}
+.specs-deep__cat-header .row-count {
+  font-family: var(--font-display); font-weight: 700;
+  font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--color-body);
+  margin-right: var(--sp-md);
+  margin-left: auto;
+}
+.specs-deep__cat-header .chevron {
+  width: 28px; height: 28px;
+  display: inline-flex; align-items: center; justify-content: center;
+  border: 1px solid rgba(39,39,39,0.2); border-radius: 50%;
+  color: var(--color-heading); font-size: 0.9rem; line-height: 1;
+  transition: transform 250ms var(--ease-out), background 200ms, color 200ms, border-color 200ms;
+}
+.specs-deep__cat[open] .specs-deep__cat-header .chevron {
+  transform: rotate(180deg);
+  background: var(--color-cat-yellow);
+  color: var(--color-text-on-yellow);
+  border-color: var(--color-cat-yellow);
+}
+.specs-deep__cat-body {
+  padding: 0 var(--sp-xl) var(--sp-xl);
+  animation: spec-fade-in 280ms var(--ease-out);
+}
+@keyframes spec-fade-in {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 .specs-deep__list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--sp-md) var(--sp-xl); margin: 0; padding: 0; list-style: none; }
 .specs-deep__list > li { padding: var(--sp-sm) 0; border-bottom: 1px solid rgba(39,39,39,0.06); display: flex; flex-direction: column; gap: 2px; }
 .specs-deep__list > li > p { margin: 0; }
@@ -267,9 +354,37 @@ a { color: inherit; text-decoration: none; }
       <p class="eyebrow">Product Specifications</p>
       <h2>Specifications</h2>
     </div>
+    <!-- At-a-glance stat strip: 4 monumental hero numbers -->
+    <div class="specs-deep__at-a-glance" data-section="specs-at-a-glance">
+      <ul>
+        <li>
+          <p class="stat-value">580<span class="unit">hp</span></p>
+          <p class="stat-label">Engine Power</p>
+        </li>
+        <li>
+          <p class="stat-value">112,574<span class="unit">lb</span></p>
+          <p class="stat-label">Operating Weight</p>
+        </li>
+        <li>
+          <p class="stat-value">4.7–13<span class="unit">m³</span></p>
+          <p class="stat-label">Bucket Capacity</p>
+        </li>
+        <li>
+          <p class="stat-value">18.2<span class="unit">s</span></p>
+          <p class="stat-label">Hydraulic Cycle</p>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Collapsible category accordions -->
     <div class="specs-deep__categories">
-      <div class="specs-deep__cat">
-        <h3>Engine</h3>
+      <details class="specs-deep__cat" open>
+        <summary class="specs-deep__cat-header">
+          <h3>Engine</h3>
+          <span class="row-count">8 specs</span>
+          <span class="chevron" aria-hidden="true">▾</span>
+        </summary>
+        <div class="specs-deep__cat-body">
         <ul class="specs-deep__list">
           <li><p>Engine Model</p><p>Cat® C18</p></li>
           <li><p>Engine Power — ISO 14396:2002</p><p>580 hp</p></li>
@@ -281,10 +396,16 @@ a { color: inherit; text-decoration: none; }
           <li><p>Peak Torque — 1,200 rpm</p><p>2,104 lbf·ft</p></li>
         </ul>
         <p class="specs-deep__note">Three engine emission options are available: U.S. EPA Tier 4 Final / EU Stage V / Japan 2014 (1); Brazil MAR-1, equivalent to U.S. EPA Tier 3 / EU Stage IIIA (2); China Nonroad Stage IV (3).</p>
-      </div>
+        </div>
+      </details>
 
-      <div class="specs-deep__cat">
-        <h3>Operating Specifications</h3>
+      <details class="specs-deep__cat">
+        <summary class="specs-deep__cat-header">
+          <h3>Operating Specifications</h3>
+          <span class="row-count">6 specs</span>
+          <span class="chevron" aria-hidden="true">▾</span>
+        </summary>
+        <div class="specs-deep__cat-body">
         <ul class="specs-deep__list">
           <li><p>Operating Weight</p><p>112,574 lb</p></li>
           <li><p>Bucket Capacity Range</p><p>4.7–13 m³ (6.2–17 yd³)</p></li>
@@ -293,10 +414,16 @@ a { color: inherit; text-decoration: none; }
           <li><p>Cat Truck Match — Standard</p><p>770 – 772</p></li>
           <li><p>Cat Truck Match — High Lift</p><p>773 – 775</p></li>
         </ul>
-      </div>
+        </div>
+      </details>
 
-      <div class="specs-deep__cat">
-        <h3>Hydraulic Cycle Time (1,400–1,860 rpm)</h3>
+      <details class="specs-deep__cat">
+        <summary class="specs-deep__cat-header">
+          <h3>Hydraulic Cycle Time (1,400–1,860 rpm)</h3>
+          <span class="row-count">5 specs</span>
+          <span class="chevron" aria-hidden="true">▾</span>
+        </summary>
+        <div class="specs-deep__cat-body">
         <ul class="specs-deep__list">
           <li><p>Raise</p><p>8 s</p></li>
           <li><p>Dump</p><p>2.2 s</p></li>
@@ -304,10 +431,16 @@ a { color: inherit; text-decoration: none; }
           <li><p>Rack Back</p><p>4.5 s</p></li>
           <li><p>Total Hydraulic Cycle Time — Empty Bucket</p><p>18.2 s</p></li>
         </ul>
-      </div>
+        </div>
+      </details>
 
-      <div class="specs-deep__cat">
-        <h3>Hydraulic System — Steering</h3>
+      <details class="specs-deep__cat">
+        <summary class="specs-deep__cat-header">
+          <h3>Hydraulic System — Steering</h3>
+          <span class="row-count">6 specs</span>
+          <span class="chevron" aria-hidden="true">▾</span>
+        </summary>
+        <div class="specs-deep__cat-body">
         <ul class="specs-deep__list">
           <li><p>Steering System — Circuit</p><p>Pilot, load sensing</p></li>
           <li><p>Steering System — Pump</p><p>Piston, variable displacement</p></li>
@@ -316,41 +449,71 @@ a { color: inherit; text-decoration: none; }
           <li><p>Steering Cycle Times — High Idle</p><p>3.4 s</p></li>
           <li><p>Steering Cycle Times — Low Idle</p><p>5.6 s</p></li>
         </ul>
-      </div>
+        </div>
+      </details>
 
-      <div class="specs-deep__cat">
-        <h3>Air Conditioning System</h3>
+      <details class="specs-deep__cat">
+        <summary class="specs-deep__cat-header">
+          <h3>Air Conditioning System</h3>
+          <span class="row-count">2 specs</span>
+          <span class="chevron" aria-hidden="true">▾</span>
+        </summary>
+        <div class="specs-deep__cat-body">
         <ul class="specs-deep__list">
           <li><p>Refrigerant</p><p>R134a or R1234yf (per regional label)</p></li>
           <li><p>Global Warming Potential (R134a)</p><p>1,430</p></li>
         </ul>
-      </div>
+        </div>
+      </details>
 
-      <div class="specs-deep__cat">
-        <h3>Axles</h3>
+      <details class="specs-deep__cat">
+        <summary class="specs-deep__cat-header">
+          <h3>Axles</h3>
+          <span class="row-count">3 specs</span>
+          <span class="chevron" aria-hidden="true">▾</span>
+        </summary>
+        <div class="specs-deep__cat-body">
         <ul class="specs-deep__list">
           <li><p>Front</p><p>Fixed</p></li>
           <li><p>Rear</p><p>Trunnion</p></li>
           <li><p>Oscillation Angle</p><p>13°</p></li>
         </ul>
-      </div>
+        </div>
+      </details>
 
-      <div class="specs-deep__cat">
-        <h3>Brakes</h3>
+      <details class="specs-deep__cat">
+        <summary class="specs-deep__cat-header">
+          <h3>Brakes</h3>
+          <span class="row-count">1 spec</span>
+          <span class="chevron" aria-hidden="true">▾</span>
+        </summary>
+        <div class="specs-deep__cat-body">
         <ul class="specs-deep__list">
           <li><p>Brake Standard</p><p>ISO 3450:2011</p></li>
         </ul>
-      </div>
+        </div>
+      </details>
 
-      <div class="specs-deep__cat">
-        <h3>Operator's Cab</h3>
+      <details class="specs-deep__cat">
+        <summary class="specs-deep__cat-header">
+          <h3>Operator's Cab</h3>
+          <span class="row-count">1 spec</span>
+          <span class="chevron" aria-hidden="true">▾</span>
+        </summary>
+        <div class="specs-deep__cat-body">
         <ul class="specs-deep__list">
           <li><p>ROPS/FOPS Standard</p><p>ISO 3471:2008 + ISO 3449:2005 Level II</p></li>
         </ul>
-      </div>
+        </div>
+      </details>
 
-      <div class="specs-deep__cat">
-        <h3>Standard Equipment</h3>
+      <details class="specs-deep__cat">
+        <summary class="specs-deep__cat-header">
+          <h3>Standard Equipment</h3>
+          <span class="row-count">5 categories</span>
+          <span class="chevron" aria-hidden="true">▾</span>
+        </summary>
+        <div class="specs-deep__cat-body">
         <ul class="specs-deep__list">
           <li><p>Powertrain</p><p>Cat C18 ACERT engine, automatic shift control</p></li>
           <li><p>Cab</p><p>Sound-suppressed, full instrumentation, air-conditioned, heated</p></li>
@@ -358,10 +521,16 @@ a { color: inherit; text-decoration: none; }
           <li><p>Operator Tech</p><p>Cat Production Measurement payload weighing, Cat Connect</p></li>
           <li><p>Safety</p><p>ROPS/FOPS cab, secondary steering, parking brake, neutralizer</p></li>
         </ul>
-      </div>
+        </div>
+      </details>
 
-      <div class="specs-deep__cat">
-        <h3>Optional Equipment</h3>
+      <details class="specs-deep__cat">
+        <summary class="specs-deep__cat-header">
+          <h3>Optional Equipment</h3>
+          <span class="row-count">5 categories</span>
+          <span class="chevron" aria-hidden="true">▾</span>
+        </summary>
+        <div class="specs-deep__cat-body">
         <ul class="specs-deep__list">
           <li><p>Auto-Dig</p><p>Z-bar linkage auto-dig with operator presence</p></li>
           <li><p>Tire Inflation</p><p>Tire-pressure monitoring system (TPMS)</p></li>
@@ -369,7 +538,8 @@ a { color: inherit; text-decoration: none; }
           <li><p>Performance Series Buckets</p><p>Higher fill factors for loose material loading</p></li>
           <li><p>Cat Detect</p><p>Object detection with rear-view camera + alerts</p></li>
         </ul>
-      </div>
+        </div>
+      </details>
     </div>
   </div>
 </section>
